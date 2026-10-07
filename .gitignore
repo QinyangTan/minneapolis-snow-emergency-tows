@@ -10,3 +10,8 @@ __pycache__/
 .pytest_cache/
 .DS_Store
 data/raw/
+
+# Browser-test traces, reports, recordings and scratch artifacts
+artifacts/
+test-results/
+playwright-report/

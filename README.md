@@ -3,7 +3,7 @@
 
 An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly become hotspots.
 
-**Status:** M0–M3 implemented: nine official ArcGIS layers reprocessed (October 7, 2026), verified neighborhood GeoJSON and quality report, three same-scale maps, scroll-driven day highlighting, neighborhood × event matrix, normalized day signatures, interactive event/day/neighborhood filtering, offline integrity tests, and automated Svelte static builds. Still to do before final course submission: browser/manual accessibility QA, final editorial annotations, and deployment.
+**Status:** M0–M4 interactive prototype validated: nine official ArcGIS layers reprocessed (October 7, 2026), verified neighborhood GeoJSON, linked visualizations, real Chromium desktop/mobile automated QA (5/5 tests), WCAG 2.1 A/AA serious/critical automated audit, and three recorded GIF demos. Remaining before final course submission: manual screenreader review, final editorial annotations, and optional static deployment.
 
 ## Animated demos
 
