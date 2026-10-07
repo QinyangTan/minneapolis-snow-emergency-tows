@@ -26,3 +26,5 @@ jobs:
         run: npm run check
       - name: Static site build
         run: npm run build
+      - name: Statistical analysis unit tests
+        run: npm run qa:research

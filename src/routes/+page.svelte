@@ -4,6 +4,7 @@
   import DaySmallMultiples from '$lib/DaySmallMultiples.svelte';
   import NeighborhoodMatrix from '$lib/NeighborhoodMatrix.svelte';
   import DaySignatures from '$lib/DaySignatures.svelte';
+  import EventComparison from '$lib/EventComparison.svelte';
   import { countInScope, eventDays, shares, type NeighborhoodGeoJSON } from '$lib/analytics';
   import {
     preliminaryDays, preliminaryEvents,
@@ -91,6 +92,7 @@
       <a href="#findings">Findings</a>
       <a href="#geography">Map story</a>
       <a href="#recurrence">Recurrence</a>
+      <a href="#comparison">Compare events</a>
       <a href="#explore">Explore</a>
       <a href="#methods">Methods</a>
     </nav>
@@ -184,6 +186,7 @@
     <div id="geography" class="story-anchor" aria-hidden="true"></div>
     <div id="recurrence" class="story-anchor" aria-hidden="true"></div>
     <div id="signatures" class="story-anchor" aria-hidden="true"></div>
+    <div id="comparison" class="story-anchor" aria-hidden="true"></div>
     {#if geography && summary}
       <section class="section geography-section">
         <div class="section-heading">
@@ -219,7 +222,7 @@
         <div class="section-heading">
           <p class="eyebrow">05 / REPEATED FOOTPRINTS</p>
           <h2>Which neighborhoods<br /><em>show up again?</em></h2>
-          <p>Compare events side by side. Cells show actual observed tow counts, and “Events” measures how often any towing record appears in the same neighborhood — not necessarily a high-intensity hotspot.</p>
+          <p>Compare observed counts across emergencies. Separate measures distinguish a neighborhood simply appearing in an event from ranking among that event’s leading tow-count neighborhoods. Method thresholds are explicit and adjustable.</p>
         </div>
         <div class="panel">
           <NeighborhoodMatrix {geography} {events} {selectedDay} {selectedEvent} {selectedNeighborhood}
@@ -238,10 +241,19 @@
             on:select={(event) => selectedNeighborhood = event.detail} />
         </div>
       </section>
+
+      <section class="section comparison-section">
+        <div class="section-heading">
+          <p class="eyebrow">07 / EVENT COMPARISON</p>
+          <h2>Do storms leave<br /><em>similar footprints?</em></h2>
+          <p>Compare the three-day signature or the neighborhood distribution of two Snow Emergencies. Differences in total records do not automatically imply differences in composition.</p>
+        </div>
+        <div class="panel"><EventComparison {events} {geography} on:selectEvent={(event) => selectedEvent = event.detail}/></div>
+      </section>
     {/if}
 
     <section class="section explore-section" id="explore">
-      <div class="section-heading"><p class="eyebrow">07 / SPATIAL EXPLORER</p><h2>Where does the<br /><em>pattern move?</em></h2><p>Neighborhood-level counts connect three-day changes with geography. Every area uses the same City boundary dataset.</p></div>
+      <div class="section-heading"><p class="eyebrow">08 / SPATIAL EXPLORER</p><h2>Where does the<br /><em>pattern move?</em></h2><p>Neighborhood-level counts connect three-day changes with geography. Every area uses the same City boundary dataset.</p></div>
       <div class="panel explorer-panel">
         <div class="filterbar">
           <label>EMERGENCY
@@ -284,7 +296,7 @@
     </section>
 
     <section class="section methods-section" id="methods">
-      <div class="section-heading"><p class="eyebrow">08 / METHODS & CAVEATS</p><h2>What the data<br /><em>can — and can't — say.</em></h2></div>
+      <div class="section-heading"><p class="eyebrow">09 / METHODS & CAVEATS</p><h2>What the data<br /><em>can — and can't — say.</em></h2></div>
       <div class="methods-grid">
         <div><b>Source</b><p>City of Minneapolis official ArcGIS Snow Emergency tow FeatureServer layers and neighborhood boundaries.</p></div>
         <div><b>Interpretation</b><p>Counts represent observed enforcement actions; they do not measure illegal parking prevalence or individual towing probability.</p></div>
