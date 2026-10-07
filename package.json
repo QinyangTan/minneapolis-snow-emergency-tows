@@ -12,14 +12,12 @@
   "dependencies": {
     "@sveltejs/kit": "^2.20.0",
     "d3-geo": "^3.1.1",
-    "d3-scale": "^4.0.2",
     "svelte": "^5.20.0"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.8",
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
-    "@types/d3-geo": "^3.1.12",
-    "@types/d3-scale": "^4.0.9",
+    "@types/d3-geo": "^3.1.0",
     "svelte-check": "^4.1.0",
     "typescript": "^5.7.3",
     "vite": "^6.2.2"
