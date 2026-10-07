@@ -17,7 +17,7 @@ Input geometry is reprojected in ArcGIS requests to WGS84 / EPSG:4326. Each even
 
 `static/data/neighborhoods.geojson`: feature collection; each polygon has `properties.name`, `total`, `days` keyed by day number (as string), `byEvent` keyed by event ID with `total` and `days`.
 
-`static/data/quality.json`: selected services, actual counts, preliminary counts, source field names, invalid day, missing geometry, outside-boundary, and ambiguous spatial joins. A nonzero total of unmatched points should halt publication by default.
+`static/data/quality.json`: selected services, actual counts, preliminary counts, source field names, invalid day, missing geometry, outside-boundary, and ambiguous spatial joins. Records outside the current neighborhood boundaries are retained in citywide counts and counted as unassigned in summary and quality outputs, but excluded from maps. A >20% unassigned share fails validation.
 
 ## Semantics
 - 'Day' is the official dataset's 1/2/3 categorization, not reconstructed from the timestamp.
