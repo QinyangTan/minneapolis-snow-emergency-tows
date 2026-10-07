@@ -37,6 +37,10 @@ Explore the neighborhood-by-event count matrix, choose a particular event and ne
 
 **Recording and validation:** `npm run qa:browser` tests desktop/mobile layout, linked filters, numerical reconciliation, keyboard actions, and automated WCAG serious/critical violations. `npm run demo:gifs` records actual Chromium videos before transcoding to looping GIF. The video-to-GIF conversion does not alter any underlying City data.
 
+## Reproducible findings
+
+Read [the frozen-data results and interpretation notes](docs/FINDINGS.md) before drawing conclusions from a screenshot. A central finding is that the closest pair of events **changes with the comparison lens**: Howard–Bridge for three-day composition, but Bridge–Glenwood for neighborhood distribution. The app computes these pairings directly from the saved City aggregates, using an explicitly defined divergence metric.
+
 ## Research questions
 
 1. How do observed towing patterns vary by Day 1, Day 2, and Day 3?

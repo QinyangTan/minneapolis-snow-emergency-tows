@@ -116,3 +116,7 @@
 .comparison-cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
 .comparison-cta button{border:1px solid #a3b6c5;background:white;color:#163c57;font-weight:700;padding:12px;font-size:12px}
 @media(max-width:700px){.comparison-topline,.comparison-pairs{grid-template-columns:1fr}.comparison-tools label{width:100%}.comparison-tools select{width:100%}}
+
+.comparison-insight{margin-top:21px;border-left:4px solid #a4445a;background:#f2f6f8;padding:20px 24px}
+.comparison-insight h3{margin:0 0 9px;font:700 19px 'Space Grotesk',sans-serif;color:#153751}
+.comparison-insight p{margin:0;font-size:14px;line-height:1.75;color:#344c62}
