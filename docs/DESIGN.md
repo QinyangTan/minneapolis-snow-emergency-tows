@@ -1,0 +1,45 @@
+# Visualization design brief
+
+## Audience and assertion boundary
+Audience: classmates, Minneapolis residents, and instructors curious about how a three-day parking rule system appears in **observed towing** records. The visual narrative must never imply a car's tow risk or causal evidence for enforcement disparity.
+
+## Six-scene storyboard
+| Scene | Takeaway | Core visual | Interaction |
+|---|---|---|---|
+| 1 · Rules | Different street parking restrictions across Days 1–3 | Compact day-by-day rule cards | Select day; official rule link |
+| 2 · Volume | Days 2 and 3 account for most preliminary tows | Counts + labeled bars | Hover/focus value labels |
+| 3 · Spatial shifts | Map concentrations may differ by day | Equal-scale 3-up neighborhood maps | Coordinated day highlight |
+| 4 · Recurrence | A hotspot may recur across distinct events | Neighborhood × event recurrence matrix | Hover counts and recurrence definition |
+| 5 · Signatures | Neighborhoods have distinct day profiles | Normalized 100% bars or heatmap | Sort by total/day share |
+| 6 · Explore | Select event, day and neighborhood | Linked choropleth and details | Filters persist; reset available |
+
+## Visual encoding choices
+- Neighborhood **fill intensity** = absolute observed tow count; common domain for side-by-side day comparisons.
+- Day color tokens = Day 1 blue, Day 2 orange, Day 3 teal; do not rely only on color.
+- 100% bars = composition (percentage of records), **not rate, probability, or risk**.
+- Recurrence definition for MVP = number of distinct complete emergency events with **>=1** observed tow in neighborhood. This measures appearance, **not** necessarily a top-ranked hotspot; a future prominence threshold needs a separate label.
+- Count vs composition are different encodings; never use them interchangeably.
+- Display absolute N, selected event/day, and source provenance alongside maps.
+- Provide keyboard focus behavior, readable tooltips, and reduced-motion fallbacks.
+
+## Initial interface
+Hero: Three Days, Three Rules — a Minneapolis context introduction.
+Sticky-ish secondary filter rail for event/day; clear data-quality status.
+Sections: day counts, event totals, geographic explorer, methods/limitations.
+Next: small-multiple map, normalized neighborhood profiles, recurrence matrix, scroll-driven transitions.
+
+## Acceptance criteria
+1. The page works with the preliminary snapshot **and visibly labels it preliminary**, with a no-map-yet state rather than fake geography.
+2. Regenerated data is strictly derived from official ArcGIS layers, is neighborhood-aggregated, and never exposes address-level raw point records.
+3. Each selected event/day count and map neighborhood count reconciles with the source.
+4. Exclude the incomplete Victory 2 layer; every included event has days 1, 2 and 3.
+5. Glenwood uses the identical neighborhood join applied to all events.
+6. The deployment is a static artifact; no runtime third-party geocoding.
+7. Include explicit City geocoding uncertainty and the 'observed tows != risk' disclaimer.
+
+## Prioritized milestones
+- M0: private repo, design spec, static app scaffold, auditable data-contract tests.
+- M1: nine official layers -> deterministic processed neighborhood data; source/count audit.
+- M2: linked event/day explorer and 3-up small-multiple maps.
+- M3: recurrence heatmap, normalized day signatures, guided narrative.
+- M4: accessibility, performance, reproducibility, course FP2/FP3 deliverables.
