@@ -26,6 +26,19 @@ jobs:
         run: npm run build
       - name: Playwright end-to-end browser QA
         run: npm run qa:browser
+      - name: Record real-browser demo GIFs
+        if: success()
+        run: |
+          ffmpeg -version | head -1
+          npm run demo:gifs
+      - name: Upload demo GIFs
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-demo-gifs
+          path: docs/demos/*.gif
+          if-no-files-found: error
+          retention-days: 30
       - name: Attach Playwright failure details
         if: always()
         uses: actions/upload-artifact@v4
