@@ -27,7 +27,8 @@
   function tint(count: number): string {
     if (count === 0) return '#eef2f5';
     const t = Math.sqrt(count / ceiling);
-    return `rgb(${Math.round(225-120*t)},${Math.round(237-146*t)},${Math.round(246-118*t)})`;
+    // Keep even the highest-intensity cells light enough for navy numerals (WCAG AA).
+    return `rgb(${Math.round(225-75*t)},${Math.round(237-87*t)},${Math.round(246-66*t)})`;
   }
   function select(area: AreaProperties, event: string) {
     dispatch('select', { neighborhood: area.name, event });

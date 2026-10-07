@@ -5,6 +5,30 @@ An interactive, evidence-driven visual story about how Minneapolis towing patter
 
 **Status:** M0–M3 implemented: nine official ArcGIS layers reprocessed (October 7, 2026), verified neighborhood GeoJSON and quality report, three same-scale maps, scroll-driven day highlighting, neighborhood × event matrix, normalized day signatures, interactive event/day/neighborhood filtering, offline integrity tests, and automated Svelte static builds. Still to do before final course submission: browser/manual accessibility QA, final editorial annotations, and deployment.
 
+## Animated demos
+
+These GIFs are **recordings of real Chromium browser interactions** with the reproducibly processed Minneapolis City dataset. They are not generated illustrations or static mockups.
+
+### 1. Three days, one comparable map scale
+
+Inspect Day 1, Day 2, and Day 3 neighborhood concentrations side by side, with synchronized day highlighting and a shared scale.
+
+![Real browser GIF showing three comparable Minneapolis Snow Emergency neighborhood maps](docs/demos/three-day-map-comparison.gif)
+
+### 2. Linked event, day, and neighborhood exploration
+
+Filter to Bridge, select Day 2, click Marcy Holmes, and inspect the associated observed tow count — then reset the explorer.
+
+![Real browser GIF showing event, day, and neighborhood filter interactions](docs/demos/linked-event-neighborhood-explorer.gif)
+
+### 3. Recurring neighborhood footprints and day signatures
+
+Explore the neighborhood-by-event count matrix, choose a particular event and neighborhood, and sort 100%-normalized day profiles.
+
+![Real browser GIF showing the recurring tow count matrix and normalized neighborhood profiles](docs/demos/recurrence-and-day-signatures.gif)
+
+**Recording and validation:** `npm run qa:browser` tests desktop/mobile layout, linked filters, numerical reconciliation, keyboard actions, and automated WCAG serious/critical violations. `npm run demo:gifs` records actual Chromium videos before transcoding to looping GIF. The video-to-GIF conversion does not alter any underlying City data.
+
 ## Research questions
 
 1. How do observed towing patterns vary by Day 1, Day 2, and Day 3?
