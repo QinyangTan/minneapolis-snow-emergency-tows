@@ -181,8 +181,11 @@
     </section>
 
 
+    <div id="geography" class="story-anchor" aria-hidden="true"></div>
+    <div id="recurrence" class="story-anchor" aria-hidden="true"></div>
+    <div id="signatures" class="story-anchor" aria-hidden="true"></div>
     {#if geography && summary}
-      <section class="section geography-section" id="geography">
+      <section class="section geography-section">
         <div class="section-heading">
           <p class="eyebrow">04 / SPATIAL SHIFTS · GUIDED NARRATIVE</p>
           <h2>Same city.<br /><em>Three different maps.</em></h2>
@@ -212,7 +215,7 @@
         </div>
       </section>
 
-      <section class="section recurrence-section" id="recurrence">
+      <section class="section recurrence-section">
         <div class="section-heading">
           <p class="eyebrow">05 / REPEATED FOOTPRINTS</p>
           <h2>Which neighborhoods<br /><em>show up again?</em></h2>
@@ -224,7 +227,7 @@
         </div>
       </section>
 
-      <section class="section signatures-section" id="signatures">
+      <section class="section signatures-section">
         <div class="section-heading">
           <p class="eyebrow">06 / NEIGHBORHOOD SIGNATURES</p>
           <h2>Not just <em>how many</em>.<br />But <em>which day</em>.</h2>
