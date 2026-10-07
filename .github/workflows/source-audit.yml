@@ -1,0 +1,27 @@
+name: Official source data audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - scripts/build_data.py
+      - .github/workflows/source-audit.yml
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Rebuild data from official Minneapolis services
+        run: python scripts/build_data.py
+      - name: Upload aggregate data for quality review
+        uses: actions/upload-artifact@v4
+        with:
+          name: city-neighborhood-data
+          path: static/data/
+          retention-days: 14
