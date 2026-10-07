@@ -1,9 +1,17 @@
 # Three Days, Three Rules
 **Visualizing Minneapolis Snow Emergency Tows** · CSCI 5609 Final Project
 
-An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly become hotspots.
+An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly appear or rank prominently across separate emergencies.
 
 **Status:** M0–M4 interactive prototype validated: nine official ArcGIS layers reprocessed (October 7, 2026), verified neighborhood GeoJSON, linked visualizations, real Chromium desktop/mobile automated QA (5/5 tests), WCAG 2.1 A/AA serious/critical automated audit, and three recorded GIF demos. Remaining before final course submission: manual screenreader review, final editorial annotations, and optional static deployment.
+
+## Research-grade analysis and accountability
+
+This is a **descriptive interactive data story**, not a live parking predictor. The application answers three distinct questions using different evidence: day-by-day patterns, neighborhoods with recurring **prominence** (not just presence), and variation between distinct Snow Emergencies. See [method and submission-readiness matrix](docs/RUBRIC_TRACEABILITY.md) for evidence, explicit limitations, and the still-unavailable official Fall 2026 Canvas rubric.
+
+The recurrence matrix reports both *ANY RECORD* (one or more tows) and *PROMINENT* (top 5/10/15 neighborhoods by observed event-specific tows, with at least five records, retaining cutoff ties). The selector lets readers assess threshold sensitivity. Event comparisons use a symmetric 0–1 Jensen–Shannon divergence of either three-day shares or mapped neighborhood shares; each mode states its denominator. **Neither descriptive measure establishes towing risk or causation.**
+
+For a larger team, maintain [verifiable contribution records](docs/TEAM_CONTRIBUTIONS.md), mutually review all analytical claims, and confirm the required [AI contribution disclosure](docs/AI_DISCLOSURE.md) before submitting to the course.
 
 ## Animated demos
 
@@ -69,6 +77,8 @@ python scripts/build_data.py
 python -m unittest discover -s tests -v
 npm run check
 npm run build
+npm run qa:research
+npm run qa:browser
 ```
 
 The data pipeline fails loudly for ambiguous services, missing days, and invalid record geometry. Points outside the current City neighborhood polygons are retained in city totals, but excluded from neighborhood maps and disclosed in quality output. Inspect `static/data/quality.json` and review count differences from FP1 before using the generated maps as final evidence. The source-audit workflow publishes `static/data/summary.json`, `static/data/neighborhoods.geojson`, and `static/data/quality.json` only when all nine layer counts pass strict checks. It never exports raw address-level tow points.
