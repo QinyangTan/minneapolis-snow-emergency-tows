@@ -1,0 +1,62 @@
+{
+  "method": "Shapely covers against unsimplified official polygons. Multiple matches remain unmatched.",
+  "geometrySimplificationDegrees": 4.5e-05,
+  "recordsContainAddresses": false,
+  "shapelyVersion": "2.1.2",
+  "sourceHashes": {
+    "tows": "fdadad7a9a2eb0ea5e5c4b9bcddb7d39e4e41fa7598f1b3397d8da947936e704",
+    "neighborhoods": "bc22f3fcc0a043b88442e47dbdc085ab90e25c6a3e74d1dabc5688de812742a1",
+    "water": "aef1a0365ef81688a77353cb0daebb06ebd3b489d3753e7541b32a7b9be101de"
+  },
+  "quality": {
+    "matched": 846,
+    "unmatched": 6,
+    "unmatchedByDay": [
+      3,
+      3,
+      0
+    ],
+    "ambiguousBoundary": 0,
+    "unmatchedRecords": [
+      {
+        "id": "23",
+        "day": 1,
+        "reason": "outside boundary"
+      },
+      {
+        "id": "25",
+        "day": 1,
+        "reason": "outside boundary"
+      },
+      {
+        "id": "27",
+        "day": 1,
+        "reason": "outside boundary"
+      },
+      {
+        "id": "204",
+        "day": 2,
+        "reason": "outside boundary"
+      },
+      {
+        "id": "212",
+        "day": 2,
+        "reason": "outside boundary"
+      },
+      {
+        "id": "279",
+        "day": 2,
+        "reason": "outside boundary"
+      }
+    ],
+    "sourceLabelMissing": 6,
+    "sourceLabelDisagreements": 0,
+    "boundaryVersion": "Current official Minneapolis_Neighborhoods snapshot; see acquisition.json",
+    "expectedAddressError": "8\u201314% in publisher disclaimer; not measured in this sample"
+  },
+  "sources": {
+    "tows": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Bridge_Tows_2025/FeatureServer/0",
+    "neighborhoods": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Minneapolis_Neighborhoods/FeatureServer/0",
+    "water": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Water/FeatureServer/0"
+  }
+}

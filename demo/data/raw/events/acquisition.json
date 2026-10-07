@@ -1,0 +1,47 @@
+{
+  "fetchedAt": "2026-10-07T21:20:04.831273+00:00",
+  "addressesRetained": false,
+  "sources": [
+    {
+      "id": "dover-2022",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Dover_Tows_2022/FeatureServer/0"
+    },
+    {
+      "id": "jane-2022",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Jane_Tows_2022/FeatureServer/0"
+    },
+    {
+      "id": "lourdes-2022",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Lourdes_Tows_2022/FeatureServer/0"
+    },
+    {
+      "id": "northrop-2023",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Northrop_Tows_2023/FeatureServer/0"
+    },
+    {
+      "id": "victory1-2023",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Victory1_Tows_2023/FeatureServer/0"
+    },
+    {
+      "id": "howard-2024",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Howard_Tows_2024/FeatureServer/0"
+    },
+    {
+      "id": "omega-2025",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Omega_Tows/FeatureServer/0"
+    },
+    {
+      "id": "bridge-2025",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Bridge_Tows_2025/FeatureServer/0"
+    },
+    {
+      "id": "glenwood-2025",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Glenwood_Tows_2025/FeatureServer/0"
+    },
+    {
+      "id": "jefferson-2025",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Jefferson_Tows_2025/FeatureServer/1"
+    }
+  ],
+  "weatherUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly"
+}

@@ -1,0 +1,8 @@
+{
+  "fetchedAt": "2026-10-07T05:05:06.292276+00:00",
+  "sources": {
+    "tows": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Bridge_Tows_2025/FeatureServer/0",
+    "neighborhoods": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Minneapolis_Neighborhoods/FeatureServer/0",
+    "water": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Water/FeatureServer/0"
+  }
+}
