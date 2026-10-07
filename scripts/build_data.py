@@ -77,6 +77,8 @@ def discover():
 def service_for(event, services):
     if event in KNOWN:
         return BASE + "/" + KNOWN[event] + "/FeatureServer"
+    season = next(s for e, s, _ in EVENTS if e == event)
+    valid_years = {"2022", "2023"} if season == "2022/23" else {season[:4]}
     candidates = sorted(set(
         BASE + "/" + entry["name"] + "/FeatureServer"
         for entry in services
@@ -84,6 +86,7 @@ def service_for(event, services):
         and "snowemergency" in clean_key(entry["name"])
         and "tow" in clean_key(entry["name"])
         and clean_key(event) in clean_key(entry["name"])
+        and any(year in re.findall(r"20[0-9]{2}", entry["name"]) for year in valid_years)
     ))
     if len(candidates) != 1:
         raise ValueError(f"Ambiguous or missing City service for {event}: {candidates}")
