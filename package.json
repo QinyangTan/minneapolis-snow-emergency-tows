@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "qa:browser": "playwright test",
-    "demo:gifs": "node scripts/record-demos.mjs"
+    "demo:gifs": "node scripts/record-demos.mjs",
+    "qa:research": "node --test tests/test_event_analysis.mjs"
   },
   "dependencies": {
     "@sveltejs/kit": "^2.20.0",

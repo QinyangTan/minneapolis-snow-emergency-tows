@@ -2,6 +2,7 @@
   import { createEventDispatcher } from 'svelte';
   import type { EventRow } from './preliminary';
   import { countInScope, eventRecurrence, type AreaProperties, type NeighborhoodGeoJSON } from './analytics';
+  import { prominentRecurrence } from './eventAnalysis.mjs';
 
   export let geography: NeighborhoodGeoJSON;
   export let events: EventRow[];
@@ -10,15 +11,19 @@
   export let selectedNeighborhood = 'all';
 
   const dispatch = createEventDispatcher<{ select: { neighborhood: string; event: string } }>();
-  let order: 'total' | 'presence' = 'total';
+  let order: 'total' | 'presence' | 'prominence' = 'total';
+  let topK = 10;
   let limit = 15;
   $: areas = geography.features.map((feature) => feature.properties).filter((p) => p.total > 0);
+  $: prominent = prominentRecurrence(geography, events.map((event) => event.id), selectedDay, topK, 5);
   $: ranked = [...areas].sort((a, b) => {
     const aTotal = countInScope(a, 'all', selectedDay);
     const bTotal = countInScope(b, 'all', selectedDay);
     const comparison = order === 'total'
-      ? bTotal - aTotal || eventRecurrence(b, events, selectedDay) - eventRecurrence(a, events, selectedDay)
-      : eventRecurrence(b, events, selectedDay) - eventRecurrence(a, events, selectedDay) || bTotal - aTotal;
+      ? bTotal-aTotal
+      : order === 'presence'
+        ? eventRecurrence(b, events, selectedDay)-eventRecurrence(a, events, selectedDay)
+        : (prominent.get(b.name) ?? 0)-(prominent.get(a.name) ?? 0);
     return comparison || a.name.localeCompare(b.name);
   });
   $: rows = ranked.slice(0, limit);
@@ -40,6 +45,14 @@
     <select bind:value={order}>
       <option value="total">Observed record count</option>
       <option value="presence">Number of events with records</option>
+      <option value="prominence">Recurring prominent neighborhoods</option>
+    </select>
+  </label>
+  <label>PROMINENCE
+    <select bind:value={topK}>
+      <option value={5}>Top 5 per event</option>
+      <option value={10}>Top 10 per event</option>
+      <option value={15}>Top 15 per event</option>
     </select>
   </label>
   <label>SHOW
@@ -57,7 +70,8 @@
       {#each events as event}
         <th scope="col" class:column-active={selectedEvent === event.id} title={event.season}>{event.id}</th>
       {/each}
-      <th scope="col">EVENTS</th>
+      <th scope="col" title="Emergency events with at least one tow here">ANY RECORD</th>
+      <th scope="col" title="Events in which neighborhood ranks among top K by count, with at least five tows">PROMINENT</th>
       <th scope="col">TOWS</th>
     </tr></thead>
     <tbody>
@@ -79,10 +93,11 @@
             </td>
           {/each}
           <td class="summary-count">{eventRecurrence(area, events, selectedDay)}/{events.length}</td>
+          <td class="summary-count">{prominent.get(area.name) ?? 0}/{events.length}</td>
           <td class="summary-count">{countInScope(area, 'all', selectedDay)}</td>
         </tr>
       {/each}
     </tbody>
   </table>
 </div>
-<p class="mini-note">Cells show observed tow counts, {selectedDay ? `Day ${selectedDay} only` : 'all three days'}. The “Events” column counts emergencies with at least one record in that neighborhood — <b>presence is not a hotspot or risk ranking</b>. Select any cell to inspect that neighborhood and event.</p>
+<p class="mini-note">Cells show observed tow counts, {selectedDay ? `Day ${selectedDay} only` : 'all three days'}. <b>ANY RECORD</b> counts events with at least one tow. <b>PROMINENT</b> counts events where this neighborhood is among the top {topK} ranked by observed tow count (including ties) and has at least 5 tows. Both are descriptive recurrence definitions, not exposure-adjusted risk. Change the top-K threshold to check sensitivity; click any cell to inspect its source event.</p>
