@@ -9,7 +9,7 @@ Input geometry is reprojected in ArcGIS requests to WGS84 / EPSG:4326. Each even
 `static/data/summary.json`
 - `status`: `recomputed-official-arcgis`
 - `generated_at_utc`: ISO timestamp
-- `total`: sum of **valid, joined** tow records
+- `total`: sum of all valid day-tagged tow records, including explicitly unassigned geography
 - `days[]`: `{day,count}`
 - `events[]`: `{id,season,total,days:[{day,count}]}`
 - `neighborhoods[]`: `{name,total,days:[{day,count}],event_count}`
