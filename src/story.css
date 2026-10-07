@@ -1,0 +1,85 @@
+/* Milestone 2–3: linked spatial story, comparable cartography, recurrence and signatures */
+
+.event-grid .event-row {
+  width: 100%; text-align: left; appearance: none;
+  background: transparent; border: 0; border-bottom: 1px solid #e7ebef;
+  color: inherit; transition: background .18s ease; cursor: pointer;
+}
+.event-grid .event-row:hover,
+.event-grid .event-row.event-selected { background: #e8f0f6; }
+.event-grid .event-row:disabled { cursor: default; opacity: 1; }
+.event-grid .event-stack { display: flex; overflow: hidden; }
+.event-grid .event-stack > span { height: 100%; min-width: 0; }
+.event-grid .event-stack .event-volume { background: #a2b8ca; }
+
+.geography-section { background: #e7edf3; }
+.story-layout { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(260px, .7fr); gap: 24px; align-items: start; }
+.story-sticky { position: sticky; top: 20px; min-width: 0; }
+.small-multiple-shell { padding: 24px; }
+.small-multiple-shell .panel-header { margin-bottom: 20px; }
+.small-multiples { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: stretch; }
+.small-map-panel { border: 2px solid #e4eaf0; background: #f8fafb; padding: 8px 5px; min-width: 0; transition: border-color .2s ease, transform .2s ease; }
+.small-map-panel.focused { border-color: #bd5b68; background: #fff; }
+.small-map-heading { width: 100%; display: flex; align-items: flex-start; justify-content: space-between; gap: 4px; padding: 8px; background: transparent; border: 0; text-align: left; font: 700 11px 'Space Grotesk', sans-serif; color: #173753; }
+.small-map-heading strong { font: 600 10px 'DM Sans', sans-serif; color: #5e7285; text-align: right; }
+.map-visual.compact svg { display: block; width: 100%; }
+.map-gradient { background: linear-gradient(90deg, #e6edf2 0%, #b7bccf 45%, #635877 100%); }
+.scale-common { margin-top: 13px; }
+.story-steps { display: flex; flex-direction: column; gap: 15px; }
+.story-step { min-height: 290px; border: 1px solid #d7e2eb; background: #f9fbfc; padding: 32px 26px; transition: background .2s ease, border-color .2s ease; }
+.story-step.step-active { background: #fff; border-left: 5px solid #bd5b68; }
+.story-step h3 { font: 700 clamp(26px,3vw,35px)/1.13 'Space Grotesk',sans-serif; letter-spacing: -.045em; margin: 16px 0; }
+.story-step p { font-size: 14px; color: #587085; line-height: 1.8; }
+.story-step-action { border: none; padding: 10px 0; background: transparent; color: #a3384d; font-size: 12px; font-weight: 700; text-decoration: underline; }
+.recurrence-section { background: #f6f7f7; }
+.matrix-tools, .signature-tools { display: flex; flex-wrap: wrap; gap: 22px; margin-bottom: 20px; }
+.matrix-tools label, .signature-tools label { display: flex; flex-direction: column; gap: 8px; font: 700 11px 'Space Grotesk',sans-serif; letter-spacing: .07em; color: #6e8194; }
+.matrix-tools select, .signature-tools select { padding: 11px 15px; font: 500 13px 'DM Sans',sans-serif; color: #243f58; background: #fff; border: 1px solid #d0dce5; min-width: 190px; }
+.matrix-scroll { width: 100%; max-width: 100%; overflow-x: auto; border: 1px solid #e0e8ed; }
+.recurrence-matrix { border-spacing: 0; border-collapse: separate; width: 100%; min-width: 1000px; font-variant-numeric: tabular-nums; }
+.recurrence-matrix th { background: #f0f4f7; font: 700 11px 'Space Grotesk',sans-serif; color: #4b6378; }
+.recurrence-matrix th, .recurrence-matrix td { padding: 5px; border-bottom: 1px solid #e7edf1; text-align: center; }
+.recurrence-matrix thead th { padding: 13px 6px; white-space: nowrap; }
+.recurrence-matrix .sticky-name { min-width: 190px; text-align: left; padding-left: 12px; position: sticky; left: 0; z-index: 1; background: #f0f4f7; }
+.recurrence-matrix tbody .sticky-name { background: #fff; }
+.recurrence-matrix .sticky-name button { background: none; border: 0; color: #203952; font-size: 12px; text-align: left; padding: 7px 0; }
+.recurrence-matrix .column-active { background: #e4ced3; }
+.recurrence-matrix .row-active .sticky-name { background: #f9e7e9; }
+.recurrence-matrix td button { border: 2px solid transparent; border-radius: 3px; min-width: 60px; width: 100%; padding: 10px 3px; font-weight: 700; font-size: 11px; color: #10253e; }
+.recurrence-matrix td button.cell-active { border-color: #ab344e; }
+.recurrence-matrix td button:hover { border-color: #264d69; }
+.recurrence-matrix .summary-count { background: #f7fafb; font-weight: 700; font-size: 12px; min-width: 56px; }
+.signatures-section { background: #f3f0ef; }
+.signature-legend { display: flex; align-items: center; gap: 20px; font: 600 12px 'DM Sans', sans-serif; margin-bottom: 14px; color: #445d74; }
+.signature-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.signature-legend i { display: inline-block; width: 12px; height: 12px; }
+.signature-list { display: flex; flex-direction: column; }
+.signature-row { width: 100%; display: grid; grid-template-columns: minmax(130px,190px) minmax(0,1fr) 70px; align-items: center; gap: 15px; border: 0; border-bottom: 1px solid #e6e9ee; background: #fff; text-align: left; padding: 13px 7px; color: #1b3952; cursor: pointer; }
+.signature-row:hover, .signature-row.focused { background: #edf3f6; }
+.signature-name { font-size: 13px; font-weight: 700; }
+.signature-track { height: 24px; width: 100%; display: flex; overflow: hidden; background: #eef2f6; }
+.signature-track span { min-width: 0; height: 100%; display: block; }
+.signature-sample { font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; color: #61798b; text-align: right; }
+.story-layout .map-visual path:focus-visible, .signature-row:focus-visible, .small-map-heading:focus-visible, .recurrence-matrix button:focus-visible { outline: 3px solid #f5aa62; outline-offset: 2px; }
+@media(max-width: 1040px) {
+  .story-layout { grid-template-columns: 1fr; }
+  .story-sticky { position: relative; top: 0; }
+  .story-steps { display: grid; grid-template-columns: repeat(3,1fr); }
+  .story-step { min-height: 240px; padding: 20px; }
+}
+@media(max-width: 760px) {
+  .topbar nav { overflow-x: auto; gap: 17px; white-space: nowrap; }
+  .small-multiple-shell { padding: 12px; }
+  .small-multiples { grid-template-columns: 1fr; gap: 8px; }
+  .small-map-panel { display: grid; grid-template-columns: 1fr 1.8fr; align-items: center; }
+  .small-map-panel .map-visual { min-width: 0; }
+  .small-map-heading { flex-direction: column; align-self: center; font-size: 13px; }
+  .story-steps { grid-template-columns: 1fr; }
+  .story-step { min-height: 200px; }
+  .signature-row { grid-template-columns: minmax(100px,130px) 1fr 50px; gap: 8px; }
+  .signature-name { font-size: 11px; }
+  .signature-track { height: 20px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .story-step, .small-map-panel, .event-grid .event-row { transition: none; }
+}

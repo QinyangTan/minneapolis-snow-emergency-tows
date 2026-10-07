@@ -3,7 +3,7 @@
 
 An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly become hotspots.
 
-**Status:** M0/M1 complete: responsive Svelte + D3 prototype, nine official ArcGIS event layers successfully reprocessed (October 7, 2026), checked-in neighborhood GeoJSON and summary, offline tests, and GitHub Actions CI. Remaining: guided narrative polish, small-multiple map comparisons, recurring-hotspot matrix, public site deployment.
+**Status:** M0–M3 implemented: nine official ArcGIS layers reprocessed (October 7, 2026), verified neighborhood GeoJSON and quality report, three same-scale maps, scroll-driven day highlighting, neighborhood × event matrix, normalized day signatures, interactive event/day/neighborhood filtering, offline integrity tests, and automated Svelte static builds. Still to do before final course submission: browser/manual accessibility QA, final editorial annotations, and deployment.
 
 ## Research questions
 
@@ -53,10 +53,10 @@ The data pipeline fails loudly for ambiguous services, missing days, and invalid
 
 ```text
 src/routes/+page.svelte          Scrollytelling overview + linked filtering
-src/lib/NeighborhoodMap.svelte  D3 neighborhood choropleth
-src/lib/preliminary.ts          Clearly labeled FP1 snapshot
+src/lib/NeighborhoodMap.svelte  Keyboard-selectable D3 neighborhood choropleth
+src/lib/DaySmallMultiples.svelte  Three comparable day maps with common legend\nsrc/lib/NeighborhoodMatrix.svelte  Event-by-neighborhood count matrix\nsrc/lib/DaySignatures.svelte  Normalized neighborhood composition\nsrc/lib/analytics.ts        Pure cross-view count/recurrence selectors\nsrc/lib/preliminary.ts      Clearly labeled FP1 fallback snapshot
 scripts/build_data.py          ArcGIS acquisition / normalization / join / export
-tests/                        Transformation unit tests
+tests/                        Input and checked-in-output integrity tests
 docs/DESIGN.md                 Storyboard, encodings, interaction, quality criteria
 docs/DATA_CONTRACT.md          Schema, provenance and aggregation semantics
 static/data/                   Generated public, aggregated data (not raw addresses)
