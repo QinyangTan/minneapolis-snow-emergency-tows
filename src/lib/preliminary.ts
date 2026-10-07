@@ -21,6 +21,7 @@ export type Summary = {
   status: string;
   generated_at_utc: string;
   total: number;
+  unassigned_neighborhood_count?: number;
   days: DayRow[];
   events: EventRow[];
   neighborhoods: {
