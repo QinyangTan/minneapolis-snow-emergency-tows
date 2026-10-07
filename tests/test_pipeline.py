@@ -42,6 +42,14 @@ class DataPipelineTests(unittest.TestCase):
         self.assertEqual(sum(e["total"] for e in summary["events"]), 27)
         self.assertEqual(geojson["features"][0]["properties"]["byEvent"]["Bridge"]["days"]["2"], 1)
 
+    def test_spatial_exclusions_are_explicit(self):
+        sample = [(e, d, None if (e == "Bridge" and d == 3) else "West")
+                  for e, _, _ in EVENTS for d in (1, 2, 3)]
+        summary, _ = aggregate(sample, self.areas)
+        self.assertEqual(summary["total"], 27)
+        self.assertEqual(summary["unassigned_neighborhood_count"], 1)
+        self.assertEqual(sum(a["total"] for a in summary["neighborhoods"]), 26)
+
     def test_incomplete_events_are_rejected(self):
         incomplete = [(e, d, "West")
                       for e, _, _ in EVENTS for d in (1, 2, 3)
