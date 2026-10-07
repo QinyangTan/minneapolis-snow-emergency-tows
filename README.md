@@ -3,7 +3,7 @@
 
 An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly become hotspots.
 
-**Status:** initial research + application scaffold. City data still needs to be regenerated from the reproducible pipeline. The numbers displayed before this regeneration are explicitly marked **FP1 preliminary estimates** (not validated live data).
+**Status:** M0/M1 complete: responsive Svelte + D3 prototype, nine official ArcGIS event layers successfully reprocessed (October 7, 2026), checked-in neighborhood GeoJSON and summary, offline tests, and GitHub Actions CI. Remaining: guided narrative polish, small-multiple map comparisons, recurring-hotspot matrix, public site deployment.
 
 ## Research questions
 
@@ -13,7 +13,7 @@ An interactive, evidence-driven visual story about how Minneapolis towing patter
 
 ## Scope
 
-Nine complete three-day emergencies: Dover, Jane, Lourdes, Northrop, Victory 1 (2022/23); Howard (2024/25); Bridge, Glenwood, Jefferson (2025/26). The FP1 proposal reports **5,423** tow records across them, subject to re-verification when rebuilding. Victory 2 is intentionally excluded because its published layer is incomplete.
+Nine complete three-day emergencies: Dover, Jane, Lourdes, Northrop, Victory 1 (2022/23); Howard (2024/25); Bridge, Glenwood, Jefferson (2025/26). The FP1 proposal reports **5,423** tow records, **independently re-confirmed** from official City layers on October 7, 2026 (all nine event counts match). Victory 2 is intentionally excluded because its published layer is incomplete.
 
 - Study **observed towing records**, not probability of a particular vehicle being towed.
 - Spatial claims primarily use neighborhoods rather than apparent address-level precision; City layers warn about approximately 8–14% geocoding-address error.
@@ -21,7 +21,7 @@ Nine complete three-day emergencies: Dover, Jane, Lourdes, Northrop, Victory 1 (
 
 ## Application
 
-- **SvelteKit + D3**, statically deployed.
+- **SvelteKit + D3**, ready for static deployment (not yet publicly hosted).
 - **Python + requests + Shapely** data preparation; historical records are fetched from official ArcGIS FeatureServer endpoints, spatially joined to one neighborhood boundary definition, and exported as versionable summary JSON + GeoJSON.
 
 ### Run locally
@@ -33,7 +33,7 @@ npm install
 npm run dev
 ```
 
-Before authoritative data is built, the page shows preliminary FP1-only charts and a clearly marked map placeholder.
+The processed data is now committed: 5,423 citywide tow records, 87 neighborhood polygons; 68 geocoded points not located within a current neighborhood are retained in city totals but excluded from neighborhood map counts. If processed files are absent, the page explicitly falls back to the FP1 preliminary view.
 
 ### Regenerate data (network required)
 
@@ -47,7 +47,7 @@ npm run check
 npm run build
 ```
 
-The data pipeline fails loudly for ambiguous services, missing days, and invalid record geometry. Points outside the current City neighborhood polygons are retained in city totals, but excluded from neighborhood maps and disclosed in quality output. Inspect `static/data/quality.json` and review count differences from FP1 before using the generated maps as final evidence. After regeneration, commit `static/data/summary.json`, `static/data/neighborhoods.geojson`, and `static/data/quality.json` (but not raw address-level point data).
+The data pipeline fails loudly for ambiguous services, missing days, and invalid record geometry. Points outside the current City neighborhood polygons are retained in city totals, but excluded from neighborhood maps and disclosed in quality output. Inspect `static/data/quality.json` and review count differences from FP1 before using the generated maps as final evidence. The source-audit workflow publishes `static/data/summary.json`, `static/data/neighborhoods.geojson`, and `static/data/quality.json` only when all nine layer counts pass strict checks. It never exports raw address-level tow points.
 
 ## Project map
 
