@@ -1,13 +1,17 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import NeighborhoodMap from '$lib/NeighborhoodMap.svelte';
+  import DaySmallMultiples from '$lib/DaySmallMultiples.svelte';
+  import NeighborhoodMatrix from '$lib/NeighborhoodMatrix.svelte';
+  import DaySignatures from '$lib/DaySignatures.svelte';
+  import { countInScope, eventDays, shares, type NeighborhoodGeoJSON } from '$lib/analytics';
   import {
     preliminaryDays, preliminaryEvents,
     type DayRow, type EventRow, type Summary
   } from '$lib/preliminary';
 
   let summary: Summary | null = null;
-  let geography: any = null;
+  let geography: NeighborhoodGeoJSON | null = null;
   let selectedDay = 0;
   let selectedEvent = 'all';
   let selectedNeighborhood = 'all';
@@ -43,13 +47,30 @@
 
   $: events = (summary?.events ?? preliminaryEvents) as EventRow[];
   $: overallDays = (summary?.days ?? preliminaryDays) as DayRow[];
-  $: chartDays = selectedEvent !== 'all' && summary
-      ? (events.find((e) => e.id === selectedEvent)?.days ?? overallDays)
-      : overallDays;
+  $: chartDays = eventDays(summary, selectedEvent, overallDays);
   $: chartTotal = chartDays.reduce((total, row) => total + row.count, 0);
   $: maxDayCount = Math.max(1, ...chartDays.map((row) => row.count));
-  $: selectedArea = summary?.neighborhoods.find((n) => n.name === selectedNeighborhood);
+  $: selectedArea = geography?.features.find((feature) => feature.properties.name === selectedNeighborhood)?.properties;
+  $: selectedAreaCount = selectedArea ? countInScope(selectedArea, selectedEvent, selectedDay) : 0;
   $: titleScope = selectedEvent === 'all' ? 'all nine events' : selectedEvent;
+  $: cityDays = summary?.days ?? preliminaryDays;
+
+  function observeDayStep(node: HTMLElement, day: number) {
+    if (typeof IntersectionObserver === 'undefined') return {};
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting && entry.intersectionRatio >= 0.55)) {
+        selectedDay = day;
+      }
+    }, { threshold: [0.55] });
+    observer.observe(node);
+    return { destroy() { observer.disconnect(); } };
+  }
+
+  function selectMatrixCell(detail: { neighborhood: string; event: string }) {
+    selectedNeighborhood = detail.neighborhood;
+    selectedEvent = detail.event;
+  }
+
 
   function resetFilters() {
     selectedDay = 0;
@@ -68,6 +89,8 @@
     <a href="#home" class="brand">❄ MINNEAPOLIS <span>/ DATA STORIES</span></a>
     <nav aria-label="Main navigation">
       <a href="#findings">Findings</a>
+      <a href="#geography">Map story</a>
+      <a href="#recurrence">Recurrence</a>
       <a href="#explore">Explore</a>
       <a href="#methods">Methods</a>
     </nav>
@@ -138,17 +161,84 @@
       <div class="section-heading"><p class="eyebrow">03 / THE EVENTS</p><h2>Nine emergencies.<br /><em>Nine different stories.</em></h2><p>Different storms contribute different record totals. Comparing day composition requires the regenerated layer data.</p></div>
       <div class="event-grid">
         {#each events as event}
-          <div class="event-row">
+          {@const proportions = shares(event.days ?? [])}
+          <button class:event-selected={selectedEvent === event.id} class="event-row" disabled={!summary} onclick={() => selectedEvent = selectedEvent === event.id ? 'all' : event.id}>
             <span class="event-name">{event.id}</span><span class="event-season">{event.season}</span>
-            <div class="event-track"><div style:width={(event.total / Math.max(...events.map((e) => e.total)) * 100) + '%'}></div></div>
+            <span class="event-track event-stack">
+              {#if summary}
+                {#each proportions as portion, i}
+                  <span class={'day-' + (i+1)} style:width={(portion * 100) + '%'} title={'Day ' + (i+1) + ': ' + (portion * 100).toFixed(1) + '%'}></span>
+                {/each}
+              {:else}
+                <span class="event-volume" style:width={(event.total / Math.max(...events.map((e) => e.total)) * 100) + '%'}></span>
+              {/if}
+            </span>
             <strong>{fmt.format(event.total)}</strong>
-          </div>
+          </button>
         {/each}
       </div>
+      <p class="mini-note">{summary ? 'Each stacked row shows Day 1 / Day 2 / Day 3 proportions within that event, with total records at right. Click to filter all the linked views.' : 'FP1 snapshot shows event totals only, pending layer-level day data.'}</p>
     </section>
 
+
+    {#if geography && summary}
+      <section class="section geography-section" id="geography">
+        <div class="section-heading">
+          <p class="eyebrow">04 / SPATIAL SHIFTS · GUIDED NARRATIVE</p>
+          <h2>Same city.<br /><em>Three different maps.</em></h2>
+          <p>The three neighborhood maps below share the exact same color scale. Scroll through the day-specific observations, or choose a map to highlight its day.</p>
+        </div>
+        <div class="story-layout">
+          <div class="story-sticky">
+            <div class="panel small-multiple-shell">
+              <div class="panel-header"><h3>Neighborhood tow patterns</h3><span>{titleScope}</span></div>
+              <DaySmallMultiples {geography} {selectedDay} {selectedEvent} {selectedNeighborhood}
+                on:selectDay={(event) => selectedDay = event.detail}
+                on:selectNeighborhood={(event) => selectedNeighborhood = event.detail}
+              />
+            </div>
+          </div>
+          <div class="story-steps">
+            {#each cityDays as row, i}
+              <article class:step-active={selectedDay === row.day} class="story-step"
+                use:observeDayStep={row.day}>
+                <span class="eyebrow">DAY 0{row.day} · {['EMERGENCY ROUTES', 'EVEN SIDES', 'ODD SIDES'][i]}</span>
+                <h3>{fmt.format(row.count)} recorded tows</h3>
+                <p>{(row.count / Math.max(1, summary.total) * 100).toFixed(1)}% of the nine-event citywide sample occurred on Day {row.day}. Explore how those records are distributed across neighborhoods, not just the overall size of the day.</p>
+                <button class="story-step-action" onclick={() => selectedDay = row.day}>Focus Day {row.day} ↗</button>
+              </article>
+            {/each}
+          </div>
+        </div>
+      </section>
+
+      <section class="section recurrence-section" id="recurrence">
+        <div class="section-heading">
+          <p class="eyebrow">05 / REPEATED FOOTPRINTS</p>
+          <h2>Which neighborhoods<br /><em>show up again?</em></h2>
+          <p>Compare events side by side. Cells show actual observed tow counts, and “Events” measures how often any towing record appears in the same neighborhood — not necessarily a high-intensity hotspot.</p>
+        </div>
+        <div class="panel">
+          <NeighborhoodMatrix {geography} {events} {selectedDay} {selectedEvent} {selectedNeighborhood}
+            on:select={(event) => selectMatrixCell(event.detail)} />
+        </div>
+      </section>
+
+      <section class="section signatures-section" id="signatures">
+        <div class="section-heading">
+          <p class="eyebrow">06 / NEIGHBORHOOD SIGNATURES</p>
+          <h2>Not just <em>how many</em>.<br />But <em>which day</em>.</h2>
+          <p>Normalized bars compare the Day 1 / Day 2 / Day 3 composition inside each neighborhood. Compare the neighborhoods featured in the FP1 proposal, or sort by total volume and day share.</p>
+        </div>
+        <div class="panel">
+          <DaySignatures {geography} {selectedEvent} {selectedNeighborhood}
+            on:select={(event) => selectedNeighborhood = event.detail} />
+        </div>
+      </section>
+    {/if}
+
     <section class="section explore-section" id="explore">
-      <div class="section-heading"><p class="eyebrow">04 / SPATIAL EXPLORER</p><h2>Where does the<br /><em>pattern move?</em></h2><p>Neighborhood-level counts connect three-day changes with geography. Every area uses the same City boundary dataset.</p></div>
+      <div class="section-heading"><p class="eyebrow">07 / SPATIAL EXPLORER</p><h2>Where does the<br /><em>pattern move?</em></h2><p>Neighborhood-level counts connect three-day changes with geography. Every area uses the same City boundary dataset.</p></div>
       <div class="panel explorer-panel">
         <div class="filterbar">
           <label>EMERGENCY
@@ -171,9 +261,9 @@
               <span class="eyebrow">SELECTED AREA</span>
               <h3>{selectedArea?.name ?? 'Choose a neighborhood'}</h3>
               {#if selectedArea}
-                <strong class="detail-count">{fmt.format(selectedArea.total)}</strong>
-                <p>observed tows across all nine events</p>
-                <p>Appears in {selectedArea.event_count} of 9 emergencies.</p>
+                <strong class="detail-count">{fmt.format(selectedAreaCount)}</strong>
+                <p>observed tows in {titleScope}, {selectedDay ? 'Day ' + selectedDay : 'all days'}.</p>
+                <p>{fmt.format(selectedArea.total)} across all nine events; {summary.neighborhoods.find((area) => area.name === selectedArea.name)?.event_count ?? '—'} of 9 events contain records.</p>
               {:else}
                 <p>Select a neighborhood on the map to inspect its overall counts and recurrence.</p>
               {/if}
@@ -191,7 +281,7 @@
     </section>
 
     <section class="section methods-section" id="methods">
-      <div class="section-heading"><p class="eyebrow">05 / METHODS & CAVEATS</p><h2>What the data<br /><em>can — and can't — say.</em></h2></div>
+      <div class="section-heading"><p class="eyebrow">08 / METHODS & CAVEATS</p><h2>What the data<br /><em>can — and can't — say.</em></h2></div>
       <div class="methods-grid">
         <div><b>Source</b><p>City of Minneapolis official ArcGIS Snow Emergency tow FeatureServer layers and neighborhood boundaries.</p></div>
         <div><b>Interpretation</b><p>Counts represent observed enforcement actions; they do not measure illegal parking prevalence or individual towing probability.</p></div>
