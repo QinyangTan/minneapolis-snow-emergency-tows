@@ -16,6 +16,8 @@
   $: firstEvent = events.find((event) => event.id === first);
   $: secondEvent = events.find((event) => event.id === second);
   $: stats = topEventPairs(events, geography, metric);
+  $: closestDays = topEventPairs(events, geography, 'days').closest[0];
+  $: closestNeighborhoods = topEventPairs(events, geography, 'neighborhoods').closest[0];
   $: left = firstEvent ? metric === 'days' ? dayVector(firstEvent) : neighborhoodVector(geography, first) : [];
   $: right = secondEvent ? metric === 'days' ? dayVector(secondEvent) : neighborhoodVector(geography, second) : [];
   $: distance = left.length && right.length ? jsDivergence(left,right) : null;
@@ -58,6 +60,10 @@
       <p>Out-of-boundary records excluded in this view; each event is normalized by its own mapped count.</p>
     {/if}
   </div>
+</div>
+<div class="comparison-insight">
+  <h3>Same data, two different notions of similarity</h3>
+  <p>By the <strong>three-day mix</strong>, {closestDays?.a} and {closestDays?.b} are the closest pair (divergence {f.format(closestDays?.divergence ?? 0)}). By <strong>mapped neighborhood composition</strong>, {closestNeighborhoods?.a} and {closestNeighborhoods?.b} are closest (divergence {f.format(closestNeighborhoods?.divergence ?? 0)}). A pair that looks similar by day need not have the same spatial footprint.</p>
 </div>
 <div class="comparison-pairs">
   <div>
