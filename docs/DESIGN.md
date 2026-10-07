@@ -31,7 +31,7 @@ Next: small-multiple map, normalized neighborhood profiles, recurrence matrix, s
 ## Acceptance criteria
 1. The page works with the preliminary snapshot **and visibly labels it preliminary**, with a no-map-yet state rather than fake geography.
 2. Regenerated data is strictly derived from official ArcGIS layers, is neighborhood-aggregated, and never exposes address-level raw point records.
-3. Each selected event/day count and map neighborhood count reconciles with the source.
+3. Event/day counts match the full source; spatially assigned neighborhood counts plus explicit unassigned points reconcile with the source.
 4. Exclude the incomplete Victory 2 layer; every included event has days 1, 2 and 3.
 5. Glenwood uses the identical neighborhood join applied to all events.
 6. The deployment is a static artifact; no runtime third-party geocoding.
