@@ -9,7 +9,7 @@ test('Research comparison explains both day profiles and mapped spatial composit
   await page.setViewportSize({ width: 1365, height: 900 });
   await openWithData(page);
   const section = page.locator('.comparison-section');
-  await expect(section.getByText('JENSEN–SHANNON DIVERGENCE')).toBeVisible();
+  await expect(section.getByText('JENSEN–SHANNON DIVERGENCE', { exact: true })).toBeVisible();
   await section.locator('select[aria-label="First Snow Emergency"]').selectOption('Bridge');
   await section.locator('select[aria-label="Second Snow Emergency"]').selectOption('Bridge');
   await expect(section.locator('.comparison-value')).toContainText('0');
