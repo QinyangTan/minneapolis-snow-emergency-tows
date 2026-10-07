@@ -29,7 +29,6 @@ jobs:
       - name: Record real-browser demo GIFs
         if: success()
         run: |
-          ffmpeg -version | head -1
           npm run demo:gifs
       - name: Upload demo GIFs
         if: success()
