@@ -83,3 +83,18 @@
 @media(prefers-reduced-motion:reduce) {
   .story-step, .small-map-panel, .event-grid .event-row { transition: none; }
 }
+
+/* WCAG AA contrast correction: maintain the same visual hierarchy but make
+   informational text legible on white, ivory and pale-blue backgrounds. */
+.section:not(.hero) .eyebrow { color: #385671; }
+.section-heading p:last-child { color: #3f5369; }
+.rule-number { color: #647b91; }
+.rule-card p { color: #41566b; }
+.mini-note { color: #42576d; }
+.panel-header span, .bar-data span, .event-season { color: #475b70; }
+.map-key, .area-detail p, .map-placeholder p, .methods-grid p { color: #42586e; }
+.signature-sample, .story-step p { color: #415970; }
+.matrix-tools label, .signature-tools label { color: #405970; }
+.small-map-heading strong { color: #41586f; }
+.filterbar label, .day-picker > span { color: #425b73; }
+.map-placeholder-art { color: #657d93; }
