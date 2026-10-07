@@ -86,7 +86,7 @@ test('day composition remains normalized for selected event; sorted matrix and k
 
   await page.locator('.matrix-tools select').first().selectOption('presence');
   await expect(page.locator('.recurrence-matrix tbody tr')).toHaveCount(15);
-  await page.locator('.matrix-tools select').nth(1).selectOption('87');
+  await page.locator('.matrix-tools select').nth(2).selectOption('87');
   const count = await page.locator('.recurrence-matrix tbody tr').count();
   expect(count).toBeGreaterThanOrEqual(65);
 
