@@ -90,7 +90,7 @@
     <div class:verified={summary !== null} class="status-strip">
       <span class="status-dot"></span>
       {#if summary}
-        Regenerated City ArcGIS data · {new Date(summary.generated_at_utc).toLocaleDateString('en-US')}
+        Regenerated City ArcGIS data · {new Date(summary.generated_at_utc).toLocaleDateString('en-US')} · {fmt.format(summary.unassigned_neighborhood_count ?? 0)} unassigned map points
       {:else}
         FP1 preliminary data · October 5, 2026 · Awaiting automated source regeneration
       {/if}
