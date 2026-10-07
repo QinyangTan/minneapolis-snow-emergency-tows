@@ -49,7 +49,7 @@
     </select>
   </label>
 </div>
-<div class="matrix-scroll" tabindex="0" role="region" aria-label="Scroll the neighborhood by Snow Emergency event matrix horizontally">
+<div class="matrix-scroll" role="region" aria-label="Scroll the neighborhood by Snow Emergency event matrix horizontally">
   <table class="recurrence-matrix">
     <thead><tr>
       <th scope="col" class="sticky-name">NEIGHBORHOOD</th>
