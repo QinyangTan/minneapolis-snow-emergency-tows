@@ -31,7 +31,14 @@ OUT = Path(__file__).resolve().parents[1] / "static" / "data"
 
 
 def api(url, **params):
-    response = requests.get(url, params={"f": "json", **params}, timeout=90)
+    arguments = {"f": "json", **params}
+    prepared = requests.Request("GET", url, params=arguments).prepare()
+    # Some ArcGIS gateways respond 404 to long GET URLs containing hundreds
+    # of object IDs, even though the layer itself exists.
+    if len(prepared.url or "") > 1500:
+        response = requests.post(url, data=arguments, timeout=90)
+    else:
+        response = requests.get(url, params=arguments, timeout=90)
     response.raise_for_status()
     obj = response.json()
     if not isinstance(obj, dict) or "error" in obj:
