@@ -3,15 +3,19 @@
 
 An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly appear or rank prominently across separate emergencies.
 
-**Status:** M0–M4 interactive prototype validated: nine official ArcGIS layers reprocessed (October 7, 2026), verified neighborhood GeoJSON, linked visualizations, real Chromium desktop/mobile automated QA (5/5 tests), WCAG 2.1 A/AA serious/critical automated audit, and three recorded GIF demos. Remaining before final course submission: manual screenreader review, final editorial annotations, and optional static deployment.
+**Status:** M0–M4 interactive prototype validated: nine official ArcGIS layers reprocessed (October 7, 2026), verified neighborhood GeoJSON, linked visualizations, real Chromium desktop/mobile automated QA (7/7 tests), WCAG 2.1 A/AA serious/critical automated audit, and three recorded GIF demos. Remaining before final course submission: manual screenreader review, final editorial annotations, and the rubric-required public GitHub Pages beta deployment.
 
 ## Research-grade analysis and accountability
 
-This is a **descriptive interactive data story**, not a live parking predictor. The application answers three distinct questions using different evidence: day-by-day patterns, neighborhoods with recurring **prominence** (not just presence), and variation between distinct Snow Emergencies. See [method and submission-readiness matrix](docs/RUBRIC_TRACEABILITY.md) for evidence, explicit limitations, and the still-unavailable official Fall 2026 Canvas rubric.
+This is a **descriptive interactive data story**, not a live parking predictor. The application answers three distinct questions using different evidence: day-by-day patterns, neighborhoods with recurring **prominence** (not just presence), and variation between distinct Snow Emergencies. See [method and submission-readiness matrix](docs/RUBRIC_TRACEABILITY.md) for evidence, explicit limitations, and the verified Fall 2026 CSCI 5609 Canvas rubric.
 
 The recurrence matrix reports both *ANY RECORD* (one or more tows) and *PROMINENT* (top 5/10/15 neighborhoods by observed event-specific tows, with at least five records, retaining cutoff ties). The selector lets readers assess threshold sensitivity. Event comparisons use a symmetric 0–1 Jensen–Shannon divergence of either three-day shares or mapped neighborhood shares; each mode states its denominator. **Neither descriptive measure establishes towing risk or causation.**
 
 For a larger team, maintain [verifiable contribution records](docs/TEAM_CONTRIBUTIONS.md), mutually review all analytical claims, and confirm the required [AI contribution disclosure](docs/AI_DISCLOSURE.md) before submitting to the course.
+
+## Official course milestones
+
+The Canvas connector was restored October 7, 2026 and the **actual Fall 2026 FP1–FP4 rubrics** were checked. See [milestone scores and deadlines](docs/RUBRIC_TRACEABILITY.md). FP1 requires a **7–10-minute PDF slide presentation by October 12**, while FP3 explicitly awards **2 points for a public GitHub Pages site**. The private source repo need not itself become public if an approved static demo is deployed separately. The [registered five-person team](docs/TEAM_CONTRIBUTIONS.md) must verify contribution ownership and [Codex/ChatGPT disclosures](docs/AI_DISCLOSURE.md). ChatGPT/GitHub commits are NOT course-funded Codex sessions.
 
 ## Animated demos
 
