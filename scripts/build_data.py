@@ -121,10 +121,11 @@ def aggregate(records, neighborhoods):
         day_counts[day] += 1
         event_counts[event] += 1
         event_days[event, day] += 1
-        area_counts[neighborhood] += 1
-        area_days[neighborhood, day] += 1
-        area_events[neighborhood, event] += 1
-        area_event_days[neighborhood, event, day] += 1
+        if neighborhood is not None:
+            area_counts[neighborhood] += 1
+            area_days[neighborhood, day] += 1
+            area_events[neighborhood, event] += 1
+            area_event_days[neighborhood, event, day] += 1
     for event, _, _ in EVENTS:
         if any(event_days[event, d] == 0 for d in (1, 2, 3)):
             raise ValueError(f"Incomplete day coverage: {event}")
@@ -132,6 +133,7 @@ def aggregate(records, neighborhoods):
         "status": "recomputed-official-arcgis",
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "total": len(records),
+        "unassigned_neighborhood_count": sum(n is None for _, _, n in records),
         "days": [{"day": d, "count": day_counts[d]} for d in (1, 2, 3)],
         "events": [
             {"id": e, "season": s, "total": event_counts[e],
@@ -145,8 +147,11 @@ def aggregate(records, neighborhoods):
             for n, _, _ in neighborhoods
         ]
     }
-    if sum(x["total"] for x in summary["neighborhoods"]) != len(records):
+    if (sum(x["total"] for x in summary["neighborhoods"])
+        + summary["unassigned_neighborhood_count"] != len(records)):
         raise ValueError("Neighborhood totals failed reconciliation")
+    if summary["unassigned_neighborhood_count"] > len(records) * 0.20:
+        raise ValueError("Over 20% of tow points cannot be assigned to Minneapolis neighborhoods")
     geography = {"type": "FeatureCollection", "features": []}
     for n, geometry, _ in neighborhoods:
         geography["features"].append({
@@ -180,6 +185,7 @@ def build():
     for event, season, preliminary in EVENTS:
         layer, features = query_features(service_for(event, services), "esriGeometryPoint")
         sources[event] = layer
+        unmatched_count = 0
         for feature in features:
             day = parse_day(feature.get("properties") or {})
             geom = feature.get("geometry") or {}
@@ -195,18 +201,22 @@ def build():
                 raise ValueError(f"{event}: out-of-range coordinates")
             point = Point(lon, lat)
             matched = [n for n, _, polygon in neighborhoods if polygon.covers(point)]
-            if len(matched) != 1:
-                raise ValueError(f"{event}: point has {len(matched)} neighborhood matches")
-            records.append((event, day, matched[0]))
+            if len(matched) > 1:
+                raise ValueError(f"{event}: point has multiple neighborhood matches")
+            if not matched:
+                unmatched_count += 1
+            records.append((event, day, matched[0] if matched else None))
         quality.append({"event": event, "season": season, "source_layer": layer,
                         "preliminary": preliminary, "retrieved": len(features),
+                        "unassigned_neighborhood_count": unmatched_count,
                         "difference": len(features) - preliminary})
     summary, geography = aggregate(records, neighborhoods)
     summary["sources"] = sources
     report = {"events": quality, "actual_total": summary["total"],
+              "unassigned_neighborhood_count": summary["unassigned_neighborhood_count"],
               "preliminary_total": 5423,
               "difference": summary["total"] - 5423,
-              "note": "Official observed tows; current neighborhood polygons; raw addresses never exported."}
+              "note": "Official observed tows; some geocoded points fall outside current neighborhood boundaries and are excluded from maps but retained in citywide totals. No raw addresses exported."}
     return summary, geography, report
 
 
