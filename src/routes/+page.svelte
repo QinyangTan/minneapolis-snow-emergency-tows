@@ -153,12 +153,12 @@
             </button>
           {/each}
         </div>
-        <p class="mini-note">FP1 preliminary result: Day 1 23.1% · Day 2 41.0% · Day 3 35.9%. Percentages refer to observed tow records, not the risk of being towed.</p>
+        <p class="mini-note">{summary ? 'Regenerated official City records.' : 'FP1 preliminary snapshot.'} Share of selected event records: {chartDays.map((row) => 'Day ' + row.day + ' ' + (row.count / Math.max(1, chartTotal) * 100).toFixed(1) + '%').join(' · ')}. These are observed tow records, not the risk of being towed.</p>
       </div>
     </section>
 
     <section class="section events-section">
-      <div class="section-heading"><p class="eyebrow">03 / THE EVENTS</p><h2>Nine emergencies.<br /><em>Nine different stories.</em></h2><p>Different storms contribute different record totals. Comparing day composition requires the regenerated layer data.</p></div>
+      <div class="section-heading"><p class="eyebrow">03 / THE EVENTS</p><h2>Nine emergencies.<br /><em>Nine different stories.</em></h2><p>Different storms contribute different record totals. The stacked day profiles are recalculated directly from each of the nine official event layers.</p></div>
       <div class="event-grid">
         {#each events as event}
           {@const proportions = shares(event.days ?? [])}
