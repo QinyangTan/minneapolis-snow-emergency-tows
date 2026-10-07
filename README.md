@@ -47,7 +47,7 @@ npm run check
 npm run build
 ```
 
-The data pipeline intentionally **fails loudly** if an event cannot be unambiguously matched in the official service directory, if an emergency has missing days, or if invalid day/geolocation records are encountered. Inspect `static/data/quality.json` and review count differences from FP1 before using the generated maps as final evidence. After regeneration, commit `static/data/summary.json`, `static/data/neighborhoods.geojson`, and `static/data/quality.json` (but not raw address-level point data).
+The data pipeline fails loudly for ambiguous services, missing days, and invalid record geometry. Points outside the current City neighborhood polygons are retained in city totals, but excluded from neighborhood maps and disclosed in quality output. Inspect `static/data/quality.json` and review count differences from FP1 before using the generated maps as final evidence. After regeneration, commit `static/data/summary.json`, `static/data/neighborhoods.geojson`, and `static/data/quality.json` (but not raw address-level point data).
 
 ## Project map
 
