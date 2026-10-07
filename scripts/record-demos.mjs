@@ -4,6 +4,7 @@
  * ArcGIS data, and each GIF contains actual browser frames from the app.
  */
 import { chromium } from '@playwright/test';
+import ffmpegPath from 'ffmpeg-static';
 import { spawn, execFileSync } from 'node:child_process';
 import { mkdir, readdir, rm, stat } from 'node:fs/promises';
 import path from 'node:path';
@@ -50,7 +51,8 @@ async function recordedScenario(browser, name, interaction) {
   if (videos.length !== 1) throw new Error(`${name}: expected a single real browser video, found ${videos.length}`);
   const source = path.join(tmp, videos[0]);
   const output = path.join(DEST, name + '.gif');
-  execFileSync('ffmpeg', [
+  if (!ffmpegPath) throw new Error('Bundled ffmpeg binary not available');
+  execFileSync(ffmpegPath, [
     '-hide_banner', '-loglevel', 'error', '-y',
     '-i', source,
     '-filter_complex',
