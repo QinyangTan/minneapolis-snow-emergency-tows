@@ -7,6 +7,7 @@
   import DaySignatures from '$lib/DaySignatures.svelte';
   import EventComparison from '$lib/EventComparison.svelte';
   import EventFingerprints from '$lib/EventFingerprints.svelte';
+  import EventConstellation from '$lib/EventConstellation.svelte';
   import RankSensitivity from '$lib/RankSensitivity.svelte';
   import { countInScope, eventDays, shares, type NeighborhoodGeoJSON } from '$lib/analytics';
   import {
@@ -185,11 +186,26 @@
     </section>
 
 
+    {#if geography && summary}
+      <section class="section constellation-section" id="constellation" aria-labelledby="constellation-title">
+        <div class="section-heading">
+          <p class="eyebrow">04 / MULTIVARIATE ANALYSIS · TASK FIRST</p>
+          <h2 id="constellation-title">How many.<br /><em>When. Where.</em></h2>
+          <p>Each dot is one complete Snow Emergency. Position compares two distinct proportions, mark area expresses total observed records, and hue identifies the peak day. Explore whether a Day 2-heavy event is also geographically concentrated: the two patterns need not align.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-header"><h3>Event constellation · nine records of history</h3><span>One mark = one emergency</span></div>
+          <EventConstellation {events} {geography} {selectedEvent}
+            on:select={(event)=>selectedEvent=event.detail}/>
+        </div>
+      </section>
+    {/if}
+
     <div id="geography" class="story-anchor" aria-hidden="true"></div>
     {#if geography && summary}
       <section class="section geography-section">
         <div class="section-heading">
-          <p class="eyebrow">04 / SPATIAL SHIFTS · GUIDED NARRATIVE</p>
+          <p class="eyebrow">05 / SPATIAL SHIFTS · GUIDED NARRATIVE</p>
           <h2>Same city.<br /><em>Three different maps.</em></h2>
           <p>The three neighborhood maps below share the exact same color scale. Scroll through the day-specific observations, or choose a map to highlight its day.</p>
         </div>
@@ -222,7 +238,7 @@
     {#if geography && summary}
       <section class="section recurrence-section">
         <div class="section-heading">
-          <p class="eyebrow">05 / REPEATED FOOTPRINTS</p>
+          <p class="eyebrow">06 / REPEATED FOOTPRINTS</p>
           <h2>A recurring footprint.<br /><em>But how stable?</em></h2>
           <p>Compare observed counts across emergencies. Separate measures distinguish a neighborhood simply appearing in an event from ranking among that event’s leading tow-count neighborhoods. Method thresholds are explicit and adjustable.</p>
         </div>
@@ -241,7 +257,7 @@
     {#if geography && summary}
       <section class="section signatures-section">
         <div class="section-heading">
-          <p class="eyebrow">06 / NEIGHBORHOOD SIGNATURES</p>
+          <p class="eyebrow">07 / NEIGHBORHOOD SIGNATURES</p>
           <h2>Not just <em>how many</em>.<br />But <em>which day</em>.</h2>
           <p>Normalized bars compare the Day 1 / Day 2 / Day 3 composition inside each neighborhood. Compare the neighborhoods featured in the FP1 proposal, or sort by total volume and day share.</p>
         </div>
