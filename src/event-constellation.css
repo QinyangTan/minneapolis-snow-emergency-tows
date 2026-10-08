@@ -1,0 +1,31 @@
+/* Course-aligned analytic plot: quantitative positions, category hue, area, and details-on-demand. */
+.constellation-layout{display:grid;grid-template-columns:minmax(0,1.75fr) minmax(235px,1fr);gap:30px;align-items:start}
+.constellation-main{min-width:0}
+.constellation-controls{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+.constellation-legend{display:flex;align-items:center;gap:12px 18px;flex-wrap:wrap;font-size:11px;font-weight:700;color:#31546c}
+.constellation-legend>span{display:inline-flex;align-items:center;gap:6px}
+.constellation-legend i{width:10px;height:10px;display:inline-block;border-radius:50%;border:1px solid #fff;box-shadow:0 0 0 1px #b5c5cf}
+.constellation-encoding{appearance:none;border:1px solid #9ab2bf;background:#f0f6f9;color:#1a4b65;font-size:12px;font-weight:750;padding:10px 12px;text-align:left;cursor:pointer;white-space:normal}
+.constellation-encoding:hover{background:#dfeef2}.constellation-encoding:focus-visible{outline:3px solid #c07942;outline-offset:2px}
+.constellation-scroll{overflow-x:auto;max-width:100%;overscroll-behavior-x:contain;scrollbar-color:#819fb1 #e8f0f4}
+.constellation-figure{position:relative;width:100%;min-width:620px;aspect-ratio:780/440;background:#fdfefe;isolation:isolate}
+.constellation-figure svg{display:block;width:100%;height:100%}
+.constellation-point{position:absolute;z-index:2;display:flex;align-items:center;justify-content:center;padding:0;border:2px solid #fff;border-radius:50%;box-shadow:0 0 0 1.5px #34586d,0 2px 8px #17394b24;transform:translate(-50%,-50%);font:750 11px 'Space Grotesk',sans-serif;color:white;text-shadow:0 1px 2px #16334773;cursor:pointer;transition:width .28s ease,height .28s ease,box-shadow .2s ease}
+.constellation-point:hover{z-index:5;box-shadow:0 0 0 4px #194d6780,0 8px 18px #17394b24}
+.constellation-point.constellation-active{z-index:4;box-shadow:0 0 0 4px #bc4761,0 4px 16px #13374559}
+.constellation-point:focus-visible{z-index:5;outline:3px solid #a74615;outline-offset:5px}
+.constellation-aside{background:#eff5f7;border-top:4px solid #275f77;padding:20px;display:flex;flex-direction:column;gap:15px;min-width:0}
+.constellation-aside h3{font:700 clamp(20px,2vw,28px)/1.1 'Space Grotesk',sans-serif;letter-spacing:-.035em;color:#173b54;margin:0}
+.constellation-aside>p:not(.mini-note){font-size:13px;color:#415d70;line-height:1.6;margin:0}
+.constellation-roster{display:flex;flex-direction:column;gap:4px}
+.constellation-roster>button{appearance:none;border:1px solid #d6e3e9;background:white;color:#24475f;display:grid;grid-template-columns:minmax(60px,1fr) minmax(55px,auto) minmax(55px,auto);gap:10px;align-items:center;padding:9px 12px;text-align:left;cursor:pointer}
+.constellation-roster>button:hover,.constellation-roster>button.roster-selected{background:#e6f0f3;border-color:#38809c}
+.constellation-roster>button.roster-selected{box-shadow:inset 4px 0 #bc4761}
+.constellation-roster>button:focus-visible{outline:3px solid #c07942}
+.constellation-roster-name{font-size:12px;font-weight:750;overflow-wrap:anywhere}
+.constellation-roster-values{font-variant-numeric:tabular-nums;text-align:right;font-size:12px;font-weight:750}
+.constellation-roster-values small{display:block;color:#49667a;font-size:10px;font-weight:500}
+.constellation-aside .mini-note{margin-top:auto}
+@media(max-width:900px){.constellation-layout{grid-template-columns:1fr}.constellation-aside{padding:18px}.constellation-roster{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.constellation-roster{grid-template-columns:1fr}.constellation-controls{align-items:start}.constellation-figure{min-width:620px}.constellation-aside{gap:11px}}
+@media(prefers-reduced-motion:reduce){.constellation-point{transition:none}}
