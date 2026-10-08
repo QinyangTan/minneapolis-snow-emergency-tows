@@ -182,9 +182,6 @@
 
 
     <div id="geography" class="story-anchor" aria-hidden="true"></div>
-    <div id="recurrence" class="story-anchor" aria-hidden="true"></div>
-    <div id="signatures" class="story-anchor" aria-hidden="true"></div>
-    <div id="comparison" class="story-anchor" aria-hidden="true"></div>
     {#if geography && summary}
       <section class="section geography-section">
         <div class="section-heading">
@@ -216,6 +213,9 @@
         </div>
       </section>
 
+    {/if}
+    <div id="recurrence" class="story-anchor" aria-hidden="true"></div>
+    {#if geography && summary}
       <section class="section recurrence-section">
         <div class="section-heading">
           <p class="eyebrow">05 / REPEATED FOOTPRINTS</p>
@@ -232,6 +232,9 @@
         </div>
       </section>
 
+    {/if}
+    <div id="signatures" class="story-anchor" aria-hidden="true"></div>
+    {#if geography && summary}
       <section class="section signatures-section">
         <div class="section-heading">
           <p class="eyebrow">06 / NEIGHBORHOOD SIGNATURES</p>
@@ -244,6 +247,9 @@
         </div>
       </section>
 
+    {/if}
+    <div id="comparison" class="story-anchor" aria-hidden="true"></div>
+    {#if geography && summary}
       <section class="section comparison-section">
         <div class="section-heading">
           <p class="eyebrow">07 / EVENT COMPARISON</p>
