@@ -2,7 +2,7 @@ name: Browser QA — Chromium
 
 on:
   push:
-    branches: [qa/browser-gif-demos, main]
+    branches: [qa/browser-gif-demos, main, feat/editorial-visualizations-fingerprints]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -30,11 +30,15 @@ jobs:
       - name: Playwright end-to-end browser QA
         run: npm run qa:browser
       - name: Record real-browser demo GIFs
-        if: success() && github.ref == 'refs/heads/qa/browser-gif-demos'
+        if: success() && (github.ref == 'refs/heads/qa/browser-gif-demos' || github.ref == 'refs/heads/feat/editorial-visualizations-fingerprints')
         run: |
-          npm run demo:gifs
+          if [ "$GITHUB_REF" = 'refs/heads/feat/editorial-visualizations-fingerprints' ]; then
+            EDITORIAL_ONLY=1 npm run demo:gifs
+          else
+            npm run demo:gifs
+          fi
       - name: Upload demo GIFs
-        if: success() && github.ref == 'refs/heads/qa/browser-gif-demos'
+        if: success() && (github.ref == 'refs/heads/qa/browser-gif-demos' || github.ref == 'refs/heads/feat/editorial-visualizations-fingerprints')
         uses: actions/upload-artifact@v4
         with:
           name: chromium-demo-gifs
@@ -42,7 +46,7 @@ jobs:
           if-no-files-found: error
           retention-days: 30
       - name: Commit verified GIF demos to the source branch
-        if: github.event_name == 'push' && github.ref == 'refs/heads/qa/browser-gif-demos'
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/qa/browser-gif-demos' || github.ref == 'refs/heads/feat/editorial-visualizations-fingerprints')
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'docs: add verified Chromium GIF demos [skip ci]'
