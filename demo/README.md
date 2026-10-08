@@ -10,6 +10,24 @@ Drag the city to rotate it. Scroll or pinch to zoom. Select a neighborhood, unfo
 
 ![The same city unfolded into three Snow Emergency days](../docs/screenshots/winter/unfolded.jpg)
 
+## Real-interaction GIF gallery
+
+These are authentic recordings of the deployed Three.js interface running in a Chromium test browser, not AI-generated mockups or static slide transitions.
+
+**Orbit and view presets**
+
+![Drag to rotate and switch camera views](../docs/demos/winter-3d-orbit.gif)
+
+**Unfold the Day 1 / Day 2 / Day 3 city**
+
+![Expand and collapse the parallel three-day 3D views](../docs/demos/winter-3d-three-days.gif)
+
+**Compare the same neighborhood in two emergency events**
+
+![Event comparison with shared Count and Share encodings](../docs/demos/winter-3d-event-comparison.gif)
+
+These clips visualize **ten selected events and 6,118 records**; the older nine-event project uses a different selected sample. No demo shows a personal towing probability or causal weather effect.
+
 ## Run the demo
 
 Node.js 22.12+ or 24+.
