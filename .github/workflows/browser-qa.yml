@@ -2,7 +2,7 @@ name: Browser QA — Chromium
 
 on:
   push:
-    branches: [qa/browser-gif-demos, main]
+    branches: [qa/browser-gif-demos, qa/winter-gif-demos, main]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -56,6 +56,35 @@ jobs:
         with:
           commit_message: 'docs: add verified Chromium GIF demos [skip ci]'
           file_pattern: 'docs/demos/*.gif'
+      - name: Node 24 for Vite 8 3D capture
+        if: success() && github.ref == 'refs/heads/qa/winter-gif-demos'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Build the standalone ten-event winter site for live recordings
+        if: success() && github.ref == 'refs/heads/qa/winter-gif-demos'
+        run: |
+          npm ci --prefix demo --no-audit --no-fund
+          npm run check --prefix demo
+          npm run build --prefix demo
+          npx playwright test --config=playwright.winter.config.mjs
+      - name: Record authentic Three.js winter browser GIFs
+        if: success() && github.ref == 'refs/heads/qa/winter-gif-demos'
+        run: node scripts/record-winter-demos.mjs
+      - name: Upload winter demo GIF artifacts
+        if: success() && github.ref == 'refs/heads/qa/winter-gif-demos'
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-winter-3d-gifs
+          path: docs/demos/winter-3d-*.gif
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit verified winter GIFs to recording branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/qa/winter-gif-demos'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'docs: add authentic winter 3D Chromium GIF recordings [skip ci]'
+          file_pattern: 'docs/demos/winter-3d-*.gif'
       - name: Attach Playwright failure details
         if: always()
         uses: actions/upload-artifact@v4
