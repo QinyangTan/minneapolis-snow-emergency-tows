@@ -6,6 +6,8 @@ on:
     paths:
       - 'demo/**'
       - '.github/workflows/winter-3d-qa.yml'
+      - 'e2e/winter.spec.mjs'
+      - 'playwright.winter.config.mjs'
   pull_request:
     branches: [main]
     paths:
@@ -24,7 +26,7 @@ jobs:
   winter-3d:
     name: Data, Svelte, build and public-artifact checks
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     defaults:
       run:
         working-directory: demo
@@ -56,3 +58,22 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Verify raw snapshot and generated ten-event dataset
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Install isolated Chromium test harness
+        working-directory: .
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium browser and OS libraries
+        working-directory: .
+        run: npx playwright install --with-deps chromium
+      - name: Test production 3D app in desktop, mobile, keyboard and fallback modes
+        working-directory: .
+        run: npx playwright test --config=playwright.winter.config.mjs
+      - name: Archive failed winter browser evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: winter-3d-browser-evidence
+          path: |
+            test-results/
+            artifacts/winter-playwright-report/
+          if-no-files-found: ignore
+          retention-days: 14
