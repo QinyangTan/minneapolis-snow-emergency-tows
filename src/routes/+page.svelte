@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { base } from '$app/paths';
   import NeighborhoodMap from '$lib/NeighborhoodMap.svelte';
   import DaySmallMultiples from '$lib/DaySmallMultiples.svelte';
   import NeighborhoodMatrix from '$lib/NeighborhoodMatrix.svelte';
@@ -31,8 +32,8 @@
     (async () => {
       try {
         const [a, b] = await Promise.all([
-          fetch('/data/summary.json'),
-          fetch('/data/neighborhoods.geojson')
+          fetch(`${base}/data/summary.json`),
+          fetch(`${base}/data/neighborhoods.geojson`)
         ]);
         if (a.status === 404 || b.status === 404) return; // deliberately show preliminary-only state
         if (!a.ok || !b.ok) throw new Error('Generated data could not be loaded');
