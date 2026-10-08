@@ -23,6 +23,12 @@ The application now features **nine multi-attribute event fingerprint cards**, a
 
 The design decisions, alternatives, quantitative encodings, interactions, keyboard behavior and data limitations are documented in [VISUAL_STORY_REDESIGN.md](docs/VISUAL_STORY_REDESIGN.md). All six embedded GIFs below are recorded from the actual Chromium application and reflect tested interactions, not generated mockups.
 
+## Interpretable event comparisons and deployment readiness
+
+The event JSD matrix now has a paired distribution view. Two colored points and an aligned axis show the actual **Day 1–3 shares**, or the **eight mapped-neighborhood shares with the largest percentage-point differences** between selected events. Each comparison displays its two denominators, the sign of the percentage-point change, and the citywide-vs-mapped scope — this makes the abstract similarity measure inspectable.
+
+We also prepared (but **did not publicly deploy**) a [GitHub Pages project-path build and privacy preflight](docs/PAGES_RELEASE_READINESS.md) and a [real human usability/screenreader evaluation protocol](docs/USER_EVALUATION_PROTOCOL.md). The Private source repository remains Private. Follow the course's [official scoring requirements](docs/RUBRIC_TRACEABILITY.md) for any actual release.
+
 ## Animated demos
 
 ### New · Multi-attribute event fingerprints
