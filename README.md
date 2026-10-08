@@ -1,9 +1,12 @@
 # Three Days, Three Rules
+
+**[▶ OPEN LIVE INTERACTIVE PUBLIC DEMO](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/)**  ·  [Compiled public release repository](https://github.com/QinyangTan/minneapolis-snow-emergency-tows-demo)
+
 **Visualizing Minneapolis Snow Emergency Tows** · CSCI 5609 Final Project
 
 An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly appear or rank prominently across separate emergencies.
 
-**Status:** M0–M4 interactive prototype validated: nine official ArcGIS layers reprocessed (October 7, 2026), verified neighborhood GeoJSON, linked visualizations, real Chromium desktop/mobile automated QA (7/7 tests), WCAG 2.1 A/AA serious/critical automated audit, and three recorded GIF demos. Remaining before final course submission: manual screenreader review, final editorial annotations, and the rubric-required public GitHub Pages beta deployment.
+**Status (Oct 8, 2026):** LIVE public GitHub Pages demo with nine official ArcGIS event layers, linked analysis and six real browser GIFs. Public 1440px desktop and 390px mobile Chromium verification passed, and the source CI had 14/14 browser E2E tests plus a GitHub Pages subpath smoke test passing. Still required for final course submission: real participant evaluation, manual screenreader review, team sign-off and course reports.
 
 ## Research-grade analysis and accountability
 
@@ -27,7 +30,7 @@ The design decisions, alternatives, quantitative encodings, interactions, keyboa
 
 The event JSD matrix now has a paired distribution view. Two colored points and an aligned axis show the actual **Day 1–3 shares**, or the **eight mapped-neighborhood shares with the largest percentage-point differences** between selected events. Each comparison displays its two denominators, the sign of the percentage-point change, and the citywide-vs-mapped scope — this makes the abstract similarity measure inspectable.
 
-We also prepared (but **did not publicly deploy**) a [GitHub Pages project-path build and privacy preflight](docs/PAGES_RELEASE_READINESS.md) and a [real human usability/screenreader evaluation protocol](docs/USER_EVALUATION_PROTOCOL.md). The Private source repository remains Private. Follow the course's [official scoring requirements](docs/RUBRIC_TRACEABILITY.md) for any actual release.
+The [public GitHub Pages demo](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) is now live; it is published from a separate repo containing **only compiled HTML/CSS/JS and City aggregates**, with a [verified project-path build and release checklist](docs/PAGES_RELEASE_READINESS.md). This development/source repo remains **Private**. A [real human usability/screenreader evaluation protocol](docs/USER_EVALUATION_PROTOCOL.md) is ready, but participation has **not yet been conducted**.
 
 ## Animated demos
 

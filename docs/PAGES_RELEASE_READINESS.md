@@ -1,33 +1,47 @@
-# GitHub Pages project-path readiness — build-only, not published
+# GitHub Pages live release — compiled-only public artifact
 
-## Why this work is necessary
+**Deployment status: LIVE (October 8, 2026).** The actual authenticated-source GitHub repo `QinyangTan/minneapolis-snow-emergency-tows` is **Private**. The separate `QinyangTan/minneapolis-snow-emergency-tows-demo` repository is **Public** and contains compiled build artifacts only.
 
-CSCI 5609 FP3 explicitly gives credit for a **publicly accessible GitHub Pages URL**. The current **source repository is Private**. The static code may be published *only after* the five-person team agrees on an acceptable public artifact and checks the repository/organization plan and Pages permissions.
+- **Public, unauthenticated site:** https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/
+- **Public release artifact repo:** https://github.com/QinyangTan/minneapolis-snow-emergency-tows-demo
+- **Public release commit:** `989dd33ea50bd7341520763b19cdeed025415dfc`
+- **Private source PR for deploy readiness:** #8, merged into main at `f0e9a7f1b1d3c3c0b83116df001acf9cd6cf3a3e`
+- **Public build source:** October 7 City aggregate snapshot, SvelteKit static build using `PAGES_BASE_PATH=/minneapolis-snow-emergency-tows-demo`.
 
-The old client requested `/data/*.json` from the domain root. That would 404 if the app is served under `/<repo>/`. This branch uses SvelteKit's `$app/paths.base` for data fetches and a configurable build-time `paths.base`.
+## Independent live verification
 
-## Reproduce a project-path artifact without publishing
+Checked after GitHub Pages build became `built`:
+
+| Item | Live result |
+|---|---|
+| Homepage, no login | HTTP 200 |
+| `data/summary.json` | HTTP 200 |
+| `data/neighborhoods.geojson` | HTTP 200 (771,993 bytes) |
+| Headless Chrome 1440px | PASS, nine fingerprint cards, three maps, official data, filtering, paired-event comparison |
+| Headless Chrome 390px | PASS, nine fingerprint cards, three maps, no root overflow or page script errors |
+| Existing private-source Actions CI | 14/14 Chromium tests and independent Pages-subpath smoke test passed |
+| Source repository visibility | Private |
+| Demo artifact repository visibility | Public |
+
+Published artifact: 19 static build files totaling 993,262 bytes plus `.nojekyll` and a public README; no original `src/`, `.git/` from source, `docs/`, `tests/`, `.env`, course PDF, team records, raw address data, or deployment credentials. A text scan for team names, e-mail identity, common GitHub/OpenAI keys and PEM private-key delimiters had no matches. This is limited evidence, not a comprehensive security audit.
+
+## Reproduce builds safely
 
 ```bash
-npm install
+npm install --no-audit --no-fund
 npm run check
 npm run qa:research
 npm run build:pages
 npm run qa:pages
-PAGES_BASE_PATH=/minneapolis-snow-emergency-tows npx playwright test e2e/pages.spec.mjs
+PAGES_BASE_PATH=/minneapolis-snow-emergency-tows-demo npx playwright test e2e/pages.spec.mjs
 ```
 
-The Pages build should have `/minneapolis-snow-emergency-tows/_app/...` asset links. The smoke test visits that subpath in Chromium and confirms the official processed summary and map geometry both return HTTP 200, plus nine event cards, three maps and the evidence chart render. Ordinary `npm run build` remains root-path compatible.
+The code uses SvelteKit `$app/paths.base` rather than root-absolute `/data/` for fetching official City aggregates. The public Pages checkout requires `.nojekyll` so the compiler's `_app/` folder is served intact. Pages is configured to publish the **public repo main branch root**. Do not publish this private development repository or its `docs/TEAM_CONTRIBUTIONS.md` to make a class URL.
 
-## Static content and privacy review
+## Future deployments
 
-- The built artifact intentionally includes **aggregate City towing data** under `/data/`, UI HTML, assets and JS. It should not include exact tow addresses or individual respondent records.
-- The preflight blocks common development/private artifact paths (`.env`, docs, tests, git internals, raw data, team contribution documents) in `build/`. This is **not a full security scan** and cannot guarantee no sensitive content embedded in JS bundles; a reviewer must inspect the final build.
-- No automatic public deployment action is configured. A **new/public GitHub Pages repository** may be needed if the private source repository's Pages entitlement does not allow an anonymous public site. Do not make source public just to simplify a class demo.
-- If an approved standalone public artifact repo is used, ensure its Pages path matches the `PAGES_BASE_PATH` build value. Keep the source Private. Ask teammates before publishing team names, recording footage or course material.
-- Public deployment requires **unauthenticated browser verification** of the exact URL, phone and desktop checks, 404 fallback and resource loading, linked controls and a data provenance note.
-- Add the final URL to README and Canvas only **after** it has been opened successfully without signing in; no URL is currently claimed.
+Future UI changes to the **private source** do **not** update the public site automatically. To release another version, (1) run all source CI / browser checks, (2) build with this public demo's exact base path, (3) repeat the privacy preflight, (4) commit only `build/` contents (plus `.nojekyll` and public README) to the **separate public artifact repo**, (5) verify the GitHub Pages build and uncached HTTP 200, assets and real browser interactions. Do not put personal tokens in workflows or publish private repo code history. The deployed client JS is necessarily accessible in minified form on the public web.
 
-## Human validation gates
+## Still required before course final
 
-Follow [USER_EVALUATION_PROTOCOL.md](USER_EVALUATION_PROTOCOL.md) to conduct a real small user evaluation. The existing axe/Playwright checks are not actual user feedback. Record contributor reviews and AI/Codex disclosure honestly.
+The public URL addresses the **FP3 publication requirement**, but does not by itself establish a score. Team sign-off, human think-aloud comprehension evaluation, real screenreader accessibility review, narrative annotations and FP2/FP4 report/presentation still remain. See [USER_EVALUATION_PROTOCOL.md](USER_EVALUATION_PROTOCOL.md) and [RUBRIC_TRACEABILITY.md](RUBRIC_TRACEABILITY.md).

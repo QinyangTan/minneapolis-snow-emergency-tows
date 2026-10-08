@@ -32,7 +32,7 @@ Canvas showed FP1 **unsubmitted** on October 7. Deadlines derived from Canvas UT
 
 ## FP3/FP4 product readiness
 
-The project already includes official City ArcGIS neighborhood aggregates, Svelte/D3 linked maps, event comparison, disclosed hotspot top-K metric and browser tests. Gaps: empirically tested narrative comprehension, prominent annotated insights, documented sketches and design rationale, approved **public GitHub Pages deployment**, final illustrated reflection report and rehearsal. Screenshots/tests do not replace an actual user study.
+The project already includes official City ArcGIS neighborhood aggregates, Svelte/D3 linked maps, event comparison, disclosed hotspot top-K metric and browser tests. Gaps: empirically tested narrative comprehension, prominent annotated insights, documented sketches and design rationale, **live public GitHub Pages demo** (Oct 8 release; live URL independently checked), final illustrated reflection report and rehearsal. Screenshots/tests do not replace an actual user study.
 
 The instructor's FP4 design lecture favors legible text and legends, annotation and key takeaways, concrete examples next to overviews, invitations to interaction, consistent layout, and a small-scale usability evaluation (e.g. think-aloud/interviews/questionnaire).
 
