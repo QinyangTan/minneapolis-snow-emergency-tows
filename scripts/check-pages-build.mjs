@@ -11,7 +11,12 @@ const root=path.resolve('build');
 const htmlPath=path.join(root,'index.html');
 if(!existsSync(htmlPath))throw Error('Missing static build/index.html');
 const html=readFileSync(htmlPath,'utf8');
-if(!html.includes(base+'/_app/'))throw Error('Compiled links do not include Pages project base '+base);
+// SvelteKit prerender deliberately emits relative "./_app/..." URLs on
+// static pages; these are subpath-safe. Absolute URLs must include the base.
+if (!html.includes('_app/')) throw Error('No compiled app assets referenced from HTML');
+if (/(?:["'(])\/_app\//.test(html)) throw Error('Root-absolute _app links will break at Pages project subpath');
+// The stronger test below is a real Chromium fetch under the declared base,
+// rather than falsely requiring all SvelteKit assets to be absolute URLs.
 
 for(const relative of ['data/summary.json','data/neighborhoods.geojson','data/quality.json']) {
   const file=path.join(root,relative);
