@@ -5,6 +5,8 @@
   import NeighborhoodMatrix from '$lib/NeighborhoodMatrix.svelte';
   import DaySignatures from '$lib/DaySignatures.svelte';
   import EventComparison from '$lib/EventComparison.svelte';
+  import EventFingerprints from '$lib/EventFingerprints.svelte';
+  import RankSensitivity from '$lib/RankSensitivity.svelte';
   import { countInScope, eventDays, shares, type NeighborhoodGeoJSON } from '$lib/analytics';
   import {
     preliminaryDays, preliminaryEvents,
@@ -141,7 +143,7 @@
     </section>
 
     <section class="section findings-section" id="findings">
-      <div class="section-heading"><p class="eyebrow">02 / CITYWIDE VIEW</p><h2>Most tows happen<br /><em>after Day 1.</em></h2><p>Observed records by emergency day, {titleScope}. Select an event when regenerated data is available.</p></div>
+      <div class="section-heading"><p class="eyebrow">02 / CITYWIDE VIEW</p><h2>Day 2 leads.<br /><em>But not everywhere.</em></h2><p>Observed records by emergency day, {titleScope}. Select an event when regenerated data is available.</p></div>
       <div class="panel stats-panel">
         <div class="panel-header">
           <h3>Day-by-day composition</h3><span>{fmt.format(chartTotal)} observed records</span>
@@ -160,26 +162,22 @@
     </section>
 
     <section class="section events-section">
-      <div class="section-heading"><p class="eyebrow">03 / THE EVENTS</p><h2>Nine emergencies.<br /><em>Nine different stories.</em></h2><p>Different storms contribute different record totals. The stacked day profiles are recalculated directly from each of the nine official event layers.</p></div>
-      <div class="event-grid">
-        {#each events as event}
-          {@const proportions = shares(event.days ?? [])}
-          <button class:event-selected={selectedEvent === event.id} class="event-row" disabled={!summary} onclick={() => selectedEvent = selectedEvent === event.id ? 'all' : event.id}>
-            <span class="event-name">{event.id}</span><span class="event-season">{event.season}</span>
-            <span class="event-track event-stack">
-              {#if summary}
-                {#each proportions as portion, i}
-                  <span class={'day-' + (i+1)} style:width={(portion * 100) + '%'} title={'Day ' + (i+1) + ': ' + (portion * 100).toFixed(1) + '%'}></span>
-                {/each}
-              {:else}
-                <span class="event-volume" style:width={(event.total / Math.max(...events.map((e) => e.total)) * 100) + '%'}></span>
-              {/if}
-            </span>
-            <strong>{fmt.format(event.total)}</strong>
-          </button>
-        {/each}
-      </div>
-      <p class="mini-note">{summary ? 'Each stacked row shows Day 1 / Day 2 / Day 3 proportions within that event, with total records at right. Click to filter all the linked views.' : 'FP1 snapshot shows event totals only, pending layer-level day data.'}</p>
+      <div class="section-heading"><p class="eyebrow">03 / NINE EVENT FINGERPRINTS</p><h2>Every storm has<br /><em>its own signature.</em></h2><p>Compare event size, within-event day composition, the largest observed neighborhood count and geocoding coverage — all in one coordinated view.</p></div>
+      {#if geography && summary}
+        <EventFingerprints {events} {geography} {selectedEvent}
+          on:select={(event) => selectedEvent=event.detail} />
+      {:else}
+        <div class="event-grid">
+          {#each events as event}
+            <div class="event-row">
+              <span class="event-name">{event.id}</span><span class="event-season">{event.season}</span>
+              <div class="event-track"><div style:width={(event.total / Math.max(...events.map(e=>e.total))*100)+'%'}></div></div>
+              <strong>{fmt.format(event.total)}</strong>
+            </div>
+          {/each}
+        </div>
+        <p class="mini-note">Event totals from the preliminary FP1 snapshot; full fingerprints need the validated ArcGIS data.</p>
+      {/if}
     </section>
 
 
@@ -221,12 +219,16 @@
       <section class="section recurrence-section">
         <div class="section-heading">
           <p class="eyebrow">05 / REPEATED FOOTPRINTS</p>
-          <h2>Which neighborhoods<br /><em>show up again?</em></h2>
+          <h2>A recurring footprint.<br /><em>But how stable?</em></h2>
           <p>Compare observed counts across emergencies. Separate measures distinguish a neighborhood simply appearing in an event from ranking among that event’s leading tow-count neighborhoods. Method thresholds are explicit and adjustable.</p>
         </div>
         <div class="panel">
           <NeighborhoodMatrix {geography} {events} {selectedDay} {selectedEvent} {selectedNeighborhood}
             on:select={(event) => selectMatrixCell(event.detail)} />
+        </div>
+        <div class="panel sensitivity-panel">
+          <RankSensitivity {events} {geography} {selectedDay} {selectedNeighborhood}
+            on:select={(event)=>selectedNeighborhood=event.detail} />
         </div>
       </section>
 
