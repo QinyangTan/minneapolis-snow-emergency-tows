@@ -13,7 +13,7 @@
   $: scale=constellationScale(rows);
   $: ordered=[...rows].sort((a,b)=>b.day2Share-a.day2Share||a.id.localeCompare(b.id));
   const format=(n:number)=>(100*n).toFixed(1)+'%';
-  const palette=(day:number|null)=>day===1?'#426b99':day===2?'#c76d40':day===3?'#23867f':'#667385';
+  const palette=(day:number|null)=>day===1?'#365f8a':day===2?'#a7522d':day===3?'#176e66':'#526376';
   const left=105,top=55,width=630,height=285,canvasWidth=780,canvasHeight=440;
   const px=(x:number,xMax:number)=>left+width*x/xMax;
   const py=(y:number,yMax:number)=>top+height*(1-y/yMax);
