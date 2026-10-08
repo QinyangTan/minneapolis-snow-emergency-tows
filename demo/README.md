@@ -44,6 +44,21 @@ npm test
 npm run build
 ```
 
+Reproduce the three genuine GIF demonstrations from a local Chromium session
+after installing root Playwright/ffmpeg dependencies and building the winter app:
+
+```sh
+# Run from the source repository root
+npm install --no-audit --no-fund
+npx playwright install chromium
+npm ci --prefix demo
+npm run build --prefix demo
+npm run demo:winter-gifs
+```
+
+The recorder launches a local preview, interacts with the live DOM and writes
+`docs/demos/winter-3d-*.gif`. It does not call image generation or reuse a static screenshot.
+
 The standalone Svelte / Three.js / D3 demo lives in this directory. The original SvelteKit application remains in the repository root.
 
 ## Data
