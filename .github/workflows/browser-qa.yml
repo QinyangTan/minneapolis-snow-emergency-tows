@@ -29,6 +29,15 @@ jobs:
         run: npm run build
       - name: Playwright end-to-end browser QA
         run: npm run qa:browser
+      - name: Build project-path GitHub Pages artifact (NOT publishing)
+        run: npm run build:pages
+      - name: Check public artifact contents and asset paths
+        run: npm run qa:pages
+      - name: Smoke-test Chromium preview under project subpath
+        run: PAGES_BASE_PATH=/minneapolis-snow-emergency-tows npx playwright test e2e/pages.spec.mjs
+      - name: Restore root-path preview for GIF recorder
+        if: success() && github.ref == 'refs/heads/qa/browser-gif-demos'
+        run: npm run build
       - name: Record real-browser demo GIFs
         if: success() && github.ref == 'refs/heads/qa/browser-gif-demos'
         run: |
