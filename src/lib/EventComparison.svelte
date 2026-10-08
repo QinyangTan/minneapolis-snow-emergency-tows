@@ -1,6 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte';
   import EventSimilarityMatrix from './EventSimilarityMatrix.svelte';
+  import ComparisonEvidence from './ComparisonEvidence.svelte';
   import { jsDivergence, dayVector, neighborhoodVector, topEventPairs } from './eventAnalysis.mjs';
   import type { EventRow } from './preliminary';
   import type { NeighborhoodGeoJSON } from './analytics';
@@ -66,6 +67,7 @@
   <h3>Same data, two different notions of similarity</h3>
   <p>By the <strong>three-day mix</strong>, {closestDays?.a} and {closestDays?.b} are the closest pair (divergence {f.format(closestDays?.divergence ?? 0)}). By <strong>mapped neighborhood composition</strong>, {closestNeighborhoods?.a} and {closestNeighborhoods?.b} are closest (divergence {f.format(closestNeighborhoods?.divergence ?? 0)}). A pair that looks similar by day need not have the same spatial footprint.</p>
 </div>
+<ComparisonEvidence {first} {second} {left} {right} {geography} {metric}/>
 <div class="comparison-matrix-panel">
   <EventSimilarityMatrix {events} {geography} {metric} selectedA={first} selectedB={second}
     on:selectPair={(event)=>{first=event.detail.a;second=event.detail.b;}}/>

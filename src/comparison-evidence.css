@@ -1,0 +1,35 @@
+/* Interpretation-first paired distribution / dumbbell comparison */
+.pair-evidence{margin:26px 0;padding:25px;background:#f7fafb;border:1px solid #d6e2e9;border-top:4px solid #3c7589}
+.pair-evidence-intro{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:start;margin-bottom:18px}
+.pair-evidence-intro h3{font:700 clamp(20px,2vw,28px)/1.2 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#173953;margin:10px 0}
+.pair-evidence-intro p{font-size:13px;line-height:1.6;color:#3d596f;margin:0}
+.pair-evidence-key{display:flex;flex-wrap:wrap;gap:13px 17px;margin-top:5px;font-size:12px;font-weight:700;color:#1c3d56}
+.pair-evidence-key span{display:flex;align-items:center;gap:7px}
+.pair-evidence-key i{width:12px;height:12px;display:inline-block;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px rgba(0,0,0,.09)}
+.pair-key-a i{background:#2c7188}.pair-key-b i{background:#bc5264}
+.pair-axis{display:grid;grid-template-columns:repeat(3,1fr);width:43%;margin:15px 18.5% 8px auto;color:#52697b;font-size:11px;font-variant-numeric:tabular-nums}
+.pair-axis span:nth-child(2){text-align:center}.pair-axis span:last-child{text-align:right}
+.pair-rows{display:flex;flex-direction:column;gap:2px}
+.pair-row{display:grid;grid-template-columns:minmax(120px,1fr) minmax(160px,2fr) minmax(110px,.75fr) 90px;align-items:center;gap:13px;padding:15px 7px;border-bottom:1px solid #dce7ed}
+.pair-row:last-child{border-bottom:0}
+.pair-category{font:700 13px 'DM Sans',sans-serif;line-height:1.4;color:#173c55}
+.pair-plot{position:relative;height:31px;border-top:0;border-bottom:0}
+.pair-zero,.pair-mid,.pair-end{position:absolute;top:2px;bottom:2px;width:1px;background:#c6d7e2}
+.pair-zero{left:0}.pair-mid{left:50%}.pair-end{right:0}
+.pair-span{position:absolute;top:50%;height:3px;transform:translateY(-50%);background:#708899}
+.pair-dot{position:absolute;width:13px;height:13px;border:2px solid #fff;box-shadow:0 0 0 1px #4c687c;border-radius:50%;transform:translate(-50%,-50%);z-index:1}
+.pair-a{top:36%;background:#2c7188}.pair-b{top:64%;background:#bc5264}
+.pair-shares{text-align:right;color:#2b536b;font-size:12px;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pair-shares span{color:#92a5b3;padding:0 2px}
+.pair-delta{font-size:12px;font-weight:700;color:#a53b55;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.pair-delta.negative{color:#2a7188}
+@media(max-width:1050px){
+ .pair-row{grid-template-columns:minmax(110px,1fr) minmax(140px,2fr) minmax(100px,1fr) 88px;gap:9px}
+ .pair-axis{width:38%;margin-right:24%}
+}
+@media(max-width:760px){
+ .pair-evidence{padding:17px 12px}.pair-evidence-intro{grid-template-columns:1fr}.pair-evidence-key{gap:12px}
+ .pair-row{grid-template-columns:minmax(92px,1fr) minmax(110px,1.8fr) 83px;gap:7px;row-gap:0;padding:11px 4px}
+ .pair-category{font-size:11px}.pair-shares{grid-column:2;text-align:left;font-size:10px}.pair-delta{grid-column:3;grid-row:1 / span 2;font-size:10px}
+ .pair-plot{grid-column:2;grid-row:1}.pair-axis{width:45%;margin:12px 23% 8px auto}
+}
