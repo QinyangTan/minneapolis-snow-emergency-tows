@@ -1,0 +1,68 @@
+name: Browser QA — Chromium
+
+on:
+  push:
+    branches: [qa/browser-gif-demos, main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  chromium-e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install packages
+        run: npm install --no-audit --no-fund
+      - name: Install Chromium and OS libraries
+        run: npx playwright install --with-deps chromium
+      - name: Svelte type and a11y checks
+        run: npm run check
+      - name: Compile production site
+        run: npm run build
+      - name: Playwright end-to-end browser QA
+        run: npm run qa:browser
+      - name: Build project-path GitHub Pages artifact (NOT publishing)
+        run: npm run build:pages
+      - name: Check public artifact contents and asset paths
+        run: npm run qa:pages
+      - name: Smoke-test Chromium preview under project subpath
+        run: PAGES_BASE_PATH=/minneapolis-snow-emergency-tows-demo npx playwright test e2e/pages.spec.mjs
+      - name: Restore root-path preview for GIF recorder
+        if: success() && github.ref == 'refs/heads/qa/browser-gif-demos'
+        run: npm run build
+      - name: Record real-browser demo GIFs
+        if: success() && github.ref == 'refs/heads/qa/browser-gif-demos'
+        run: |
+          npm run demo:gifs
+      - name: Upload demo GIFs
+        if: success() && github.ref == 'refs/heads/qa/browser-gif-demos'
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-demo-gifs
+          path: docs/demos/*.gif
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit verified GIF demos to the source branch
+        if: github.event_name == 'push' && github.ref == 'refs/heads/qa/browser-gif-demos'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'docs: add verified Chromium GIF demos [skip ci]'
+          file_pattern: 'docs/demos/*.gif'
+      - name: Attach Playwright failure details
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chromium-qa-artifacts
+          path: |
+            artifacts/playwright-report/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 14

@@ -12,12 +12,14 @@ Audience: classmates, Minneapolis residents, and instructors curious about how a
 | 4 · Recurrence | A hotspot may recur across distinct events | Neighborhood × event recurrence matrix | Hover counts and recurrence definition |
 | 5 · Signatures | Neighborhoods have distinct day profiles | Normalized 100% bars or heatmap | Sort by total/day share |
 | 6 · Explore | Select event, day and neighborhood | Linked choropleth and details | Filters persist; reset available |
+| 7 · Event difference | Ask which emergencies share a day or neighborhood composition | Two complementary JSD comparisons | Select any event pair; link to explorer |
 
 ## Visual encoding choices
 - Neighborhood **fill intensity** = absolute observed tow count; common domain for side-by-side day comparisons.
 - Day color tokens = Day 1 blue, Day 2 orange, Day 3 teal; do not rely only on color.
 - 100% bars = composition (percentage of records), **not rate, probability, or risk**.
-- Recurrence definition for MVP = number of distinct complete emergency events with **>=1** observed tow in neighborhood. This measures appearance, **not** necessarily a top-ranked hotspot; a future prominence threshold needs a separate label.
+- Recurrence has **two distinct measures**: ANY RECORD (at least one observed tow per event) versus PROMINENT (top 5/10/15 by observed event count among city neighborhoods, minimum 5 tows, cutoff ties included). The threshold is adjustable for sensitivity checks. Neither measures exposure-adjusted risk.
+- Event comparison uses Jensen–Shannon divergence (base 2; 0 identical, 1 fully disjoint). Day-share comparisons include all citywide event records; geographic comparisons renormalize over assigned neighborhood records. These denominators are explicitly stated.
 - Count vs composition are different encodings; never use them interchangeably.
 - Display absolute N, selected event/day, and source provenance alongside maps.
 - Provide keyboard focus behavior, readable tooltips, and reduced-motion fallbacks.
