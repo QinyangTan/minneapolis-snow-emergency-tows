@@ -152,3 +152,15 @@ The primary design authority is the team's *CSCI5609 FP1 Snow Emergency Proposal
 ## Working agreement
 
 Do not publish false-precision dot maps, mislabel observed counts as risk, silently discard unmatched records, or claim an FP1 preliminary count has been independently revalidated. Always show source, unit of analysis, time coverage, and limitations. No raw address-level export in the public app.
+
+## Alternative winter 3D demo
+
+**[Open Snow in Minneapolis](https://minneapolis-snow-emergency-demo.vercel.app)** · [Run instructions and data notes](demo/README.md)
+
+A standalone snow-white and ice-blue city map. Drag to rotate, unfold the three days, or compare two events. This demo uses its own selected collection: 10 events, 6,118 tow records and 87 neighborhoods. Needle height shows Count or within-neighborhood three-day Share; it does not show snow depth or individual tow risk.
+
+![Snow in Minneapolis: interactive neighborhood map](docs/screenshots/winter/desktop.jpg)
+
+![The city unfolded into three Snow Emergency days](docs/screenshots/winter/unfolded.jpg)
+
+Run from the repository root with `cd demo && npm ci && npm run dev`. The root application and its nine-event analysis use the commands above. [Mobile](docs/screenshots/winter/mobile.jpg) · [Event comparison](docs/screenshots/winter/comparison.jpg) · [UI review](docs/winter-design-review.md).

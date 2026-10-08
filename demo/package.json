@@ -1,0 +1,24 @@
+{
+  "name": "three-days-three-rules",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test tests/*.test.js",
+    "check": "svelte-check --tsconfig ./jsconfig.json --fail-on-warnings"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "svelte": "^5.56.1",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^7.1.2",
+    "vite": "^8.0.16",
+    "svelte-check": "^4.3.3",
+    "typescript": "^5.9.3"
+  }
+}
