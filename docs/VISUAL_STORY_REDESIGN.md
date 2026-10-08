@@ -30,4 +30,4 @@
 - Numeric unit tests: event JSD identity/symmetry; strict data reconciliation; prominence threshold monotonicity.
 - Browser regressions: 9 fingerprints, count/percentage totals, linked selection, 81 matrix cells, matrix symmetry and metric switching, sensitivity lines, mobile root width, keyboard and axe serious/critical.
 - Manual gates remain: real user think-aloud comprehension, actual screenreader and low-end-device review, teammates' independent method critique and documented contribution sign-offs.
-- Next refinement after UI tests: update README demo GIFs **only using real browser recordings** of the new views; record them as additional demos without overwriting authentic previous clips; human review of editorial wording before course release.
+- **Recorded demo verification complete:** three additional real Chromium GIFs were committed and embedded in README; the three earlier authentic recordings remain intact. Human review of editorial wording and usability is still required before course release.
