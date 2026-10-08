@@ -12,7 +12,8 @@
     "demo:gifs": "node scripts/record-demos.mjs",
     "qa:research": "node --test tests/test_event_analysis.mjs tests/test_comparison_evidence.mjs",
     "build:pages": "PAGES_BASE_PATH=/minneapolis-snow-emergency-tows-demo npm run build",
-    "qa:pages": "node scripts/check-pages-build.mjs"
+    "qa:pages": "node scripts/check-pages-build.mjs",
+    "demo:winter-gifs": "node scripts/record-winter-demos.mjs"
   },
   "dependencies": {
     "@sveltejs/kit": "^2.20.0",

@@ -155,12 +155,23 @@ Do not publish false-precision dot maps, mislabel observed counts as risk, silen
 
 ## Alternative winter 3D demo
 
-**[Open Snow in Minneapolis](https://minneapolis-snow-emergency-demo.vercel.app)** · [Run instructions and data notes](demo/README.md)
+**[▶ EXPLORE THE LIVE 3D WINTER CITY](https://minneapolis-snow-emergency-demo.vercel.app)** · [Standalone data story source](demo/README.md)
 
-A standalone snow-white and ice-blue city map. Drag to rotate, unfold the three days, or compare two events. This demo uses its own selected collection: 10 events, 6,118 tow records and 87 neighborhoods. Needle height shows Count or within-neighborhood three-day Share; it does not show snow depth or individual tow risk.
+This separate Three.js visualization uses a **ten-event / 6,118-record** collection, *not* the nine-event / 5,423-record sample of the main SvelteKit story. It adds an audited Omega event; do not combine counts from the two views without making the event selection explicit. Needle height represents observed Count or within-neighborhood day Share, not snow depth or per-vehicle towing risk.
 
-![Snow in Minneapolis: interactive neighborhood map](docs/screenshots/winter/desktop.jpg)
+### Genuine interactive demo GIFs — recorded from Chromium
 
-![The city unfolded into three Snow Emergency days](docs/screenshots/winter/unfolded.jpg)
+**Orbit the city** — freely rotate the real neighborhood geometry, then switch between top and angled views.
 
-Run from the repository root with `cd demo && npm ci && npm run dev`. The root application and its nine-event analysis use the commands above. [Mobile](docs/screenshots/winter/mobile.jpg) · [Event comparison](docs/screenshots/winter/comparison.jpg) · [UI review](docs/winter-design-review.md).
+![Actual Chromium GIF: rotate Minneapolis neighborhood 3D scene and change view](docs/demos/winter-3d-orbit.gif)
+
+**Unfold three days** — reveal parallel views of the same city and compare daily counts with a shared scale.
+
+![Actual Chromium GIF: unfold three Snow Emergency days in the same 3D city](docs/demos/winter-3d-three-days.gif)
+
+**Compare two emergencies** — Bridge versus Howard, switching Count/Share and selecting the third day.
+
+![Actual Chromium GIF: compare City event counts and shares side by side in 3D](docs/demos/winter-3d-event-comparison.gif)
+
+[Live 3D demo](https://minneapolis-snow-emergency-demo.vercel.app) · [Run locally](demo/README.md) · [Mobile screenshot](docs/screenshots/winter/mobile.jpg) · [Design review](docs/winter-design-review.md)
+
