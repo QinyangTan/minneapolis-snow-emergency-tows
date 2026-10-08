@@ -76,6 +76,7 @@ async function main() {
   try {
     await waitForServer();
     browser = await chromium.launch({ headless: true });
+    if (process.env.EDITORIAL_ONLY !== '1') {
     await recordedScenario(browser, 'three-day-map-comparison', async (page) => {
       await page.locator('.small-multiple-shell').scrollIntoViewIfNeeded();
       await page.waitForTimeout(1100);
@@ -85,7 +86,7 @@ async function main() {
       }
     });
     await recordedScenario(browser, 'linked-event-neighborhood-explorer', async (page) => {
-      await page.locator('.event-grid .event-row').filter({hasText:'Bridge'}).click();
+      await page.locator('.fingerprint-gallery .fingerprint-card').filter({hasText:'Bridge'}).click();
       await page.waitForTimeout(1100);
       await page.locator('.explorer-panel').scrollIntoViewIfNeeded();
       await page.locator('.filterbar .day-picker button').filter({hasText:/^2$/}).click();
@@ -107,11 +108,44 @@ async function main() {
       await page.locator('.signature-tools select').first().selectOption('day3');
       await page.waitForTimeout(1250);
     });
+    }
+    await recordedScenario(browser, 'event-fingerprint-gallery', async (page) => {
+      await page.locator('.fingerprint-gallery').scrollIntoViewIfNeeded();
+      await page.waitForTimeout(1150);
+      await page.locator('.fingerprint-card').filter({hasText:'Bridge'}).click();
+      await page.waitForTimeout(1100);
+      await page.locator('.fingerprint-card').filter({hasText:'Howard'}).click();
+      await page.waitForTimeout(1100);
+      await page.locator('.fingerprint-gallery').scrollIntoViewIfNeeded();
+      await page.waitForTimeout(850);
+    });
+    await recordedScenario(browser, 'event-similarity-matrix', async (page) => {
+      const matrix=page.locator('.similarity-scroll');
+      await matrix.scrollIntoViewIfNeeded();
+      await page.waitForTimeout(1100);
+      await matrix.getByRole('button',{name:/Compare Bridge to Howard:/}).click();
+      await page.waitForTimeout(1050);
+      await page.locator('select[aria-label="Compare events by distribution"]').selectOption('neighborhoods');
+      await page.waitForTimeout(1150);
+      await matrix.getByRole('button',{name:/Compare Bridge to Glenwood:/}).click();
+      await page.waitForTimeout(1050);
+    });
+    await recordedScenario(browser, 'hotspot-threshold-sensitivity', async (page) => {
+      const panel=page.locator('.sensitivity-panel');
+      await panel.scrollIntoViewIfNeeded();
+      await page.waitForTimeout(1100);
+      await panel.locator('.sensitivity-row').nth(0).click();
+      await page.waitForTimeout(1100);
+      await panel.locator('.sensitivity-row').nth(3).click();
+      await page.waitForTimeout(1100);
+      await panel.locator('.sensitivity-row').nth(1).click();
+      await page.waitForTimeout(1050);
+    });
   } finally {
     if (browser) await browser.close();
     server.kill('SIGTERM');
   }
-  console.log('Three real-interaction GIF demos saved under docs/demos/');
+  console.log('Real-interaction GIF demos saved under docs/demos/');
 }
 
 main().catch((error) => { console.error(error); process.exitCode = 1; });

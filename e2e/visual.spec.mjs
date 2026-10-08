@@ -44,7 +44,7 @@ test('linked event/day/neighborhood filters, matrix click, and reset', async ({ 
   page.on('pageerror', (error) => browserErrors.push(error.message));
   await ready(page);
 
-  await page.locator('.event-grid .event-row').filter({ hasText: 'Bridge' }).click();
+  await page.locator('.fingerprint-gallery .fingerprint-card').filter({ hasText: 'Bridge' }).click();
   await expect(page.locator('.filterbar select')).toHaveValue('Bridge');
   await expect(page.locator('.stats-panel .panel-header')).toContainText('852 observed records');
   await page.locator('.filterbar .day-picker button').filter({hasText: /^2$/}).click();

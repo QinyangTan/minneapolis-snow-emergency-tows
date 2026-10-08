@@ -17,7 +17,34 @@ For a larger team, maintain [verifiable contribution records](docs/TEAM_CONTRIBU
 
 The Canvas connector was restored October 7, 2026 and the **actual Fall 2026 FP1–FP4 rubrics** were checked. See [milestone scores and deadlines](docs/RUBRIC_TRACEABILITY.md). FP1 requires a **7–10-minute PDF slide presentation by October 12**, while FP3 explicitly awards **2 points for a public GitHub Pages site**. The private source repo need not itself become public if an approved static demo is deployed separately. The [registered five-person team](docs/TEAM_CONTRIBUTIONS.md) must verify contribution ownership and [Codex/ChatGPT disclosures](docs/AI_DISCLOSURE.md). ChatGPT/GitHub commits are NOT course-funded Codex sessions.
 
+## Editorial visualization gallery (current website)
+
+The application now features **nine multi-attribute event fingerprint cards**, a **nine-by-nine symmetric event-similarity matrix**, and **top-5/10/15 recurrence sensitivity slopegraphs**. These complement the linked three-day neighborhood maps, recurrence count matrix, day signatures and detailed event inspector. All values are computed from the verified Minneapolis City aggregates, rather than fabricated examples.
+
+The design decisions, alternatives, quantitative encodings, interactions, keyboard behavior and data limitations are documented in [VISUAL_STORY_REDESIGN.md](docs/VISUAL_STORY_REDESIGN.md). All six embedded GIFs below are recorded from the actual Chromium application and reflect tested interactions, not generated mockups.
+
 ## Animated demos
+
+### New · Multi-attribute event fingerprints
+
+Compare nine event signatures — size, Day 1–3 proportions, strongest neighborhood count, and geocoding coverage — then select events to filter the story.
+
+![Real Chromium GIF: nine Snow Emergency event fingerprint cards and linked filters](docs/demos/event-fingerprint-gallery.gif)
+
+### New · Pairwise similarity across nine events
+
+An interactive symmetric 9×9 Jensen–Shannon divergence matrix. Switch from day composition to mapped neighborhood composition and select any pair.
+
+![Real Chromium GIF: responsive event similarity matrix switching metrics and selected pairs](docs/demos/event-similarity-matrix.gif)
+
+### New · Hotspot-threshold sensitivity
+
+Compare neighborhood prominence at Top 5, Top 10 and Top 15 definitions; connect selected slopes back to the map explorer. These lines reflect a change of threshold, not time.
+
+![Real Chromium GIF: hotspot recurrence sensitivity curves with neighborhood selections](docs/demos/hotspot-threshold-sensitivity.gif)
+
+### Previous validated interaction demos
+
 
 These GIFs are **recordings of real Chromium browser interactions** with the reproducibly processed Minneapolis City dataset. They are not generated illustrations or static mockups.
 

@@ -5,6 +5,8 @@
   import NeighborhoodMatrix from '$lib/NeighborhoodMatrix.svelte';
   import DaySignatures from '$lib/DaySignatures.svelte';
   import EventComparison from '$lib/EventComparison.svelte';
+  import EventFingerprints from '$lib/EventFingerprints.svelte';
+  import RankSensitivity from '$lib/RankSensitivity.svelte';
   import { countInScope, eventDays, shares, type NeighborhoodGeoJSON } from '$lib/analytics';
   import {
     preliminaryDays, preliminaryEvents,
@@ -54,6 +56,8 @@
   $: selectedArea = geography?.features.find((feature) => feature.properties.name === selectedNeighborhood)?.properties;
   $: selectedAreaCount = selectedArea ? countInScope(selectedArea, selectedEvent, selectedDay) : 0;
   $: titleScope = selectedEvent === 'all' ? 'all nine events' : selectedEvent;
+  $: peakRow = chartDays.reduce((best,row)=>row.count>best.count?row:best,chartDays[0]);
+  $: peakShare = (peakRow?.count??0)/Math.max(1,chartTotal)*100;
   $: cityDays = summary?.days ?? preliminaryDays;
 
   function observeDayStep(node: HTMLElement, day: number) {
@@ -141,7 +145,7 @@
     </section>
 
     <section class="section findings-section" id="findings">
-      <div class="section-heading"><p class="eyebrow">02 / CITYWIDE VIEW</p><h2>Most tows happen<br /><em>after Day 1.</em></h2><p>Observed records by emergency day, {titleScope}. Select an event when regenerated data is available.</p></div>
+      <div class="section-heading"><p class="eyebrow">02 / CITYWIDE VIEW</p><h2>Day 2 leads.<br /><em>But not everywhere.</em></h2><p>Observed records by emergency day, {titleScope}. Select an event when regenerated data is available.</p></div>
       <div class="panel stats-panel">
         <div class="panel-header">
           <h3>Day-by-day composition</h3><span>{fmt.format(chartTotal)} observed records</span>
@@ -155,38 +159,32 @@
             </button>
           {/each}
         </div>
+        <div class="analysis-annotation"><b>READ THIS CHART</b><p>{titleScope === 'all nine events' ? 'Across the selected nine emergencies' : 'Within '+titleScope}, Day {peakRow?.day ?? '—'} has the largest observed count, representing {peakShare.toFixed(1)}% of this selection. This is a <strong>composition of recorded tows</strong>, not a measure of parking or towing risk.</p></div>
         <p class="mini-note">{summary ? 'Regenerated official City records.' : 'FP1 preliminary snapshot.'} Share of selected event records: {chartDays.map((row) => 'Day ' + row.day + ' ' + (row.count / Math.max(1, chartTotal) * 100).toFixed(1) + '%').join(' · ')}. These are observed tow records, not the risk of being towed.</p>
       </div>
     </section>
 
     <section class="section events-section">
-      <div class="section-heading"><p class="eyebrow">03 / THE EVENTS</p><h2>Nine emergencies.<br /><em>Nine different stories.</em></h2><p>Different storms contribute different record totals. The stacked day profiles are recalculated directly from each of the nine official event layers.</p></div>
-      <div class="event-grid">
-        {#each events as event}
-          {@const proportions = shares(event.days ?? [])}
-          <button class:event-selected={selectedEvent === event.id} class="event-row" disabled={!summary} onclick={() => selectedEvent = selectedEvent === event.id ? 'all' : event.id}>
-            <span class="event-name">{event.id}</span><span class="event-season">{event.season}</span>
-            <span class="event-track event-stack">
-              {#if summary}
-                {#each proportions as portion, i}
-                  <span class={'day-' + (i+1)} style:width={(portion * 100) + '%'} title={'Day ' + (i+1) + ': ' + (portion * 100).toFixed(1) + '%'}></span>
-                {/each}
-              {:else}
-                <span class="event-volume" style:width={(event.total / Math.max(...events.map((e) => e.total)) * 100) + '%'}></span>
-              {/if}
-            </span>
-            <strong>{fmt.format(event.total)}</strong>
-          </button>
-        {/each}
-      </div>
-      <p class="mini-note">{summary ? 'Each stacked row shows Day 1 / Day 2 / Day 3 proportions within that event, with total records at right. Click to filter all the linked views.' : 'FP1 snapshot shows event totals only, pending layer-level day data.'}</p>
+      <div class="section-heading"><p class="eyebrow">03 / NINE EVENT FINGERPRINTS</p><h2>Every storm has<br /><em>its own signature.</em></h2><p>Compare event size, within-event day composition, the largest observed neighborhood count and geocoding coverage — all in one coordinated view.</p></div>
+      {#if geography && summary}
+        <EventFingerprints {events} {geography} {selectedEvent}
+          on:select={(event) => selectedEvent=event.detail} />
+      {:else}
+        <div class="event-grid">
+          {#each events as event}
+            <div class="event-row">
+              <span class="event-name">{event.id}</span><span class="event-season">{event.season}</span>
+              <div class="event-track"><div style:width={(event.total / Math.max(...events.map(e=>e.total))*100)+'%'}></div></div>
+              <strong>{fmt.format(event.total)}</strong>
+            </div>
+          {/each}
+        </div>
+        <p class="mini-note">Event totals from the preliminary FP1 snapshot; full fingerprints need the validated ArcGIS data.</p>
+      {/if}
     </section>
 
 
     <div id="geography" class="story-anchor" aria-hidden="true"></div>
-    <div id="recurrence" class="story-anchor" aria-hidden="true"></div>
-    <div id="signatures" class="story-anchor" aria-hidden="true"></div>
-    <div id="comparison" class="story-anchor" aria-hidden="true"></div>
     {#if geography && summary}
       <section class="section geography-section">
         <div class="section-heading">
@@ -205,12 +203,12 @@
             </div>
           </div>
           <div class="story-steps">
-            {#each cityDays as row, i}
+            {#each chartDays as row, i}
               <article class:step-active={selectedDay === row.day} class="story-step"
                 use:observeDayStep={row.day}>
                 <span class="eyebrow">DAY 0{row.day} · {['EMERGENCY ROUTES', 'EVEN SIDES', 'ODD SIDES'][i]}</span>
                 <h3>{fmt.format(row.count)} recorded tows</h3>
-                <p>{(row.count / Math.max(1, summary.total) * 100).toFixed(1)}% of the nine-event citywide sample occurred on Day {row.day}. Explore how those records are distributed across neighborhoods, not just the overall size of the day.</p>
+                <p>{(row.count / Math.max(1, chartTotal) * 100).toFixed(1)}% of the observed records for {titleScope} occurred on Day {row.day}. The three maps use mapped counts, so their denominators may be slightly smaller than these citywide day totals.</p>
                 <button class="story-step-action" onclick={() => selectedDay = row.day}>Focus Day {row.day} ↗</button>
               </article>
             {/each}
@@ -218,18 +216,28 @@
         </div>
       </section>
 
+    {/if}
+    <div id="recurrence" class="story-anchor" aria-hidden="true"></div>
+    {#if geography && summary}
       <section class="section recurrence-section">
         <div class="section-heading">
           <p class="eyebrow">05 / REPEATED FOOTPRINTS</p>
-          <h2>Which neighborhoods<br /><em>show up again?</em></h2>
+          <h2>A recurring footprint.<br /><em>But how stable?</em></h2>
           <p>Compare observed counts across emergencies. Separate measures distinguish a neighborhood simply appearing in an event from ranking among that event’s leading tow-count neighborhoods. Method thresholds are explicit and adjustable.</p>
         </div>
         <div class="panel">
           <NeighborhoodMatrix {geography} {events} {selectedDay} {selectedEvent} {selectedNeighborhood}
             on:select={(event) => selectMatrixCell(event.detail)} />
         </div>
+        <div class="panel sensitivity-panel">
+          <RankSensitivity {events} {geography} {selectedDay} {selectedNeighborhood}
+            on:select={(event)=>selectedNeighborhood=event.detail} />
+        </div>
       </section>
 
+    {/if}
+    <div id="signatures" class="story-anchor" aria-hidden="true"></div>
+    {#if geography && summary}
       <section class="section signatures-section">
         <div class="section-heading">
           <p class="eyebrow">06 / NEIGHBORHOOD SIGNATURES</p>
@@ -242,6 +250,9 @@
         </div>
       </section>
 
+    {/if}
+    <div id="comparison" class="story-anchor" aria-hidden="true"></div>
+    {#if geography && summary}
       <section class="section comparison-section">
         <div class="section-heading">
           <p class="eyebrow">07 / EVENT COMPARISON</p>
