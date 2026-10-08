@@ -6,7 +6,7 @@
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import path from 'node:path';
 
-const base=process.env.PAGES_BASE_PATH||'/minneapolis-snow-emergency-tows';
+const base=process.env.PAGES_BASE_PATH||'/minneapolis-snow-emergency-tows-demo';
 const root=path.resolve('build');
 const htmlPath=path.join(root,'index.html');
 if(!existsSync(htmlPath))throw Error('Missing static build/index.html');
