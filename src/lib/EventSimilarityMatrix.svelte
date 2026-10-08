@@ -11,10 +11,10 @@
   export let selectedB='Howard';
   const dispatch=createEventDispatcher<{ selectPair: {a:string;b:string} }>();
   const format=(n:number)=>n.toFixed(3);
-  function vector(e: EventRow):number[] {
-    return metric==='days'?dayVector(e):neighborhoodVector(geography,e.id);
-  }
-  $: matrix=events.map(a=>events.map(b=>jsDivergence(vector(a),vector(b))??0));
+  // Explicit reactive dependencies are essential: Svelte cannot infer that
+  // a helper references metric or geography from its closure.
+  $: vectors=events.map(e=>metric==='days'?dayVector(e):neighborhoodVector(geography,e.id));
+  $: matrix=vectors.map(a=>vectors.map(b=>jsDivergence(a,b)??0));
   function fill(n:number):string {
     const t=Math.sqrt(Math.max(0,Math.min(1,n)));
     return `rgb(${Math.round(244-65*t)},${Math.round(248-62*t)},${Math.round(250-56*t)})`;
