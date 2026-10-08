@@ -85,7 +85,7 @@ async function main() {
       }
     });
     await recordedScenario(browser, 'linked-event-neighborhood-explorer', async (page) => {
-      await page.locator('.event-grid .event-row').filter({hasText:'Bridge'}).click();
+      await page.locator('.fingerprint-gallery .fingerprint-card').filter({hasText:'Bridge'}).click();
       await page.waitForTimeout(1100);
       await page.locator('.explorer-panel').scrollIntoViewIfNeeded();
       await page.locator('.filterbar .day-picker button').filter({hasText:/^2$/}).click();
