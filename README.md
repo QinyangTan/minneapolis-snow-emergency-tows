@@ -26,6 +26,12 @@ The application now features **nine multi-attribute event fingerprint cards**, a
 
 The design decisions, alternatives, quantitative encodings, interactions, keyboard behavior and data limitations are documented in [VISUAL_STORY_REDESIGN.md](docs/VISUAL_STORY_REDESIGN.md). All six embedded GIFs below are recorded from the actual Chromium application and reflect tested interactions, not generated mockups.
 
+## Course-grounded event constellation and coverage review
+
+The new **Event Constellation** is a four-channel analytical plot developed after reading the CSCI 5609 lecture slides: quantitative x-position (Day 2's share of each event's *citywide* records), quantitative y-position (top-five neighborhood concentration among *mapped* records), proportional bubble area (event total), and hue (peak day). An equal-size mode reconfigures the encoding without changing the data; accessible event buttons link directly into all existing filters. The explicit citywide/mapped denominators prevent an especially tempting interpretation error. No population-level inference is made from nine selected emergencies.
+
+The separate [lecture-by-lecture course alignment audit](docs/COURSE_ALIGNMENT_AUDIT.md) compares the authenticated Fall 2026 Canvas modules and real FP1–FP4 rubrics with concrete source/test evidence, marking gaps rather than claiming every lecture technique is implemented. It does **not** republish instructor slides. Real study outcomes, alternative sketches, team ownership confirmation and AI/Codex record requirements remain outstanding.
+
 ## Interpretable event comparisons and deployment readiness
 
 The event JSD matrix now has a paired distribution view. Two colored points and an aligned axis show the actual **Day 1–3 shares**, or the **eight mapped-neighborhood shares with the largest percentage-point differences** between selected events. Each comparison displays its two denominators, the sign of the percentage-point change, and the citywide-vs-mapped scope — this makes the abstract similarity measure inspectable.
