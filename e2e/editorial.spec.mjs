@@ -37,11 +37,12 @@ test('pairwise 9x9 matrix is symmetric and updates pair comparison', async ({pag
   await matrix.getByRole('button',{name:/Compare Bridge to Glenwood:/}).click();
   await expect(page.locator('select[aria-label="First Snow Emergency"]')).toHaveValue('Bridge');
   await expect(page.locator('select[aria-label="Second Snow Emergency"]')).toHaveValue('Glenwood');
+  const pair=matrix.getByRole('button',{name:/Compare Bridge to Glenwood:/});
+  const days=await pair.textContent();
   await page.locator('select[aria-label="Compare events by distribution"]').selectOption('neighborhoods');
-  const spatial=await matrix.getByRole('button',{name:/Compare Bridge to Glenwood:/}).textContent();
+  await expect.poll(async()=>await pair.textContent()).not.toBe(days);
   await page.locator('select[aria-label="Compare events by distribution"]').selectOption('days');
-  const days=await matrix.getByRole('button',{name:/Compare Bridge to Glenwood:/}).textContent();
-  expect(spatial).not.toEqual(days);
+  await expect(pair).toHaveText(days.trim());
 });
 
 test('rank sensitivity plot has nondecreasing top-K recurrence and links to city explorer', async ({page}) => {
@@ -51,7 +52,7 @@ test('rank sensitivity plot has nondecreasing top-K recurrence and links to city
   const values=await slopes.evaluateAll(rows=>rows.map(row=>{
     const svg=row.querySelector('svg');
     const label=svg?.getAttribute('aria-label')??'';
-    return [...label.matchAll(/(?:Top (?:5|10|15) )(\d+)/g)].map(x=>Number(x[1]));
+    return [...label.matchAll(/top (?:5|10|15) (\d+)/gi)].map(x=>Number(x[1]));
   }));
   for(const v of values){
     expect(v).toHaveLength(3);
