@@ -56,6 +56,8 @@
   $: selectedArea = geography?.features.find((feature) => feature.properties.name === selectedNeighborhood)?.properties;
   $: selectedAreaCount = selectedArea ? countInScope(selectedArea, selectedEvent, selectedDay) : 0;
   $: titleScope = selectedEvent === 'all' ? 'all nine events' : selectedEvent;
+  $: peakRow = chartDays.reduce((best,row)=>row.count>best.count?row:best,chartDays[0]);
+  $: peakShare = (peakRow?.count??0)/Math.max(1,chartTotal)*100;
   $: cityDays = summary?.days ?? preliminaryDays;
 
   function observeDayStep(node: HTMLElement, day: number) {
@@ -157,6 +159,7 @@
             </button>
           {/each}
         </div>
+        <div class="analysis-annotation"><b>READ THIS CHART</b><p>{titleScope === 'all nine events' ? 'Across the selected nine emergencies' : 'Within '+titleScope}, Day {peakRow?.day ?? '—'} has the largest observed count, representing {peakShare.toFixed(1)}% of this selection. This is a <strong>composition of recorded tows</strong>, not a measure of parking or towing risk.</p></div>
         <p class="mini-note">{summary ? 'Regenerated official City records.' : 'FP1 preliminary snapshot.'} Share of selected event records: {chartDays.map((row) => 'Day ' + row.day + ' ' + (row.count / Math.max(1, chartTotal) * 100).toFixed(1) + '%').join(' · ')}. These are observed tow records, not the risk of being towed.</p>
       </div>
     </section>
@@ -200,12 +203,12 @@
             </div>
           </div>
           <div class="story-steps">
-            {#each cityDays as row, i}
+            {#each chartDays as row, i}
               <article class:step-active={selectedDay === row.day} class="story-step"
                 use:observeDayStep={row.day}>
                 <span class="eyebrow">DAY 0{row.day} · {['EMERGENCY ROUTES', 'EVEN SIDES', 'ODD SIDES'][i]}</span>
                 <h3>{fmt.format(row.count)} recorded tows</h3>
-                <p>{(row.count / Math.max(1, summary.total) * 100).toFixed(1)}% of the nine-event citywide sample occurred on Day {row.day}. Explore how those records are distributed across neighborhoods, not just the overall size of the day.</p>
+                <p>{(row.count / Math.max(1, chartTotal) * 100).toFixed(1)}% of the observed records for {titleScope} occurred on Day {row.day}. The three maps use mapped counts, so their denominators may be slightly smaller than these citywide day totals.</p>
                 <button class="story-step-action" onclick={() => selectedDay = row.day}>Focus Day {row.day} ↗</button>
               </article>
             {/each}
