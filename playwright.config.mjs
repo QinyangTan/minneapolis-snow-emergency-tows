@@ -4,6 +4,7 @@ const pagesBase = process.env.PAGES_BASE_PATH || '';
 
 export default defineConfig({
   testDir: './e2e',
+  testIgnore: '**/winter.spec.mjs', // separate standalone Three.js production preview
   timeout: 45_000,
   expect: { timeout: 12_000 },
   retries: process.env.CI ? 1 : 0,
