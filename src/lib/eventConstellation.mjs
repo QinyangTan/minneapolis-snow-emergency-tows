@@ -57,5 +57,5 @@ export function bubbleDiameter(total, maximum, equalSize=false) {
   if(equalSize)return 30;
   if(!Number.isFinite(total)||!Number.isFinite(maximum)||total<0||maximum<=0)throw new Error('Invalid bubble size domain');
   // Graphic area is proportional to count; radius is proportional to sqrt.
-  return Math.round(20+35*Math.sqrt(total/maximum));
+  return Math.round(58*Math.sqrt(total/maximum));
 }
