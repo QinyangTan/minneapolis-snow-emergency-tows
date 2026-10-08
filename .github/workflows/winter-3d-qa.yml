@@ -1,0 +1,58 @@
+name: Winter 3D Demo QA
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'demo/**'
+      - '.github/workflows/winter-3d-qa.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'demo/**'
+      - '.github/workflows/winter-3d-qa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: winter-3d-qa-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  winter-3d:
+    name: Data, Svelte, build and public-artifact checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: demo
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: demo/package-lock.json
+      - name: Install locked JavaScript dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Svelte diagnostics
+        run: npm run check
+      - name: JavaScript analysis and interaction-model unit tests
+        run: npm test
+      - name: Build production 3D static website
+        run: npm run build
+      - name: Audit distributable and its data denominators
+        run: node scripts/check_release.mjs
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: demo/requirements.txt
+      - name: Install Python geometry dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Verify raw snapshot and generated ten-event dataset
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
