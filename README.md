@@ -6,6 +6,14 @@
 
 An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly appear or rank prominently across separate emergencies.
 
+## See the Google Maps Extension in action (GIF)
+
+**Watch the extension run directly on the real Google Maps website:** observed tow-count choropleth, Day 1–3 comparisons, neighborhood recurrence and interactive map navigation. This is a Chrome/Edge extension demo; the separate [live project website](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) remains accessible without an extension.
+
+![Animated real-browser Google Maps extension demo: 87 neighborhood tow overlays, Bridge Day 2, Marcy Holmes inspection, recurring hotspots, Top-10 prominence, event fingerprints, native zoom and pan](docs/demos/google-maps-extension-demo.gif)
+
+**Captured from actual `google.com/maps` with the Chrome MV3 extension loaded (no substituted map pages).** The GIF shows count colors and legend, Day 2 event filtering, neighborhood inspection, cross-event recurrence/Top K, nine-event fingerprints, and native Google Maps zoom/pan. Short cuts between genuine captured UI states are video editing, not simulated map data. [Installation & methodology](extension/README.md) · [Run the standalone interactive story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/).
+
 **Status (Oct 8, 2026):** LIVE public GitHub Pages demo with nine official ArcGIS event layers, linked analysis and six real browser GIFs. Public 1440px desktop and 390px mobile Chromium verification passed, and the source CI had 14/14 browser E2E tests plus a GitHub Pages subpath smoke test passing. Still required for final course submission: real participant evaluation, manual screenreader review, team sign-off and course reports.
 
 ## Research-grade analysis and accountability
@@ -23,12 +31,6 @@ For a larger team, maintain [verifiable contribution records](docs/TEAM_CONTRIBU
 A new [Chrome/Edge Manifest V3 extension](extension/README.md) can show the project's observed tow-count choropleth **on top of the desktop Google Maps website**, together with an event/day selection panel. It bundles our own 87-neighborhood City GeoJSON offline and requests only `activeTab` + `storage`; it does not require a Google Maps API key.
 
 **Alignment is a preview, not a guarantee:** the overlay projects from the map's visible URL camera, not an official Google Maps extension projection API. It automatically hides polygons when camera coordinates, north-up 2D orientation, or map bounds are unavailable. See [installation and QA limitations](extension/README.md); the [standalone story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) remains the authoritative geographically self-contained visualization. Browser-extension source is independent of the course's FP1 PDF submission.
-
-### Google Maps Extension · real Chromium demo (GIF)
-
-![Animated real-browser Google Maps extension demo: 87 neighborhood tow overlays, Bridge Day 2, Marcy Holmes inspection, recurring hotspots, Top-10 prominence, event fingerprints, native zoom and pan](docs/demos/google-maps-extension-demo.gif)
-
-**Captured from actual `google.com/maps` with the Chrome MV3 extension loaded (no substituted map pages).** The GIF shows count colors and legend, Day 2 event filtering, neighborhood inspection, cross-event recurrence/Top K, nine-event fingerprints, and native Google Maps zoom/pan. Short cuts between genuine captured UI states are video editing, not simulated map data. [Installation & methodology](extension/README.md) · [Run the standalone interactive story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/).
 
 ## Official course milestones
 
