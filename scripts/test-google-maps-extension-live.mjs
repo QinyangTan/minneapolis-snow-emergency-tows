@@ -30,15 +30,22 @@ try{
   await page.goto(maps,{waitUntil:'domcontentloaded',timeout:60000});
   try {
     await page.waitForFunction(()=>{
-      const canvases=[...document.querySelectorAll('canvas')].map(x=>x.getBoundingClientRect());
-      return canvases.filter(r=>r.width>=600 && r.height>=400).length>=2;
+      const mapReady=Boolean(document.querySelector('button[aria-label="Zoom in"]') &&
+        document.querySelector('button[aria-label="Zoom out"]') &&
+        document.querySelector('[aria-label="Search"]'));
+      const viewportCanvas=[...document.querySelectorAll('canvas')].some(c=>{
+        const r=c.getBoundingClientRect();
+        return r.width>=innerWidth*.8&&r.height>=innerHeight*.8;
+      });
+      return mapReady&&viewportCanvas &&
+        document.querySelector('#csci5609-snow-maps-extension');
     },null,{timeout:70000});
   } catch (e) {
     const diagnostics=await page.evaluate(()=>({
       url:location.href,title:document.title,bodyText:document.body?.innerText?.slice(0,1400),
-      canvases:[...document.querySelectorAll('canvas')].map(x=>{
+      viewport:{width:innerWidth,height:innerHeight},canvases:[...document.querySelectorAll('canvas')].map(x=>{
         const r=x.getBoundingClientRect();
-        return {width:r.width,height:r.height,className:x.className};
+        return {left:r.left,top:r.top,width:r.width,height:r.height,className:x.className};
       }),
       appPresent:Boolean(document.getElementById('csci5609-snow-maps-extension')),
       mapControls:[...document.querySelectorAll('button[aria-label]')].map(x=>x.getAttribute('aria-label')).filter(x=>/zoom|search|directions/i.test(x)).slice(0,12)
