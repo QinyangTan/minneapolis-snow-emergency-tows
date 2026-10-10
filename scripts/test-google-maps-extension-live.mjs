@@ -6,7 +6,7 @@
 import { chromium } from '@playwright/test';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { mkdtempSync, rmSync } from 'node:fs';
+import { mkdtempSync, rmSync, mkdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -19,8 +19,8 @@ const assert=(ok,message)=>{if(!ok)throw new Error(message)};
 const contextDescription=()=>({source:'REAL Google Maps: no mocks, no route interception',timestamp:new Date().toISOString()});
 try{
   browser=await chromium.launchPersistentContext(profile,{
-    channel:'chromium',headless:true,viewport:{width:1200,height:850},
-    args:[`--disable-extensions-except=${ext}`,`--load-extension=${ext}`]
+    channel:'chromium',headless:process.env.GMAPS_HEADED!=='1',viewport:{width:1200,height:850},
+    args:[`--disable-extensions-except=${ext}`,`--load-extension=${ext}`, '--enable-webgl', '--use-gl=angle', '--use-angle=swiftshader']
   });
   const worker=browser.serviceWorkers()[0]||await browser.waitForEvent('serviceworker',{timeout:20000});
   await worker.evaluate(()=>chrome.storage.local.set({enabled:true}));
@@ -28,10 +28,26 @@ try{
   const errors=[];
   page.on('pageerror',e=>errors.push(String(e).slice(0,250)));
   await page.goto(maps,{waitUntil:'domcontentloaded',timeout:60000});
-  await page.waitForFunction(()=>{
-    const canvases=[...document.querySelectorAll('canvas')].map(x=>x.getBoundingClientRect());
-    return canvases.filter(r=>r.width>=600 && r.height>=400).length>=2;
-  },null,{timeout:45000});
+  try {
+    await page.waitForFunction(()=>{
+      const canvases=[...document.querySelectorAll('canvas')].map(x=>x.getBoundingClientRect());
+      return canvases.filter(r=>r.width>=600 && r.height>=400).length>=2;
+    },null,{timeout:70000});
+  } catch (e) {
+    const diagnostics=await page.evaluate(()=>({
+      url:location.href,title:document.title,bodyText:document.body?.innerText?.slice(0,1400),
+      canvases:[...document.querySelectorAll('canvas')].map(x=>{
+        const r=x.getBoundingClientRect();
+        return {width:r.width,height:r.height,className:x.className};
+      }),
+      appPresent:Boolean(document.getElementById('csci5609-snow-maps-extension')),
+      mapControls:[...document.querySelectorAll('button[aria-label]')].map(x=>x.getAttribute('aria-label')).filter(x=>/zoom|search|directions/i.test(x)).slice(0,12)
+    }));
+    console.error('Live map load diagnostics:',JSON.stringify(diagnostics));
+    mkdirSync('artifacts',{recursive:true});
+    try{await page.screenshot({path:'artifacts/real-maps-diagnostic.png',fullPage:false,timeout:15000})}catch{}
+    throw e;
+  }
   const host=page.locator('#csci5609-snow-maps-extension');
   await host.waitFor({state:'attached',timeout:15000});
   const panel=host.locator('.snow-panel');
