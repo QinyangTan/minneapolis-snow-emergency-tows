@@ -2,7 +2,7 @@ import {
   MINNEAPOLIS, parseCamera, coordinatesToPath, gradientFor, summarize
 } from './geo.mjs';
 
-const DEFAULTS={enabled:false,layerVisible:true,event:'all',day:0,opacity:0.42};
+const DEFAULTS={enabled:false,layerVisible:true,event:'all',day:0,neighborhood:'all',opacity:0.42};
 const rootId='csci5609-snow-maps-extension';
 const DATA_URL='data/neighborhoods.geojson';
 const SUMMARY_URL='data/summary.json';
@@ -59,6 +59,12 @@ async function boot(){
       <div class="snow-gradient">
         <span>0</span><div class="snow-gradient-bar" aria-hidden="true"></div><span data-maximum>—</span>
       </div>
+      <label class="snow-field">INSPECT A NEIGHBORHOOD
+        <select data-neighborhood aria-label="Select neighborhood for count inspection">
+          <option value="all">All Minneapolis neighborhoods</option>
+        </select>
+      </label>
+      <output class="snow-selected-count" data-neighborhood-count aria-live="polite"></output>
       <div class="snow-insights">
         <div class="snow-section-head">HIGHEST RECORDED NEIGHBORHOOD COUNTS <span data-scope>ALL EVENTS</span></div>
         <div class="snow-leaders" data-leaders></div>
@@ -81,6 +87,8 @@ async function boot(){
     total:dock.querySelector('[data-total]'),
     mapped:dock.querySelector('[data-mapped]'),
     event:dock.querySelector('[data-event]'),
+    neighborhood:dock.querySelector('[data-neighborhood]'),
+    neighborhoodCount:dock.querySelector('[data-neighborhood-count]'),
     layer:dock.querySelector('[data-layer]'),
     opacity:dock.querySelector('[data-opacity]'),
     camera:dock.querySelector('[data-camera-status]'),
@@ -154,6 +162,7 @@ async function boot(){
   });
   dock.querySelector('.snow-close').addEventListener('click',()=>store({enabled:false}));
   ui.event.addEventListener('change',()=>store({event:ui.event.value}));
+  ui.neighborhood.addEventListener('change',()=>store({neighborhood:ui.neighborhood.value}));
   ui.layer.addEventListener('change',()=>store({layerVisible:ui.layer.checked}));
   ui.opacity.addEventListener('input',()=>store({opacity:Math.min(.85,Math.max(.15,Number(ui.opacity.value)))}));
   for(const button of dock.querySelectorAll('button[data-day]')){
@@ -205,6 +214,13 @@ async function boot(){
         option.textContent=entry.label||entry.id+' · '+entry.season;
         ui.event.append(option);
       }
+      for(const feature of [...geography.features].sort((a,b)=>
+        a.properties.name.localeCompare(b.properties.name))){
+        const option=document.createElement('option');
+        option.value=feature.properties.name;
+        option.textContent=feature.properties.name;
+        ui.neighborhood.append(option);
+      }
     })();
     try{await dataPromise;}catch(error){dataPromise=null;throw error}
   }
@@ -247,8 +263,9 @@ async function boot(){
       const path=document.createElementNS('http://www.w3.org/2000/svg','path');
       path.setAttribute('d',pathText);
       path.setAttribute('fill',gradientFor(rows[index]?.count||0,max));
-      path.setAttribute('stroke','#24455e');
-      path.setAttribute('stroke-width','0.8');
+      const focused=feature.properties.name===prefs.neighborhood;
+      path.setAttribute('stroke',focused?'#b9333a':'#24455e');
+      path.setAttribute('stroke-width',focused?'3.5':'0.8');
       path.setAttribute('fill-rule','evenodd');
       path.setAttribute('vector-effect','non-scaling-stroke');
       geometry.append(path);
@@ -281,6 +298,17 @@ async function boot(){
     const day=Number(prefs.day);
     if(![0,1,2,3].includes(day)){prefs.day=0;store({day:0});return}
     const selected=summarize(data,prefs.event,day);
+    if(prefs.neighborhood!=='all'&&!selected.rows.some(r=>r.name===prefs.neighborhood)){
+      prefs.neighborhood='all';
+      store({neighborhood:'all'});
+      return;
+    }
+    ui.neighborhood.value=prefs.neighborhood;
+    const focused=selected.rows.find(r=>r.name===prefs.neighborhood);
+    ui.neighborhoodCount.textContent=focused
+      ?focused.name+': '+focused.count.toLocaleString('en-US')+
+        ' observed tow records in this selection (not a tow-risk estimate)'
+      :'Select a neighborhood to inspect its observed tow count.';
     ui.event.value=prefs.event;
     ui.layer.checked=Boolean(prefs.layerVisible);
     ui.opacity.value=String(prefs.opacity);
@@ -302,7 +330,7 @@ async function boot(){
       item.append(title,count);newRows.append(item);
     }
     ui.leaders.replaceChildren(newRows);
-    ui.loadState.textContent='5,423 selected source records · 68 unmapped citywide records';
+    ui.loadState.textContent='Source coverage: 5,423 historic records; 68 without neighborhood match';
 
     const camera=parseCamera(location.href);
     const viewport=findMapViewport();
@@ -334,7 +362,7 @@ async function boot(){
       reason='Waiting for map transition…';
     if(reason){ui.camera.textContent=reason;ui.overlay.style.display='none';previousKey='';return}
     motionPending=false;
-    const key=[location.href,viewport.left,viewport.top,viewport.width,viewport.height,prefs.event,day,prefs.opacity].join('|');
+    const key=[location.href,viewport.left,viewport.top,viewport.width,viewport.height,prefs.event,day,prefs.neighborhood,prefs.opacity].join('|');
     if(force||key!==previousKey){
       drawPaths(camera,viewport,selected);
       previousKey=key;
