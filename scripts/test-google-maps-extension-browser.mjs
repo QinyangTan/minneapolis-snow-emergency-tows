@@ -138,6 +138,14 @@ try{
   await panel.locator('input[data-layer]').uncheck();
   if(await host.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)!=='none')fail('Layer OFF did not hide geometry');
   await panel.locator('input[data-layer]').check();
+  // A browser/sidebar resize must restore the coordinate layer even when the
+  // URL center stays the same. Drag/wheel gestures are still fail-closed.
+  await page.setViewportSize({width:1100,height:780});
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    const svg=root?.querySelector('svg.snow-geo-overlay');
+    return svg && getComputedStyle(svg).display!=='none'&&svg.querySelectorAll('path').length===87;
+  },null,{timeout:12000});
   // Real pointer/wheel input must reach the map, while stale geographic marks disappear.
   const wheelSeen=await page.evaluate(()=>{
     window.__snowWheelSeen=false;
