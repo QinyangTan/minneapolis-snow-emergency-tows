@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   record-and-publish:
@@ -50,12 +50,10 @@ jobs:
           path: artifacts/live-map-overlay-*.png
           if-no-files-found: error
           retention-days: 10
-      - name: Push GIF to same repository PR branch
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/demos/google-maps-extension-demo.gif
-          if ! git diff --cached --quiet; then
-            git commit -m 'docs: embed real Google Maps extension GIF [skip ci]'
-            git push origin HEAD:refs/heads/docs/google-maps-extension-demo-gif
-          fi
+      - name: Upload generated looping README GIF
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-maps-extension-readme-gif
+          path: docs/demos/google-maps-extension-demo.gif
+          if-no-files-found: error
+          retention-days: 30
