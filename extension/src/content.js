@@ -1,8 +1,11 @@
 import {
   MINNEAPOLIS, parseCamera, coordinatesToPath, gradientFor, summarize
 } from './geo.mjs';
+import {layerAnalysis,legendBands,colorClass,colorForObservation,
+  HIGH_CONTRAST_COLORS,explainSelection} from './storyLayers.mjs';
 
-const DEFAULTS={enabled:false,layerVisible:true,event:'all',day:0,neighborhood:'all',opacity:0.42};
+const DEFAULTS={enabled:false,layerVisible:true,event:'all',day:0,neighborhood:'all',
+  mode:'counts',recurrenceMetric:'any',topK:5,opacity:0.84};
 const rootId='csci5609-snow-maps-extension';
 const DATA_URL='data/neighborhoods.geojson';
 const SUMMARY_URL='data/summary.json';
@@ -39,8 +42,14 @@ async function boot(){
       <button class="snow-close" type="button" aria-label="Close visualization" title="Hide extension">×</button>
     </header>
     <div class="snow-body">
-      <div class="snow-kpis"><div><strong data-total>—</strong><span>citywide records</span></div>
-        <div><strong data-mapped>—</strong><span>mapped to neighborhoods</span></div></div>
+      <div class="snow-question">EXPLORE A QUESTION</div>
+      <div class="snow-view-tabs" role="group" aria-label="Visualization analysis mode">
+        <button type="button" data-mode="counts" aria-pressed="true">Where are tows?</button>
+        <button type="button" data-mode="recurrence" aria-pressed="false">Which areas repeat?</button>
+      </div>
+      <p class="snow-mode-hint" data-mode-hint>Compare historical tow counts across neighborhoods and Days 1–3.</p>
+      <div class="snow-kpis"><div><strong data-total>—</strong><span data-total-label>citywide records</span></div>
+        <div><strong data-mapped>—</strong><span data-mapped-label>mapped to neighborhoods</span></div></div>
       <label class="snow-field">SNOW EMERGENCY
         <select data-event aria-label="Snow emergency event"></select>
       </label>
@@ -50,16 +59,34 @@ async function boot(){
         <button type="button" data-day="2" aria-pressed="false">02</button>
         <button type="button" data-day="3" aria-pressed="false">03</button>
       </fieldset>
+      <div class="snow-recurrence-rules" data-recurrence-rules hidden>
+        <label class="snow-field">WHAT COUNTS AS RECURRING?
+          <select data-recurrence-metric aria-label="Recurrence definition">
+            <option value="any">Any record in the event (≥1)</option>
+            <option value="prominent">Prominent neighborhood (Top K)</option>
+          </select>
+        </label>
+        <label class="snow-field" data-topk-row hidden>TOP-K RANK THRESHOLD
+          <select data-topk aria-label="Prominence Top K ranking">
+            <option value="5">Top 5</option>
+            <option value="10">Top 10</option>
+            <option value="15">Top 15</option>
+          </select>
+        </label>
+        <p class="snow-rule-caption">Compares all 9 emergencies. Top K includes rank ties and requires at least 5 tow records in that event.</p>
+      </div>
       <div class="snow-switchrow">
         <label><input data-layer type="checkbox" checked> Show neighborhood layer</label>
         <output data-camera-status aria-live="polite">Initializing…</output>
       </div>
       <label class="snow-field snow-opacity">MAP LAYER OPACITY
-        <input data-opacity type="range" min="0.15" max="0.85" step="0.05" value="0.42" aria-label="Neighborhood layer opacity"/>
+        <input data-opacity type="range" min="0.60" max="1" step="0.05" value="0.84" aria-label="Neighborhood layer opacity"/>
       </label>
-      <div class="snow-gradient">
-        <span>0</span><div class="snow-gradient-bar" aria-hidden="true"></div><span data-maximum>—</span>
-      </div>
+      <section class="snow-legend" aria-label="Map data legend">
+        <h3>MAP COLOR KEY <span data-legend-units>OBSERVED TOW RECORDS</span></h3>
+        <div class="snow-legend-grid" data-legend></div>
+        <p>Distinct ordered bands; fixed across comparable views. Gray means zero records, not missing data.</p>
+      </section>
       <label class="snow-field">INSPECT A NEIGHBORHOOD
         <select data-neighborhood aria-label="Select neighborhood for count inspection">
           <option value="all">All Minneapolis neighborhoods</option>
@@ -67,9 +94,14 @@ async function boot(){
       </label>
       <output class="snow-selected-count" data-neighborhood-count aria-live="polite"></output>
       <div class="snow-insights">
-        <div class="snow-section-head">HIGHEST RECORDED NEIGHBORHOOD COUNTS <span data-scope>ALL EVENTS</span></div>
+        <div class="snow-section-head"><span data-top-heading>HIGHEST RECORDED NEIGHBORHOOD COUNTS</span><span data-scope>ALL EVENTS</span></div>
         <div class="snow-leaders" data-leaders></div>
       </div>
+      <section class="snow-story" aria-label="Evidence-backed interpretation">
+        <h3 data-story-title>What the map reveals</h3>
+        <p data-story-text aria-live="polite">Select an event or neighborhood to explore its records.</p>
+        <div class="snow-day-compare" data-day-compare aria-label="Same-denominator three day comparison"></div>
+      </section>
       <div class="snow-actions">
         <a data-recenter href="https://www.google.com/maps/@44.9778,-93.2650,12z" title="Center Google Maps on Minneapolis">Center Minneapolis ↗</a>
         <a href="https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/" target="_blank" rel="noopener noreferrer">Full analysis ↗</a>
@@ -93,7 +125,19 @@ async function boot(){
     layer:dock.querySelector('[data-layer]'),
     opacity:dock.querySelector('[data-opacity]'),
     camera:dock.querySelector('[data-camera-status]'),
-    maximum:dock.querySelector('[data-maximum]'),
+    legend:dock.querySelector('[data-legend]'),
+    legendUnits:dock.querySelector('[data-legend-units]'),
+    totalLabel:dock.querySelector('[data-total-label]'),
+    mappedLabel:dock.querySelector('[data-mapped-label]'),
+    modeHint:dock.querySelector('[data-mode-hint]'),
+    recurrenceRules:dock.querySelector('[data-recurrence-rules]'),
+    recurrenceMetric:dock.querySelector('[data-recurrence-metric]'),
+    topK:dock.querySelector('[data-topk]'),
+    topKRow:dock.querySelector('[data-topk-row]'),
+    storyTitle:dock.querySelector('[data-story-title]'),
+    storyText:dock.querySelector('[data-story-text]'),
+    dayCompare:dock.querySelector('[data-day-compare]'),
+    topHeading:dock.querySelector('[data-top-heading]'),
     leaders:dock.querySelector('[data-leaders]'),
     scope:dock.querySelector('[data-scope]'),
     loadState:dock.querySelector('[data-load-state]')
@@ -163,10 +207,15 @@ async function boot(){
     minimizeButton.title=collapsed?'Expand controls':'Collapse controls';
   });
   dock.querySelector('.snow-close').addEventListener('click',()=>store({enabled:false}));
+  for(const button of dock.querySelectorAll('[data-mode]')){
+    button.addEventListener('click',()=>store({mode:button.dataset.mode}));
+  }
+  ui.recurrenceMetric.addEventListener('change',()=>store({recurrenceMetric:ui.recurrenceMetric.value}));
+  ui.topK.addEventListener('change',()=>store({topK:Number(ui.topK.value)}));
   ui.event.addEventListener('change',()=>store({event:ui.event.value}));
   ui.neighborhood.addEventListener('change',()=>store({neighborhood:ui.neighborhood.value}));
   ui.layer.addEventListener('change',()=>store({layerVisible:ui.layer.checked}));
-  ui.opacity.addEventListener('input',()=>store({opacity:Math.min(.85,Math.max(.15,Number(ui.opacity.value)))}));
+  ui.opacity.addEventListener('input',()=>store({opacity:Math.min(1,Math.max(.60,Number(ui.opacity.value)))}));
   for(const button of dock.querySelectorAll('button[data-day]')){
     button.addEventListener('click',()=>store({day:Number(button.dataset.day)}));
   }
