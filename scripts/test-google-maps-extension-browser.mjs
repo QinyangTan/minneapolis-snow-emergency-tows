@@ -51,6 +51,36 @@ try{
   await panel.locator('input[data-layer]').uncheck();
   if(await host.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)!=='none')fail('Layer OFF did not hide geometry');
   await panel.locator('input[data-layer]').check();
+  // Real pointer/wheel input must reach the map, while stale geographic marks disappear.
+  const wheelSeen=await page.evaluate(()=>{
+    window.__snowWheelSeen=false;
+    document.getElementById('scene').addEventListener('wheel',()=>{
+      window.__snowWheelSeen=true;
+    },{once:true});
+    return true;
+  });
+  if(!wheelSeen)fail('Map fixture did not initialize wheel listener');
+  await page.mouse.move(520,390);
+  await page.mouse.wheel(0,350);
+  await page.waitForTimeout(650);
+  if(!await page.evaluate(()=>window.__snowWheelSeen))
+    fail('Extension should not intercept Google Maps wheel gestures');
+  if(await host.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)!=='none')
+    fail('A zoom gesture must immediately hide stale map geometry');
+  // The original URL camera has not moved yet. Resuming the old geometry is unsafe.
+  await page.waitForTimeout(900);
+  if(await host.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)!=='none')
+    fail('Overlay resumed despite unchanged URL camera after a zoom gesture');
+  if(!/overlay paused/i.test(await panel.locator('[data-camera-status]').textContent()||''))
+    fail('Failed to explain why the stale overlay was suspended');
+  await page.evaluate(()=>history.replaceState({},'', '/maps/@44.9790,-93.2650,12.2z'));
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root && getComputedStyle(root.querySelector('.snow-geo-overlay')).display!=='none';
+  },null,{timeout:10000});
+  // A newly reported camera should recover the overlay after a settle interval.
+  if(await host.locator('svg.snow-geo-overlay path').count()!==87)
+    fail('Did not recover 87 map polygons when settled URL camera became available');
   await page.goto('https://www.google.com/maps/@44.9778,-93.2650,12z,45t',{waitUntil:'domcontentloaded'});
   await panel.waitFor({state:'visible',timeout:15000});
   await page.waitForTimeout(1300);
