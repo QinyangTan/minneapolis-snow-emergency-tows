@@ -33,7 +33,9 @@ let storySource=readFileSync(join(source,'src/storyLayers.mjs'),'utf8');
 if((storySource.match(/export (?:const|function) /g)||[]).length!==9) {
   throw new Error('Story-layer exports changed; audit packager before publishing');
 }
-storySource=storySource.replace(/import\s*\{\s*countInScope\s*\}\s*from\s*['"]\.\/geo\.mjs['"];\s*/,'');
+const storyImport=/^import\s*\{\s*countInScope\s*\}\s*from\s*['"]\.\/geo\.mjs['"];\s*/m;
+if (!storyImport.test(storySource)) throw new Error('Expected story-layer dependency not found');
+storySource=storySource.replace(storyImport,'');
 storySource=storySource.replace(/\bexport (const|function)\b/g,'$1');
 const content=readFileSync(join(source,'src/content.js'),'utf8');
 const importPattern=/^import\s*\{[\s\S]*?\}\s*from\s*['"]\.\/geo\.mjs['"];\s*import\s*\{[\s\S]*?\}\s*from\s*['"]\.\/storyLayers\.mjs['"];\s*/;
