@@ -3,13 +3,19 @@
   import type {EventRow} from './preliminary';
   import type {NeighborhoodGeoJSON} from './analytics';
   import {constellationRows,constellationScale,bubbleDiameter} from './eventConstellation.mjs';
+  import {brushByDayTwo} from './constellationBrush.mjs';
 
   export let events:EventRow[]=[];
   export let geography:NeighborhoodGeoJSON;
   export let selectedEvent='all';
   const dispatch=createEventDispatcher<{select:string}>();
   let equalSize=false;
+  let brushMin=0;
+  let brushMax=100;
   $: rows=constellationRows(events,geography);
+  $: brushed=brushByDayTwo(rows,brushMin,brushMax);
+  $: brushedIds=new Set(brushed.map(row=>row.id));
+  $: brushActive=brushMin>0||brushMax<100;
   $: scale=constellationScale(rows);
   $: ordered=[...rows].sort((a,b)=>b.day2Share-a.day2Share||a.id.localeCompare(b.id));
   const format=(n:number)=>(100*n).toFixed(1)+'%';
@@ -34,10 +40,32 @@
         {equalSize?'Use volume-sized marks':'Use equal-sized marks'} ↔
       </button>
     </div>
+    <div class="constellation-brush-controls" role="group" aria-label="Brush by Day 2 share percentage">
+      <div class="constellation-brush-title">
+        <strong>BRUSH &amp; LINK / DAY 2 SHARE</strong>
+        <span aria-live="polite">{brushed.length} of {rows.length} emergencies in range · {brushMin}%–{brushMax}%</span>
+      </div>
+      <div class="constellation-brush-sliders">
+        <label>FROM {brushMin}%
+          <input type="range" min="0" max={brushMax} step="5" bind:value={brushMin} aria-label="Minimum Day 2 share percentage" />
+        </label>
+        <label>TO {brushMax}%
+          <input type="range" min={brushMin} max="100" step="5" bind:value={brushMax} aria-label="Maximum Day 2 share percentage" />
+        </label>
+        <button type="button" onclick={()=>{brushMin=0;brushMax=100;}} disabled={!brushActive}>Clear range ↺</button>
+      </div>
+      <p class="constellation-brush-hint">The same range highlights matching dots and rows below. Choose one highlighted event to filter the other charts.</p>
+    </div>
     <div class="constellation-scroll" role="region" aria-label="Scrollable multivariate event constellation plot">
       <div class="constellation-figure">
         <svg viewBox="0 0 780 440" role="img" aria-label="Scatterplot comparing Day 2 share of all City records on the horizontal axis and concentration in the five most-recorded neighborhoods among mapped records on the vertical axis. Event size represents observed total when volume encoding is on.">
           <rect x={left} y={top} width={width} height={height} fill="#fafcfd"/>
+          {#if brushActive}
+            <rect x={px(Math.min(scale.xMax,brushMin/100),scale.xMax)}
+              y={top} width={Math.max(0,px(Math.min(scale.xMax,brushMax/100),scale.xMax)-px(Math.min(scale.xMax,brushMin/100),scale.xMax))}
+              height={height} fill="#c9e8ea" fill-opacity=".65" stroke="#5094a9"
+              stroke-dasharray="5 4" stroke-width="2" pointer-events="none"/>
+          {/if}
           {#each [0,.25,.5,.75,1] as t}
             <line x1={left} x2={left+width} y1={top+height*(1-t)} y2={top+height*(1-t)} stroke="#dce6eb" stroke-width="1"/>
             <line x1={left+width*t} x2={left+width*t} y1={top} y2={top+height} stroke="#dce6eb" stroke-width="1"/>
@@ -54,6 +82,7 @@
           {#if event.concentration!==null}
           <button
             class:constellation-active={selectedEvent===event.id}
+            class:constellation-brush-out={brushActive&&!brushedIds.has(event.id)}
             class="constellation-point"
             style:left={(px(event.day2Share,scale.xMax)/canvasWidth*100)+'%'}
             style:top={(py(event.concentration,scale.yMax)/canvasHeight*100)+'%'}
@@ -78,6 +107,7 @@
     <div class="constellation-roster">
       {#each ordered as row (row.id)}
         <button class:roster-selected={selectedEvent===row.id}
+          class:constellation-roster-muted={brushActive&&!brushedIds.has(row.id)}
           onclick={()=>pick(row.id)} aria-pressed={selectedEvent===row.id}>
           <span class="constellation-roster-name">{row.id}</span>
           <span class="constellation-roster-values">{format(row.day2Share)} <small>Day 2</small></span>
