@@ -90,6 +90,58 @@ async function boot(){
   };
 
   let prefs={...DEFAULTS}, data=null, summary=null, dataPromise=null, previousKey='';
+  // A third-party website exposes no documented live camera projection to this extension.
+  // Prevent stale screen-space geometry during gestures and Maps SPA transitions.
+  let motionPending=false, motionStartedAtUrl='', lastInteractionAt=0;
+  let lastUrl=location.href, lastUrlChangedAt=0;
+  let pointerStart=null, lastViewportSignature='';
+  const SETTLE_MS=750;
+
+  function viewportSignature(viewport) {
+    return viewport ? [viewport.left,viewport.top,viewport.width,viewport.height].join(':') : '';
+  }
+  function hitMapSurface(event) {
+    if(event.composedPath?.().includes(host))return false; // panel is interactive; never treat it as map.
+    const r=findMapViewport();
+    return Boolean(r && Number.isFinite(event.clientX) && Number.isFinite(event.clientY) &&
+      event.clientX>=r.left && event.clientX<=r.left+r.width &&
+      event.clientY>=r.top && event.clientY<=r.top+r.height);
+  }
+  function invalidateCamera() {
+    if(!prefs.enabled||!prefs.layerVisible)return;
+    if(!motionPending)motionStartedAtUrl=location.href;
+    motionPending=true;
+    lastInteractionAt=performance.now();
+    previousKey='';
+    ui.overlay.style.display='none';
+    ui.camera.textContent='Map moving · awaiting updated coordinates';
+  }
+  document.addEventListener('pointerdown',event=>{
+    if(hitMapSurface(event))pointerStart={id:event.pointerId,x:event.clientX,y:event.clientY};
+  },{capture:true,passive:true});
+  document.addEventListener('pointermove',event=>{
+    if(!pointerStart||pointerStart.id!==event.pointerId)return;
+    if(Math.hypot(event.clientX-pointerStart.x,event.clientY-pointerStart.y)>6){
+      invalidateCamera();
+    }
+  },{capture:true,passive:true});
+  for(const eventName of ['pointerup','pointercancel']){
+    document.addEventListener(eventName,()=>{pointerStart=null;},{capture:true,passive:true});
+  }
+  document.addEventListener('wheel',event=>{
+    if(hitMapSurface(event))invalidateCamera();
+  },{capture:true,passive:true});
+  document.addEventListener('touchmove',event=>{
+    if(event.touches.length>=2 && event.touches[0] &&
+       hitMapSurface({clientX:event.touches[0].clientX,clientY:event.touches[0].clientY,
+         composedPath:()=>event.composedPath?.()||[]})) invalidateCamera();
+  },{capture:true,passive:true});
+  document.addEventListener('keydown',event=>{
+    if(!['+','-','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(event.key))return;
+    const target=event.target;
+    if(target instanceof Element &&
+      target.closest('canvas.widget-scene-canvas, #scene, .widget-scene, [aria-label="Map"]'))invalidateCamera();
+  },{capture:true,passive:true});
   const store=(changes)=>chrome.storage.local.set(changes);
   dock.querySelector('.snow-close').addEventListener('click',()=>store({enabled:false}));
   ui.event.addEventListener('change',()=>store({event:ui.event.value}));
@@ -108,14 +160,20 @@ async function boot(){
   const stored=await chrome.storage.local.get(DEFAULTS);
   prefs={...DEFAULTS,...stored};
   redraw(true);
-  let lastUrl=location.href;
-  window.addEventListener('resize',()=>redraw(true),{passive:true});
+  window.addEventListener('resize',()=>{
+    invalidateCamera(); // A sidebar or canvas reflow can move the camera independently.
+    redraw(true);
+  },{passive:true});
   window.addEventListener('popstate',()=>redraw(true));
-  // Google Maps uses SPA history mutations, so ordinary popstate is insufficient.
-  setInterval(()=>{if(!prefs.enabled)return;
-    if(location.href!==lastUrl){lastUrl=location.href;redraw(true);}
-    else redraw(false);
-  },1100);
+  // Google Maps is an SPA: the URL may not update in step with an animated map movement.
+  setInterval(()=>{
+    if(!prefs.enabled)return;
+    if(location.href!==lastUrl){
+      lastUrl=location.href;
+      lastUrlChangedAt=performance.now();
+      redraw(true);
+    } else redraw(false);
+  },400);
 
   async function loadData(){
     if(dataPromise)return dataPromise;
@@ -224,13 +282,33 @@ async function boot(){
     const camera=parseCamera(location.href);
     const viewport=findMapViewport();
     let reason='';
+    const currentSignature=viewportSignature(viewport);
+    // A map canvas relayout without a trustworthy new camera invalidates registration.
+    if(currentSignature && lastViewportSignature && currentSignature!==lastViewportSignature) {
+      invalidateCamera();
+    }
+    if(currentSignature)lastViewportSignature=currentSignature;
+    const time=performance.now();
+    // On an unobserved programmatic navigation, wait for the map to settle too.
+    if(location.href!==lastUrl){
+      lastUrl=location.href;
+      lastUrlChangedAt=time;
+    }
     if(!prefs.layerVisible)reason='Overlay off';
     else if(!camera)reason='Center the map · coordinates not visible';
     else if(!camera.northUp2D)reason='Tilted/rotated map · use 2D north-up';
     else if(Math.abs(camera.lat-MINNEAPOLIS.lat)>1.2||Math.abs(camera.lng-MINNEAPOLIS.lng)>1.9)
       reason='Navigate to Minneapolis to see the layer';
     else if(!viewport)reason='Map canvas not detected · overlay paused';
+    else if(motionPending && location.href===motionStartedAtUrl)
+      reason='Map moved, URL coordinates unchanged · overlay paused';
+    else if(motionPending &&
+      (time-lastInteractionAt<SETTLE_MS || time-lastUrlChangedAt<SETTLE_MS))
+      reason='Waiting for settled map coordinates…';
+    else if(lastUrlChangedAt && time-lastUrlChangedAt<SETTLE_MS)
+      reason='Waiting for map transition…';
     if(reason){ui.camera.textContent=reason;ui.overlay.style.display='none';previousKey='';return}
+    motionPending=false;
     const key=[location.href,viewport.left,viewport.top,viewport.width,viewport.height,prefs.event,day,prefs.opacity].join('|');
     if(force||key!==previousKey){
       drawPaths(camera,viewport,selected);
