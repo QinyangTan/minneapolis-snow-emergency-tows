@@ -147,7 +147,7 @@ async function boot(){
   let statsCacheKey='', statsCacheValue=null, previousPanelKey='';
   // A third-party website exposes no documented live camera projection to this extension.
   // Prevent stale screen-space geometry during gestures and Maps SPA transitions.
-  let motionPending=false, motionStartedAtUrl='', lastInteractionAt=0;
+  let motionPending=false, motionStartedAtUrl='', lastInteractionAt=0, motionReason='gesture';
   let lastUrl=location.href, lastUrlChangedAt=0;
   let pointerStart=null, lastViewportSignature='';
   const SETTLE_MS=750;
@@ -162,14 +162,17 @@ async function boot(){
       event.clientX>=r.left && event.clientX<=r.left+r.width &&
       event.clientY>=r.top && event.clientY<=r.top+r.height);
   }
-  function invalidateCamera() {
+  function invalidateCamera(reason='gesture') {
     if(!prefs.enabled||!prefs.layerVisible)return;
     if(!motionPending)motionStartedAtUrl=location.href;
+    // A resize/layout event must never override a more uncertain drag or zoom.
+    if(!motionPending || reason==='gesture') motionReason=reason;
     motionPending=true;
     lastInteractionAt=performance.now();
     previousKey='';
     ui.overlay.style.display='none';
-    ui.camera.textContent='Map moving · awaiting updated coordinates';
+    ui.camera.textContent=reason==='layout'?'Map layout settling…':
+      'Map moving · awaiting updated coordinates';
   }
   document.addEventListener('pointerdown',event=>{
     if(hitMapSurface(event))pointerStart={id:event.pointerId,x:event.clientX,y:event.clientY};
@@ -230,7 +233,7 @@ async function boot(){
   prefs={...DEFAULTS,...stored};
   redraw(true);
   window.addEventListener('resize',()=>{
-    invalidateCamera(); // A sidebar or canvas reflow can move the camera independently.
+    invalidateCamera('layout'); // Reproject against the resized viewport after settling.
     redraw(true);
   },{passive:true});
   window.addEventListener('popstate',()=>redraw(true));
@@ -492,7 +495,7 @@ async function boot(){
     const currentSignature=viewportSignature(viewport);
     // A map canvas relayout without a trustworthy new camera invalidates registration.
     if(currentSignature && lastViewportSignature && currentSignature!==lastViewportSignature) {
-      invalidateCamera();
+      invalidateCamera('layout');
     }
     if(currentSignature)lastViewportSignature=currentSignature;
     const time=performance.now();
@@ -507,7 +510,8 @@ async function boot(){
     else if(Math.abs(camera.lat-MINNEAPOLIS.lat)>1.2||Math.abs(camera.lng-MINNEAPOLIS.lng)>1.9)
       reason='Navigate to Minneapolis to see the layer';
     else if(!viewport)reason='Map canvas not detected · overlay paused';
-    else if(motionPending && location.href===motionStartedAtUrl)
+    else if(motionPending && motionReason==='gesture' &&
+      location.href===motionStartedAtUrl)
       reason='Map moved, URL coordinates unchanged · overlay paused';
     else if(motionPending &&
       (time-lastInteractionAt<SETTLE_MS || time-lastUrlChangedAt<SETTLE_MS))
