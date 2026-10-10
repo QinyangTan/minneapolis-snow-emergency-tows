@@ -5,7 +5,7 @@ import {layerAnalysis,legendBands,colorClass,colorForObservation,
   HIGH_CONTRAST_COLORS,explainSelection} from './storyLayers.mjs';
 
 const DEFAULTS={enabled:false,layerVisible:true,event:'all',day:0,neighborhood:'all',
-  mode:'counts',recurrenceMetric:'any',topK:5,opacity:0.84};
+  mode:'counts',recurrenceMetric:'any',topK:5,opacity:0.74};
 const rootId='csci5609-snow-maps-extension';
 const DATA_URL='data/neighborhoods.geojson';
 const SUMMARY_URL='data/summary.json';
@@ -48,6 +48,11 @@ async function boot(){
         <button type="button" data-mode="recurrence" aria-pressed="false">Which areas repeat?</button>
       </div>
       <p class="snow-mode-hint" data-mode-hint aria-live="polite">Compare historical tow counts across neighborhoods and Days 1–3.</p>
+      <section class="snow-legend" aria-label="Map data legend">
+        <h3>MAP COLOR KEY <span data-legend-units>OBSERVED TOW RECORDS</span></h3>
+        <div class="snow-legend-grid" data-legend></div>
+        <p>Distinct ordered bands; fixed across comparable views. Gray means zero records, not missing data.</p>
+      </section>
       <div class="snow-kpis"><div><strong data-total>—</strong><span data-total-label>citywide records</span></div>
         <div><strong data-mapped>—</strong><span data-mapped-label>mapped to neighborhoods</span></div></div>
       <label class="snow-field">SNOW EMERGENCY
@@ -80,13 +85,8 @@ async function boot(){
         <output data-camera-status aria-live="polite">Initializing…</output>
       </div>
       <label class="snow-field snow-opacity">MAP LAYER OPACITY
-        <input data-opacity type="range" min="0.60" max="1" step="0.05" value="0.84" aria-label="Neighborhood layer opacity"/>
+        <input data-opacity type="range" min="0.60" max="1" step="0.05" value="0.74" aria-label="Neighborhood layer opacity"/>
       </label>
-      <section class="snow-legend" aria-label="Map data legend">
-        <h3>MAP COLOR KEY <span data-legend-units>OBSERVED TOW RECORDS</span></h3>
-        <div class="snow-legend-grid" data-legend></div>
-        <p>Distinct ordered bands; fixed across comparable views. Gray means zero records, not missing data.</p>
-      </section>
       <label class="snow-field">INSPECT A NEIGHBORHOOD
         <select data-neighborhood aria-label="Select neighborhood for count inspection">
           <option value="all">All Minneapolis neighborhoods</option>
