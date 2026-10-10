@@ -86,6 +86,13 @@ try{
   // comparison, linked numerical annotations, and same-denominator day bars.
   const keyItems=panel.locator('.snow-legend-item');
   if(await keyItems.count()!==6)fail('Six explicit observed-count legend bands are required');
+  const legendBox=await panel.locator('.snow-legend').boundingBox();
+  const kpiBox=await panel.locator('.snow-kpis').boundingBox();
+  if(!legendBox||!kpiBox||legendBox.y>=kpiBox.y)
+    fail('Map color key must be visible before the KPI/dashboard controls');
+  const opacity=Number(await panel.locator('[data-opacity]').inputValue());
+  if(opacity<0.70||opacity>0.80)
+    fail('Default overlay must balance strong color contrast with legible Google road labels');
   const countLabels=await keyItems.allTextContents();
   if(countLabels.map(x=>x.trim()).join('|')!=='0|1–4|5–14|15–39|40–99|100+')
     fail('Count legend labels are inconsistent: '+countLabels.join('|'));
