@@ -12,6 +12,20 @@ This prototype reads only Google Maps' *visible URL camera* (`@latitude,longitud
 
 The first version intentionally does not draw street-level tow-address pins, use Google Maps Platform credentials, or claim parking-law risk or current street rules.
 
+## Live Google Maps DOM audit — October 10, 2026
+
+A separate Playwright browser visited the **actual** public Google Maps website at `https://www.google.com/maps/@44.9778,-93.2650,12z` (1200 × 880 viewport). Findings:
+
+- Legacy selectors `canvas.widget-scene-canvas`, `#scene`, `.widget-scene`, `[aria-label="Map"]` **were absent**. The page used **two overlapping viewport-sized WebGL canvases** (plus a zero-size canvas). The initial extension could not locate a scene there and therefore would fail closed.
+- A real map wheel-zoom updated the visible image **before** changing the URL. In this browser observation, the address first retained zoom `12z`, then later reported approximately `12.68z` and an adjusted center. It is not safe to keep previously projected polygons visible during that delay.
+- The patched extension now recognizes an **overlapping pair** of large canvases; one generic full-page canvas is intentionally not enough.
+- The patched extension **suspends geographic geometry** as soon as a map wheel, drag/pinch gesture or viewport relayout is observed. It resumes only after a *different* URL camera appears and remains settled. If Google Maps never updates its URL, the layer stays paused instead of presenting stale geometry.
+- The filter panel now offers a one-click **collapse** without disabling the layer, preserving more room for map search, zoom, navigation and POI selection.
+
+**Evidence limits:** This was live Google Maps DOM/URL inspection plus separate Chromium MV3 fixture verification. The extension **has not yet been installed and georegistered against the live website** in that browser; no claim of pixel-perfect overlay positioning, compatibility with all search sidebars, or production readiness is justified. Google Maps can change its private DOM/URL conventions without notice.
+
+**Production release gate:** screen-record dragging/panning/zooming and compare known neighborhood boundaries with independent ground-truth references at multiple viewport sizes and zoom levels; verify search and directions remain usable; test Street View, tilt/rotate, route sidebar and accessibility. Prefer a fully supported Google Maps JavaScript API **owned map instance** with `OverlayView` for guaranteed map-synchronized custom layers, but recognize this creates a new Google-powered map rather than modifying the consumer `google.com/maps` instance.
+
 ## Installing a verified QA build
 
 1. Open the repository's [Google Maps Extension Actions workflow](https://github.com/QinyangTan/minneapolis-snow-emergency-tows/actions/workflows/google-maps-extension.yml).
