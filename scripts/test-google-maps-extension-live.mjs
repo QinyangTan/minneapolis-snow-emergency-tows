@@ -74,6 +74,8 @@ try{
     return root?.querySelectorAll('svg.snow-geo-overlay path').length===87;
   },null,{timeout:15000});
   const initial=await state();
+  const geometry=()=>page.locator('#csci5609-snow-maps-extension').locator('svg.snow-geo-overlay path').first().getAttribute('d');
+  const initialGeometry=await geometry();
   mkdirSync('artifacts',{recursive:true});
   await page.screenshot({path:'artifacts/live-map-overlay-initial.png',animations:'disabled'});
   assert(initial.overlayVisible,'REAL Google Maps: overlay not visible in supported north-up view');
@@ -98,6 +100,8 @@ try{
     return overlay && getComputedStyle(overlay).display!=='none';
   },null,{timeout:15000});
   const afterZoom=await state();
+  const zoomGeometry=await geometry();
+  assert(zoomGeometry && zoomGeometry!==initialGeometry,'Real Google zoom did not change projected neighborhood coordinates');
   await page.screenshot({path:'artifacts/live-map-overlay-after-zoom.png',animations:'disabled'});
   assert(afterZoom.polygons===87,'Map polygons lost after native Google zoom');
   // Native drag must remain functional. Google Maps reports a new URL camera
@@ -116,6 +120,8 @@ try{
     return getComputedStyle(root.querySelector('.snow-geo-overlay')).display!=='none';
   },null,{timeout:18000});
   const final=await state();
+  const dragGeometry=await geometry();
+  assert(dragGeometry && dragGeometry!==zoomGeometry,'Real Google drag did not reproject neighborhood boundaries');
   await page.screenshot({path:'artifacts/live-map-overlay-after-drag.png',animations:'disabled'});
   assert(final.polygons===87&&final.citywide==='418','Lost state after real map drag');
   assert(!errors.some(x=>/Snow Emergency overlay/.test(x)),'Extension caused a page error');
