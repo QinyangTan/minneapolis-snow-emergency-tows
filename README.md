@@ -16,6 +16,8 @@ The recurrence matrix reports both *ANY RECORD* (one or more tows) and *PROMINEN
 
 For a larger team, maintain [verifiable contribution records](docs/TEAM_CONTRIBUTIONS.md), mutually review all analytical claims, and confirm the required [AI contribution disclosure](docs/AI_DISCLOSURE.md) before submitting to the course.
 
+
+**Usability study (new):** The [moderated facilitator kit](docs/USER_EVALUATION_SESSION_KIT.md) provides six unbiased participant tasks, exact answers grounded in the official City data, a [blank TSV observation sheet](docs/evaluation/evaluation-template.tsv), and an offline aggregation script. Use `npm run evaluation:report -- /path/to/private-study.tsv` to summarize only genuinely recorded anonymous outcomes. No participants have been evaluated yet. This is not a claim of real-user success.
 ## Official course milestones
 
 The Canvas connector was restored October 7, 2026 and the **actual Fall 2026 FP1–FP4 rubrics** were checked. See [milestone scores and deadlines](docs/RUBRIC_TRACEABILITY.md). FP1 requires a **7–10-minute PDF slide presentation by October 12**, while FP3 explicitly awards **2 points for a public GitHub Pages site**. The private source repo need not itself become public if an approved static demo is deployed separately. The [registered five-person team](docs/TEAM_CONTRIBUTIONS.md) must verify contribution ownership and [Codex/ChatGPT disclosures](docs/AI_DISCLOSURE.md). ChatGPT/GitHub commits are NOT course-funded Codex sessions.
