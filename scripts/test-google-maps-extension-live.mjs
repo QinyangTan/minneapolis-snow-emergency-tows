@@ -74,6 +74,8 @@ try{
     return root?.querySelectorAll('svg.snow-geo-overlay path').length===87;
   },null,{timeout:15000});
   const initial=await state();
+  mkdirSync('artifacts',{recursive:true});
+  await page.screenshot({path:'artifacts/live-map-overlay-initial.png',animations:'disabled'});
   assert(initial.overlayVisible,'REAL Google Maps: overlay not visible in supported north-up view');
   assert(initial.citywide==='5,423','REAL Google Maps: wrong source total');
   assert(initial.canvases>=1,'REAL Google Maps: no active raster or WebGL canvas');
@@ -96,6 +98,7 @@ try{
     return overlay && getComputedStyle(overlay).display!=='none';
   },null,{timeout:15000});
   const afterZoom=await state();
+  await page.screenshot({path:'artifacts/live-map-overlay-after-zoom.png',animations:'disabled'});
   assert(afterZoom.polygons===87,'Map polygons lost after native Google zoom');
   // Native drag must remain functional. Google Maps reports a new URL camera
   // asynchronously; never show stale geography while it is lagging.
@@ -113,6 +116,7 @@ try{
     return getComputedStyle(root.querySelector('.snow-geo-overlay')).display!=='none';
   },null,{timeout:18000});
   const final=await state();
+  await page.screenshot({path:'artifacts/live-map-overlay-after-drag.png',animations:'disabled'});
   assert(final.polygons===87&&final.citywide==='418','Lost state after real map drag');
   assert(!errors.some(x=>/Snow Emergency overlay/.test(x)),'Extension caused a page error');
   console.log(JSON.stringify({result:'PASS',...contextDescription(),initial,afterZoom,final,pageErrors:errors.slice(0,3)},null,2));
