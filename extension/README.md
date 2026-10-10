@@ -4,6 +4,12 @@ An original, **opt-in Chrome/Edge Manifest V3 extension** for the CSCI 5609 Thre
 
 **Status:** experimental GIS overlay, not navigationally calibrated. Source reproducible and offline. Never claim exact alignments to Google Maps' private rendering engine.
 
+## Watch the Google Maps extension in action
+
+![Looping GIF recorded from Google Maps Chromium with the live extension: choropleth, Day 2 event, neighborhood, recurring hotspots, Top K, fingerprint small multiples, native zoom and drag](../docs/demos/google-maps-extension-demo.gif)
+
+This is a compact GIF assembled from **real browser screenshots** captured by the unmocked Google Maps extension test; it is not a generated UI mockup. Between-state crossfades are edited transitions. See [the reproducible capture script](../scripts/test-google-maps-extension-live.mjs) and [GIF conversion tool](../scripts/build-google-maps-demo-gif.py). The overlay still requires a north-up 2D view with a readable URL camera; GIFs do not independently establish pixel-level ground-truth registration.
+
 ## Readable story layers — CSCI 5609 lecture-to-interaction transfer
 
 The original smooth, low-opacity gradient made adjacent neighborhoods difficult to distinguish over a colorful Google basemap. The revised **v0.2 analysis UI** has a discoverable, six-class color key and two explicitly distinct tasks:
