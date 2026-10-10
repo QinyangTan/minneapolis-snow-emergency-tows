@@ -31,7 +31,7 @@ try{
     route.fulfill({status:200,contentType:'text/html',
       body:'<!doctype html><html lang="en"><head><title>Google Maps fixture</title></head><body style="margin:0"><div id="scene" style="position:fixed;inset:0;background:#eaf0f4"></div></body></html>'}));
   await page.goto('https://www.google.com/maps/@44.9778,-93.2650,12z',{waitUntil:'domcontentloaded'});
-  await worker.evaluate(()=>chrome.storage.local.set({enabled:true}));
+  await worker.evaluate(()=>chrome.storage.local.set({enabled:true,opacity:0.42}));
   const host=page.locator('#csci5609-snow-maps-extension');
   await host.waitFor({state:'attached',timeout:16000});
   const panel=host.locator('.snow-panel');
@@ -74,19 +74,102 @@ try{
   await areas.selectOption('Marcy Holmes');
   const detail=(await panel.locator('[data-neighborhood-count]').textContent())||'';
   if(!/Marcy Holmes:\s*62\b/.test(detail))fail('Neighborhood inspector did not show Bridge/Day 2 = 62: '+detail);
-  const focused=host.locator('svg.snow-geo-overlay path[stroke="#b9333a"]');
+  const focused=host.locator('svg.snow-geo-overlay path[stroke="#0a1325"]');
   if(await focused.count()!==1)fail('Exactly one selected neighborhood border should be emphasized');
   await areas.selectOption('all');
   await page.waitForFunction(()=>{
     const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
-    return root?.querySelectorAll('svg.snow-geo-overlay path[stroke="#b9333a"]').length===0;
+    return root?.querySelectorAll('svg.snow-geo-overlay path[stroke="#0a1325"]').length===0;
   },null,{timeout:5000});
   if(await focused.count()!==0)fail('Clearing neighborhood highlight left selected geometry');
+  // Lecture-inspired: legend decoding, reproducible fixed thresholds, recurrence
+  // comparison, linked numerical annotations, and same-denominator day bars.
+  const keyItems=panel.locator('.snow-legend-item');
+  if(await keyItems.count()!==6)fail('Six explicit observed-count legend bands are required');
+  const legendBox=await panel.locator('.snow-legend').boundingBox();
+  const kpiBox=await panel.locator('.snow-kpis').boundingBox();
+  if(!legendBox||!kpiBox||legendBox.y>=kpiBox.y)
+    fail('Map color key must be visible before the KPI/dashboard controls');
+  const opacity=Number(await panel.locator('[data-opacity]').inputValue());
+  if(opacity<0.70||opacity>0.80)
+    fail('Default overlay must balance strong color contrast with legible Google road labels');
+  const countLabels=await keyItems.allTextContents();
+  if(countLabels.map(x=>x.trim()).join('|')!=='0|1–4|5–14|15–39|40–99|100+')
+    fail('Count legend labels are inconsistent: '+countLabels.join('|'));
+  const swatches=await keyItems.locator('.snow-color-swatch').evaluateAll(xs=>
+    xs.map(x=>getComputedStyle(x).backgroundColor));
+  if(new Set(swatches).size!==6)fail('The map legend did not provide distinct color bins');
+  const filled=await host.locator('svg.snow-geo-overlay path').evaluateAll(xs=>
+    [...new Set(xs.map(x=>x.getAttribute('data-band')))]);
+  if(filled.length<3)fail('Only '+filled.length+' count categories rendered; contrast is insufficient');
+  if(!/62 observed records/.test(await panel.locator('[data-story-text]').textContent()||''))
+    fail('Evidence annotation did not link to the selected neighborhood');
+  if(await panel.locator('.snow-day-row').count()!==3)
+    fail('Three comparable Days 1–3 should be visible');
+  await panel.locator('button[data-mode="recurrence"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='9' &&
+      root?.querySelector('[data-recurrence-rules]')?.hidden===false;
+  });
+  if(!await panel.locator('select[data-event]').isDisabled())
+    fail('Single event selector must disable in across-all-event recurrence view');
+  if((await keyItems.allTextContents()).map(x=>x.trim()).join('|')!=='0|1–2|3–4|5–6|7–8|9')
+    fail('Recurrence color key must refer to nine events, not raw towing counts');
+  await panel.locator('[data-recurrence-metric]').selectOption('prominent');
+  await panel.locator('[data-topk]').selectOption('10');
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return /Top 10/.test(root?.querySelector('[data-story-text]')?.textContent||'');
+  });
+  if((await panel.locator('[data-topk-row]').isHidden()))
+    fail('Top K threshold must remain discoverable when prominence is active');
+  const recurrenceHeader=await panel.locator('[data-top-heading]').textContent();
+  if(!/RECURRING/.test(recurrenceHeader||''))
+    fail('Recurrence view did not explain its metric');
+  await panel.locator('button[data-mode="counts"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='418' &&
+      root?.querySelector('[data-recurrence-rules]')?.hidden===true;
+  });
   const state=await panel.locator('button[data-day="2"]').getAttribute('aria-pressed');
   if(state!=='true')fail('Selected day is not accessible');
   await panel.locator('input[data-layer]').uncheck();
   if(await host.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)!=='none')fail('Layer OFF did not hide geometry');
   await panel.locator('input[data-layer]').check();
+  // Multi-view lecture: nine real event fingerprints, aligned proportions,
+  // and reversible selection linking back to the geographic data layer.
+  await panel.locator('.snow-fingerprints summary').click();
+  if(await panel.locator('button[data-fingerprint-event]').count()!==9)
+    fail('Event-comparison small multiples must contain all nine historical events');
+  const fingerprints=panel.locator('button[data-fingerprint-event]');
+  for(const item of await fingerprints.all()){
+    if(await item.locator('.snow-fingerprint-segment').count()!==3)
+      fail('Each event fingerprint requires comparable Day 1–3 segments');
+  }
+  await panel.locator('button[data-fingerprint-event="Glenwood"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='719' &&
+      root?.querySelector('[data-event]')?.value==='Glenwood';
+  });
+  if(await panel.locator('button[data-fingerprint-event="Glenwood"]').getAttribute('aria-pressed')!=='true')
+    fail('Event fingerprint click did not link to global selection');
+  await panel.locator('select[data-event]').selectOption('Bridge');
+  await panel.locator('button[data-day="2"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='418';
+  });
+  // A browser/sidebar resize must restore the coordinate layer even when the
+  // URL center stays the same. Drag/wheel gestures are still fail-closed.
+  await page.setViewportSize({width:1100,height:780});
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    const svg=root?.querySelector('svg.snow-geo-overlay');
+    return svg && getComputedStyle(svg).display!=='none'&&svg.querySelectorAll('path').length===87;
+  },null,{timeout:12000});
   // Real pointer/wheel input must reach the map, while stale geographic marks disappear.
   const wheelSeen=await page.evaluate(()=>{
     window.__snowWheelSeen=false;
