@@ -138,6 +138,30 @@ try{
   await panel.locator('input[data-layer]').uncheck();
   if(await host.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)!=='none')fail('Layer OFF did not hide geometry');
   await panel.locator('input[data-layer]').check();
+  // Multi-view lecture: nine real event fingerprints, aligned proportions,
+  // and reversible selection linking back to the geographic data layer.
+  await panel.locator('.snow-fingerprints summary').click();
+  if(await panel.locator('button[data-fingerprint-event]').count()!==9)
+    fail('Event-comparison small multiples must contain all nine historical events');
+  const fingerprints=panel.locator('button[data-fingerprint-event]');
+  for(const item of await fingerprints.all()){
+    if(await item.locator('.snow-fingerprint-segment').count()!==3)
+      fail('Each event fingerprint requires comparable Day 1–3 segments');
+  }
+  await panel.locator('button[data-fingerprint-event="Glenwood"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='719' &&
+      root?.querySelector('[data-event]')?.value==='Glenwood';
+  });
+  if(await panel.locator('button[data-fingerprint-event="Glenwood"]').getAttribute('aria-pressed')!=='true')
+    fail('Event fingerprint click did not link to global selection');
+  await panel.locator('select[data-event]').selectOption('Bridge');
+  await panel.locator('button[data-day="2"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='418';
+  });
   // A browser/sidebar resize must restore the coordinate layer even when the
   // URL center stays the same. Drag/wheel gestures are still fail-closed.
   await page.setViewportSize({width:1100,height:780});
