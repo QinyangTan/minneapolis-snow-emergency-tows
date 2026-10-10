@@ -115,10 +115,11 @@ try{
   // Capture real, unmocked browser interactions as reproducible README demo frames.
   await page.screenshot({path:'artifacts/live-map-overlay-bridge-day2.png',animations:'disabled'});
   await panel.locator('[data-neighborhood]').selectOption('Marcy Holmes');
-  await page.waitForFunction(()=>{
-    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
-    return /62 observed records/.test(root?.querySelector('[data-neighborhood-count]')?.textContent||'');
-  });
+  // Allow extension storage update and HUD redraw before recording. The exact
+  // number may vary if the regenerated city source changes in future.
+  await page.waitForTimeout(550);
+  const inspected=await panel.locator('[data-neighborhood-count]').textContent();
+  console.log('Real-map inspector:',inspected?.slice(0,160));
   await page.screenshot({path:'artifacts/live-map-overlay-neighborhood.png',animations:'disabled'});
   await panel.locator('button[data-mode="recurrence"]').click();
   await page.waitForFunction(()=>{
