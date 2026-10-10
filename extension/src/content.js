@@ -102,6 +102,16 @@ async function boot(){
         <p data-story-text aria-live="polite">Select an event or neighborhood to explore its records.</p>
         <div class="snow-day-compare" data-day-compare aria-label="Same-denominator three day comparison"></div>
       </section>
+      <details class="snow-fingerprints">
+        <summary>COMPARE ALL 9 EMERGENCIES <span>Day-share fingerprints</span></summary>
+        <p>Each row is 100% of one event. The three colored segments compare timing; the number at right is the separate citywide event total. Select a row to explore its map.</p>
+        <div class="snow-fingerprint-legend" aria-label="Fingerprint day color legend">
+          <span><i style="background:#23638b"></i>Day 1</span>
+          <span><i style="background:#dc663c"></i>Day 2</span>
+          <span><i style="background:#8155a7"></i>Day 3</span>
+        </div>
+        <div data-fingerprints class="snow-fingerprint-list"></div>
+      </details>
       <div class="snow-actions">
         <a data-recenter href="https://www.google.com/maps/@44.9778,-93.2650,12z" title="Center Google Maps on Minneapolis">Center Minneapolis ↗</a>
         <a href="https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/" target="_blank" rel="noopener noreferrer">Full analysis ↗</a>
@@ -137,6 +147,7 @@ async function boot(){
     storyTitle:dock.querySelector('[data-story-title]'),
     storyText:dock.querySelector('[data-story-text]'),
     dayCompare:dock.querySelector('[data-day-compare]'),
+    fingerprints:dock.querySelector('[data-fingerprints]'),
     topHeading:dock.querySelector('[data-top-heading]'),
     leaders:dock.querySelector('[data-leaders]'),
     scope:dock.querySelector('[data-scope]'),
@@ -282,6 +293,34 @@ async function boot(){
         option.textContent=feature.properties.name;
         ui.neighborhood.append(option);
       }
+      const fingerprintList=document.createDocumentFragment();
+      for(const event of overview.events){
+        const button=document.createElement('button');
+        button.type='button';button.className='snow-fingerprint';
+        button.dataset.fingerprintEvent=event.id;
+        button.setAttribute('aria-pressed','false');
+        const head=document.createElement('div');head.className='snow-fingerprint-head';
+        const title=document.createElement('span');title.textContent=event.id+' · '+event.season;
+        const count=document.createElement('strong');count.textContent=event.total.toLocaleString('en-US')+' records';
+        head.append(title,count);
+        const bar=document.createElement('div');bar.className='snow-fingerprint-track';
+        const shares=[];
+        for(const entry of event.days){
+          const share=event.total>0?100*entry.count/event.total:0;
+          shares.push('Day '+entry.day+' '+share.toFixed(1)+'%');
+          const segment=document.createElement('span');
+          segment.className='snow-fingerprint-segment';
+          segment.style.width=share.toFixed(4)+'%';
+          segment.style.backgroundColor=['','#23638b','#dc663c','#8155a7'][entry.day];
+          bar.append(segment);
+        }
+        button.setAttribute('aria-label',event.id+', '+event.season+', '+
+          event.total+' citywide records: '+shares.join('; ')+'. Select event map.');
+        button.append(head,bar);button.addEventListener('click',()=>
+          store({mode:'counts',event:event.id,day:0}));
+        fingerprintList.append(button);
+      }
+      ui.fingerprints.replaceChildren(fingerprintList);
     })();
     try{await dataPromise;}catch(error){dataPromise=null;throw error}
   }
@@ -421,6 +460,10 @@ async function boot(){
       ui.topK.value=String(prefs.topK);
       ui.topKRow.hidden=prefs.recurrenceMetric!=='prominent';
       ui.event.value=prefs.event;
+      for(const button of ui.fingerprints.querySelectorAll('button[data-fingerprint-event]')){
+        button.setAttribute('aria-pressed',String(prefs.mode==='counts' &&
+          button.dataset.fingerprintEvent===prefs.event));
+      }
       ui.neighborhood.value=prefs.neighborhood;
       ui.layer.checked=Boolean(prefs.layerVisible);
       ui.opacity.value=String(prefs.opacity);
