@@ -15,7 +15,10 @@
     "qa:pages": "node scripts/check-pages-build.mjs",
     "demo:winter-gifs": "node scripts/record-winter-demos.mjs",
     "qa:evaluation": "node --test tests/test_evaluate_study.mjs tests/test_study_answer_key.mjs",
-    "evaluation:report": "node scripts/evaluate-study.mjs"
+    "evaluation:report": "node scripts/evaluate-study.mjs",
+    "build:extension": "node scripts/build-google-maps-extension.mjs",
+    "qa:extension": "node --test tests/test_google_maps_extension.mjs",
+    "qa:extension:browser": "node scripts/test-google-maps-extension-browser.mjs"
   },
   "dependencies": {
     "@sveltejs/kit": "^2.20.0",
