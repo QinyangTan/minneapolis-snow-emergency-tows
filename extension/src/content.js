@@ -251,7 +251,33 @@ async function boot(){
         return convert(a);
       }
     }
-    return null; // Fail closed instead of attaching a geospatial layer to arbitrary DOM.
+    // Google Maps' raster/2D fallback on Linux can expose ONE oversized
+    // mAWRAc canvas, not the paired WebGL canvases seen on macOS. It is only
+    // trusted when native Maps search AND zoom controls are simultaneously
+    // present, the current URL contains a valid camera, and the rendered
+    // canvas intersects most of the visible viewport. Generic single-canvas
+    // pages remain unsupported.
+    const hasNativeControls=Boolean(
+      document.querySelector('button[aria-label="Zoom in"]') &&
+      document.querySelector('button[aria-label="Zoom out"]') &&
+      document.querySelector('[aria-label="Search"]')
+    );
+    if(hasNativeControls && parseCamera(location.href)){
+      const canvases=Array.from(document.querySelectorAll('canvas'))
+        .filter(node=>!host.contains(node))
+        .map(node=>node.getBoundingClientRect());
+      for(const r of canvases){
+        const visibleWidth=Math.max(0,Math.min(innerWidth,r.right)-Math.max(0,r.left));
+        const visibleHeight=Math.max(0,Math.min(innerHeight,r.bottom)-Math.max(0,r.top));
+        if(visibleWidth>=innerWidth*.8 && visibleHeight>=innerHeight*.8 &&
+            r.width>=innerWidth*.8 && r.height>=innerHeight*.8){
+          // Oversized canvas includes raster buffer padding; URL camera is
+          // assumed to reference visible viewport, not the offscreen buffer.
+          return {left:0,top:0,width:innerWidth,height:innerHeight};
+        }
+      }
+    }
+    return null; // Fail closed instead of attaching a layer to unverified DOM.
   }
 
   function drawPaths(camera,viewport,selected){
