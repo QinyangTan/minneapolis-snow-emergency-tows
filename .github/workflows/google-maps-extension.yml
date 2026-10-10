@@ -5,6 +5,7 @@ on:
       - 'extension/**'
       - 'scripts/build-google-maps-extension.mjs'
       - 'scripts/test-google-maps-extension-browser.mjs'
+      - 'scripts/test-google-maps-extension-live.mjs'
       - 'tests/test_google_maps_extension.mjs'
       - 'package.json'
       - '.github/workflows/google-maps-extension.yml'
@@ -14,6 +15,7 @@ on:
       - 'extension/**'
       - 'scripts/build-google-maps-extension.mjs'
       - 'scripts/test-google-maps-extension-browser.mjs'
+      - 'scripts/test-google-maps-extension-live.mjs'
       - 'tests/test_google_maps_extension.mjs'
       - 'package.json'
   workflow_dispatch:
@@ -45,6 +47,9 @@ jobs:
         run: npx playwright install --with-deps chromium
       - name: Browser smoke test — Google Maps URL fixture and MV3
         run: npm run qa:extension:browser
+      - name: Real Google Maps E2E — no stub or intercepted requests
+        run: npm run qa:extension:live
+        timeout-minutes: 5
       - name: Upload installable unpacked Chrome extension
         if: success()
         uses: actions/upload-artifact@v4
