@@ -22,10 +22,8 @@ on:
       - 'package.json'
   workflow_dispatch:
 
-# Same-repository demo branch only: commit an image generated from real-browser screenshots.
-# All unrelated jobs remain read-only in effect; no outside PRs are allowed to commit.
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   verify-extension:
@@ -33,8 +31,6 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref || github.ref_name }}
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -74,23 +70,6 @@ jobs:
           path: artifacts/live-map-overlay-*.png
           if-no-files-found: error
           retention-days: 14
-      - name: Create actual Google Maps interaction GIF for README
-        if: github.event_name == 'pull_request' && github.head_ref == 'docs/google-maps-extension-demo-gif' && github.event.pull_request.head.repo.full_name == github.repository
-        run: |
-          python3 -m pip install --quiet Pillow==12.0.0
-          python3 scripts/build-google-maps-demo-gif.py artifacts docs/demos/google-maps-extension-demo.gif
-          file docs/demos/google-maps-extension-demo.gif
-          test -s docs/demos/google-maps-extension-demo.gif
-      - name: Commit browser-derived GIF to dedicated PR branch
-        if: github.event_name == 'pull_request' && github.head_ref == 'docs/google-maps-extension-demo-gif' && github.event.pull_request.head.repo.full_name == github.repository
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/demos/google-maps-extension-demo.gif
-          if ! git diff --cached --quiet; then
-            git commit -m 'docs: add real Google Maps extension demo GIF [skip ci]'
-            git push origin HEAD:refs/heads/docs/google-maps-extension-demo-gif
-          fi
       - name: Upload installable unpacked Chrome extension
         if: success()
         uses: actions/upload-artifact@v4
