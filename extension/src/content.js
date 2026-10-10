@@ -17,7 +17,7 @@ async function boot(){
   host.style.cssText='position:fixed;inset:0;z-index:2147483646;pointer-events:none;';
   const shadow=host.attachShadow({mode:'open'});
   const style=document.createElement('style');
-  style.textContent=`:host{all:initial} .snow-panel{display:none}`;
+  style.textContent=`:host{all:initial;pointer-events:none!important} .snow-panel{display:none}`;
   shadow.append(style);
   const overlay=document.createElementNS('http://www.w3.org/2000/svg','svg');
   overlay.setAttribute('class','snow-geo-overlay');
