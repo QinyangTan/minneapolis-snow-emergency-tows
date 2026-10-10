@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Three Days, Three Rules · Google Maps Overlay",
+  "short_name": "Snow Tow Overlay",
+  "version": "0.1.0",
+  "description": "Map-aligned preview of official Minneapolis Snow Emergency towing counts, with historical event/day filtering.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Toggle Minneapolis Snow Emergency layer"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/maps*",
+        "https://maps.google.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "content.css",
+        "data/neighborhoods.geojson",
+        "data/summary.json"
+      ],
+      "matches": [
+        "https://www.google.com/*",
+        "https://maps.google.com/*"
+      ]
+    }
+  ]
+}
