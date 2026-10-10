@@ -77,6 +77,10 @@ try{
   const focused=host.locator('svg.snow-geo-overlay path[stroke="#b9333a"]');
   if(await focused.count()!==1)fail('Exactly one selected neighborhood border should be emphasized');
   await areas.selectOption('all');
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelectorAll('svg.snow-geo-overlay path[stroke="#b9333a"]').length===0;
+  },null,{timeout:5000});
   if(await focused.count()!==0)fail('Clearing neighborhood highlight left selected geometry');
   const state=await panel.locator('button[data-day="2"]').getAttribute('aria-pressed');
   if(state!=='true')fail('Selected day is not accessible');
