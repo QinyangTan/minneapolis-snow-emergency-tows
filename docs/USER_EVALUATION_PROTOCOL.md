@@ -2,6 +2,9 @@
 
 **Status: not conducted.** This is a repeatable evaluation plan for the team, not a claim that anyone has participated. The Fall 2026 course emphasizes a small study, clear visual encodings and legible takeaway annotations. Automated tests, screenshots, and AI-generated opinions cannot substitute for genuine participants.
 
+
+**Ready-to-run materials:** see [the six-task moderated study kit](USER_EVALUATION_SESSION_KIT.md), [blank coded observation worksheet](evaluation/evaluation-template.tsv), and the offline command `npm run evaluation:report -- /path/to/private-study.tsv`. The original protocol below remains a broader research plan. **Zero actual participant results have been reported.**
+
 ## Recruitment / ethics
 
 Recruit 3–5 adult volunteers who have not built the project, ideally with different Minneapolis and data-visualization familiarity. Explain this is a classroom prototype, not City parking guidance. Participants may decline, skip questions or stop. Obtain permission before saving quotes or recordings; avoid collecting exact addresses, phone numbers or identifying records. Keep field notes private and anonymized; only share aggregated findings. Do not record ordinary visitor analytics without disclosure.
