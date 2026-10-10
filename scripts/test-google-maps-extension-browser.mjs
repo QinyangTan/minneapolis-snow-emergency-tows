@@ -60,7 +60,7 @@ try{
   if((await areas.locator('option').count())!==88)fail('Expected 87 neighborhoods plus all areas');
   await areas.selectOption('Marcy Holmes');
   const detail=(await panel.locator('[data-neighborhood-count]').textContent())||'';
-  if(!/Marcy Holmes:\\s*62\\b/.test(detail))fail('Neighborhood inspector did not show Bridge/Day 2 = 62: '+detail);
+  if(!/Marcy Holmes:\s*62\b/.test(detail))fail('Neighborhood inspector did not show Bridge/Day 2 = 62: '+detail);
   const focused=host.locator('svg.snow-geo-overlay path[stroke="#b9333a"]');
   if(await focused.count()!==1)fail('Exactly one selected neighborhood border should be emphasized');
   await areas.selectOption('all');
