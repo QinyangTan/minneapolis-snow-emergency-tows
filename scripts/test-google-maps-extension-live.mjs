@@ -82,6 +82,21 @@ try{
     try{await page.screenshot({path:'artifacts/real-maps-diagnostic.png'})}catch{}
     throw error;
   }
+  // An actual Maps canvas may resize after initial injection. Only assert
+  // visible geography after the extension's documented settle window.
+  try {
+    await page.waitForFunction(()=>{
+      const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+      const overlay=root?.querySelector('.snow-geo-overlay');
+      return overlay && getComputedStyle(overlay).display!=='none';
+    },null,{timeout:18000});
+  } catch (e) {
+    const diagnostics=await state();
+    console.error('Live overlay did not settle:',JSON.stringify(diagnostics));
+    mkdirSync('artifacts',{recursive:true});
+    await page.screenshot({path:'artifacts/real-maps-diagnostic.png',animations:'disabled'}).catch(()=>{});
+    throw e;
+  }
   const initial=await state();
   const geometry=()=>page.locator('#csci5609-snow-maps-extension').locator('svg.snow-geo-overlay path').first().getAttribute('d');
   const initialGeometry=await geometry();
