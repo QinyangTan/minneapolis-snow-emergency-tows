@@ -43,6 +43,16 @@ try{
   const count=await host.locator('svg.snow-geo-overlay path').count();
   if(count!==87)fail('Expected all 87 projected neighborhoods; received '+count);
   if((await panel.locator('[data-total]').textContent())!=='5,423')fail('Wrong nine-event citywide count');
+  // A collapsible HUD must free map space without hiding the currently selected layer.
+  const collapse=panel.getByRole('button',{name:'Collapse visualization controls'});
+  await collapse.click();
+  if(!(await panel.evaluate(node=>node.classList.contains('snow-collapsed'))))
+    fail('Panel did not collapse');
+  if(await host.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)==='none')
+    fail('Minimizing controls must not disable the map overlay');
+  await panel.getByRole('button',{name:'Expand visualization controls'}).click();
+  if(await panel.evaluate(node=>node.classList.contains('snow-collapsed')))
+    fail('Panel failed to expand');
   await panel.locator('select[data-event]').selectOption('Bridge');
   await panel.locator('button[data-day="2"]').click();
   if((await panel.locator('[data-total]').textContent())!=='418')fail('Bridge Day 2 count mismatch');
