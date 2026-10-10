@@ -28,3 +28,5 @@ jobs:
         run: npm run build
       - name: Statistical analysis unit tests
         run: npm run qa:research
+      - name: Verify README animated demos
+        run: node scripts/check-readme-gifs.mjs
