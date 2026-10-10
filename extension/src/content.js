@@ -15,7 +15,7 @@ async function boot(){
   const host=document.createElement('div');
   host.id=rootId;
   host.style.cssText='position:fixed;inset:0;z-index:2147483646;pointer-events:none;';
-  const shadow=host.attachShadow({mode:'closed'});
+  const shadow=host.attachShadow({mode:'open'});
   const style=document.createElement('style');
   style.textContent=`:host{all:initial} .snow-panel{display:none}`;
   shadow.append(style);
