@@ -29,3 +29,20 @@
 @media(max-width:900px){.constellation-layout{grid-template-columns:1fr}.constellation-aside{padding:18px}.constellation-roster{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:550px){.constellation-roster{grid-template-columns:1fr}.constellation-controls{align-items:start}.constellation-figure{min-width:620px}.constellation-aside{gap:11px}}
 @media(prefers-reduced-motion:reduce){.constellation-point{transition:none}}
+
+/* Range brushing ties the quantitative scatterplot to the categorical event roster. */
+.constellation-brush-controls{background:#f2f7f9;border:1px solid #cddfe8;padding:14px 16px;margin-bottom:15px}
+.constellation-brush-title{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#1c4963;font-size:12px}
+.constellation-brush-title strong{font:750 11px 'Space Grotesk',sans-serif;letter-spacing:.09em}
+.constellation-brush-title span{font-variant-numeric:tabular-nums}
+.constellation-brush-sliders{display:grid;grid-template-columns:1fr 1fr auto;align-items:end;gap:13px;margin:14px 0 7px}
+.constellation-brush-sliders label{display:flex;flex-direction:column;gap:6px;font:700 11px 'Space Grotesk',sans-serif;color:#314d62}
+.constellation-brush-sliders input{width:100%;min-width:0;accent-color:#2d718f;cursor:ew-resize}
+.constellation-brush-sliders input:focus-visible{outline:3px solid #c07942;outline-offset:3px}
+.constellation-brush-sliders button{background:#fff;border:1px solid #9cbbc8;padding:8px 10px;color:#285773;font-size:11px;font-weight:700;cursor:pointer}
+.constellation-brush-sliders button:disabled{opacity:.5;cursor:default}
+.constellation-brush-sliders button:focus-visible{outline:3px solid #c07942;outline-offset:2px}
+.constellation-brush-hint{margin:6px 0 0;font-size:11px;line-height:1.5;color:#49687b}
+.constellation-point.constellation-brush-out{opacity:.18;filter:grayscale(.8)}
+.constellation-roster>button.constellation-roster-muted:not(.roster-selected){opacity:.34;background:#f5f7f8}
+@media(max-width:550px){.constellation-brush-sliders{grid-template-columns:1fr 1fr}.constellation-brush-sliders button{grid-column:1/-1}}
