@@ -56,6 +56,15 @@ try{
   await panel.locator('select[data-event]').selectOption('Bridge');
   await panel.locator('button[data-day="2"]').click();
   if((await panel.locator('[data-total]').textContent())!=='418')fail('Bridge Day 2 count mismatch');
+  const areas=panel.locator('select[data-neighborhood]');
+  if((await areas.locator('option').count())!==88)fail('Expected 87 neighborhoods plus all areas');
+  await areas.selectOption('Marcy Holmes');
+  const detail=(await panel.locator('[data-neighborhood-count]').textContent())||'';
+  if(!/Marcy Holmes:\\s*62\\b/.test(detail))fail('Neighborhood inspector did not show Bridge/Day 2 = 62: '+detail);
+  const focused=host.locator('svg.snow-geo-overlay path[stroke="#b9333a"]');
+  if(await focused.count()!==1)fail('Exactly one selected neighborhood border should be emphasized');
+  await areas.selectOption('all');
+  if(await focused.count()!==0)fail('Clearing neighborhood highlight left selected geometry');
   const state=await panel.locator('button[data-day="2"]').getAttribute('aria-pressed');
   if(state!=='true')fail('Selected day is not accessible');
   await panel.locator('input[data-layer]').uncheck();
