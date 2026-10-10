@@ -15,3 +15,8 @@ data/raw/
 artifacts/
 test-results/
 playwright-report/
+
+# Never commit real-user study observations or non-anonymized field notes
+docs/evaluation/private/
+docs/evaluation/observations*.tsv
+docs/evaluation/results*.md

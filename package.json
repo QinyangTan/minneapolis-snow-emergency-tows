@@ -10,10 +10,12 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "qa:browser": "playwright test",
     "demo:gifs": "node scripts/record-demos.mjs",
-    "qa:research": "node --test tests/test_event_analysis.mjs tests/test_comparison_evidence.mjs tests/test_event_constellation.mjs",
+    "qa:research": "node --test tests/test_event_analysis.mjs tests/test_comparison_evidence.mjs tests/test_event_constellation.mjs tests/test_constellation_brush.mjs tests/test_evaluate_study.mjs tests/test_study_answer_key.mjs",
     "build:pages": "PAGES_BASE_PATH=/minneapolis-snow-emergency-tows-demo npm run build",
     "qa:pages": "node scripts/check-pages-build.mjs",
-    "demo:winter-gifs": "node scripts/record-winter-demos.mjs"
+    "demo:winter-gifs": "node scripts/record-winter-demos.mjs",
+    "qa:evaluation": "node --test tests/test_evaluate_study.mjs tests/test_study_answer_key.mjs",
+    "evaluation:report": "node scripts/evaluate-study.mjs"
   },
   "dependencies": {
     "@sveltejs/kit": "^2.20.0",
