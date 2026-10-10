@@ -31,7 +31,7 @@ try{
     route.fulfill({status:200,contentType:'text/html',
       body:'<!doctype html><html lang="en"><head><title>Google Maps fixture</title></head><body style="margin:0"><div id="scene" style="position:fixed;inset:0;background:#eaf0f4"></div></body></html>'}));
   await page.goto('https://www.google.com/maps/@44.9778,-93.2650,12z',{waitUntil:'domcontentloaded'});
-  await worker.evaluate(()=>chrome.storage.local.set({enabled:true}));
+  await worker.evaluate(()=>chrome.storage.local.set({enabled:true,opacity:0.42}));
   const host=page.locator('#csci5609-snow-maps-extension');
   await host.waitFor({state:'attached',timeout:16000});
   const panel=host.locator('.snow-panel');
