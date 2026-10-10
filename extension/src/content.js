@@ -34,6 +34,7 @@ async function boot(){
       <div class="snow-mark" aria-hidden="true">✳</div>
       <div><div class="snow-eyebrow">MINNEAPOLIS / DATA STORIES</div>
         <h2>Snow Emergency Tows</h2></div>
+      <button class="snow-minimize" type="button" aria-label="Collapse visualization controls" aria-expanded="true" title="Collapse controls">−</button>
       <button class="snow-close" type="button" aria-label="Close visualization" title="Hide extension">×</button>
     </header>
     <div class="snow-body">
@@ -143,6 +144,14 @@ async function boot(){
       target.closest('canvas.widget-scene-canvas, #scene, .widget-scene, [aria-label="Map"]'))invalidateCamera();
   },{capture:true,passive:true});
   const store=(changes)=>chrome.storage.local.set(changes);
+  const minimizeButton=dock.querySelector('.snow-minimize');
+  minimizeButton.addEventListener('click',()=>{
+    const collapsed=dock.classList.toggle('snow-collapsed');
+    minimizeButton.setAttribute('aria-label',collapsed?'Expand visualization controls':'Collapse visualization controls');
+    minimizeButton.setAttribute('aria-expanded',String(!collapsed));
+    minimizeButton.textContent=collapsed?'+':'−';
+    minimizeButton.title=collapsed?'Expand controls':'Collapse controls';
+  });
   dock.querySelector('.snow-close').addEventListener('click',()=>store({enabled:false}));
   ui.event.addEventListener('change',()=>store({event:ui.event.value}));
   ui.layer.addEventListener('change',()=>store({layerVisible:ui.layer.checked}));
