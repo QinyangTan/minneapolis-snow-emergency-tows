@@ -60,6 +60,14 @@ jobs:
           path: artifacts/real-maps-diagnostic.png
           if-no-files-found: ignore
           retention-days: 7
+      - name: Upload real Google Maps snapshots for map-alignment review
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-maps-overlay-real-browser-screenshots
+          path: artifacts/live-map-overlay-*.png
+          if-no-files-found: error
+          retention-days: 14
       - name: Upload installable unpacked Chrome extension
         if: success()
         uses: actions/upload-artifact@v4
