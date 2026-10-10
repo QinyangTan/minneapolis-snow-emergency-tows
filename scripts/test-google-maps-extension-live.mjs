@@ -118,11 +118,13 @@ try{
   const prev=page.url();
   await zoom.click();
   await page.waitForFunction(old=>location.href!==old,prev,{timeout:25000});
-  await page.waitForFunction(()=>{
+  await page.waitForFunction(oldPath=>{
     const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
     const overlay=root?.querySelector('.snow-geo-overlay');
-    return overlay && getComputedStyle(overlay).display!=='none';
-  },null,{timeout:15000});
+    const path=overlay?.querySelector('path')?.getAttribute('d');
+    return path && path!==oldPath &&
+      getComputedStyle(overlay).display!=='none';
+  },initialGeometry,{timeout:15000});
   const afterZoom=await state();
   const zoomGeometry=await geometry();
   assert(zoomGeometry && zoomGeometry!==initialGeometry,'Real Google zoom did not change projected neighborhood coordinates');
@@ -139,10 +141,13 @@ try{
   await page.mouse.move(x+125,y+88,{steps:12});
   await page.mouse.up();
   await page.waitForFunction(old=>location.href!==old,beforeDrag,{timeout:25000});
-  await page.waitForFunction(()=>{
+  await page.waitForFunction(oldPath=>{
     const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
-    return getComputedStyle(root.querySelector('.snow-geo-overlay')).display!=='none';
-  },null,{timeout:18000});
+    const overlay=root?.querySelector('.snow-geo-overlay');
+    const path=overlay?.querySelector('path')?.getAttribute('d');
+    return path && path!==oldPath &&
+      getComputedStyle(overlay).display!=='none';
+  },zoomGeometry,{timeout:18000});
   const final=await state();
   const dragGeometry=await geometry();
   assert(dragGeometry && dragGeometry!==zoomGeometry,'Real Google drag did not reproject neighborhood boundaries');
