@@ -47,7 +47,7 @@ async function boot(){
         <button type="button" data-mode="counts" aria-pressed="true">Where are tows?</button>
         <button type="button" data-mode="recurrence" aria-pressed="false">Which areas repeat?</button>
       </div>
-      <p class="snow-mode-hint" data-mode-hint>Compare historical tow counts across neighborhoods and Days 1–3.</p>
+      <p class="snow-mode-hint" data-mode-hint aria-live="polite">Compare historical tow counts across neighborhoods and Days 1–3.</p>
       <div class="snow-kpis"><div><strong data-total>—</strong><span data-total-label>citywide records</span></div>
         <div><strong data-mapped>—</strong><span data-mapped-label>mapped to neighborhoods</span></div></div>
       <label class="snow-field">SNOW EMERGENCY
@@ -396,9 +396,14 @@ async function boot(){
       for(const button of dock.querySelectorAll('button[data-mode]')){
         button.setAttribute('aria-pressed',String(button.dataset.mode===prefs.mode));
       }
-      ui.modeHint.textContent=prefs.mode==='counts'?
-        'Compare observed towing counts across events and Days 1–3. Every color band uses the same thresholds.':
-        'See which neighborhoods repeatedly appear across nine emergencies. This is event recurrence, not tow volume.';
+      const leading=selected.top[0];
+      ui.modeHint.textContent=leading ?
+        (prefs.mode==='counts'
+          ?'DATA INSIGHT · '+leading.name+' has the highest mapped count here ('+
+            leading.count.toLocaleString('en-US')+'). Compare the three days below.'
+          :'DATA INSIGHT · '+leading.name+' meets this recurrence rule in '+
+            leading.count+' of 9 emergencies. Try Any Record vs Top K to compare.')
+        :'No recorded data for the selected view.';
       ui.recurrenceRules.hidden=prefs.mode!=='recurrence';
       ui.event.disabled=prefs.mode==='recurrence';
       ui.event.title=prefs.mode==='recurrence'?'Recurrence compares all nine events': '';
