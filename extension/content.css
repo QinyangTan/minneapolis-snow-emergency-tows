@@ -8,7 +8,13 @@
 .snow-mark{width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:#f0f9fc;color:#1d6886;font-size:25px;flex:0 0 34px}
 .snow-header h2{margin:1px 0 0;font-size:17px;line-height:1.2;color:#fff;font-weight:750;letter-spacing:-.4px}
 .snow-eyebrow{font-size:9px;letter-spacing:1.6px;color:#bcdeeb;font-weight:800}
-.snow-close{margin-left:auto;background:#ffffff1c;color:#fff;border:1px solid #ffffff42;border-radius:10px;width:29px;height:30px;cursor:pointer;font-size:23px;display:grid;place-items:center;line-height:1}
+.snow-minimize,.snow-close{background:#ffffff1c;color:#fff;border:1px solid #ffffff42;border-radius:10px;width:29px;height:30px;flex:0 0 29px;cursor:pointer;font-size:23px;display:grid;place-items:center;line-height:1}
+.snow-minimize{margin-left:auto}
+.snow-panel.snow-collapsed{width:250px;max-height:63px;overflow:hidden}
+.snow-panel.snow-collapsed .snow-body{display:none}
+.snow-panel.snow-collapsed .snow-header{border-radius:16px;min-height:61px}
+.snow-panel.snow-collapsed .snow-header h2{font-size:13px}
+.snow-panel.snow-collapsed .snow-eyebrow{font-size:8px}
 .snow-body{padding:16px}
 .snow-kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
 .snow-kpis>div{display:flex;flex-direction:column;gap:2px;border-radius:9px;background:#edf4f8;padding:12px}
