@@ -339,10 +339,11 @@ async function boot(){
       if(!pathText)return;
       const path=document.createElementNS('http://www.w3.org/2000/svg','path');
       path.setAttribute('d',pathText);
-      path.setAttribute('fill',gradientFor(rows[index]?.count||0,max));
+      path.setAttribute('fill',colorForObservation(rows[index]?.count||0,prefs.mode));
+      path.setAttribute('data-band',String(colorClass(rows[index]?.count||0,prefs.mode)));
       const focused=feature.properties.name===prefs.neighborhood;
-      path.setAttribute('stroke',focused?'#b9333a':'#24455e');
-      path.setAttribute('stroke-width',focused?'3.5':'0.8');
+      path.setAttribute('stroke',focused?'#0a1325':'#ffffff');
+      path.setAttribute('stroke-width',focused?'3.2':'1.2');
       path.setAttribute('fill-rule','evenodd');
       path.setAttribute('vector-effect','non-scaling-stroke');
       geometry.append(path);
@@ -374,44 +375,109 @@ async function boot(){
     }
     const day=Number(prefs.day);
     if(![0,1,2,3].includes(day)){prefs.day=0;store({day:0});return}
-    const dataScopeKey=prefs.event+'|'+day;
-    const selected=statsCacheKey===dataScopeKey ? statsCacheValue : summarize(data,prefs.event,day);
+    if(!['counts','recurrence'].includes(prefs.mode)){
+      prefs.mode='counts';store({mode:'counts'});return;
+    }
+    if(!['any','prominent'].includes(prefs.recurrenceMetric)){
+      prefs.recurrenceMetric='any';store({recurrenceMetric:'any'});return;
+    }
+    if(![5,10,15].includes(Number(prefs.topK))){
+      prefs.topK=5;store({topK:5});return;
+    }
+    const dataScopeKey=[prefs.mode,prefs.event,day,prefs.recurrenceMetric,prefs.topK].join('|');
+    const selected=statsCacheKey===dataScopeKey ? statsCacheValue :
+      layerAnalysis(data,summary,prefs);
     if(statsCacheKey!==dataScopeKey){statsCacheKey=dataScopeKey;statsCacheValue=selected;}
     const panelKey=dataScopeKey+'|'+prefs.neighborhood+'|'+prefs.opacity+'|'+prefs.layerVisible;
     if(force || previousPanelKey!==panelKey){
-    if(prefs.neighborhood!=='all'&&!selected.rows.some(r=>r.name===prefs.neighborhood)){
-      prefs.neighborhood='all';
-      store({neighborhood:'all'});
-      return;
-    }
-    ui.neighborhood.value=prefs.neighborhood;
-    const focused=selected.rows.find(r=>r.name===prefs.neighborhood);
-    ui.neighborhoodCount.textContent=focused
-      ?focused.name+': '+focused.count.toLocaleString('en-US')+
-        ' observed tow records in this selection (not a tow-risk estimate)'
-      :'Select a neighborhood to inspect its observed tow count.';
-    ui.event.value=prefs.event;
-    ui.layer.checked=Boolean(prefs.layerVisible);
-    ui.opacity.value=String(prefs.opacity);
-    ui.total.textContent=Number(prefs.event==='all'
-      ?(day===0?summary.total:summary.days.find(r=>r.day===day)?.count)
-      :(day===0?summary.events.find(e=>e.id===prefs.event)?.total:summary.events.find(e=>e.id===prefs.event)?.days.find(r=>r.day===day)?.count)
-      ||0).toLocaleString('en-US');
-    ui.mapped.textContent=selected.mapped.toLocaleString('en-US');
-    ui.maximum.textContent=selected.max.toLocaleString('en-US')+' records';
-    ui.scope.textContent=(prefs.event==='all'?'9 EVENTS':prefs.event.toUpperCase())+' · '+(day===0?'ALL DAYS':'DAY '+day);
-    for(const btn of dock.querySelectorAll('button[data-day]')){
-      btn.setAttribute('aria-pressed',String(Number(btn.dataset.day)===day));
-    }
-    const newRows=document.createDocumentFragment();
-    for(const row of selected.top){
-      const item=document.createElement('div');item.className='snow-leader';
-      const title=document.createElement('span');title.textContent=row.name;
-      const count=document.createElement('strong');count.textContent=row.count.toLocaleString('en-US');
-      item.append(title,count);newRows.append(item);
-    }
-    ui.leaders.replaceChildren(newRows);
-    ui.loadState.textContent='Source coverage: 5,423 historic records; 68 without neighborhood match';
+      if(prefs.neighborhood!=='all'&&!selected.rows.some(r=>r.name===prefs.neighborhood)){
+        prefs.neighborhood='all';store({neighborhood:'all'});return;
+      }
+      for(const button of dock.querySelectorAll('button[data-mode]')){
+        button.setAttribute('aria-pressed',String(button.dataset.mode===prefs.mode));
+      }
+      ui.modeHint.textContent=prefs.mode==='counts'?
+        'Compare observed towing counts across events and Days 1–3. Every color band uses the same thresholds.':
+        'See which neighborhoods repeatedly appear across nine emergencies. This is event recurrence, not tow volume.';
+      ui.recurrenceRules.hidden=prefs.mode!=='recurrence';
+      ui.event.disabled=prefs.mode==='recurrence';
+      ui.event.title=prefs.mode==='recurrence'?'Recurrence compares all nine events': '';
+      ui.recurrenceMetric.value=prefs.recurrenceMetric;
+      ui.topK.value=String(prefs.topK);
+      ui.topKRow.hidden=prefs.recurrenceMetric!=='prominent';
+      ui.event.value=prefs.event;
+      ui.neighborhood.value=prefs.neighborhood;
+      ui.layer.checked=Boolean(prefs.layerVisible);
+      ui.opacity.value=String(prefs.opacity);
+      const focused=selected.rows.find(row=>row.name===prefs.neighborhood);
+      ui.neighborhoodCount.textContent=focused
+        ?focused.name+': '+focused.count.toLocaleString('en-US')+' '+
+          (prefs.mode==='counts'?'observed tow records':'qualifying emergencies of 9')+
+          '. This does not measure parking risk.'
+        :'Choose a neighborhood to inspect its exact '+selected.measure+'.';
+      ui.total.textContent=selected.headline.primary.toLocaleString('en-US');
+      ui.mapped.textContent=selected.headline.secondary.toLocaleString('en-US');
+      ui.totalLabel.textContent=selected.headline.primaryLabel;
+      ui.mappedLabel.textContent=selected.headline.secondaryLabel;
+      ui.legendUnits.textContent=prefs.mode==='counts'?'TOW RECORDS':'QUALIFYING EVENTS / 9';
+      ui.scope.textContent=(prefs.mode==='recurrence'?'9 EVENTS':
+        (prefs.event==='all'?'9 EVENTS':prefs.event.toUpperCase()))+
+        ' · '+(day===0?'ALL DAYS':'DAY '+day);
+      ui.topHeading.textContent=prefs.mode==='counts'?
+        'MOST OBSERVED TOW RECORDS':'MOST RECURRING NEIGHBORHOODS';
+      for(const button of dock.querySelectorAll('button[data-day]')){
+        button.setAttribute('aria-pressed',String(Number(button.dataset.day)===day));
+      }
+      const legend=document.createDocumentFragment();
+      legendBands(prefs.mode).forEach((band,index)=>{
+        const item=document.createElement('div');item.className='snow-legend-item';
+        const swatch=document.createElement('span');swatch.className='snow-color-swatch';
+        swatch.style.backgroundColor=HIGH_CONTRAST_COLORS[index];
+        swatch.setAttribute('aria-hidden','true');
+        const name=document.createElement('span');name.textContent=band.label;
+        item.append(swatch,name);legend.append(item);
+      });
+      ui.legend.replaceChildren(legend);
+      const newRows=document.createDocumentFragment();
+      for(const row of selected.top){
+        const item=document.createElement('div');
+        item.className='snow-leader'+(row.name===prefs.neighborhood?' snow-leader-selected':'');
+        const header=document.createElement('div');header.className='snow-leader-line';
+        const name=document.createElement('span');name.textContent=row.name;
+        const value=document.createElement('strong');value.textContent=row.count.toLocaleString('en-US');
+        header.append(name,value);
+        const bar=document.createElement('div');bar.className='snow-rank-track';
+        const fill=document.createElement('span');fill.className='snow-rank-fill';
+        fill.style.width=(100*row.count/Math.max(1,selected.max)).toFixed(1)+'%';
+        fill.style.backgroundColor=colorForObservation(row.count,prefs.mode);
+        bar.append(fill);item.append(header,bar);newRows.append(item);
+      }
+      ui.leaders.replaceChildren(newRows);
+      ui.storyTitle.textContent=prefs.mode==='counts'?'READ THE MAP / Where is the concentration?':
+        'READ THE MAP / How often does an area recur?';
+      ui.storyText.textContent=explainSelection(selected,summary,prefs.neighborhood,
+        prefs.recurrenceMetric,Number(prefs.topK));
+      ui.dayCompare.replaceChildren();
+      ui.dayCompare.hidden=prefs.mode!=='counts';
+      if(prefs.mode==='counts'){
+        const eventRow=prefs.event==='all'?summary:summary.events.find(e=>e.id===prefs.event);
+        const maxDay=Math.max(1,...eventRow.days.map(d=>d.count));
+        const label=document.createElement('strong');label.className='snow-day-label';
+        label.textContent='SAME EVENT · DAY 1–3 COMPARISON';
+        ui.dayCompare.append(label);
+        for(const d of eventRow.days){
+          const row=document.createElement('div');row.className='snow-day-row';
+          const dayLabel=document.createElement('span');dayLabel.textContent='Day '+d.day;
+          const track=document.createElement('div');track.className='snow-day-track';
+          const fill=document.createElement('span');fill.style.width=(100*d.count/maxDay).toFixed(1)+'%';
+          fill.style.backgroundColor=['','#23638b','#dc663c','#8155a7'][d.day];
+          track.append(fill);
+          const count=document.createElement('strong');
+          count.textContent=d.count.toLocaleString('en-US')+' · '+(100*d.count/eventRow.total).toFixed(1)+'%';
+          row.append(dayLabel,track,count);ui.dayCompare.append(row);
+        }
+      }
+      ui.loadState.textContent='Historic official City aggregates · 68 citywide records without a mapped neighborhood.';
       previousPanelKey=panelKey;
     }
 
@@ -445,7 +511,7 @@ async function boot(){
       reason='Waiting for map transition…';
     if(reason){ui.camera.textContent=reason;ui.overlay.style.display='none';previousKey='';return}
     motionPending=false;
-    const key=[location.href,viewport.left,viewport.top,viewport.width,viewport.height,prefs.event,day,prefs.neighborhood,prefs.opacity].join('|');
+    const key=[location.href,viewport.left,viewport.top,viewport.width,viewport.height,prefs.event,day,prefs.mode,prefs.recurrenceMetric,prefs.topK,prefs.neighborhood,prefs.opacity].join('|');
     if(force||key!==previousKey){
       drawPaths(camera,viewport,selected);
       previousKey=key;
