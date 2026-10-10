@@ -74,14 +74,58 @@ try{
   await areas.selectOption('Marcy Holmes');
   const detail=(await panel.locator('[data-neighborhood-count]').textContent())||'';
   if(!/Marcy Holmes:\s*62\b/.test(detail))fail('Neighborhood inspector did not show Bridge/Day 2 = 62: '+detail);
-  const focused=host.locator('svg.snow-geo-overlay path[stroke="#b9333a"]');
+  const focused=host.locator('svg.snow-geo-overlay path[stroke="#0a1325"]');
   if(await focused.count()!==1)fail('Exactly one selected neighborhood border should be emphasized');
   await areas.selectOption('all');
   await page.waitForFunction(()=>{
     const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
-    return root?.querySelectorAll('svg.snow-geo-overlay path[stroke="#b9333a"]').length===0;
+    return root?.querySelectorAll('svg.snow-geo-overlay path[stroke="#0a1325"]').length===0;
   },null,{timeout:5000});
   if(await focused.count()!==0)fail('Clearing neighborhood highlight left selected geometry');
+  // Lecture-inspired: legend decoding, reproducible fixed thresholds, recurrence
+  // comparison, linked numerical annotations, and same-denominator day bars.
+  const keyItems=panel.locator('.snow-legend-item');
+  if(await keyItems.count()!==6)fail('Six explicit observed-count legend bands are required');
+  const countLabels=await keyItems.allTextContents();
+  if(countLabels.map(x=>x.trim()).join('|')!=='0|1–4|5–14|15–39|40–99|100+')
+    fail('Count legend labels are inconsistent: '+countLabels.join('|'));
+  const swatches=await keyItems.locator('.snow-color-swatch').evaluateAll(xs=>
+    xs.map(x=>getComputedStyle(x).backgroundColor));
+  if(new Set(swatches).size!==6)fail('The map legend did not provide distinct color bins');
+  const filled=await host.locator('svg.snow-geo-overlay path').evaluateAll(xs=>
+    [...new Set(xs.map(x=>x.getAttribute('data-band')))]);
+  if(filled.length<3)fail('Only '+filled.length+' count categories rendered; contrast is insufficient');
+  if(!/62 observed records/.test(await panel.locator('[data-story-text]').textContent()||''))
+    fail('Evidence annotation did not link to the selected neighborhood');
+  if(await panel.locator('.snow-day-row').count()!==3)
+    fail('Three comparable Days 1–3 should be visible');
+  await panel.locator('button[data-mode="recurrence"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='9' &&
+      root?.querySelector('[data-recurrence-rules]')?.hidden===false;
+  });
+  if(!await panel.locator('select[data-event]').isDisabled())
+    fail('Single event selector must disable in across-all-event recurrence view');
+  if((await keyItems.allTextContents()).map(x=>x.trim()).join('|')!=='0|1–2|3–4|5–6|7–8|9')
+    fail('Recurrence color key must refer to nine events, not raw towing counts');
+  await panel.locator('[data-recurrence-metric]').selectOption('prominent');
+  await panel.locator('[data-topk]').selectOption('10');
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return /Top 10/.test(root?.querySelector('[data-story-text]')?.textContent||'');
+  });
+  if((await panel.locator('[data-topk-row]').isHidden()))
+    fail('Top K threshold must remain discoverable when prominence is active');
+  const recurrenceHeader=await panel.locator('[data-top-heading]').textContent();
+  if(!/RECURRING/.test(recurrenceHeader||''))
+    fail('Recurrence view did not explain its metric');
+  await panel.locator('button[data-mode="counts"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='418' &&
+      root?.querySelector('[data-recurrence-rules]')?.hidden===true;
+  });
   const state=await panel.locator('button[data-day="2"]').getAttribute('aria-pressed');
   if(state!=='true')fail('Selected day is not accessible');
   await panel.locator('input[data-layer]').uncheck();
