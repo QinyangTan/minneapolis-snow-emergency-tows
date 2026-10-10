@@ -42,6 +42,19 @@ try{
   },null,{timeout:20000});
   const count=await host.locator('svg.snow-geo-overlay path').count();
   if(count!==87)fail('Expected all 87 projected neighborhoods; received '+count);
+  // A real page-control at the map corner must still receive clicks through
+  // the full-screen extension host; only the small HUD is interactive.
+  await page.evaluate(()=>{
+    const native=document.createElement('button');
+    native.setAttribute('aria-label','Zoom in');
+    native.textContent='+';
+    native.style.cssText='position:fixed;right:15px;bottom:15px;width:42px;height:42px;z-index:2';
+    native.addEventListener('click',()=>{window.__nativeMapZoomClicks=(window.__nativeMapZoomClicks||0)+1});
+    document.body.append(native);
+  });
+  await page.getByRole('button',{name:'Zoom in',exact:true}).click();
+  if((await page.evaluate(()=>window.__nativeMapZoomClicks))!==1)
+    fail('Full-screen extension host blocked a native map Zoom in click');
   if((await panel.locator('[data-total]').textContent())!=='5,423')fail('Wrong nine-event citywide count');
   // A collapsible HUD must free map space without hiding the currently selected layer.
   const collapse=panel.getByRole('button',{name:'Collapse visualization controls'});
