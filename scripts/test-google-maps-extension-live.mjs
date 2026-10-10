@@ -69,10 +69,19 @@ try{
       canvases:[...document.querySelectorAll('canvas')].map(c=>c.getBoundingClientRect())
         .filter(r=>r.width>600&&r.height>400).length};
   });
-  await page.waitForFunction(()=>{
-    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
-    return root?.querySelectorAll('svg.snow-geo-overlay path').length===87;
-  },null,{timeout:15000});
+  try {
+    await page.waitForFunction(()=>{
+      const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+      const overlay=root?.querySelector('svg.snow-geo-overlay');
+      return overlay?.querySelectorAll('path').length===87 &&
+        getComputedStyle(overlay).display!=='none';
+    },null,{timeout:25000});
+  } catch(error){
+    console.error('Live overlay settle diagnostic:',JSON.stringify(await state()));
+    mkdirSync('artifacts',{recursive:true});
+    try{await page.screenshot({path:'artifacts/real-maps-diagnostic.png'})}catch{}
+    throw error;
+  }
   const initial=await state();
   const geometry=()=>page.locator('#csci5609-snow-maps-extension').locator('svg.snow-geo-overlay path').first().getAttribute('d');
   const initialGeometry=await geometry();
