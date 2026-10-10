@@ -25,7 +25,7 @@ if(manifest.manifest_version!==3||manifest.permissions.some(p=>!['storage'].incl
    !manifest.content_scripts?.length)throw new Error('Unexpected extension permissions or manifest');
 
 let geoSource=readFileSync(join(source,'src/geo.mjs'),'utf8');
-if((geoSource.match(/export (?:const|function) /g)||[]).length!==7){
+if((geoSource.match(/export (?:const|function) /g)||[]).length!==8){
   throw new Error('Projection exports changed: inspect bundler before packaging');
 }
 geoSource=geoSource.replace(/\bexport (const|function)\b/g,'$1');
