@@ -86,7 +86,35 @@ try{
   await page.waitForTimeout(1300);
   if(!/Tilted\/rotated/.test(await panel.locator('[data-camera-status]').textContent()||''))fail('Tilt guard did not warn');
   if(await host.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)!=='none')fail('Tilt guard should hide overlay');
-  console.log('PASS: MV3 injected; 87 polygon paths; 5,423 source records; Bridge Day 2=418; overlay toggle; unsafe tilt rejected.');
+  // The live Google Maps DOM observed in October 2026 uses overlapping WebGL
+  // canvases rather than the older widget-scene selector.
+  await page.route(/^https:\/\/www\.google\.com\/maps(?:\/|$)/,route=>
+    route.fulfill({status:200,contentType:'text/html',
+      body:'<!doctype html><html><head><title>Modern WebGL Google Maps fixture</title></head><body style="margin:0"><canvas class="H1VXrf Kh1Hec" style="position:fixed;inset:0;width:100vw;height:100vh"></canvas><canvas class="H1VXrf JRr1M DnOnV" style="position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none"></canvas></body></html>'}),{times:1});
+  await page.goto('https://www.google.com/maps/@44.9778,-93.265,12z?modernCanvas=1',{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelectorAll('svg.snow-geo-overlay path').length===87 &&
+      getComputedStyle(root.querySelector('.snow-geo-overlay')).display!=='none';
+  },null,{timeout:20000});
+  if((await page.locator('#csci5609-snow-maps-extension').locator('svg.snow-geo-overlay path').count())!==87)
+    fail('Modern Google Maps dual-canvas layout was not detected');
+
+  // One unrelated WebGL canvas is insufficient evidence to register geography.
+  await page.route(/^https:\/\/www\.google\.com\/maps(?:\/|$)/,route=>
+    route.fulfill({status:200,contentType:'text/html',
+      body:'<!doctype html><html><body style="margin:0"><canvas style="position:fixed;inset:0;width:100vw;height:100vh"></canvas></body></html>'}),{times:1});
+  await page.goto('https://www.google.com/maps/@44.9778,-93.265,12z?untrustedCanvas=1',{waitUntil:'domcontentloaded'});
+  const solitary=page.locator('#csci5609-snow-maps-extension');
+  await solitary.locator('.snow-panel').waitFor({state:'visible',timeout:15000});
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return /Map canvas not detected/.test(root?.querySelector('[data-camera-status]')?.textContent||'');
+  },null,{timeout:20000});
+  if(await solitary.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)!=='none')
+    fail('Untrusted single canvas must not carry a geographic overlay');
+
+  console.log('PASS: real Chromium MV3, 87 polygons, counts, gestures, stale-camera suppression, tilt guard, modern dual WebGL canvas and single-canvas refusal.');
 }catch(error){console.error('FAIL: Chrome extension browser smoke test:',error);process.exitCode=1}
 finally{
   if(context)await context.close();
