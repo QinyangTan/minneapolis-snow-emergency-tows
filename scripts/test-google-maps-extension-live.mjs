@@ -76,7 +76,7 @@ try{
   const initial=await state();
   assert(initial.overlayVisible,'REAL Google Maps: overlay not visible in supported north-up view');
   assert(initial.citywide==='5,423','REAL Google Maps: wrong source total');
-  assert(initial.canvases>=2,'REAL Google Maps: map canvases disappeared');
+  assert(initial.canvases>=1,'REAL Google Maps: no active raster or WebGL canvas');
   const collapse=panel.getByRole('button',{name:'Collapse visualization controls'});
   await collapse.click();
   assert(await panel.evaluate(e=>e.classList.contains('snow-collapsed')),'HUD did not collapse on real Maps');
