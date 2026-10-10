@@ -51,3 +51,6 @@
 button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #d88947!important;outline-offset:2px!important}
 @media(max-width:560px){.snow-panel{width:min(350px,calc(100vw - 20px));right:10px;top:65px;max-height:calc(100vh - 80px)}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+.snow-selected-count{display:block;background:#fff6f3;border-left:3px solid #b9333a;color:#5a3940;font-size:11px;line-height:1.55;padding:8px 10px;margin:0 0 13px;border-radius:0 5px 5px 0}
+.snow-field select[data-neighborhood]{height:39px;max-width:100%;overflow:hidden;text-overflow:ellipsis}
