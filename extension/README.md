@@ -4,6 +4,26 @@ An original, **opt-in Chrome/Edge Manifest V3 extension** for the CSCI 5609 Thre
 
 **Status:** experimental GIS overlay, not navigationally calibrated. Source reproducible and offline. Never claim exact alignments to Google Maps' private rendering engine.
 
+## Readable story layers — CSCI 5609 lecture-to-interaction transfer
+
+The original smooth, low-opacity gradient made adjacent neighborhoods difficult to distinguish over a colorful Google basemap. The revised **v0.2 analysis UI** has a discoverable, six-class color key and two explicitly distinct tasks:
+
+| Question | Mode / channels | What the numbers actually mean |
+|---|---|---|
+| Where are observed tows concentrated? | **Where are tows?** Fixed color classes `0`, `1–4`, `5–14`, `15–39`, `40–99`, `100+` observed counts; selected neighborhood has a dark outline. Event and Day 1–3 can be selected. A linked ranked bar list and same-event Day 1–3 mini-bar comparison make visual decoding redundant with exact text. | **Citywide tow records** and **neighborhood-mapped records** are kept separate; unknown neighborhood assignment is not silently discarded. Counts are not parking-exposure-normalized tow probabilities. |
+| Which neighborhoods recur across snow emergencies? | **Which areas repeat?** Switch between **ANY RECORD (≥1 tow)** and **PROMINENT (Top 5/10/15)**. Ranking uses separate event data, a minimum of five recorded tows, and includes cutoff rank ties. Legend uses `0`, `1–2`, `3–4`, `5–6`, `7–8`, `9` **events**. | Each filled neighborhood counts the number of **distinct emergencies out of nine** that meet the selected recurrence criterion. A single event cannot be selected here because the question compares all events. |
+
+**Task and visual encoding decisions from actual Canvas lecture PDFs:**
+
+- *Visual Encoding / Design Perception / Visualization Evaluation:* Strongly distinct, fixed ordinal bands, visible text labels and exact counts instead of relying on visually subtle gradient interpretation. "Zero observed records" gets a separate neutral class.
+- *Interactions: Why/What/How:* Distinguish a simple event/day filter from a *reconfiguration* into a recurrence task. Update hue, legend, statistics, rankings and active mode feedback together. Do not confuse linked single-neighborhood inspection with touching Google Maps' native POI layers.
+- *Narrative Visualization:* Provide one concise **evidence-backed observation** before exploration, then let the reader choose the emergency, day, prominence cutoff or neighborhood. Provide a direct link to the full visualization story.
+- *Multi-View + Maps:* Add small day comparison bars and a numeric linked ranking to the geographic marks; keep denominator, measurement units and scale honest. No invented motion or origin–destination edges.
+
+See [the archived lecture/design audit](../docs/LECTURE_DESIGN_TRANSFER_2026-10-10.md), based on the **Fall 2026 Canvas course modules**. Lecture slides stay in Canvas and are not reproduced in the extension.
+
+**Contrast and ethics:** The saturated ordinal palette is intended to remain distinct against the standard light Google basemap, supported by a six-swatch numeric key, selected dark boundaries, values, explicit units, and screen-reader-friendly UI controls. Visual appearance and color-vision accessibility **must still be manually evaluated** across devices and map styles; passing automated tests is not a formal WCAG claim. The app explicitly does not tell drivers where they will be towed or whether parking is legal today.
+
 ## Why this is separate from the main website
 
 Our [complete data story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) uses its own map projection and internally linked views. Google Maps itself **does not expose a stable mapping camera API to third-party extensions**. A Chrome content script can render HTML/SVG above the page, but cannot turn private Google Maps layers into an officially supported geospatial overlay.
