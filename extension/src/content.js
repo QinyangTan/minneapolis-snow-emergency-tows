@@ -201,16 +201,32 @@ async function boot(){
   }
 
   function findMapViewport(){
-    const candidates=Array.from(document.querySelectorAll(
-      'canvas.widget-scene-canvas, #scene, .widget-scene, [aria-label="Map"]'
-    )).filter(node=>!host.contains(node));
-    const rectangles=candidates.map(node=>node.getBoundingClientRect())
-      .filter(r=>r.width>=280&&r.height>=260&&r.width<=innerWidth+25&&r.height<=innerHeight+25&&r.bottom>0&&r.right>0);
-    if(!rectangles.length)return null;
-    // Prefer a concrete map scene over generic map labels; avoid guessing full-page extents.
-    const r=rectangles[0];
-    return {left:Math.max(0,r.left),top:Math.max(0,r.top),
-      width:Math.min(innerWidth-Math.max(0,r.left),r.width),height:Math.min(innerHeight-Math.max(0,r.top),r.height)};
+    const plausible=r=>r.width>=280&&r.height>=260&&r.width<=innerWidth+25&&
+      r.height<=innerHeight+25&&r.bottom>0&&r.right>0;
+    const convert=r=>({left:Math.max(0,r.left),top:Math.max(0,r.top),
+      width:Math.min(innerWidth-Math.max(0,r.left),r.width),
+      height:Math.min(innerHeight-Math.max(0,r.top),r.height)});
+    const knownSelectors='canvas.widget-scene-canvas, #scene, .widget-scene, [aria-label="Map"]';
+    const scene=Array.from(document.querySelectorAll(knownSelectors))
+      .filter(node=>!host.contains(node)).map(node=>node.getBoundingClientRect()).filter(plausible);
+    if(scene.length)return convert(scene[0]);
+
+    // October 2026 live Google Maps uses two identical viewport-sized WebGL canvases
+    // rather than legacy #scene/widget-scene nodes. A single large canvas is NOT
+    // sufficient: require two distinct, almost-identically placed canvas rectangles.
+    const candidates=Array.from(document.querySelectorAll('canvas'))
+      .filter(node=>!host.contains(node))
+      .map(node=>node.getBoundingClientRect())
+      .filter(r=>plausible(r)&&r.width>=innerWidth*.6&&r.height>=innerHeight*.6);
+    for(let i=0;i<candidates.length;i++){
+      const a=candidates[i];
+      if(candidates.some((b,j)=>i!==j&&Math.abs(a.left-b.left)<=3&&
+           Math.abs(a.top-b.top)<=3&&Math.abs(a.width-b.width)<=3&&
+           Math.abs(a.height-b.height)<=3)){
+        return convert(a);
+      }
+    }
+    return null; // Fail closed instead of attaching a geospatial layer to arbitrary DOM.
   }
 
   function drawPaths(camera,viewport,selected){
