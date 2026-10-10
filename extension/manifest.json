@@ -6,6 +6,7 @@
   "description": "Map-aligned preview of official Minneapolis Snow Emergency towing counts, with historical event/day filtering.",
   "minimum_chrome_version": "116",
   "permissions": [
+    "activeTab",
     "storage"
   ],
   "action": {
