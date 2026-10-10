@@ -14,7 +14,8 @@ if (window.top===window.self && !document.getElementById(rootId)) {
 async function boot(){
   const host=document.createElement('div');
   host.id=rootId;
-  host.style.cssText='position:fixed;inset:0;z-index:2147483646;pointer-events:none;';
+  // A zero-area host cannot cover Google Maps. Only the fixed HUD receives input.
+  host.style.cssText='position:fixed;left:0;top:0;width:0;height:0;z-index:2147483646;pointer-events:none;';
   const shadow=host.attachShadow({mode:'open'});
   const style=document.createElement('style');
   style.textContent=`:host{all:initial;pointer-events:none!important} .snow-panel{display:none}`;
