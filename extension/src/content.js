@@ -231,6 +231,13 @@ async function boot(){
 
   const stored=await chrome.storage.local.get(DEFAULTS);
   prefs={...DEFAULTS,...stored};
+  // Upgrade path: v0.1 saved very low opacity values (e.g. 0.42), which
+  // undermine the v0.2 high-contrast legend. Preserve valid user choices.
+  if(!Number.isFinite(Number(prefs.opacity))||Number(prefs.opacity)<0.60 ||
+      Number(prefs.opacity)>1){
+    prefs.opacity=DEFAULTS.opacity;
+    await chrome.storage.local.set({opacity:prefs.opacity});
+  }
   redraw(true);
   window.addEventListener('resize',()=>{
     invalidateCamera('layout'); // Reproject against the resized viewport after settling.
