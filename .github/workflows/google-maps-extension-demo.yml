@@ -1,0 +1,59 @@
+name: Record real Google Maps extension GIF
+on:
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'extension/README.md'
+      - 'scripts/test-google-maps-extension-live.mjs'
+      - 'scripts/build-google-maps-demo-gif.py'
+      - '.github/workflows/google-maps-extension-demo.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  record-and-publish:
+    if: github.event_name == 'pull_request' && github.head_ref == 'docs/google-maps-extension-demo-gif' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Prepare verified offline extension
+        run: |
+          npm install --no-audit --no-fund
+          npm run build:extension
+      - name: Install browser and visual dependencies
+        run: |
+          npx playwright install --with-deps chromium
+          python3 -m pip install --quiet Pillow==12.0.0
+      - name: Capture eight actual Chrome extension states on live Google Maps
+        env:
+          GMAPS_HEADED: '1'
+        run: xvfb-run -a npm run qa:extension:live
+        timeout-minutes: 5
+      - name: Generate optimized looping README GIF
+        run: |
+          python3 scripts/build-google-maps-demo-gif.py artifacts docs/demos/google-maps-extension-demo.gif
+          file docs/demos/google-maps-extension-demo.gif
+          test -s docs/demos/google-maps-extension-demo.gif
+      - name: Upload authentic browser source frames
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-maps-extension-demo-source-captures
+          path: artifacts/live-map-overlay-*.png
+          if-no-files-found: error
+          retention-days: 10
+      - name: Upload generated looping README GIF
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-maps-extension-readme-gif
+          path: docs/demos/google-maps-extension-demo.gif
+          if-no-files-found: error
+          retention-days: 30

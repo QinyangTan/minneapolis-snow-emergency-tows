@@ -24,6 +24,12 @@ A new [Chrome/Edge Manifest V3 extension](extension/README.md) can show the proj
 
 **Alignment is a preview, not a guarantee:** the overlay projects from the map's visible URL camera, not an official Google Maps extension projection API. It automatically hides polygons when camera coordinates, north-up 2D orientation, or map bounds are unavailable. See [installation and QA limitations](extension/README.md); the [standalone story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) remains the authoritative geographically self-contained visualization. Browser-extension source is independent of the course's FP1 PDF submission.
 
+### Google Maps Extension · real Chromium demo (GIF)
+
+![Animated real-browser Google Maps extension demo: 87 neighborhood tow overlays, Bridge Day 2, Marcy Holmes inspection, recurring hotspots, Top-10 prominence, event fingerprints, native zoom and pan](docs/demos/google-maps-extension-demo.gif)
+
+**Captured from actual `google.com/maps` with the Chrome MV3 extension loaded (no substituted map pages).** The GIF shows count colors and legend, Day 2 event filtering, neighborhood inspection, cross-event recurrence/Top K, nine-event fingerprints, and native Google Maps zoom/pan. Short cuts between genuine captured UI states are video editing, not simulated map data. [Installation & methodology](extension/README.md) · [Run the standalone interactive story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/).
+
 ## Official course milestones
 
 The Canvas connector was restored October 7, 2026 and the **actual Fall 2026 FP1–FP4 rubrics** were checked. See [milestone scores and deadlines](docs/RUBRIC_TRACEABILITY.md). FP1 requires a **7–10-minute PDF slide presentation by October 12**, while FP3 explicitly awards **2 points for a public GitHub Pages site**. The private source repo need not itself become public if an approved static demo is deployed separately. The [registered five-person team](docs/TEAM_CONTRIBUTIONS.md) must verify contribution ownership and [Codex/ChatGPT disclosures](docs/AI_DISCLOSURE.md). ChatGPT/GitHub commits are NOT course-funded Codex sessions.

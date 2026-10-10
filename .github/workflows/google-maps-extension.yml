@@ -6,6 +6,7 @@ on:
       - 'scripts/build-google-maps-extension.mjs'
       - 'scripts/test-google-maps-extension-browser.mjs'
       - 'scripts/test-google-maps-extension-live.mjs'
+      - 'scripts/build-google-maps-demo-gif.py'
       - 'tests/test_google_maps_extension.mjs'
       - 'package.json'
       - '.github/workflows/google-maps-extension.yml'
@@ -16,6 +17,7 @@ on:
       - 'scripts/build-google-maps-extension.mjs'
       - 'scripts/test-google-maps-extension-browser.mjs'
       - 'scripts/test-google-maps-extension-live.mjs'
+      - 'scripts/build-google-maps-demo-gif.py'
       - 'tests/test_google_maps_extension.mjs'
       - 'package.json'
   workflow_dispatch:

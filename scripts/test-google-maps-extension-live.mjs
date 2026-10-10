@@ -112,6 +112,35 @@ try{
   await panel.locator('[data-event]').selectOption('Bridge');
   await panel.locator('button[data-day="2"]').click();
   assert((await state()).citywide==='418','Event/day filtering failed on the live site');
+  // Capture real, unmocked browser interactions as reproducible README demo frames.
+  await page.screenshot({path:'artifacts/live-map-overlay-bridge-day2.png',animations:'disabled'});
+  await panel.locator('[data-neighborhood]').selectOption('Marcy Holmes');
+  // Allow extension storage update and HUD redraw before recording. The exact
+  // number may vary if the regenerated city source changes in future.
+  await page.waitForTimeout(550);
+  const inspected=await panel.locator('[data-neighborhood-count]').textContent();
+  console.log('Real-map inspector:',inspected?.slice(0,160));
+  await page.screenshot({path:'artifacts/live-map-overlay-neighborhood.png',animations:'disabled'});
+  await panel.locator('button[data-mode="recurrence"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='9';
+  });
+  await page.screenshot({path:'artifacts/live-map-overlay-recurrence.png',animations:'disabled'});
+  await panel.locator('[data-recurrence-metric]').selectOption('prominent');
+  await panel.locator('[data-topk]').selectOption('10');
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return /Top 10/.test(root?.querySelector('[data-story-text]')?.textContent||'');
+  });
+  await page.screenshot({path:'artifacts/live-map-overlay-top10.png',animations:'disabled'});
+  await panel.locator('button[data-mode="counts"]').click();
+  await panel.locator('[data-neighborhood]').selectOption('all');
+  await panel.locator('.snow-fingerprints summary').click();
+  await panel.evaluate(node=>{node.scrollTop=node.scrollHeight});
+  await page.screenshot({path:'artifacts/live-map-overlay-fingerprints.png',animations:'disabled'});
+  await panel.locator('.snow-fingerprints summary').click();
+  await panel.evaluate(node=>{node.scrollTop=0});
   // Google Maps retains its native zoom button and search UI.
   const zoom=page.getByRole('button',{name:'Zoom in',exact:true}).first();
   await zoom.waitFor({state:'visible',timeout:20000});
