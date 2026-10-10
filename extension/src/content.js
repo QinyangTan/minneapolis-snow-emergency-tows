@@ -99,6 +99,7 @@ async function boot(){
   };
 
   let prefs={...DEFAULTS}, data=null, summary=null, dataPromise=null, previousKey='';
+  let statsCacheKey='', statsCacheValue=null, previousPanelKey='';
   // A third-party website exposes no documented live camera projection to this extension.
   // Prevent stale screen-space geometry during gestures and Maps SPA transitions.
   let motionPending=false, motionStartedAtUrl='', lastInteractionAt=0;
@@ -323,7 +324,11 @@ async function boot(){
     }
     const day=Number(prefs.day);
     if(![0,1,2,3].includes(day)){prefs.day=0;store({day:0});return}
-    const selected=summarize(data,prefs.event,day);
+    const dataScopeKey=prefs.event+'|'+day;
+    const selected=statsCacheKey===dataScopeKey ? statsCacheValue : summarize(data,prefs.event,day);
+    if(statsCacheKey!==dataScopeKey){statsCacheKey=dataScopeKey;statsCacheValue=selected;}
+    const panelKey=dataScopeKey+'|'+prefs.neighborhood+'|'+prefs.opacity+'|'+prefs.layerVisible;
+    if(force || previousPanelKey!==panelKey){
     if(prefs.neighborhood!=='all'&&!selected.rows.some(r=>r.name===prefs.neighborhood)){
       prefs.neighborhood='all';
       store({neighborhood:'all'});
@@ -357,6 +362,8 @@ async function boot(){
     }
     ui.leaders.replaceChildren(newRows);
     ui.loadState.textContent='Source coverage: 5,423 historic records; 68 without neighborhood match';
+      previousPanelKey=panelKey;
+    }
 
     const camera=parseCamera(location.href);
     const viewport=findMapViewport();
