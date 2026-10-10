@@ -18,6 +18,12 @@ For a larger team, maintain [verifiable contribution records](docs/TEAM_CONTRIBU
 
 
 **Usability study (new):** The [moderated facilitator kit](docs/USER_EVALUATION_SESSION_KIT.md) provides six unbiased participant tasks, exact answers grounded in the official City data, a [blank TSV observation sheet](docs/evaluation/evaluation-template.tsv), and an offline aggregation script. Use `npm run evaluation:report -- /path/to/private-study.tsv` to summarize only genuinely recorded anonymous outcomes. No participants have been evaluated yet. This is not a claim of real-user success.
+## Optional Google Maps browser overlay (experimental)
+
+A new [Chrome/Edge Manifest V3 extension](extension/README.md) can show the project's observed tow-count choropleth **on top of the desktop Google Maps website**, together with an event/day selection panel. It bundles our own 87-neighborhood City GeoJSON offline and requests only `activeTab` + `storage`; it does not require a Google Maps API key.
+
+**Alignment is a preview, not a guarantee:** the overlay projects from the map's visible URL camera, not an official Google Maps extension projection API. It automatically hides polygons when camera coordinates, north-up 2D orientation, or map bounds are unavailable. See [installation and QA limitations](extension/README.md); the [standalone story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) remains the authoritative geographically self-contained visualization. Browser-extension source is independent of the course's FP1 PDF submission.
+
 ## Official course milestones
 
 The Canvas connector was restored October 7, 2026 and the **actual Fall 2026 FP1–FP4 rubrics** were checked. See [milestone scores and deadlines](docs/RUBRIC_TRACEABILITY.md). FP1 requires a **7–10-minute PDF slide presentation by October 12**, while FP3 explicitly awards **2 points for a public GitHub Pages site**. The private source repo need not itself become public if an approved static demo is deployed separately. The [registered five-person team](docs/TEAM_CONTRIBUTIONS.md) must verify contribution ownership and [Codex/ChatGPT disclosures](docs/AI_DISCLOSURE.md). ChatGPT/GitHub commits are NOT course-funded Codex sessions.
