@@ -1,0 +1,102 @@
+/**
+ * ACTUAL Google Maps smoke test. Unlike the offline fixture suite, no requests to
+ * Google Maps are intercepted or replaced. Do not claim pixel-registration from
+ * this test; it validates the critical native map experience and overlay lifecycle.
+ */
+import { chromium } from '@playwright/test';
+import { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { mkdtempSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+
+const root=resolve(fileURLToPath(new URL('..',import.meta.url)));
+const ext=resolve(root,'build/google-maps-extension');
+const profile=mkdtempSync(join(tmpdir(),'5609-real-gmaps-'));
+const maps='https://www.google.com/maps/@44.9778,-93.265,12z';
+let browser;
+const assert=(ok,message)=>{if(!ok)throw new Error(message)};
+const contextDescription=()=>({source:'REAL Google Maps: no mocks, no route interception',timestamp:new Date().toISOString()});
+try{
+  browser=await chromium.launchPersistentContext(profile,{
+    channel:'chromium',headless:true,viewport:{width:1200,height:850},
+    args:[`--disable-extensions-except=${ext}`,`--load-extension=${ext}`]
+  });
+  const worker=browser.serviceWorkers()[0]||await browser.waitForEvent('serviceworker',{timeout:20000});
+  await worker.evaluate(()=>chrome.storage.local.set({enabled:true}));
+  const page=await browser.newPage();
+  const errors=[];
+  page.on('pageerror',e=>errors.push(String(e).slice(0,250)));
+  await page.goto(maps,{waitUntil:'domcontentloaded',timeout:60000});
+  await page.waitForFunction(()=>{
+    const canvases=[...document.querySelectorAll('canvas')].map(x=>x.getBoundingClientRect());
+    return canvases.filter(r=>r.width>=600 && r.height>=400).length>=2;
+  },null,{timeout:45000});
+  const host=page.locator('#csci5609-snow-maps-extension');
+  await host.waitFor({state:'attached',timeout:15000});
+  const panel=host.locator('.snow-panel');
+  await panel.waitFor({state:'visible',timeout:18000});
+  const state=()=>page.evaluate(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    const overlay=root?.querySelector('.snow-geo-overlay');
+    return {url:location.href,overlayVisible:overlay&&getComputedStyle(overlay).display!=='none',
+      polygons:overlay?.querySelectorAll('path').length,
+      camera:root?.querySelector('[data-camera-status]')?.textContent,
+      citywide:root?.querySelector('[data-total]')?.textContent,
+      canvases:[...document.querySelectorAll('canvas')].map(c=>c.getBoundingClientRect())
+        .filter(r=>r.width>600&&r.height>400).length};
+  });
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelectorAll('svg.snow-geo-overlay path').length===87;
+  },null,{timeout:15000});
+  const initial=await state();
+  assert(initial.overlayVisible,'REAL Google Maps: overlay not visible in supported north-up view');
+  assert(initial.citywide==='5,423','REAL Google Maps: wrong source total');
+  assert(initial.canvases>=2,'REAL Google Maps: map canvases disappeared');
+  const collapse=panel.getByRole('button',{name:'Collapse visualization controls'});
+  await collapse.click();
+  assert(await panel.evaluate(e=>e.classList.contains('snow-collapsed')),'HUD did not collapse on real Maps');
+  await panel.getByRole('button',{name:'Expand visualization controls'}).click();
+  await panel.locator('[data-event]').selectOption('Bridge');
+  await panel.locator('button[data-day="2"]').click();
+  assert((await state()).citywide==='418','Event/day filtering failed on the live site');
+  // Google Maps retains its native zoom button and search UI.
+  const zoom=page.getByRole('button',{name:'Zoom in',exact:true}).first();
+  await zoom.waitFor({state:'visible',timeout:20000});
+  const prev=page.url();
+  await zoom.click();
+  await page.waitForFunction(old=>location.href!==old,prev,{timeout:25000});
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    const overlay=root?.querySelector('.snow-geo-overlay');
+    return overlay && getComputedStyle(overlay).display!=='none';
+  },null,{timeout:15000});
+  const afterZoom=await state();
+  assert(afterZoom.polygons===87,'Map polygons lost after native Google zoom');
+  // Native drag must remain functional. Google Maps reports a new URL camera
+  // asynchronously; never show stale geography while it is lagging.
+  const rect=await page.locator('canvas').first().boundingBox();
+  assert(rect&&rect.width>600,'Cannot locate real map canvas for drag');
+  const x=rect.x+rect.width*.6,y=rect.y+rect.height*.5;
+  const beforeDrag=page.url();
+  await page.mouse.move(x,y);
+  await page.mouse.down();
+  await page.mouse.move(x+125,y+88,{steps:12});
+  await page.mouse.up();
+  await page.waitForFunction(old=>location.href!==old,beforeDrag,{timeout:25000});
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return getComputedStyle(root.querySelector('.snow-geo-overlay')).display!=='none';
+  },null,{timeout:18000});
+  const final=await state();
+  assert(final.polygons===87&&final.citywide==='418','Lost state after real map drag');
+  assert(!errors.some(x=>/Snow Emergency overlay/.test(x)),'Extension caused a page error');
+  console.log(JSON.stringify({result:'PASS',...contextDescription(),initial,afterZoom,final,pageErrors:errors.slice(0,3)},null,2));
+}catch(e){
+  console.error(JSON.stringify({result:'FAIL',...contextDescription(),reason:String(e),stack:e?.stack?.slice(0,1600)},null,2));
+  process.exitCode=1;
+}finally{
+  if(browser)await browser.close();
+  rmSync(profile,{recursive:true,force:true});
+}
