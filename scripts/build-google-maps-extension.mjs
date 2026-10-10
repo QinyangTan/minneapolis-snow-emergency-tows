@@ -21,7 +21,7 @@ if(geography.type!=='FeatureCollection'||geography.features?.length!==87||
 const mapped=geography.features.reduce((acc,feature)=>acc+(feature.properties?.total||0),0);
 if(mapped!==summary.total-summary.unassigned_neighborhood_count)throw new Error('Unreconciled official mapping totals');
 const manifest=JSON.parse(readFileSync(join(source,'manifest.json'),'utf8'));
-if(manifest.manifest_version!==3||manifest.permissions.some(p=>!['storage'].includes(p))||
+if(manifest.manifest_version!==3||manifest.permissions.some(p=>!['storage','activeTab'].includes(p))||
    !manifest.content_scripts?.length)throw new Error('Unexpected extension permissions or manifest');
 
 let geoSource=readFileSync(join(source,'src/geo.mjs'),'utf8');
