@@ -1,0 +1,78 @@
+name: Google Maps Extension — MV3 QA
+on:
+  pull_request:
+    paths:
+      - 'extension/**'
+      - 'scripts/build-google-maps-extension.mjs'
+      - 'scripts/test-google-maps-extension-browser.mjs'
+      - 'scripts/test-google-maps-extension-live.mjs'
+      - 'tests/test_google_maps_extension.mjs'
+      - 'package.json'
+      - '.github/workflows/google-maps-extension.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'extension/**'
+      - 'scripts/build-google-maps-extension.mjs'
+      - 'scripts/test-google-maps-extension-browser.mjs'
+      - 'scripts/test-google-maps-extension-live.mjs'
+      - 'tests/test_google_maps_extension.mjs'
+      - 'package.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-extension:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install existing project dependencies
+        run: npm install --no-audit --no-fund
+      - name: Test projection, aggregates, bundle and limited permissions
+        run: npm run qa:extension
+      - name: Confirm generated Chrome bundle exists
+        run: |
+          test -f build/google-maps-extension/manifest.json
+          test -f build/google-maps-extension/content.js
+          test -f build/google-maps-extension/data/neighborhoods.geojson
+          node --check build/google-maps-extension/content.js
+          node --check build/google-maps-extension/background.js
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Browser smoke test — Google Maps URL fixture and MV3
+        run: npm run qa:extension:browser
+      - name: Real Google Maps E2E — headed Chromium, no stubs or interception
+        run: xvfb-run -a npm run qa:extension:live
+        env:
+          GMAPS_HEADED: '1'
+        timeout-minutes: 5
+      - name: Upload real Google Maps diagnostics on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-maps-real-site-diagnostics
+          path: artifacts/real-maps-diagnostic.png
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Upload real Google Maps snapshots for map-alignment review
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-maps-overlay-real-browser-screenshots
+          path: artifacts/live-map-overlay-*.png
+          if-no-files-found: error
+          retention-days: 14
+      - name: Upload installable unpacked Chrome extension
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: google-maps-snow-emergency-extension
+          path: build/google-maps-extension/
+          if-no-files-found: error
+          retention-days: 30
