@@ -119,6 +119,19 @@ try{
   if((await page.locator('#csci5609-snow-maps-extension').locator('svg.snow-geo-overlay path').count())!==87)
     fail('Modern Google Maps dual-canvas layout was not detected');
 
+  // Verify the REAL Google raster fallback found in Linux-headed Chromium:
+  // one oversized canvas is acceptable only when native Maps controls confirm
+  // it is a Map, not an arbitrary third-party WebGL element.
+  await page.route(/^https:\/\/www\.google\.com\/maps(?:\/|$)/,route=>
+    route.fulfill({status:200,contentType:'text/html',
+      body:'<!doctype html><html><body style="margin:0"><canvas class="mAWRAc" style="position:fixed;left:-100px;top:-190px;width:1536px;height:1280px"></canvas><button aria-label="Zoom in"></button><button aria-label="Zoom out"></button><button aria-label="Search"></button></body></html>'}),{times:1});
+  await page.goto('https://www.google.com/maps/@44.9778,-93.265,12z?rasterCanvas=1',{waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelectorAll('svg.snow-geo-overlay path').length===87 &&
+      getComputedStyle(root.querySelector('.snow-geo-overlay')).display!=='none';
+  },null,{timeout:18000});
+
   // One unrelated WebGL canvas is insufficient evidence to register geography.
   await page.route(/^https:\/\/www\.google\.com\/maps(?:\/|$)/,route=>
     route.fulfill({status:200,contentType:'text/html',
