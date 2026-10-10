@@ -18,6 +18,27 @@ test('six distinct labeled ordinal classes; fixed bands across day filters',()=>
   assert.throws(()=>colorClass(-1),/nonnegative/);
 });
 
+// CIE76 is a coarse numeric guard against regressing to imperceptible adjacent hues;
+// this is not a substitute for actual color-vision/accessibility testing.
+function cielab(hex){
+  const c=[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255)
+    .map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);
+  const [r,g,b]=c;
+  const xyz=[(.4124564*r+.3575761*g+.1804375*b)/.95047,
+    .2126729*r+.7151522*g+.0721750*b,
+    (.0193339*r+.1191920*g+.9503041*b)/1.08883];
+  const f=t=>t>.008856?Math.cbrt(t):7.787*t+16/116;
+  const [x,y,z]=xyz.map(f);
+  return [116*y-16,500*(x-y),200*(y-z)];
+}
+test('adjacent legend swatches keep substantial CIE76 color separation',()=>{
+  const points=HIGH_CONTRAST_COLORS.map(cielab);
+  for(let i=0;i<points.length-1;i++){
+    const separation=Math.hypot(...points[i].map((v,j)=>v-points[i+1][j]));
+    assert.ok(separation>=30,'Adjacent classes '+i+' and '+(i+1)+' differ only by '+separation.toFixed(1));
+  }
+});
+
 test('historic count panels distinguish citywide from mapped records',()=>{
   const all=layerAnalysis(geo,city,{mode:'counts'});
   assert.equal(all.headline.primary,5423);assert.equal(all.headline.secondary,5355);
