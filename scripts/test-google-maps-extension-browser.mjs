@@ -93,7 +93,7 @@ try{
   const opacity=Number(await panel.locator('[data-opacity]').inputValue());
   if(opacity<0.70||opacity>0.80)
     fail('Default overlay must balance strong color contrast with legible Google road labels');
-  const countLabels=await keyItems.allTextContents();
+  const countLabels=await keyItems.locator('.snow-band-label').allTextContents();
   if(countLabels.map(x=>x.trim()).join('|')!=='0|1–4|5–14|15–39|40–99|100+')
     fail('Count legend labels are inconsistent: '+countLabels.join('|'));
   const swatches=await keyItems.locator('.snow-color-swatch').evaluateAll(xs=>
@@ -102,6 +102,48 @@ try{
   const filled=await host.locator('svg.snow-geo-overlay path').evaluateAll(xs=>
     [...new Set(xs.map(x=>x.getAttribute('data-band')))]);
   if(filled.length<3)fail('Only '+filled.length+' count categories rendered; contrast is insufficient');
+  // Course interaction requirement: the color key acts as keyboard-operable
+  // brushing and reports a verifiable subset without changing the totals.
+  const classFour=panel.locator('button[data-band="4"]');
+  await classFour.click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('button[data-band="4"]')?.getAttribute('aria-pressed')==='true' &&
+      root?.querySelector('[data-band-status]')?.textContent?.includes('2 of 87');
+  },null,{timeout:6000});
+  const highCount=await host.locator('svg.snow-geo-overlay path[data-band-match="true"]').count();
+  if(highCount!==2)fail('Expected two Bridge/Day 2 neighborhoods in 40–99 range, got '+highCount);
+  if(await host.locator('svg.snow-geo-overlay path[data-band-match="false"]').count()!==85)
+    fail('Unselected neighborhoods should remain visible but de-emphasized');
+  if((await panel.locator('[data-total]').textContent())!=='418')
+    fail('Brushing color class must not change the historic event total');
+  await panel.getByRole('button',{name:'Clear highlight'}).click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-clear-band]')?.hidden===true &&
+      root?.querySelectorAll('svg.snow-geo-overlay path[data-band-match="true"]').length===87;
+  },null,{timeout:6000});
+  // Keyboard activation is essential: no pointer-only interactions.
+  await classFour.focus();
+  await classFour.press('Enter');
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('button[data-band="4"]')?.getAttribute('aria-pressed')==='true';
+  },null,{timeout:6000});
+  await panel.getByRole('button',{name:'Clear highlight'}).click();
+  const leaderButton=panel.locator('button[data-neighborhood-target]').first();
+  if(await panel.locator('button[data-neighborhood-target]').count()!==6)
+    fail('Linked neighborhood ranking should offer six buttons');
+  const targetNeighborhood=await leaderButton.getAttribute('data-neighborhood-target');
+  await leaderButton.click();
+  await page.waitForFunction(name=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-neighborhood]')?.value===name &&
+      [...root.querySelectorAll('button[data-neighborhood-target]')]
+        .some(b=>b.dataset.neighborhoodTarget===name&&b.getAttribute('aria-pressed')==='true') &&
+      root.querySelectorAll('svg.snow-geo-overlay path[stroke="#0a1325"]').length===1;
+  },targetNeighborhood,{timeout:6000});
+  await areas.selectOption('all');
   if(!/62 observed records/.test(await panel.locator('[data-story-text]').textContent()||''))
     fail('Evidence annotation did not link to the selected neighborhood');
   if(await panel.locator('.snow-day-row').count()!==3)
@@ -114,7 +156,7 @@ try{
   });
   if(!await panel.locator('select[data-event]').isDisabled())
     fail('Single event selector must disable in across-all-event recurrence view');
-  if((await keyItems.allTextContents()).map(x=>x.trim()).join('|')!=='0|1–2|3–4|5–6|7–8|9')
+  if((await keyItems.locator('.snow-band-label').allTextContents()).map(x=>x.trim()).join('|')!=='0|1–2|3–4|5–6|7–8|9')
     fail('Recurrence color key must refer to nine events, not raw towing counts');
   await panel.locator('[data-recurrence-metric]').selectOption('prominent');
   await panel.locator('[data-topk]').selectOption('10');

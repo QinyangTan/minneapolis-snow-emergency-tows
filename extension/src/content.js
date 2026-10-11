@@ -5,7 +5,7 @@ import {layerAnalysis,legendBands,colorClass,colorForObservation,
   HIGH_CONTRAST_COLORS,explainSelection} from './storyLayers.mjs';
 
 const DEFAULTS={enabled:false,layerVisible:true,event:'all',day:0,neighborhood:'all',
-  mode:'counts',recurrenceMetric:'any',topK:5,opacity:0.74};
+  mode:'counts',recurrenceMetric:'any',topK:5,band:-1,opacity:0.74};
 const rootId='csci5609-snow-maps-extension';
 const DATA_URL='data/neighborhoods.geojson';
 const SUMMARY_URL='data/summary.json';
@@ -50,8 +50,12 @@ async function boot(){
       <p class="snow-mode-hint" data-mode-hint aria-live="polite">Compare historical tow counts across neighborhoods and Days 1–3.</p>
       <section class="snow-legend" aria-label="Map data legend">
         <h3>MAP COLOR KEY <span data-legend-units>OBSERVED TOW RECORDS</span></h3>
-        <div class="snow-legend-grid" data-legend></div>
-        <p>Distinct ordered bands; fixed across comparable views. Gray means zero records, not missing data.</p>
+        <div class="snow-legend-grid" data-legend role="group" aria-label="Highlight neighborhoods by color band"></div>
+        <div class="snow-band-tools">
+          <output data-band-status aria-live="polite">Click a color band to highlight matching neighborhoods.</output>
+          <button type="button" data-clear-band hidden>Clear highlight</button>
+        </div>
+        <p>Choose a color to brush matching neighborhoods across the map. Counts and totals remain unchanged. Gray means zero records, not missing data.</p>
       </section>
       <div class="snow-kpis"><div><strong data-total>—</strong><span data-total-label>citywide records</span></div>
         <div><strong data-mapped>—</strong><span data-mapped-label>mapped to neighborhoods</span></div></div>
@@ -136,6 +140,8 @@ async function boot(){
     opacity:dock.querySelector('[data-opacity]'),
     camera:dock.querySelector('[data-camera-status]'),
     legend:dock.querySelector('[data-legend]'),
+    bandStatus:dock.querySelector('[data-band-status]'),
+    clearBand:dock.querySelector('[data-clear-band]'),
     legendUnits:dock.querySelector('[data-legend-units]'),
     totalLabel:dock.querySelector('[data-total-label]'),
     mappedLabel:dock.querySelector('[data-mapped-label]'),
@@ -222,12 +228,24 @@ async function boot(){
   });
   dock.querySelector('.snow-close').addEventListener('click',()=>store({enabled:false}));
   for(const button of dock.querySelectorAll('[data-mode]')){
-    button.addEventListener('click',()=>store({mode:button.dataset.mode}));
+    button.addEventListener('click',()=>store({mode:button.dataset.mode,band:-1}));
   }
   ui.recurrenceMetric.addEventListener('change',()=>store({recurrenceMetric:ui.recurrenceMetric.value}));
   ui.topK.addEventListener('change',()=>store({topK:Number(ui.topK.value)}));
   ui.event.addEventListener('change',()=>store({event:ui.event.value}));
   ui.neighborhood.addEventListener('change',()=>store({neighborhood:ui.neighborhood.value}));
+  // Accessible linked highlighting: the native Google Maps canvas remains untouched.
+  ui.legend.addEventListener('click',event=>{
+    const button=event.target.closest('button[data-band]');
+    if(!button)return;
+    const chosen=Number(button.dataset.band);
+    store({band:prefs.band===chosen?-1:chosen});
+  });
+  ui.clearBand.addEventListener('click',()=>store({band:-1}));
+  ui.leaders.addEventListener('click',event=>{
+    const button=event.target.closest('button[data-neighborhood-target]');
+    if(button)store({neighborhood:button.dataset.neighborhoodTarget});
+  });
   ui.layer.addEventListener('change',()=>store({layerVisible:ui.layer.checked}));
   ui.opacity.addEventListener('input',()=>store({opacity:Math.min(1,Math.max(.60,Number(ui.opacity.value)))}));
   for(const button of dock.querySelectorAll('button[data-day]')){
@@ -389,7 +407,10 @@ async function boot(){
       const path=document.createElementNS('http://www.w3.org/2000/svg','path');
       path.setAttribute('d',pathText);
       path.setAttribute('fill',colorForObservation(rows[index]?.count||0,prefs.mode));
-      path.setAttribute('data-band',String(colorClass(rows[index]?.count||0,prefs.mode)));
+      const classIndex=colorClass(rows[index]?.count||0,prefs.mode);
+      path.setAttribute('data-band',String(classIndex));
+      path.setAttribute('data-band-match',String(prefs.band===-1||prefs.band===classIndex));
+      path.setAttribute('fill-opacity',String(prefs.band===-1||prefs.band===classIndex?1:.13));
       const focused=feature.properties.name===prefs.neighborhood;
       path.setAttribute('stroke',focused?'#0a1325':'#ffffff');
       path.setAttribute('stroke-width',focused?'3.2':'1.2');
@@ -433,11 +454,14 @@ async function boot(){
     if(![5,10,15].includes(Number(prefs.topK))){
       prefs.topK=5;store({topK:5});return;
     }
+    if(![-1,0,1,2,3,4,5].includes(Number(prefs.band))){
+      prefs.band=-1;store({band:-1});return;
+    }
     const dataScopeKey=[prefs.mode,prefs.event,day,prefs.recurrenceMetric,prefs.topK].join('|');
     const selected=statsCacheKey===dataScopeKey ? statsCacheValue :
       layerAnalysis(data,summary,prefs);
     if(statsCacheKey!==dataScopeKey){statsCacheKey=dataScopeKey;statsCacheValue=selected;}
-    const panelKey=dataScopeKey+'|'+prefs.neighborhood+'|'+prefs.opacity+'|'+prefs.layerVisible;
+    const panelKey=dataScopeKey+'|'+prefs.neighborhood+'|'+prefs.opacity+'|'+prefs.layerVisible+'|'+prefs.band;
     if(force || previousPanelKey!==panelKey){
       if(prefs.neighborhood!=='all'&&!selected.rows.some(r=>r.name===prefs.neighborhood)){
         prefs.neighborhood='all';store({neighborhood:'all'});return;
@@ -487,19 +511,40 @@ async function boot(){
         button.setAttribute('aria-pressed',String(Number(button.dataset.day)===day));
       }
       const legend=document.createDocumentFragment();
-      legendBands(prefs.mode).forEach((band,index)=>{
-        const item=document.createElement('div');item.className='snow-legend-item';
+      const bands=legendBands(prefs.mode);
+      const classTotals=bands.map((_,index)=>selected.rows.filter(r=>colorClass(r.count,prefs.mode)===index).length);
+      bands.forEach((band,index)=>{
+        const item=document.createElement('button');item.className='snow-legend-item';
+        item.type='button';item.dataset.band=String(index);
+        item.setAttribute('aria-pressed',String(prefs.band===index));
+        item.setAttribute('aria-label','Highlight '+band.label+' '+selected.measure+'; '+classTotals[index]+' neighborhoods');
+        item.title=classTotals[index]+' of '+selected.rows.length+' neighborhoods';
         const swatch=document.createElement('span');swatch.className='snow-color-swatch';
         swatch.style.backgroundColor=HIGH_CONTRAST_COLORS[index];
         swatch.setAttribute('aria-hidden','true');
-        const name=document.createElement('span');name.textContent=band.label;
-        item.append(swatch,name);legend.append(item);
+        const name=document.createElement('span');name.className='snow-band-label';name.textContent=band.label;
+        const count=document.createElement('small');count.textContent='('+classTotals[index]+')';
+        item.append(swatch,name,count);legend.append(item);
       });
+      const restoreBand=shadow.activeElement?.closest?.('button[data-band]')?.dataset.band;
       ui.legend.replaceChildren(legend);
+      if(restoreBand!==undefined){
+        const next=[...ui.legend.querySelectorAll('button[data-band]')].find(b=>b.dataset.band===restoreBand);
+        next?.focus({preventScroll:true});
+      }
+      ui.clearBand.hidden=prefs.band===-1;
+      ui.bandStatus.textContent=prefs.band===-1 ?
+        'Click a color band to highlight matching neighborhoods (87 total).' :
+        classTotals[prefs.band]+' of '+selected.rows.length+' neighborhoods highlighted: '+
+        bands[prefs.band].label+' '+selected.measure+'. Totals remain unchanged.';
       const newRows=document.createDocumentFragment();
       for(const row of selected.top){
-        const item=document.createElement('div');
+        const item=document.createElement('button');
         item.className='snow-leader'+(row.name===prefs.neighborhood?' snow-leader-selected':'');
+        item.type='button';
+        item.dataset.neighborhoodTarget=row.name;
+        item.setAttribute('aria-pressed',String(row.name===prefs.neighborhood));
+        item.setAttribute('aria-label','Inspect '+row.name+': '+row.count+' '+selected.measure);
         const header=document.createElement('div');header.className='snow-leader-line';
         const name=document.createElement('span');name.textContent=row.name;
         const value=document.createElement('strong');value.textContent=row.count.toLocaleString('en-US');
@@ -510,7 +555,12 @@ async function boot(){
         fill.style.backgroundColor=colorForObservation(row.count,prefs.mode);
         bar.append(fill);item.append(header,bar);newRows.append(item);
       }
+      const restoreLeader=shadow.activeElement?.closest?.('button[data-neighborhood-target]')?.dataset.neighborhoodTarget;
       ui.leaders.replaceChildren(newRows);
+      if(restoreLeader!==undefined){
+        const next=[...ui.leaders.querySelectorAll('button[data-neighborhood-target]')].find(b=>b.dataset.neighborhoodTarget===restoreLeader);
+        next?.focus({preventScroll:true});
+      }
       ui.storyTitle.textContent=prefs.mode==='counts'?'READ THE MAP / Where is the concentration?':
         'READ THE MAP / How often does an area recur?';
       ui.storyText.textContent=explainSelection(selected,summary,prefs.neighborhood,
@@ -570,7 +620,7 @@ async function boot(){
       reason='Waiting for map transition…';
     if(reason){ui.camera.textContent=reason;ui.overlay.style.display='none';previousKey='';return}
     motionPending=false;
-    const key=[location.href,viewport.left,viewport.top,viewport.width,viewport.height,prefs.event,day,prefs.mode,prefs.recurrenceMetric,prefs.topK,prefs.neighborhood,prefs.opacity].join('|');
+    const key=[location.href,viewport.left,viewport.top,viewport.width,viewport.height,prefs.event,day,prefs.mode,prefs.recurrenceMetric,prefs.topK,prefs.neighborhood,prefs.band,prefs.opacity].join('|');
     if(force||key!==previousKey){
       drawPaths(camera,viewport,selected);
       previousKey=key;

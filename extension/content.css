@@ -113,3 +113,28 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
 .snow-fingerprint-head strong{font-size:10px;color:#59748a;white-space:nowrap}
 .snow-fingerprint-track{display:flex;width:100%;height:10px;overflow:hidden;border-radius:5px;background:#dce5eb}
 .snow-fingerprint-segment{height:100%;display:block;min-width:0}
+
+/* Brushing & linking: fixed color thresholds become keyboard-operable data queries. */
+.snow-legend-grid .snow-legend-item{appearance:none;font:inherit;font-size:11px;
+  display:flex;align-items:center;justify-content:flex-start;min-width:0;
+  padding:5px 3px;gap:4px;background:transparent;color:#1b384f;
+  border:2px solid transparent;border-radius:6px;text-align:left;cursor:pointer}
+.snow-legend-item small{font-size:10px;color:#496275;font-variant-numeric:tabular-nums}
+.snow-legend-item:hover{background:#e6eff7}
+.snow-legend-grid .snow-legend-item[aria-pressed="true"]{
+  background:#dbeef8;border-color:#17537d;box-shadow:inset 0 0 0 1px #fff}
+.snow-legend-item[aria-pressed="true"] .snow-color-swatch{
+  outline:2px solid #123c60;outline-offset:1px}
+.snow-band-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:11px}
+.snow-band-tools output{font-size:10.5px;font-weight:600;color:#274960;line-height:1.45;flex:1 1 155px}
+.snow-band-tools button{border:1px solid #5683a4;background:#fff;border-radius:5px;
+  color:#164d71;padding:5px 7px;font-size:10.5px;font-weight:750;cursor:pointer}
+.snow-band-tools button[hidden]{display:none}
+.snow-leaders button.snow-leader{appearance:none;display:block;width:100%;text-align:left;
+  cursor:pointer;font:inherit;background:transparent;color:inherit;border:1px solid transparent;border-bottom-color:#d6e1e9;
+  border-radius:5px}
+.snow-leaders button.snow-leader:hover{background:#e6f0f7;border-color:#aac7d9}
+.snow-leaders button.snow-leader[aria-pressed="true"]{
+  background:#f4e7fb;border:2px solid #763887}
+.snow-leaders button.snow-leader:focus-visible,.snow-legend-grid button:focus-visible{
+  outline:3px solid #cc772c!important;outline-offset:2px!important}

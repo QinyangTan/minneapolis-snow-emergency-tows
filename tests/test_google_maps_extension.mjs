@@ -71,6 +71,7 @@ test('build creates installable, offline Chrome MV3 directory without broad perm
   const dist=resolve(root,'build/google-maps-extension');
   const manifest=JSON.parse(readFileSync(resolve(dist,'manifest.json'),'utf8'));
   assert.equal(manifest.manifest_version,3);
+  assert.equal(manifest.version,'0.3.0','bundle manifest must identify the interactive analysis release');
   assert.deepEqual(manifest.permissions,['activeTab','storage']);
   assert.equal(manifest.content_scripts[0].all_frames,false);
   assert.ok(manifest.content_scripts[0].matches.every(host=>host.includes('google.com/maps')||host==='https://maps.google.com/*'));

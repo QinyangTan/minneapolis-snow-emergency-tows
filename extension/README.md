@@ -10,6 +10,16 @@ An original, **opt-in Chrome/Edge Manifest V3 extension** for the CSCI 5609 Thre
 
 This is a compact GIF assembled from **real browser screenshots** captured by the unmocked Google Maps extension test; it is not a generated UI mockup. Between-state crossfades are edited transitions. See [the reproducible capture script](../scripts/test-google-maps-extension-live.mjs) and [GIF conversion tool](../scripts/build-google-maps-demo-gif.py). The overlay still requires a north-up 2D view with a readable URL camera; GIFs do not independently establish pixel-level ground-truth registration.
 
+## v0.3 — Brushing & Linking directly from the legend
+
+The six-item choropleth legend is **interactive**, rather than decorative. Each color band is a focusable button with a measured number of neighborhoods, a pressed state, and an explanatory live status. Choose a band to highlight exactly the neighborhoods in its fixed data interval; other polygons become faint but stay on the map to preserve context. Press the same band again or **Clear highlight** to restore all 87. This visual selection **never changes citywide or neighborhood totals**.
+
+The Top 6 neighborhood roster is also interactive: choosing a named bar highlights that neighborhood's boundary, updates the dropdown inspector and rewrites the evidence annotation using the same official record. Keyboard Enter/Space activation and focus retention after a selection are covered by Chromium tests. The overlay continues using `pointer-events: none`, so native Google Maps zoom, drag, search and other controls retain input priority.
+
+When changing from "Where are tows?" to "Which areas repeat?", the brush clears deliberately: **40–99 tow records** and **7–8 recurring emergencies** are different variables and must never look like the same selection. There is no implied geographic precision beyond the existing URL-camera limitations.
+
+This follows the actual instructor's Interaction Zoo examples of **select, link, filter and visible feedback**, the Perception & Tasks lecture's emphasis on labeled, task-specific marks, and the Multi-View lecture's same-data coordinated displays. It is not claimed as a completed human-subject usability study.
+
 ## Readable story layers — CSCI 5609 lecture-to-interaction transfer
 
 The original smooth, low-opacity gradient made adjacent neighborhoods difficult to distinguish over a colorful Google basemap. The revised **v0.2 analysis UI** has a discoverable, six-class color key and two explicitly distinct tasks:
