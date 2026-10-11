@@ -522,7 +522,7 @@ async function boot(){
         const swatch=document.createElement('span');swatch.className='snow-color-swatch';
         swatch.style.backgroundColor=HIGH_CONTRAST_COLORS[index];
         swatch.setAttribute('aria-hidden','true');
-        const name=document.createElement('span');name.textContent=band.label;
+        const name=document.createElement('span');name.className='snow-band-label';name.textContent=band.label;
         const count=document.createElement('small');count.textContent='('+classTotals[index]+')';
         item.append(swatch,name,count);legend.append(item);
       });
