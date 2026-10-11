@@ -17,7 +17,7 @@
     "qa:evaluation": "node --test tests/test_evaluate_study.mjs tests/test_study_answer_key.mjs",
     "evaluation:report": "node scripts/evaluate-study.mjs",
     "build:extension": "node scripts/build-google-maps-extension.mjs",
-    "qa:extension": "node --test tests/test_google_maps_extension.mjs tests/test_extension_story_layers.mjs",
+    "qa:extension": "node --test tests/test_google_maps_extension.mjs tests/test_extension_story_layers.mjs tests/test_extension_delta_layer.mjs",
     "qa:extension:browser": "node scripts/test-google-maps-extension-browser.mjs",
     "qa:extension:live": "node scripts/test-google-maps-extension-live.mjs"
   },

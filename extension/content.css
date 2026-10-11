@@ -138,3 +138,14 @@ button:focus-visible,a:focus-visible,select:focus-visible,input:focus-visible{ou
   background:#f4e7fb;border:2px solid #763887}
 .snow-leaders button.snow-leader:focus-visible,.snow-legend-grid button:focus-visible{
   outline:3px solid #cc772c!important;outline-offset:2px!important}
+
+/* Third question: different task, so distinct diverging encoding (not a heat scale). */
+.snow-view-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+.snow-view-tabs button{font-size:11px;padding:10px 5px;min-height:47px;line-height:1.3}
+.snow-view-tabs button[data-mode="delta"][aria-pressed="true"]{background:#69406f;border-color:#69406f;color:#fff}
+.snow-days:disabled{opacity:.45}
+.snow-days:disabled button{cursor:not-allowed}
+.snow-legend-grid:has(.snow-legend-item:nth-child(9)){grid-template-columns:repeat(3,minmax(0,1fr))}
+.snow-legend-grid:has(.snow-legend-item:nth-child(9)) .snow-legend-item{font-size:10px;gap:3px}
+.snow-legend-grid:has(.snow-legend-item:nth-child(9)) .snow-color-swatch{width:17px;flex-basis:17px}
+.snow-leader-line strong{font-variant-numeric:tabular-nums}

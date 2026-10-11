@@ -3,6 +3,8 @@ import {
 } from './geo.mjs';
 import {layerAnalysis,legendBands,colorClass,colorForObservation,
   HIGH_CONTRAST_COLORS,explainSelection} from './storyLayers.mjs';
+import {DELTA_BANDS,DELTA_COLORS,deltaClass,deltaColor,signed,
+  compareDayTwoToOne,explainDelta} from './deltaLayer.mjs';
 
 const DEFAULTS={enabled:false,layerVisible:true,event:'all',day:0,neighborhood:'all',
   mode:'counts',recurrenceMetric:'any',topK:5,band:-1,opacity:0.74};
@@ -46,6 +48,7 @@ async function boot(){
       <div class="snow-view-tabs" role="group" aria-label="Visualization analysis mode">
         <button type="button" data-mode="counts" aria-pressed="true">Where are tows?</button>
         <button type="button" data-mode="recurrence" aria-pressed="false">Which areas repeat?</button>
+        <button type="button" data-mode="delta" aria-pressed="false">What changed?</button>
       </div>
       <p class="snow-mode-hint" data-mode-hint aria-live="polite">Compare historical tow counts across neighborhoods and Days 1–3.</p>
       <section class="snow-legend" aria-label="Map data legend">
@@ -55,7 +58,7 @@ async function boot(){
           <output data-band-status aria-live="polite">Click a color band to highlight matching neighborhoods.</output>
           <button type="button" data-clear-band hidden>Clear highlight</button>
         </div>
-        <p>Choose a color to brush matching neighborhoods across the map. Counts and totals remain unchanged. Gray means zero records, not missing data.</p>
+        <p data-legend-help>Choose a color to brush matching neighborhoods across the map. Counts and totals remain unchanged. Gray means zero records, not missing data.</p>
       </section>
       <div class="snow-kpis"><div><strong data-total>—</strong><span data-total-label>citywide records</span></div>
         <div><strong data-mapped>—</strong><span data-mapped-label>mapped to neighborhoods</span></div></div>
@@ -153,6 +156,8 @@ async function boot(){
     storyTitle:dock.querySelector('[data-story-title]'),
     storyText:dock.querySelector('[data-story-text]'),
     dayCompare:dock.querySelector('[data-day-compare]'),
+    daySelector:dock.querySelector('.snow-days'),
+    legendHelp:dock.querySelector('[data-legend-help]'),
     fingerprints:dock.querySelector('[data-fingerprints]'),
     topHeading:dock.querySelector('[data-top-heading]'),
     leaders:dock.querySelector('[data-leaders]'),
@@ -406,8 +411,10 @@ async function boot(){
       if(!pathText)return;
       const path=document.createElementNS('http://www.w3.org/2000/svg','path');
       path.setAttribute('d',pathText);
-      path.setAttribute('fill',colorForObservation(rows[index]?.count||0,prefs.mode));
-      const classIndex=colorClass(rows[index]?.count||0,prefs.mode);
+      path.setAttribute('fill',prefs.mode==='delta'
+        ?deltaColor(rows[index]?.count??0):colorForObservation(rows[index]?.count||0,prefs.mode));
+      const classIndex=prefs.mode==='delta'
+        ?deltaClass(rows[index]?.count??0):colorClass(rows[index]?.count||0,prefs.mode);
       path.setAttribute('data-band',String(classIndex));
       path.setAttribute('data-band-match',String(prefs.band===-1||prefs.band===classIndex));
       path.setAttribute('fill-opacity',String(prefs.band===-1||prefs.band===classIndex?1:.13));
@@ -445,7 +452,7 @@ async function boot(){
     }
     const day=Number(prefs.day);
     if(![0,1,2,3].includes(day)){prefs.day=0;store({day:0});return}
-    if(!['counts','recurrence'].includes(prefs.mode)){
+    if(!['counts','recurrence','delta'].includes(prefs.mode)){
       prefs.mode='counts';store({mode:'counts'});return;
     }
     if(!['any','prominent'].includes(prefs.recurrenceMetric)){
@@ -454,12 +461,14 @@ async function boot(){
     if(![5,10,15].includes(Number(prefs.topK))){
       prefs.topK=5;store({topK:5});return;
     }
-    if(![-1,0,1,2,3,4,5].includes(Number(prefs.band))){
+    if(!Number.isInteger(Number(prefs.band)) || Number(prefs.band)<-1 ||
+       Number(prefs.band)>(prefs.mode==='delta'?8:5)){
       prefs.band=-1;store({band:-1});return;
     }
     const dataScopeKey=[prefs.mode,prefs.event,day,prefs.recurrenceMetric,prefs.topK].join('|');
     const selected=statsCacheKey===dataScopeKey ? statsCacheValue :
-      layerAnalysis(data,summary,prefs);
+      (prefs.mode==='delta' ? compareDayTwoToOne(data,summary,prefs.event):
+        layerAnalysis(data,summary,prefs));
     if(statsCacheKey!==dataScopeKey){statsCacheKey=dataScopeKey;statsCacheValue=selected;}
     const panelKey=dataScopeKey+'|'+prefs.neighborhood+'|'+prefs.opacity+'|'+prefs.layerVisible+'|'+prefs.band;
     if(force || previousPanelKey!==panelKey){
@@ -470,16 +479,20 @@ async function boot(){
         button.setAttribute('aria-pressed',String(button.dataset.mode===prefs.mode));
       }
       const leading=selected.top[0];
-      ui.modeHint.textContent=leading ?
-        (prefs.mode==='counts'
+      ui.modeHint.textContent=!leading ? 'No comparable neighborhood data available.'
+        : prefs.mode==='counts'
           ?'DATA INSIGHT · '+leading.name+' has the highest mapped count here ('+
             leading.count.toLocaleString('en-US')+'). Compare the three days below.'
-          :'DATA INSIGHT · '+leading.name+' meets this recurrence rule in '+
-            leading.count+' of 9 emergencies. Try Any Record vs Top K to compare.')
-        :'No recorded data for the selected view.';
+          : prefs.mode==='recurrence'
+            ?'DATA INSIGHT · '+leading.name+' meets this recurrence rule in '+
+              leading.count+' of 9 emergencies. Try Any Record vs Top K.'
+            :'DAY 2 − DAY 1 · '+leading.name+' has the largest change ('+
+              signed(leading.count)+' observed tows). Compare values, not just colors.';
       ui.recurrenceRules.hidden=prefs.mode!=='recurrence';
       ui.event.disabled=prefs.mode==='recurrence';
-      ui.event.title=prefs.mode==='recurrence'?'Recurrence compares all nine events': '';
+      ui.event.title=prefs.mode==='recurrence'?'Recurrence compares all nine events':'';
+      ui.daySelector.disabled=prefs.mode==='delta';
+      ui.daySelector.title=prefs.mode==='delta'?'This view always compares Day 2 with Day 1':'';
       ui.recurrenceMetric.value=prefs.recurrenceMetric;
       ui.topK.value=String(prefs.topK);
       ui.topKRow.hidden=prefs.recurrenceMetric!=='prominent';
@@ -493,26 +506,37 @@ async function boot(){
       ui.opacity.value=String(prefs.opacity);
       const focused=selected.rows.find(row=>row.name===prefs.neighborhood);
       ui.neighborhoodCount.textContent=focused
-        ?focused.name+': '+focused.count.toLocaleString('en-US')+' '+
-          (prefs.mode==='counts'?'observed tow records':'qualifying emergencies of 9')+
+        ?focused.name+': '+(prefs.mode==='delta'?signed(focused.count):
+          focused.count.toLocaleString('en-US'))+' '+
+          (prefs.mode==='counts'?'observed tow records':prefs.mode==='recurrence'?
+            'qualifying emergencies of 9':'Day 2 minus Day 1 observed tow records')+
           '. This does not measure parking risk.'
         :'Choose a neighborhood to inspect its exact '+selected.measure+'.';
-      ui.total.textContent=selected.headline.primary.toLocaleString('en-US');
-      ui.mapped.textContent=selected.headline.secondary.toLocaleString('en-US');
+      ui.total.textContent=prefs.mode==='delta'?signed(selected.headline.primary):
+        selected.headline.primary.toLocaleString('en-US');
+      ui.mapped.textContent=prefs.mode==='delta'?signed(selected.headline.secondary):
+        selected.headline.secondary.toLocaleString('en-US');
       ui.totalLabel.textContent=selected.headline.primaryLabel;
       ui.mappedLabel.textContent=selected.headline.secondaryLabel;
-      ui.legendUnits.textContent=prefs.mode==='counts'?'TOW RECORDS':'QUALIFYING EVENTS / 9';
+      ui.legendUnits.textContent=prefs.mode==='counts'?'TOW RECORDS':prefs.mode==='recurrence'?
+        'QUALIFYING EVENTS / 9':'DAY 2 − DAY 1 TOWS';
+      ui.legendHelp.textContent=prefs.mode==='delta'
+        ?'Blue means fewer Day 2 records, red means more, gray means no change. Brushing does not change totals. These are counts, not causal effects.'
+        :'Choose a color to brush matching neighborhoods across the map. Totals remain unchanged. Gray means zero observed records.';
       ui.scope.textContent=(prefs.mode==='recurrence'?'9 EVENTS':
         (prefs.event==='all'?'9 EVENTS':prefs.event.toUpperCase()))+
-        ' · '+(day===0?'ALL DAYS':'DAY '+day);
-      ui.topHeading.textContent=prefs.mode==='counts'?
-        'MOST OBSERVED TOW RECORDS':'MOST RECURRING NEIGHBORHOODS';
+        ' · '+(prefs.mode==='delta'?'DAY 2 − DAY 1':day===0?'ALL DAYS':'DAY '+day);
+      ui.topHeading.textContent=prefs.mode==='counts'
+        ?'MOST OBSERVED TOW RECORDS':prefs.mode==='recurrence'
+        ?'MOST RECURRING NEIGHBORHOODS':'LARGEST DAY 2 − DAY 1 CHANGES';
       for(const button of dock.querySelectorAll('button[data-day]')){
         button.setAttribute('aria-pressed',String(Number(button.dataset.day)===day));
       }
       const legend=document.createDocumentFragment();
-      const bands=legendBands(prefs.mode);
-      const classTotals=bands.map((_,index)=>selected.rows.filter(r=>colorClass(r.count,prefs.mode)===index).length);
+      const bands=prefs.mode==='delta'?DELTA_BANDS:legendBands(prefs.mode);
+      const classification=value=>prefs.mode==='delta'?deltaClass(value):
+        colorClass(value,prefs.mode);
+      const classTotals=bands.map((_,index)=>selected.rows.filter(r=>classification(r.count)===index).length);
       bands.forEach((band,index)=>{
         const item=document.createElement('button');item.className='snow-legend-item';
         item.type='button';item.dataset.band=String(index);
@@ -520,7 +544,7 @@ async function boot(){
         item.setAttribute('aria-label','Highlight '+band.label+' '+selected.measure+'; '+classTotals[index]+' neighborhoods');
         item.title=classTotals[index]+' of '+selected.rows.length+' neighborhoods';
         const swatch=document.createElement('span');swatch.className='snow-color-swatch';
-        swatch.style.backgroundColor=HIGH_CONTRAST_COLORS[index];
+        swatch.style.backgroundColor=prefs.mode==='delta'?DELTA_COLORS[index]:HIGH_CONTRAST_COLORS[index];
         swatch.setAttribute('aria-hidden','true');
         const name=document.createElement('span');name.className='snow-band-label';name.textContent=band.label;
         const count=document.createElement('small');count.textContent='('+classTotals[index]+')';
@@ -547,12 +571,14 @@ async function boot(){
         item.setAttribute('aria-label','Inspect '+row.name+': '+row.count+' '+selected.measure);
         const header=document.createElement('div');header.className='snow-leader-line';
         const name=document.createElement('span');name.textContent=row.name;
-        const value=document.createElement('strong');value.textContent=row.count.toLocaleString('en-US');
+        const value=document.createElement('strong');value.textContent=prefs.mode==='delta'?
+          signed(row.count):row.count.toLocaleString('en-US');
         header.append(name,value);
         const bar=document.createElement('div');bar.className='snow-rank-track';
         const fill=document.createElement('span');fill.className='snow-rank-fill';
-        fill.style.width=(100*row.count/Math.max(1,selected.max)).toFixed(1)+'%';
-        fill.style.backgroundColor=colorForObservation(row.count,prefs.mode);
+        fill.style.width=(100*Math.abs(row.count)/Math.max(1,selected.max)).toFixed(1)+'%';
+        fill.style.backgroundColor=prefs.mode==='delta'?deltaColor(row.count):
+          colorForObservation(row.count,prefs.mode);
         bar.append(fill);item.append(header,bar);newRows.append(item);
       }
       const restoreLeader=shadow.activeElement?.closest?.('button[data-neighborhood-target]')?.dataset.neighborhoodTarget;
@@ -562,16 +588,21 @@ async function boot(){
         next?.focus({preventScroll:true});
       }
       ui.storyTitle.textContent=prefs.mode==='counts'?'READ THE MAP / Where is the concentration?':
-        'READ THE MAP / How often does an area recur?';
-      ui.storyText.textContent=explainSelection(selected,summary,prefs.neighborhood,
-        prefs.recurrenceMetric,Number(prefs.topK));
+        prefs.mode==='recurrence'?'READ THE MAP / How often does an area recur?':
+        'READ THE MAP / What changed between Days 1 and 2?';
+      ui.storyText.textContent=prefs.mode==='delta'
+        ?explainDelta(selected,prefs.neighborhood)
+        :explainSelection(selected,summary,prefs.neighborhood,
+          prefs.recurrenceMetric,Number(prefs.topK));
       ui.dayCompare.replaceChildren();
-      ui.dayCompare.hidden=prefs.mode!=='counts';
-      if(prefs.mode==='counts'){
+      ui.dayCompare.hidden=prefs.mode==='recurrence';
+      if(prefs.mode!=='recurrence'){
         const eventRow=prefs.event==='all'?summary:summary.events.find(e=>e.id===prefs.event);
         const maxDay=Math.max(1,...eventRow.days.map(d=>d.count));
         const label=document.createElement('strong');label.className='snow-day-label';
-        label.textContent='SAME EVENT · DAY 1–3 COMPARISON';
+        label.textContent=prefs.mode==='delta'
+          ?'DAY 1–3 CITYWIDE COUNTS · CONTEXT FOR CHANGE'
+          :'SAME EVENT · DAY 1–3 COMPARISON';
         ui.dayCompare.append(label);
         for(const d of eventRow.days){
           const row=document.createElement('div');row.className='snow-day-row';

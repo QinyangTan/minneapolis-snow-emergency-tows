@@ -177,6 +177,46 @@ try{
   });
   const state=await panel.locator('button[data-day="2"]').getAttribute('aria-pressed');
   if(state!=='true')fail('Selected day is not accessible');
+
+  // Diverging day comparison: truthfully represent SIGNED changes rather
+  // than reusing the nonnegative sequential color scale.
+  await panel.locator('button[data-mode="delta"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='+332' &&
+      root?.querySelector('.snow-days')?.disabled===true;
+  },null,{timeout:8000});
+  if(await panel.locator('button[data-band]').count()!==9)
+    fail('Signed day-difference overlay must show exactly nine diverging legend bins');
+  if((await keyItems.locator('.snow-band-label').allTextContents()).map(x=>x.trim()).join('|')!==
+       '≤ −40|−39 to −15|−14 to −5|−4 to −1|0|+1 to +4|+5 to +14|+15 to +39|≥ +40')
+    fail('Day-difference legend labels or signs are incorrect');
+  if(!await panel.locator('button[data-day="1"]').isDisabled())
+    fail('Day filter must be unavailable while comparing fixed Day 2 − Day 1 values');
+  await areas.selectOption('Marcy Holmes');
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return /Marcy Holmes.*\+36/.test(root?.querySelector('[data-neighborhood-count]')?.textContent||'') &&
+      /26 Day 1 tows and 62 Day 2 tows/.test(root?.querySelector('[data-story-text]')?.textContent||'');
+  },null,{timeout:8000});
+  const deltaPalette=await host.locator('svg.snow-geo-overlay path').evaluateAll(xs=>
+    [...new Set(xs.map(x=>x.getAttribute('data-band')))]);
+  if(deltaPalette.length<4)fail('Signed difference map has too few visible categories');
+  await panel.locator('button[data-band="7"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('button[data-band="7"]')?.getAttribute('aria-pressed')==='true';
+  },null,{timeout:6000});
+  if((await panel.locator('[data-total]').textContent())!=='+332')
+    fail('Legend brushing must not change the signed citywide Day 2 − Day 1 total');
+  await panel.locator('button[data-mode="counts"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='418' &&
+      root?.querySelectorAll('button[data-band]').length===6 &&
+      root?.querySelector('.snow-days')?.disabled===false;
+  },null,{timeout:8000});
+  await areas.selectOption('all');
   await panel.locator('input[data-layer]').uncheck();
   if(await host.locator('svg.snow-geo-overlay').evaluate(n=>getComputedStyle(n).display)!=='none')fail('Layer OFF did not hide geometry');
   await panel.locator('input[data-layer]').check();

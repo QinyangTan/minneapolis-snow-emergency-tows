@@ -2,8 +2,8 @@
   "manifest_version": 3,
   "name": "Three Days, Three Rules · Google Maps Overlay",
   "short_name": "Snow Tow Overlay",
-  "version": "0.3.0",
-  "description": "Interactive Minneapolis tow data on Google Maps: high-contrast selectable legend, linked neighborhoods, day comparisons and recurrence.",
+  "version": "0.4.0",
+  "description": "Three readable Minneapolis snow tow analyses on Google Maps: historic counts, recurring neighborhoods, and signed Day 2 versus Day 1 changes.",
   "minimum_chrome_version": "116",
   "permissions": [
     "activeTab",
