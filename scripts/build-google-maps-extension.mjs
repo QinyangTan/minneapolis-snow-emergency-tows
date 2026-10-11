@@ -37,10 +37,17 @@ const storyImport=/^import\s*\{\s*countInScope\s*\}\s*from\s*['"]\.\/geo\.mjs['"
 if (!storyImport.test(storySource)) throw new Error('Expected story-layer dependency not found');
 storySource=storySource.replace(storyImport,'');
 storySource=storySource.replace(/\bexport (const|function)\b/g,'$1');
+let deltaSource=readFileSync(join(source,'src/deltaLayer.mjs'),'utf8');
+if((deltaSource.match(/export (?:const|function) /g)||[]).length!==7)
+  throw new Error('Delta-layer exports changed: audit offline bundler');
+const deltaImport=/^import\s*\{\s*countInScope\s*\}\s*from\s*['"]\.\/geo\.mjs['"];\s*/m;
+if(!deltaImport.test(deltaSource))throw new Error('Expected delta module dependency not found');
+deltaSource=deltaSource.replace(deltaImport,'');
+deltaSource=deltaSource.replace(/\bexport (const|function)\b/g,'$1');
 const content=readFileSync(join(source,'src/content.js'),'utf8');
-const importPattern=/^import\s*\{[\s\S]*?\}\s*from\s*['"]\.\/geo\.mjs['"];\s*import\s*\{[\s\S]*?\}\s*from\s*['"]\.\/storyLayers\.mjs['"];\s*/;
+const importPattern=/^import\s*\{[\s\S]*?\}\s*from\s*['"]\.\/geo\.mjs['"];\s*import\s*\{[\s\S]*?\}\s*from\s*['"]\.\/storyLayers\.mjs['"];\s*import\s*\{[\s\S]*?\}\s*from\s*['"]\.\/deltaLayer\.mjs['"];\s*/;
 if(!importPattern.test(content))throw new Error('Content script module imports changed');
-const bundled='(()=>{\n"use strict";\n'+geoSource+'\n'+storySource+'\n'+content.replace(importPattern,'')+'\n})();\n';
+const bundled='(()=>{\n"use strict";\n'+geoSource+'\n'+storySource+'\n'+deltaSource+'\n'+content.replace(importPattern,'')+'\n})();\n';
 if(/\b(?:import|export)\s*(?:\{|\*|from|const|function)/.test(bundled))throw new Error('Unexpected unbundled module reference');
 rmSync(out,{recursive:true,force:true});
 mkdirSync(join(out,'data'),{recursive:true});
