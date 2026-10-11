@@ -10,6 +10,19 @@ An original, **opt-in Chrome/Edge Manifest V3 extension** for the CSCI 5609 Thre
 
 This is a compact GIF assembled from **real browser screenshots** captured by the unmocked Google Maps extension test; it is not a generated UI mockup. Between-state crossfades are edited transitions. See [the reproducible capture script](../scripts/test-google-maps-extension-live.mjs) and [GIF conversion tool](../scripts/build-google-maps-demo-gif.py). The overlay still requires a north-up 2D view with a readable URL camera; GIFs do not independently establish pixel-level ground-truth registration.
 
+## New course-aligned difference view — What changed from Day 1 to Day 2?
+
+**Question:** Which neighborhoods saw more or fewer **observed tow records** on Day 2 compared with Day 1 of the selected historical Snow Emergency? Select **What changed?** to draw a signed diverging choropleth on the same Google Maps geometry.
+
+- **Blue** = fewer Day 2 records; **gray** = no change; **red** = more. The nine fixed bins (`≤ −40`, `−39 to −15`, `−14 to −5`, `−4 to −1`, `0`, `+1 to +4`, `+5 to +14`, `+15 to +39`, `≥ +40`) are stable across events.
+- **Event selector** still works; the Day 1–3 selector is disabled because the comparison is explicitly **Day 2 minus Day 1**. A selected neighborhood reports *both* original counts and the signed difference. The ranking shows the six largest absolute changes, with exact positive/negative signs and magnitude bars.
+- **Map legend brushing** remains accessible. Selecting a signed change bin highlights matching neighborhoods but never changes citywide totals; switching analysis modes clears the previous bin because sequential counts and signed differences have different units.
+- **Denominator honesty:** The KPI reports both the citywide difference and the neighborhood-mapped difference. For all nine events, citywide Day 1 = **1,255**, Day 2 = **2,222**, signed difference **+967**; the neighborhood-mapped difference is **+961**. Never conflate them.
+- **Specific example:** Bridge Day 1 = **86**, Day 2 = **418**; Marcy Holmes recorded 26 then 62 tow records, a difference of **+36**.
+- **Limitation:** A count difference is neither a tow *risk* change nor evidence of causation by parking rules. It reflects different days of the selected recorded incidents; without an exposure denominator or causal design, we cannot infer individual probabilities or mechanism.
+
+This implements the instructor's **diverging encoding for a signed quantity, task-first analysis, quantitative small-multiple comparison, and linked explanatory annotations**. The fixed scale avoids implicit renormalization across selected events. The Google Maps camera/DOM limitations and 2D fail-closed behavior remain unchanged.
+
 ## v0.3 — Brushing & Linking directly from the legend
 
 The six-item choropleth legend is **interactive**, rather than decorative. Each color band is a focusable button with a measured number of neighborhoods, a pressed state, and an explanatory live status. Choose a band to highlight exactly the neighborhoods in its fixed data interval; other polygons become faint but stay on the map to preserve context. Press the same band again or **Clear highlight** to restore all 87. This visual selection **never changes citywide or neighborhood totals**.
