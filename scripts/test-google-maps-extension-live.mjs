@@ -134,6 +134,15 @@ try{
     return /Top 10/.test(root?.querySelector('[data-story-text]')?.textContent||'');
   });
   await page.screenshot({path:'artifacts/live-map-overlay-top10.png',animations:'disabled'});
+  // Real Google Maps: actual signed Day 2 versus Day 1 analysis, no fixture.
+  await panel.locator('button[data-mode="delta"]').click();
+  await page.waitForFunction(()=>{
+    const root=document.querySelector('#csci5609-snow-maps-extension')?.shadowRoot;
+    return root?.querySelector('[data-total]')?.textContent==='+332' &&
+      root?.querySelectorAll('button[data-band]').length===9;
+  },null,{timeout:12000});
+  assert((await state()).polygons===87,'Live signed map lost its neighborhood polygons');
+  await page.screenshot({path:'artifacts/live-map-overlay-day2-minus-day1.png',animations:'disabled'});
   await panel.locator('button[data-mode="counts"]').click();
   await panel.locator('[data-neighborhood]').selectOption('all');
   await panel.locator('.snow-fingerprints summary').click();
