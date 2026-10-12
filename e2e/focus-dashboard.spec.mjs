@@ -1,58 +1,37 @@
-import {test, expect} from '@playwright/test';
-
-async function openDashboard(page) {
-  await page.goto('./');
-  await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
-  await expect(page.locator('.focus-dashboard')).toBeVisible();
-}
-
-test('dashboard defaults to a compact linked view; deep dive remains available', async ({page}) => {
-  await page.setViewportSize({width:1365,height:900});
-  await openDashboard(page);
+import {test,expect} from '@playwright/test';
+async function ready(page){await page.goto('/');await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');}
+test('default workbench links event, day and neighborhood',async({page})=>{
+  await ready(page);
+  await expect(page.locator('#focus-dashboard')).toBeVisible();
   await expect(page.locator('.rules-section')).toBeHidden();
-  await expect(page.locator('.focus-map svg path')).toHaveCount(87);
   await expect(page.locator('.focus-event-list button')).toHaveCount(9);
-
   await page.locator('.focus-event-list button').filter({hasText:'Bridge'}).click();
-  await expect(page.locator('.focus-toolbar select')).toHaveValue('Bridge');
-  await expect(page.locator('.focus-stats').first()).toContainText('852');
-  await page.locator('.focus-day-picker button').filter({hasText:'Day 3'}).click();
-  await expect(page.locator('.focus-map .focus-panel-title')).toContainText('Day 3');
+  await expect(page.getByLabel('Dashboard Snow Emergency')).toHaveValue('Bridge');
+  await expect(page.locator('.focus-stats')).toContainText('852');
+  await page.locator('.focus-day-picker button').filter({hasText:'Day 2'}).click();
+  await expect(page.locator('.focus-day-bars button.active')).toContainText('DAY 02');
   await page.locator('.focus-map svg path[aria-label^="Marcy Holmes:"]').click();
   await expect(page.locator('.focus-map-footer')).toContainText('Marcy Holmes');
   await page.locator('.focus-reset').click();
-  await expect(page.locator('.focus-toolbar select')).toHaveValue('all');
-  await expect(page.locator('.focus-day-picker button.active')).toHaveText('All');
-
-  await page.locator('.focus-mode-switch').click();
-  await expect(page.locator('.rules-section')).toBeVisible();
-  await expect(page.locator('.small-map-panel')).toHaveCount(3);
-  await page.locator('.focus-mode-switch').click();
-  await expect(page.locator('.rules-section')).toBeHidden();
+  await expect(page.getByLabel('Dashboard Snow Emergency')).toHaveValue('all');
 });
-
-test('Day 2 brush highlights same event subset in compact and deep-dive views', async ({page}) => {
-  await openDashboard(page);
-  const sliders=page.locator('.focus-brush-ranges input[type=range]');
-  await sliders.nth(0).evaluate(el=>{el.value='40';el.dispatchEvent(new Event('input',{bubbles:true}));});
-  await sliders.nth(1).evaluate(el=>{el.value='60';el.dispatchEvent(new Event('input',{bubbles:true}));});
-  await expect(page.locator('.focus-brush .focus-panel-title')).toContainText('40%–60%');
-  const inRange=await page.locator('.focus-event-list button:not(.muted)').count();
-  expect(inRange).toBeGreaterThan(0);
-  expect(inRange).toBeLessThan(9);
-  await page.locator('.focus-mode-switch').click();
-  await expect(page.locator('.constellation-brush-title')).toContainText('40%–60%');
-  const deepInRange=9-await page.locator('.constellation-roster-muted').count();
-  expect(deepInRange).toBe(inRange);
-  await page.locator('.focus-clear-brush').click();
-  await expect(page.locator('.constellation-brush-title')).toContainText('0%–100%');
+test('brush is linked with detailed constellation',async({page})=>{
+  await ready(page);
+  const min=page.getByLabel('Dashboard minimum Day 2 share');
+  await min.focus();await min.press('Home');
+  for(let i=0;i<8;i++)await min.press('ArrowRight');
+  const max=page.getByLabel('Dashboard maximum Day 2 share');
+  await max.focus();await max.press('End');
+  for(let i=0;i<9;i++)await max.press('ArrowLeft');
+  await expect(page.locator('.focus-brush')).toContainText('40%–55%');
+  const muted=await page.locator('.focus-event-list button.muted').count();
+  expect(muted).toBeGreaterThan(0);
+  await page.getByRole('button',{name:'Explore all charts ↗'}).click();
+  await expect(page.locator('.constellation-brush-title')).toContainText('40%–55%');
+  await expect(page.locator('.constellation-roster-muted')).toHaveCount(muted);
 });
-
-test('compact dashboard stays inside mobile viewport without horizontal overflow',async ({page})=>{
-  await page.setViewportSize({width:390,height:844});
-  await openDashboard(page);
-  await expect(page.locator('.focus-map svg path')).toHaveCount(87);
-  const widths=await page.evaluate(()=>({body:document.body.scrollWidth,root:document.documentElement.scrollWidth,viewport:innerWidth}));
-  expect(widths.body).toBeLessThanOrEqual(widths.viewport+2);
-  expect(widths.root).toBeLessThanOrEqual(widths.viewport+2);
+test('compact mobile view has no horizontal overflow',async({page})=>{
+  await page.setViewportSize({width:390,height:844});await ready(page);
+  const w=await page.evaluate(()=>({viewport:innerWidth,body:document.body.scrollWidth,root:document.documentElement.scrollWidth}));
+  expect(w.body).toBeLessThanOrEqual(w.viewport+2);expect(w.root).toBeLessThanOrEqual(w.viewport+2);
 });

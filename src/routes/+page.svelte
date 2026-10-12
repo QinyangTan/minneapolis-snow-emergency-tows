@@ -66,9 +66,9 @@
   $: peakShare = (peakRow?.count??0)/Math.max(1,chartTotal)*100;
   $: cityDays = summary?.days ?? preliminaryDays;
   $: overviewEvents = geography ? constellationRows(events, geography) : [];
-  $: brushedEvents = overviewEvents.filter((row)=>row.day2Share*100>=brushMin-1e-8&&row.day2Share*100<=brushMax+1e-8);
-  $: brushedIds = new Set(brushedEvents.map((row)=>row.id));
-  $: brushActive = brushMin>0||brushMax<100;
+  $: brushedEvents = overviewEvents.filter(event => event.day2Share*100 >= brushMin-1e-8 && event.day2Share*100 <= brushMax+1e-8);
+  $: brushedEventIds = new Set(brushedEvents.map(event => event.id));
+  $: brushActive = brushMin>0 || brushMax<100;
 
   function observeDayStep(node: HTMLElement, day: number) {
     if (typeof IntersectionObserver === 'undefined') return {};
@@ -91,10 +91,9 @@
     selectedDay = 0;
     selectedEvent = 'all';
     selectedNeighborhood = 'all';
-    brushMin=0;
-    brushMax=100;
+    brushMin = 0; brushMax = 100;
   }
-  function showStory(){storyMode=true;}
+  function showFullStory() { storyMode = true; }
 </script>
 
 <svelte:head>
@@ -107,10 +106,10 @@
     <a href="#home" class="brand">❄ MINNEAPOLIS <span>/ DATA STORIES</span></a>
     <nav aria-label="Main navigation">
       <a href="#focus-dashboard">Dashboard</a>
-      <a href="#constellation" onclick={showStory}>Brush &amp; link</a>
-      <a href="#geography" onclick={showStory}>Day maps</a>
-      <a href="#comparison" onclick={showStory}>Compare</a>
-      <a href="#methods" onclick={showStory}>Methods</a>
+      <a href="#constellation" onclick={showFullStory}>Brush &amp; link</a>
+      <a href="#geography" onclick={showFullStory}>Day maps</a>
+      <a href="#comparison" onclick={showFullStory}>Compare</a>
+      <a href="#methods" onclick={showFullStory}>Methods</a>
     </nav>
     <span class="tag">CSCI 5609 · 2026</span>
   </header>
@@ -141,59 +140,77 @@
 
     <section class="focus-dashboard" id="focus-dashboard" aria-labelledby="focus-title">
       <div class="focus-heading">
-        <div><p class="eyebrow">EXPLORE / BRUSH · LINK · INSPECT</p><h2 id="focus-title">Find the pattern. <em>See it move.</em></h2>
-          <p>Pick a rule day or emergency, brush the event shares, or select a neighborhood. Linked views update together.</p></div>
-        <button class="focus-mode-switch" aria-expanded={storyMode} onclick={() => storyMode = !storyMode}>{storyMode ? 'Hide deep dive ↑' : 'Explore all charts ↗'}</button>
+        <div><p class="eyebrow">EXPLORE / BRUSH · LINK · INSPECT</p>
+        <h2 id="focus-title">Find the pattern. <em>See it move.</em></h2>
+        <p>Choose a day, brush Day 2 shares, or select a neighborhood. The linked views respond together.</p></div>
+        <button class="focus-mode-switch" onclick={() => storyMode = !storyMode} aria-expanded={storyMode}>
+          {storyMode ? 'Hide deep dive ↑' : 'Explore all charts ↗'}
+        </button>
       </div>
-      <div class="focus-toolbar" aria-label="Linked visualization filters">
-        <label>SNOW EMERGENCY<select bind:value={selectedEvent} disabled={!summary} aria-label="Dashboard Snow Emergency">
-          <option value="all">All 9 events</option>{#each events as event}<option value={event.id}>{event.id}</option>{/each}</select></label>
-        <fieldset class="focus-day-picker"><legend>RULE DAY</legend>{#each [0,1,2,3] as day}
-          <button type="button" class:active={selectedDay === day} aria-pressed={selectedDay === day} onclick={() => selectedDay=day}>{day===0?'All':'Day '+day}</button>
-        {/each}</fieldset>
-        <button class="focus-reset" type="button" onclick={resetFilters}>Reset all ↺</button>
+      <div class="focus-toolbar" aria-label="Linked visualization controls">
+        <label>SNOW EMERGENCY <select bind:value={selectedEvent} disabled={!summary} aria-label="Dashboard Snow Emergency">
+          <option value="all">All 9 events</option>
+          {#each events as event}<option value={event.id}>{event.id}</option>{/each}
+        </select></label>
+        <fieldset class="focus-day-picker"><legend>RULE DAY</legend>
+          {#each [0,1,2,3] as day}<button type="button" class:active={selectedDay===day}
+            aria-pressed={selectedDay===day} onclick={()=>selectedDay=day}>{day===0?'All':'Day '+day}</button>{/each}
+        </fieldset>
+        <button class="focus-reset" onclick={resetFilters} type="button">Reset all ↺</button>
       </div>
       <div class="focus-stats" aria-live="polite">
         <div><span>OBSERVED RECORDS</span><strong>{fmt.format(chartTotal)}</strong><small>{titleScope}</small></div>
-        <div><span>LARGEST RULE DAY</span><strong>Day {peakRow?.day??'—'}</strong><small>{peakShare.toFixed(1)}% of selected records</small></div>
-        <div><span>DAY 2 BRUSH</span><strong>{brushedEvents.length}<small> / {overviewEvents.length} events</small></strong><small>matching the interval</small></div>
-        <div><span>NEIGHBORHOOD FOCUS</span><strong>{selectedArea ? fmt.format(selectedAreaCount) : '—'}</strong><small>{selectedArea?.name ?? 'Choose an area'}</small></div>
+        <div><span>BUSIEST RULE DAY</span><strong>Day {peakRow?.day??'—'}</strong><small>{peakShare.toFixed(1)}% of citywide event records</small></div>
+        <div><span>DAY 2 BRUSH</span><strong>{brushedEvents.length}<small> / {overviewEvents.length} events</small></strong><small>matching share interval</small></div>
+        <div><span>NEIGHBORHOOD FOCUS</span><strong>{selectedArea?fmt.format(selectedAreaCount):'—'}</strong><small>{selectedArea?.name??'Choose an area'}</small></div>
       </div>
       <div class="focus-content">
         <div class="focus-analysis">
-          <div class="focus-panel-title"><h3>When are the recorded tows?</h3><span>Citywide composition · not towing risk</span></div>
-          <div class="focus-day-bars">{#each chartDays as day}
-            <button type="button" class:active={selectedDay===day.day} aria-pressed={selectedDay===day.day} onclick={() => selectedDay=selectedDay===day.day?0:day.day}
-              aria-label={'Focus Day '+day.day+', '+(100*day.count/Math.max(1,chartTotal)).toFixed(1)+' percent'}>
-              <span>DAY 0{day.day}</span><span class="focus-bar-track"><i class={'day-'+day.day} style:width={(100*day.count/maxDayCount)+'%'}></i></span><strong>{(100*day.count/Math.max(1,chartTotal)).toFixed(1)}%</strong>
-            </button>{/each}</div>
+          <div class="focus-panel-title"><h3>When are tows recorded?</h3><span>Citywide composition, not risk</span></div>
+          <div class="focus-day-bars">
+            {#each chartDays as row}<button type="button" class:active={selectedDay===row.day} aria-pressed={selectedDay===row.day}
+                aria-label={'Focus Day '+row.day+', '+(row.count/Math.max(1,chartTotal)*100).toFixed(1)+' percent'}
+                onclick={()=>selectedDay=selectedDay===row.day?0:row.day}>
+                <span class="focus-bar-name">DAY 0{row.day}</span>
+                <span class="focus-bar-track"><i class={'day-'+row.day} style:width={(row.count/maxDayCount*100)+'%'}></i></span>
+                <strong>{(row.count/Math.max(1,chartTotal)*100).toFixed(1)}%</strong></button>
+            {/each}
+          </div>
           <div class="focus-brush">
-            <div class="focus-panel-title"><h3>Brush by Day 2 share</h3><span aria-live="polite">{brushMin}%–{brushMax}% · {brushedEvents.length} events</span></div>
+            <div class="focus-panel-title"><h3>Brush events by Day 2 share</h3><span aria-live="polite">{brushMin}%–{brushMax}% · {brushedEvents.length} selected</span></div>
             <div class="focus-brush-ranges">
               <label>FROM {brushMin}%<input type="range" min="0" max={brushMax} step="5" bind:value={brushMin} aria-label="Dashboard minimum Day 2 share" disabled={!summary}/></label>
               <label>TO {brushMax}%<input type="range" min={brushMin} max="100" step="5" bind:value={brushMax} aria-label="Dashboard maximum Day 2 share" disabled={!summary}/></label>
             </div>
-            <div class="focus-event-list" aria-label="Linked event roster">{#each overviewEvents as event}
-              <button type="button" class:muted={brushActive&&!brushedIds.has(event.id)} class:selected={selectedEvent===event.id}
-                aria-pressed={selectedEvent===event.id} title={event.id+' — '+(event.day2Share*100).toFixed(1)+'% citywide Day 2 records'}
-                onclick={() => selectedEvent=selectedEvent===event.id?'all':event.id}>
-                <span>{event.id}</span><strong>{(event.day2Share*100).toFixed(1)}%</strong><i style:width={(event.day2Share*100)+'%'}></i>
-              </button>{/each}</div>
-            {#if brushActive}<button class="focus-clear-brush" type="button" onclick={() => {brushMin=0;brushMax=100;}}>Clear brush ↺</button>{/if}
+            <div class="focus-event-list" aria-label="Linked events">
+              {#each overviewEvents as event}
+                <button type="button" class:muted={brushActive&&!brushedEventIds.has(event.id)}
+                  class:selected={selectedEvent===event.id} aria-pressed={selectedEvent===event.id}
+                  title={event.id+' · '+(event.day2Share*100).toFixed(1)+'% Day 2 of citywide records'}
+                  onclick={()=>selectedEvent=selectedEvent===event.id?'all':event.id}>
+                  <span>{event.id}</span><strong>{(event.day2Share*100).toFixed(1)}%</strong>
+                  <i style:width={(event.day2Share*100)+'%'}></i></button>
+              {/each}
+            </div>
+            {#if !geography}<p class="mini-note">Waiting for validated City map data.</p>{/if}
+            {#if brushActive}<button class="focus-clear-brush" onclick={()=>{brushMin=0;brushMax=100;}}>Clear brush ↺</button>{/if}
           </div>
         </div>
-        <div class="focus-map"><div class="focus-panel-title"><h3>Where are they recorded?</h3><span>{selectedDay?'Day '+selectedDay:'All days'} · {titleScope}</span></div>
+        <div class="focus-map">
+          <div class="focus-panel-title"><h3>Where does it happen?</h3><span>{selectedDay?'Day '+selectedDay:'All days'} · {titleScope}</span></div>
           {#if geography && summary}
-            <NeighborhoodMap {geography} {selectedDay} {selectedEvent} {selectedNeighborhood} on:select={(event)=>selectedNeighborhood=event.detail}/>
+            <NeighborhoodMap {geography} {selectedDay} {selectedEvent} {selectedNeighborhood}
+              on:select={event=>selectedNeighborhood=event.detail}/>
             <div class="focus-map-footer" aria-live="polite"><strong>{selectedArea?.name??'Choose a neighborhood'}</strong>
-              <span>{selectedArea?fmt.format(selectedAreaCount)+' mapped tows in current scope':'Map colors represent observed counts.'}</span>
-              {#if selectedArea}<button type="button" onclick={() => selectedNeighborhood='all'}>Clear ×</button>{/if}
+              <span>{selectedArea?fmt.format(selectedAreaCount)+' mapped tows in scope':'Color indicates observed counts, not per-car risk.'}</span>
+              {#if selectedArea}<button onclick={()=>selectedNeighborhood='all'}>Clear area ×</button>{/if}
             </div>
-          {:else}<p role="status" class="focus-data-loading">Awaiting verified map data. No synthetic geography.</p>{/if}
+          {:else}<p class="focus-data-loading" role="status">Map awaits verified neighborhood data. No synthetic geography.</p>{/if}
         </div>
       </div>
-      <p class="focus-evidence-note">Nine selected historic emergencies. City of Minneapolis observed tow records, not risk or predictions. The brush highlights events; select one event to filter the maps. Unmatched locations are omitted only from mapped counts.</p>
+      <p class="focus-evidence-note">9 selected historic emergencies · City of Minneapolis tow records · unmatched locations excluded from mapped counts. Brushing highlights events; click one event to inspect its linked geography. No towing-risk or causal claims.</p>
     </section>
+
     <section class="section rules-section" id="rules">
       <div class="section-heading"><p class="eyebrow">01 / THE RULES</p><h2>Same storm.<br />Different streets.</h2><p>Each emergency day has a distinct restriction. Those differences are central to this analysis.</p></div>
       <div class="rule-cards">

@@ -11,7 +11,7 @@ test('static project-path preview loads the official City data and maps',async (
   });
   await page.goto('./');
   await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
-  await page.locator('.focus-mode-switch').click();
+  await page.getByRole('button',{name:'Explore all charts ↗'}).click();
   await expect(page.locator('.fingerprint-card')).toHaveCount(9);
   await expect(page.locator('.small-map-panel')).toHaveCount(3);
   const base=process.env.PAGES_BASE_PATH||'';
