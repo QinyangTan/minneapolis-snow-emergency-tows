@@ -124,3 +124,6 @@ footer span:first-child{color:white;font-weight:700;letter-spacing:.09em}
 @media(max-width:850px){.focus-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.focus-content{grid-template-columns:1fr}.focus-heading{flex-wrap:wrap}.focus-reset{margin-left:0}}
 @media(max-width:520px){.focus-dashboard{padding:14px 3% 25px}.focus-view .hero{padding:30px 4% 18px}.focus-view .hero h1{font-size:38px}.focus-stats strong{font-size:21px}.focus-stats>div{padding:9px}.focus-day-picker{width:100%}.focus-day-picker button{flex:1}.focus-mode-switch{width:100%}.focus-analysis,.focus-map{padding:12px}.focus-event-list button{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.focus-bar-track i{transition:none}}
+
+/* Explicit WCAG AA contrast for the compact dashboard eyebrow on pale blue. */
+.focus-dashboard .focus-heading .eyebrow{color:#2a526c}

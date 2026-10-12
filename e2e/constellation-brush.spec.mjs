@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test';
 test('quantitative brushing coordinates scatterplot and event roster without changing counts', async ({page}) => {
   await page.goto('/');
   await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
+  await page.locator('.focus-mode-switch').click();
   const section = page.locator('.constellation-section');
   await expect(section.locator('.constellation-point')).toHaveCount(9);
   const min = section.getByRole('slider', {name:'Minimum Day 2 share percentage'});
@@ -32,6 +33,7 @@ test('keyboard-operable query brush shows an empty selection truthfully', async 
   await page.setViewportSize({width:390,height:844});
   await page.goto('/');
   await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
+  await page.locator('.focus-mode-switch').click();
   const max = page.getByRole('slider',{name:'Maximum Day 2 share percentage'});
   await max.evaluate(element => {
     element.value='20';
