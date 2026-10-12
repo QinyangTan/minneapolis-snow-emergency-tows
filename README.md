@@ -6,21 +6,28 @@
 
 An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly appear or rank prominently across separate emergencies.
 
-## Compact brushing-and-linking dashboard (October 2026)
+## See the linked visualization in action
 
-The [live demo](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) now opens to one compact linked workspace: select a Snow Emergency, choose Day 1/2/3, brush an inclusive Day 2 share interval, or click any of 87 neighborhoods. Summary statistics, event highlighting and the map stay coordinated; expanding **Explore all charts** reveals the original multivariate constellation, three equal-scale maps, recurrence matrix, sensitivity analysis, and pairwise comparison. Brush ranges **highlight separate events** rather than aggregating them into an invented storm. The new controls are keyboard operable and use high-contrast selection states and labels alongside color.
+![Real Chromium capture of the CSCI 5609 compact dashboard: select Bridge, highlight Day 2, inspect a Minneapolis neighborhood, and brush events by Day 2 share](docs/demos/linked-dashboard-brushing.gif)
 
-The updated site was checked against the City-derived 5,423-record snapshot, with 22 passing Chromium E2E cases plus the GitHub Pages subpath smoke test. This remains observational, not evidence of towing risk or causal differences, and no human usability evaluation has yet been conducted.
+**A genuine Chromium recording of the working website** (not a generated mockup or stitched static screenshots). The site loads the processed official Minneapolis City data.
 
-## See the Google Maps Extension in action (GIF)
+**[▶ Try the dashboard yourself](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/)**
 
-**Watch the extension run directly on the real Google Maps website:** observed tow-count choropleth, Day 1–3 comparisons, neighborhood recurrence and interactive map navigation. This is a Chrome/Edge extension demo; the separate [live project website](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) remains accessible without an extension.
+| Try this | What links together |
+|---|---|
+| **Choose Bridge** in the event roster | Citywide total changes to **852** records; day composition and neighborhood map update together |
+| **Choose Day 2**, then click **Marcy Holmes** | The selected day, mapped neighborhood count and detail focus coordinate |
+| **Brush the Day 2 share from 40% to 55%** | **3 of 9** historic events remain highlighted; the other six fade, without inventing a combined storm |
+| Select **Explore all charts ↗** | Reveal the event constellation, three comparable day maps, recurrence matrix, threshold sensitivity, and pairwise comparisons; the brush state is shared |
 
-![Animated real-browser Google Maps extension demo: 87 neighborhood tow overlays, Bridge Day 2, Marcy Holmes inspection, recurring hotspots, Top-10 prominence, event fingerprints, native zoom and pan](docs/demos/google-maps-extension-demo.gif)
+The default view is a compact workspace rather than nine long sections. Blue / orange / teal distinguish the three days; strong text and selected states supplement color. Keyboard interactions and 390px mobile layout are covered by browser QA.
 
-**Captured from actual `google.com/maps` with the Chrome MV3 extension loaded (no substituted map pages).** The GIF shows count colors and legend, Day 2 event filtering, neighborhood inspection, cross-event recurrence/Top K, nine-event fingerprints, and native Google Maps zoom/pan. Short cuts between genuine captured UI states are video editing, not simulated map data. [Installation & methodology](extension/README.md) · [Run the standalone interactive story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/).
+**Scope:** 5,423 City tow records from nine historical emergencies, with 87 neighborhood polygons and 68 records without a matched map neighborhood. **Citywide totals and mapped counts have different denominators.** Brushing is an event-selection highlight, not a causality, significance, or individual towing-risk claim.
 
-**Status (Oct 11, 2026):** LIVE compact linked dashboard and full research story, with nine official ArcGIS event layers and six earlier real-browser GIFs. Latest GitHub CI: **22/22 Chromium E2E tests passed**, plus the GitHub Pages subpath smoke test, static build, data integrity and Svelte checks. Desktop and 390px mobile checks pass; the newest dashboard is not yet represented by a newly recorded README GIF. Still required for final course submission: real participant evaluation, manual screenreader review, team sign-off and course reports.
+**Verified:** [22/22 Chromium end-to-end cases plus a Pages-subpath smoke test](https://github.com/QinyangTan/minneapolis-snow-emergency-tows/actions/runs/38190904017), with a static production build and data integrity checks. The new GIF is captured from real browser interactions and validated in [the dedicated recording workflow](https://github.com/QinyangTan/minneapolis-snow-emergency-tows/actions/runs/38192041066). **Still outstanding:** real participant evaluation, manual screenreader review, team sign-off and course reports.
+
+[Interaction design rationale](docs/VISUAL_STORY_REDESIGN.md) · [Data limitations](docs/FINDINGS.md) · [Course rubric alignment](docs/RUBRIC_TRACEABILITY.md)
 
 ## Research-grade analysis and accountability
 
@@ -34,6 +41,17 @@ For a larger team, maintain [verifiable contribution records](docs/TEAM_CONTRIBU
 **Usability study (new):** The [moderated facilitator kit](docs/USER_EVALUATION_SESSION_KIT.md) provides six unbiased participant tasks, exact answers grounded in the official City data, a [blank TSV observation sheet](docs/evaluation/evaluation-template.tsv), and an offline aggregation script. Use `npm run evaluation:report -- /path/to/private-study.tsv` to summarize only genuinely recorded anonymous outcomes. No participants have been evaluated yet. This is not a claim of real-user success.
 ## Optional Google Maps browser overlay (experimental)
 
+<details>
+<summary>Watch the separate Google Maps extension running on the real Google Maps website</summary>
+
+**Watch the extension run directly on the real Google Maps website:** observed tow-count choropleth, Day 1–3 comparisons, neighborhood recurrence and interactive map navigation. This is a Chrome/Edge extension demo; the separate [live project website](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) remains accessible without an extension.
+
+![Animated real-browser Google Maps extension demo: 87 neighborhood tow overlays, Bridge Day 2, Marcy Holmes inspection, recurring hotspots, Top-10 prominence, event fingerprints, native zoom and pan](docs/demos/google-maps-extension-demo.gif)
+
+**Captured from actual `google.com/maps` with the Chrome MV3 extension loaded (no substituted map pages).** The GIF shows count colors and legend, Day 2 event filtering, neighborhood inspection, cross-event recurrence/Top K, nine-event fingerprints, and native Google Maps zoom/pan. Short cuts between genuine captured UI states are video editing, not simulated map data. [Installation & methodology](extension/README.md) · [Run the standalone interactive story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/).
+
+</details>
+
 A new [Chrome/Edge Manifest V3 extension](extension/README.md) can show the project's observed tow-count choropleth **on top of the desktop Google Maps website**, together with an event/day selection panel. It bundles our own 87-neighborhood City GeoJSON offline and requests only `activeTab` + `storage`; it does not require a Google Maps API key.
 
 **Alignment is a preview, not a guarantee:** the overlay projects from the map's visible URL camera, not an official Google Maps extension projection API. It automatically hides polygons when camera coordinates, north-up 2D orientation, or map bounds are unavailable. See [installation and QA limitations](extension/README.md); the [standalone story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) remains the authoritative geographically self-contained visualization. Browser-extension source is independent of the course's FP1 PDF submission.
@@ -46,7 +64,7 @@ The Canvas connector was restored October 7, 2026 and the **actual Fall 2026 FP1
 
 The application now features **nine multi-attribute event fingerprint cards**, a **nine-by-nine symmetric event-similarity matrix**, and **top-5/10/15 recurrence sensitivity slopegraphs**. These complement the linked three-day neighborhood maps, recurrence count matrix, day signatures and detailed event inspector. All values are computed from the verified Minneapolis City aggregates, rather than fabricated examples.
 
-The design decisions, alternatives, quantitative encodings, interactions, keyboard behavior and data limitations are documented in [VISUAL_STORY_REDESIGN.md](docs/VISUAL_STORY_REDESIGN.md). All six embedded GIFs below are recorded from the actual Chromium application and reflect tested interactions, not generated mockups.
+The design decisions, alternatives, quantitative encodings, interactions, keyboard behavior and data limitations are documented in [VISUAL_STORY_REDESIGN.md](docs/VISUAL_STORY_REDESIGN.md). The six earlier website GIFs below are recordings of actual Chromium interactions; the new linked-dashboard GIF above is separately recorded and verified.
 
 ## Course-grounded event constellation and coverage review
 
@@ -103,7 +121,7 @@ Explore the neighborhood-by-event count matrix, choose a particular event and ne
 
 ![Real browser GIF showing the recurring tow count matrix and normalized neighborhood profiles](docs/demos/recurrence-and-day-signatures.gif)
 
-**Recording and validation:** `npm run qa:browser` tests desktop/mobile layout, linked filters, numerical reconciliation, keyboard actions, and automated WCAG serious/critical violations. `npm run demo:gifs` records actual Chromium videos before transcoding to looping GIF. The video-to-GIF conversion does not alter any underlying City data.
+**Recording and validation:** `npm run qa:browser` tests desktop/mobile layout, linked filters, numerical reconciliation, keyboard actions, and automated WCAG serious/critical violations. `npm run demo:gifs` records actual Chromium videos before transcoding to looping GIF; `DASHBOARD_ONLY=1 npm run demo:gifs` records just the linked-dashboard tour. The video-to-GIF conversion does not alter any underlying City data.
 
 ## Reproducible findings
 
@@ -125,7 +143,7 @@ Nine complete three-day emergencies: Dover, Jane, Lourdes, Northrop, Victory 1 (
 
 ## Application
 
-- **SvelteKit + D3**, ready for static deployment (not yet publicly hosted).
+- **SvelteKit + D3**, deployed as a [public GitHub Pages static app](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/).
 - **Python + requests + Shapely** data preparation; historical records are fetched from official ArcGIS FeatureServer endpoints, spatially joined to one neighborhood boundary definition, and exported as versionable summary JSON + GeoJSON.
 
 ### Run locally
