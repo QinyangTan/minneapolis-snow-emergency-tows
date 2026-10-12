@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test';
 async function openWithData(page) {
   await page.goto('/');
   await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
+  await page.locator('.focus-mode-switch').click();
 }
 
 test('Research comparison explains both day profiles and mapped spatial composition', async ({ page }) => {

@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test';
 test('side-by-side shares explicitly explain pair divergence with denominators', async ({page})=>{
   await page.goto('./');
   await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
+  await page.locator('.focus-mode-switch').click();
   const card=page.locator('.pair-evidence');
   await expect(card.locator('.pair-row')).toHaveCount(3);
   await expect(card).toContainText('Bridge n=852');
@@ -25,6 +26,7 @@ test('comparison evidence is usable at 390px without root overflow',async ({page
   await page.setViewportSize({width:390,height:844});
   await page.goto('./');
   await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
+  await page.locator('.focus-mode-switch').click();
   await page.locator('select[aria-label="Compare events by distribution"]').selectOption('neighborhoods');
   await expect(page.locator('.pair-evidence .pair-row')).toHaveCount(8);
   const widths=await page.evaluate(()=>({root:document.documentElement.scrollWidth,viewport:innerWidth}));

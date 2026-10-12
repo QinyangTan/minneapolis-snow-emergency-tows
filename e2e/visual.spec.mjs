@@ -8,6 +8,8 @@ const city = { 1: 1255, 2: 2222, 3: 1946 };
 async function ready(page) {
   await page.goto('/');
   await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
+  await expect(page.locator('.focus-dashboard')).toBeVisible();
+  await page.locator('.focus-mode-switch').click();
   await expect(page.locator('.small-map-panel')).toHaveCount(3);
   await expect(page.locator('.explorer-layout')).toBeVisible();
 }
