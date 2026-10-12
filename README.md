@@ -6,6 +6,12 @@
 
 An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly appear or rank prominently across separate emergencies.
 
+## Compact brushing-and-linking dashboard (October 2026)
+
+The [live demo](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) now opens to one compact linked workspace: select a Snow Emergency, choose Day 1/2/3, brush an inclusive Day 2 share interval, or click any of 87 neighborhoods. Summary statistics, event highlighting and the map stay coordinated; expanding **Explore all charts** reveals the original multivariate constellation, three equal-scale maps, recurrence matrix, sensitivity analysis, and pairwise comparison. Brush ranges **highlight separate events** rather than aggregating them into an invented storm. The new controls are keyboard operable and use high-contrast selection states and labels alongside color.
+
+The updated site was checked against the City-derived 5,423-record snapshot, with 22 passing Chromium E2E cases plus the GitHub Pages subpath smoke test. This remains observational, not evidence of towing risk or causal differences, and no human usability evaluation has yet been conducted.
+
 ## See the Google Maps Extension in action (GIF)
 
 **Watch the extension run directly on the real Google Maps website:** observed tow-count choropleth, Day 1–3 comparisons, neighborhood recurrence and interactive map navigation. This is a Chrome/Edge extension demo; the separate [live project website](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/) remains accessible without an extension.
@@ -14,7 +20,7 @@ An interactive, evidence-driven visual story about how Minneapolis towing patter
 
 **Captured from actual `google.com/maps` with the Chrome MV3 extension loaded (no substituted map pages).** The GIF shows count colors and legend, Day 2 event filtering, neighborhood inspection, cross-event recurrence/Top K, nine-event fingerprints, and native Google Maps zoom/pan. Short cuts between genuine captured UI states are video editing, not simulated map data. [Installation & methodology](extension/README.md) · [Run the standalone interactive story](https://qinyangtan.github.io/minneapolis-snow-emergency-tows-demo/).
 
-**Status (Oct 8, 2026):** LIVE public GitHub Pages demo with nine official ArcGIS event layers, linked analysis and six real browser GIFs. Public 1440px desktop and 390px mobile Chromium verification passed, and the source CI had 14/14 browser E2E tests plus a GitHub Pages subpath smoke test passing. Still required for final course submission: real participant evaluation, manual screenreader review, team sign-off and course reports.
+**Status (Oct 11, 2026):** LIVE compact linked dashboard and full research story, with nine official ArcGIS event layers and six earlier real-browser GIFs. Latest GitHub CI: **22/22 Chromium E2E tests passed**, plus the GitHub Pages subpath smoke test, static build, data integrity and Svelte checks. Desktop and 390px mobile checks pass; the newest dashboard is not yet represented by a newly recorded README GIF. Still required for final course submission: real participant evaluation, manual screenreader review, team sign-off and course reports.
 
 ## Research-grade analysis and accountability
 
