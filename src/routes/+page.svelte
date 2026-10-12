@@ -269,8 +269,9 @@
     </section>
 
 
+    <div id="constellation" class="story-anchor" aria-hidden="true"></div>
     {#if geography && summary}
-      <section class="section constellation-section" id="constellation" aria-labelledby="constellation-title">
+      <section class="section constellation-section" aria-labelledby="constellation-title">
         <div class="section-heading">
           <p class="eyebrow">04 / MULTIVARIATE ANALYSIS · TASK FIRST</p>
           <h2 id="constellation-title">How many.<br /><em>When. Where.</em></h2>
