@@ -10,8 +10,8 @@
   export let selectedEvent='all';
   const dispatch=createEventDispatcher<{select:string}>();
   let equalSize=false;
-  let brushMin=0;
-  let brushMax=100;
+  export let brushMin=0;
+  export let brushMax=100;
   $: rows=constellationRows(events,geography);
   $: brushed=brushByDayTwo(rows,brushMin,brushMax);
   $: brushedIds=new Set(brushed.map(row=>row.id));

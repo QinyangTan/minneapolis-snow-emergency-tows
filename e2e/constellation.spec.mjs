@@ -3,6 +3,7 @@ import { test, expect } from '@playwright/test';
 async function ready(page){
   await page.goto('/');
   await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
+  await page.locator('.focus-mode-switch').click();
   await expect(page.locator('.constellation-point')).toHaveCount(9);
   await expect(page.locator('.constellation-roster button')).toHaveCount(9);
 }

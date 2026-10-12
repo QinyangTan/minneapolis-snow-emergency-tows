@@ -1,0 +1,48 @@
+name: Stage verified public demo build
+
+on:
+  push:
+    branches:
+      - main
+      - feat/compact-linked-dashboard-20261011
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: public-demo-staging
+  cancel-in-progress: true
+
+jobs:
+  build-demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install packages
+        run: npm install --no-audit --no-fund
+      - name: Svelte checks
+        run: npm run check
+      - name: Build for public demo subpath
+        run: PAGES_BASE_PATH=/minneapolis-snow-emergency-tows-demo npm run build
+      - name: Validate publishable processed-data artifact
+        run: PAGES_BASE_PATH=/minneapolis-snow-emergency-tows-demo npm run qa:pages
+      - name: Stage static files on a separate source repository branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/snow-demo-artifact"
+          cp -R build/. "$RUNNER_TEMP/snow-demo-artifact/"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch --orphan demo-stage-snapshot
+          git rm -rf --cached . >/dev/null || true
+          cp -R "$RUNNER_TEMP/snow-demo-artifact/." .
+          touch .nojekyll
+          git add -f index.html _app data .nojekyll
+          git commit -m "build: validated public demo artifact [skip ci]"
+          git push --force origin HEAD:refs/heads/demo-build-snapshot-20261011
