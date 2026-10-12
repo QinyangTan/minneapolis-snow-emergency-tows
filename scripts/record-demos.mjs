@@ -39,7 +39,12 @@ async function recordedScenario(browser, name, interaction) {
   page.on('pageerror', (error) => errors.push(error.message));
   try {
     await page.goto(BASE, { waitUntil: 'networkidle' });
-    await page.locator('.small-map-panel').first().waitFor();
+    await page.locator('.focus-dashboard').waitFor();
+    await page.locator('.focus-map svg path').first().waitFor();
+    if (name !== 'linked-dashboard-brushing') {
+      await page.locator('.focus-mode-switch').click();
+      await page.locator('.small-map-panel').first().waitFor();
+    }
     await page.waitForTimeout(700);
     await interaction(page);
     await page.waitForTimeout(900);
@@ -76,6 +81,31 @@ async function main() {
   try {
     await waitForServer();
     browser = await chromium.launch({ headless: true });
+    await recordedScenario(browser, 'linked-dashboard-brushing', async (page) => {
+      await page.locator('#focus-dashboard').scrollIntoViewIfNeeded();
+      await page.waitForTimeout(1150);
+      await page.locator('.focus-event-list button').filter({hasText:'Bridge'}).click();
+      await page.waitForTimeout(1050);
+      await page.locator('.focus-day-picker').getByRole('button', {name:'Day 2'}).click();
+      await page.waitForTimeout(1050);
+      await page.locator('.focus-map svg path[aria-label^="Marcy Holmes:"]').click();
+      await page.waitForTimeout(1200);
+      const minimum=page.getByRole('slider',{name:'Dashboard minimum Day 2 share'});
+      await minimum.focus();
+      await minimum.press('Home');
+      for (let i=0;i<8;i++) await minimum.press('ArrowRight');
+      await page.waitForTimeout(650);
+      const maximum=page.getByRole('slider',{name:'Dashboard maximum Day 2 share'});
+      await maximum.focus();
+      await maximum.press('End');
+      for (let i=0;i<9;i++) await maximum.press('ArrowLeft');
+      await page.waitForTimeout(1350);
+      const inRange=await page.locator('.focus-event-list button:not(.muted)').count();
+      if (inRange !== 3) throw new Error('Brush data changed: expected 3 events in 40%–55%, got '+inRange);
+      await page.locator('.focus-reset').click();
+      await page.waitForTimeout(850);
+    });
+    if (process.env.DASHBOARD_ONLY !== '1') {
     if (process.env.EDITORIAL_ONLY !== '1') {
     await recordedScenario(browser, 'three-day-map-comparison', async (page) => {
       await page.locator('.small-multiple-shell').scrollIntoViewIfNeeded();
@@ -141,6 +171,7 @@ async function main() {
       await panel.locator('.sensitivity-row').nth(1).click();
       await page.waitForTimeout(1050);
     });
+    }
   } finally {
     if (browser) await browser.close();
     server.kill('SIGTERM');
