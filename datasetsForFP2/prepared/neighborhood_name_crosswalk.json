@@ -1,0 +1,524 @@
+{
+  "matched": [
+    {
+      "city_neighborhood_id": "1",
+      "city_name": "Shingle Creek",
+      "map_name": "Shingle Creek",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "2",
+      "city_name": "Lind - Bohanon",
+      "map_name": "Lind - Bohanon",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "3",
+      "city_name": "Victory",
+      "map_name": "Victory",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "4",
+      "city_name": "Webber - Camden",
+      "map_name": "Webber - Camden",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "5",
+      "city_name": "Cleveland",
+      "map_name": "Cleveland",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "6",
+      "city_name": "Folwell",
+      "map_name": "Folwell",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "7",
+      "city_name": "McKinley",
+      "map_name": "McKinley",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "9",
+      "city_name": "Camden Industrial",
+      "map_name": "Camden Industrial",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "11",
+      "city_name": "Columbia Park",
+      "map_name": "Columbia Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "12",
+      "city_name": "Waite Park",
+      "map_name": "Waite Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "13",
+      "city_name": "Marshall Terrace",
+      "map_name": "Marshall Terrace",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "14",
+      "city_name": "Bottineau",
+      "map_name": "Bottineau",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "15",
+      "city_name": "Holland",
+      "map_name": "Holland",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "16",
+      "city_name": "Audubon Park",
+      "map_name": "Audubon Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "17",
+      "city_name": "Sheridan",
+      "map_name": "Sheridan",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "18",
+      "city_name": "Logan Park",
+      "map_name": "Logan Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "19",
+      "city_name": "Windom Park",
+      "map_name": "Windom Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "20",
+      "city_name": "Northeast Park",
+      "map_name": "Northeast Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "21",
+      "city_name": "St. Anthony West",
+      "map_name": "St. Anthony West",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "22",
+      "city_name": "St. Anthony East",
+      "map_name": "St. Anthony East",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "23",
+      "city_name": "Beltrami",
+      "map_name": "Beltrami",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "24",
+      "city_name": "Jordan",
+      "map_name": "Jordan",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "25",
+      "city_name": "Hawthorne",
+      "map_name": "Hawthorne",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "26",
+      "city_name": "Willard - Hay",
+      "map_name": "Willard - Hay",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "27",
+      "city_name": "Near - North",
+      "map_name": "Near - North",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "28",
+      "city_name": "Harrison",
+      "map_name": "Harrison",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "29",
+      "city_name": "Sumner - Glenwood",
+      "map_name": "Sumner - Glenwood",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "31",
+      "city_name": "Loring Park",
+      "map_name": "Loring Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "32",
+      "city_name": "Steven's Square - Loring Heights",
+      "map_name": "Steven's Square - Loring Heights",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "33",
+      "city_name": "Elliot Park",
+      "map_name": "Elliot Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "34",
+      "city_name": "Nicollet Island - East Bank",
+      "map_name": "Nicollet Island - East Bank",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "35",
+      "city_name": "Marcy Holmes",
+      "map_name": "Marcy Holmes",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "37",
+      "city_name": "Como",
+      "map_name": "Como",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "38",
+      "city_name": "Cedar Riverside",
+      "map_name": "Cedar Riverside",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "39",
+      "city_name": "Prospect Park - East River Road",
+      "map_name": "Prospect Park - East River Road",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "40",
+      "city_name": "University of Minnesota",
+      "map_name": "University of Minnesota",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "41",
+      "city_name": "Cedar - Isles - Dean",
+      "map_name": "Cedar - Isles - Dean",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "42",
+      "city_name": "Kenwood",
+      "map_name": "Kenwood",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "43",
+      "city_name": "Lowry Hill",
+      "map_name": "Lowry Hill",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "44",
+      "city_name": "East Isles",
+      "map_name": "East Isles",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "45",
+      "city_name": "Lowry Hill East",
+      "map_name": "Lowry Hill East",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "46",
+      "city_name": "East Bde Maka Ska",
+      "map_name": "East Bde Maka Ska",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "47",
+      "city_name": "South Uptown",
+      "map_name": "South Uptown",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "49",
+      "city_name": "West Maka Ska",
+      "map_name": "West Maka Ska",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "50",
+      "city_name": "Bryn - Mawr",
+      "map_name": "Bryn - Mawr",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "51",
+      "city_name": "Whittier",
+      "map_name": "Whittier",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "53",
+      "city_name": "Lyndale",
+      "map_name": "Lyndale",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "54",
+      "city_name": "Central",
+      "map_name": "Central",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "55",
+      "city_name": "Powderhorn Park",
+      "map_name": "Powderhorn Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "56",
+      "city_name": "Corcoran",
+      "map_name": "Corcoran",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "57",
+      "city_name": "Bryant",
+      "map_name": "Bryant",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "58",
+      "city_name": "Bancroft",
+      "map_name": "Bancroft",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "59",
+      "city_name": "Standish",
+      "map_name": "Standish",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "60",
+      "city_name": "Seward",
+      "map_name": "Seward",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "61",
+      "city_name": "Longfellow",
+      "map_name": "Longfellow",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "62",
+      "city_name": "Cooper",
+      "map_name": "Cooper",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "63",
+      "city_name": "Howe",
+      "map_name": "Howe",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "64",
+      "city_name": "Hiawatha",
+      "map_name": "Hiawatha",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "65",
+      "city_name": "Tangletown",
+      "map_name": "Tangletown",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "66",
+      "city_name": "Armatage",
+      "map_name": "Armatage",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "67",
+      "city_name": "Kenny",
+      "map_name": "Kenny",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "68",
+      "city_name": "Windom",
+      "map_name": "Windom",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "69",
+      "city_name": "Linden Hills",
+      "map_name": "Linden Hills",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "70",
+      "city_name": "East Harriet",
+      "map_name": "East Harriet",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "71",
+      "city_name": "King Field",
+      "map_name": "King Field",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "72",
+      "city_name": "Fulton",
+      "map_name": "Fulton",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "73",
+      "city_name": "Lynnhurst",
+      "map_name": "Lynnhurst",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "74",
+      "city_name": "Regina",
+      "map_name": "Regina",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "75",
+      "city_name": "Northrop",
+      "map_name": "Northrop",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "76",
+      "city_name": "Ericsson",
+      "map_name": "Ericsson",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "77",
+      "city_name": "Field",
+      "map_name": "Field",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "78",
+      "city_name": "Page",
+      "map_name": "Page",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "79",
+      "city_name": "Hale",
+      "map_name": "Hale",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "80",
+      "city_name": "Keewaydin",
+      "map_name": "Keewaydin",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "81",
+      "city_name": "Minnehaha",
+      "map_name": "Minnehaha",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "82",
+      "city_name": "Diamond Lake",
+      "map_name": "Diamond Lake",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "83",
+      "city_name": "Wenonah",
+      "map_name": "Wenonah",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "84",
+      "city_name": "Morris Park",
+      "map_name": "Morris Park",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "85",
+      "city_name": "Mid - City Industrial",
+      "map_name": "Mid - City Industrial",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "86",
+      "city_name": "North Loop",
+      "map_name": "North Loop",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "87",
+      "city_name": "Downtown West",
+      "map_name": "Downtown West",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "88",
+      "city_name": "Downtown East",
+      "map_name": "Downtown East",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "89",
+      "city_name": "Ventura Village",
+      "map_name": "Ventura Village",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "90",
+      "city_name": "Phillips West",
+      "map_name": "Phillips West",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "91",
+      "city_name": "Midtown Phillips",
+      "map_name": "Midtown Phillips",
+      "match_method": "case/punctuation/whitespace normalization only"
+    },
+    {
+      "city_neighborhood_id": "92",
+      "city_name": "East Phillips",
+      "map_name": "East Phillips",
+      "match_method": "case/punctuation/whitespace normalization only"
+    }
+  ],
+  "map_without_city_acs": [
+    "Humboldt Industrial Area"
+  ],
+  "policy": "Missing estimates remain null; never zero-fill. This is a NAME correspondence, not proof of historical polygon equivalence."
+}

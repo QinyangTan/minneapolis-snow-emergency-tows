@@ -1,0 +1,1036 @@
+[
+  {
+    "id": "Incidents_Reported_911",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Incidents_Reported_911/FeatureServer/0",
+    "status": "metadata_only",
+    "reason": "Calls for service are not confirmed tows; inspect categories and dates before acquisition.",
+    "acquisition_log": "addon_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B01003.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B01003.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B19301.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B19301.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B19013.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B19013.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B17001.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B17001.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B25077.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B25077.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B25064.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B25064.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B25003.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B25003.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B08201.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B08201.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B08301.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B08301.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B25024.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B25024.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B25070.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B25070.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/tract_B25002.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2022/block_group_B25002.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B01003.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B01003.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B19301.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B19301.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B19013.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B19013.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B17001.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B17001.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B25077.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B25077.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B25064.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B25064.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B25003.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B25003.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B08201.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B08201.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B08301.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B08301.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B25024.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B25024.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B25070.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B25070.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/tract_B25002.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2023/block_group_B25002.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B01003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B01003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B19301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B19301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B19013.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B19013.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B17001.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B17001.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B25077.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B25077.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B25064.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B25064.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B25003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B25003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B08201.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B08201.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B08301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B08301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B25024.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B25024.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B25070.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B25070.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/tract_B25002.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/2024/block_group_B25002.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B01003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B01003.json",
+    "path": "raw/acs/metadata/B01003.json",
+    "status": "downloaded",
+    "bytes": 199994,
+    "sha256": "f692fa121bf007948893c312945d86abc83c6bae6420540ccf4c66891467b904",
+    "retrieved_at_utc": "2026-11-10T20:54:40.033410+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B19301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B19301.json",
+    "path": "raw/acs/metadata/B19301.json",
+    "status": "downloaded",
+    "bytes": 200518,
+    "sha256": "b3c19c6c133963668f3b4ba618b7189c89d0e88366248d450cc6177342bd9234",
+    "retrieved_at_utc": "2026-11-10T20:54:40.000891+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B19013.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B19013.json",
+    "path": "raw/acs/metadata/B19013.json",
+    "status": "downloaded",
+    "bytes": 200530,
+    "sha256": "304b5d72b144edcddf9d76bdb3d3928d2240d2a1c3071770666a313df32bfae9",
+    "retrieved_at_utc": "2026-11-10T20:54:40.423998+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B17001.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B17001.json",
+    "path": "raw/acs/metadata/B17001.json",
+    "status": "downloaded",
+    "bytes": 291458,
+    "sha256": "3554588a3334d9e4359d82508e7abb7f16b3bc52da9ff4b406d4e93375e146e5",
+    "retrieved_at_utc": "2026-11-10T20:54:41.746161+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B25077.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25077.json",
+    "path": "raw/acs/metadata/B25077.json",
+    "status": "downloaded",
+    "bytes": 200158,
+    "sha256": "892740d42c4a6c7120999f9302c18550508c964082f66eddc75865200f32fd0c",
+    "retrieved_at_utc": "2026-11-10T20:54:41.651562+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B25064.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25064.json",
+    "path": "raw/acs/metadata/B25064.json",
+    "status": "downloaded",
+    "bytes": 200266,
+    "sha256": "6e7536d071748c25add9844650d785a5dc59d8047f2923f4fd2889731fc8b670",
+    "retrieved_at_utc": "2026-11-10T20:54:41.677031+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B25003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25003.json",
+    "path": "raw/acs/metadata/B25003.json",
+    "status": "downloaded",
+    "bytes": 202106,
+    "sha256": "75bc8b9150800dd2f40336814062a5795b6cf4ab14f00b38e9a053887422133b",
+    "retrieved_at_utc": "2026-11-10T20:54:41.737612+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B08201.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B08201.json",
+    "path": "raw/acs/metadata/B08201.json",
+    "status": "downloaded",
+    "bytes": 235388,
+    "sha256": "24ce57c5e3cdc294dc0c3f4fb54cb857173906d67827b35a87ddc082ab8da957",
+    "retrieved_at_utc": "2026-11-10T20:54:42.042852+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B08301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B08301.json",
+    "path": "raw/acs/metadata/B08301.json",
+    "status": "downloaded",
+    "bytes": 225160,
+    "sha256": "819fd7fda8a71e38ed860416b6defe5590d7f3ff8487a46fc880b95fe73b0735",
+    "retrieved_at_utc": "2026-11-10T20:54:43.324386+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B25024.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25024.json",
+    "path": "raw/acs/metadata/B25024.json",
+    "status": "downloaded",
+    "bytes": 210452,
+    "sha256": "cca3eba14b48c355f8cf844385a76ff907768be6d074466f971bda3eae3fedde",
+    "retrieved_at_utc": "2026-11-10T20:54:43.363183+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B25070.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25070.json",
+    "path": "raw/acs/metadata/B25070.json",
+    "status": "downloaded",
+    "bytes": 213800,
+    "sha256": "81516d5733ff2931eab994443db33bcf9057fdb39263336cf3768bcb2d848638",
+    "retrieved_at_utc": "2026-11-10T20:54:43.395300+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/B25002.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25002.json",
+    "path": "raw/acs/metadata/B25002.json",
+    "status": "downloaded",
+    "bytes": 202040,
+    "sha256": "7203086ab854865dab956d9efa0f5b9e83d3a91db99eb311b2772c1c299b97e1",
+    "retrieved_at_utc": "2026-11-10T20:54:43.420386+00:00",
+    "last_modified": null,
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "references/2024_Accomplishments_TPS.pdf",
+    "url": "https://www.minneapolismn.gov/media/-www-content-assets/documents/2024-Accomplishments-TPS.pdf",
+    "params": null,
+    "status": "failed",
+    "error": "404 Client Error: Not Found for url: https://www.minneapolismn.gov/media/-www-content-assets/documents/2024-Accomplishments-TPS.pdf",
+    "acquisition_log": "context_downloads.json"
+  },
+  {
+    "id": "acs/metadata/C17002.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/C17002.json",
+    "path": "raw/acs/metadata/C17002.json",
+    "status": "downloaded",
+    "bytes": 209720,
+    "sha256": "6e363deb4d9f86424627b61b46364c14a6b325d0e7d639fe1722b68f207f86ed",
+    "retrieved_at_utc": "2026-11-10T21:15:18.135399+00:00",
+    "kind": "json",
+    "acquisition_log": "context_downloads.json"
+  }
+]

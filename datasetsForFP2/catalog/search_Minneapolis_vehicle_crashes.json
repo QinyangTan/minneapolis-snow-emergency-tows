@@ -1,0 +1,211 @@
+{
+  "total": 3,
+  "start": 1,
+  "num": 50,
+  "nextStart": -1,
+  "results": [
+    {
+      "id": "04895466ee69430281d4a92add4abfdb",
+      "owner": "grantp29@iastate.edu_ISUGISF",
+      "created": 1777400406000,
+      "modified": 1777997917000,
+      "guid": null,
+      "name": null,
+      "title": "Assignment5_GPautsch",
+      "type": "Web Map",
+      "typeKeywords": [
+        "ArcGIS API for JavaScript",
+        "ArcGIS Online",
+        "Explorer Web Map",
+        "Map",
+        "Online Map",
+        "Web Map"
+      ],
+      "description": "<p>This map analyzes various transportation characteristics for the Twin Cities of Minnesota. The specific area used for this analysis comes form the Metropolitan Council, which recognizes the Twin Cities as a 7-county metropolitan area in eastern Minnesota. The following information is analyzed in this map:</p><ul><li>National Walkability Index data by Census tract, which provides an index measurement of the likelihood of walking being used as a method of transportation.</li><li>Annual Average Daily Traffic by Census tract, which provides the mean traffic counts for each census tract based on all roads within its boundaries.</li><li>Transit Stops Boarding and Alighting by Census tract, which provides the total number of boardings and departures from transit vehicles at stops within the boundary of a Census tract.</li><li>Bike Crash Risk Index by road segments and intersections, which provides an index rating for the safety of that segment or intersection for cyclists.</li><li>Motor Vehicle Crash Risk Index by road segments and intersections, which provides an index rating for the safety of that segment or intersection for motorists.</li></ul>",
+      "tags": [
+        "Transportation",
+        "Bicycling",
+        "Motor Vehicles",
+        "Safety",
+        "Twin Cities",
+        "minneapolis",
+        "st. paul",
+        "Minnesota",
+        "public transit"
+      ],
+      "snippet": "Analysis of various transportation factors within the Twin Cities of Minnesota.",
+      "thumbnail": "thumbnail/ago_downloaded.png",
+      "documentation": null,
+      "extent": [
+        [
+          -93.3584572327728,
+          44.89947883993671
+        ],
+        [
+          -93.11263814097626,
+          45.00371329212004
+        ]
+      ],
+      "categories": [
+        "/Categories/Boundaries",
+        "/Categories/Transportation"
+      ],
+      "spatialReference": "",
+      "accessInformation": "",
+      "classification": null,
+      "licenseInfo": "",
+      "culture": "en-us",
+      "properties": null,
+      "advancedSettings": null,
+      "url": "",
+      "proxyFilter": null,
+      "access": "public",
+      "size": -1,
+      "subInfo": 0,
+      "appCategories": [],
+      "industries": [],
+      "languages": [],
+      "largeThumbnail": null,
+      "banner": null,
+      "screenshots": [],
+      "listed": false,
+      "numComments": 0,
+      "numRatings": 0,
+      "avgRating": 0,
+      "numViews": 175,
+      "scoreCompleteness": 83,
+      "groupDesignations": null,
+      "apiToken1ExpirationDate": -1,
+      "apiToken2ExpirationDate": -1,
+      "lastViewed": 1794250800000
+    },
+    {
+      "id": "01675e64234e433b8991c32c9079108e",
+      "owner": "hennepin.county.maps",
+      "created": 1780598867000,
+      "modified": 1782495422000,
+      "guid": null,
+      "name": null,
+      "title": "Multimodal Counts Map",
+      "type": "Web Map",
+      "typeKeywords": [
+        "ArcGIS API for JavaScript",
+        "ArcGIS Online",
+        "Explorer Web Map",
+        "Map",
+        "Online Map",
+        "Web Map"
+      ],
+      "description": "<h3><strong>Traffic Counts</strong>&nbsp;</h3><p>This map displays annual average daily traffic (AADT) volumes for years 1977 to 2023 and heavy commercial annual average daily traffic (HCAADT*) volumes for 2017 to 2023.&nbsp;</p><p>Traffic volumes (AADT) on the Hennepin County highway system that are outside the City of Minneapolis are counted on a two-year cycle. Traffic volumes within the City of Minneapolis were furnished by the Traffic Engineering Division, Minneapolis Department of Public Works. Minneapolis follows a four-year count cycle.&nbsp;</p><p>For select sites, traffic count reports (AADT and HCAADT) are available and can be viewed within the map. For more specific questions, please contact the <a target='_blank' href='https://www.hennepincounty.gov/government/projects-initiatives/transportation/transportation-planning' rel='nofollow ugc noopener noreferrer'>Hennepin County Transportation Department, Planning Division</a>.&nbsp;</p><p><i>*For more information about how traffic is classified as heavy commercial, click </i><a target='_blank' href='https://www.fhwa.dot.gov/policyinformation/tmguide/tmg_2013/vehicle-types.cfm' rel='nofollow ugc noopener noreferrer'><i>here</i></a><i>.</i>&nbsp;</p><h3><strong>Turning Movement Counts</strong>&nbsp;&nbsp;&nbsp;</h3><p>This map also displays turning movement count data collected by Hennepin County staff and various consultants. This data includes hourly turning movements of vehicles (usually from 6 a.m. - 8 p.m.). The data is used for intersection design and traffic signal timing. Turning movement count locations within Hennepin County and their associated PDF reports are accessible within the map. For additional information or questions, please contact the <a target='_blank' href='https://www.hennepincounty.gov/government/projects-initiatives/transportation/transportation-planning' rel='nofollow ugc noopener noreferrer'>Hennepin County Transportation Department, Planning Division</a>.&nbsp;</p><h3><strong>Bike and Pedestrian counts</strong></h3><p>Hennepin County collects a variety of bicycle and pedestrian data through automated bicycle counters and observations. The primary focus of these programs is to track and report bicycle and pedestrian volume information along Hennepin County roadways, including trails adjacent to county roads. Trails owned and maintained by Three Rivers Park District are not included in this program because Three Rivers conducts their own bicycle monitoring program. There are many reasons to establish and maintain a regular bicycle monitoring program, including:</p><ul><li>Help track ridership changes seasonally and annually.</li><li>Provide bicycle data to inform and support planning and engineering decisions.</li><li>Determine volumes to help calculate crash rates.</li><li>Track usage before and after county projects.</li><li>Report data to elected officials, local government agencies, and the general public</li></ul><h3><strong>Automated bicycle counts</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3><p>The county collects short duration (24-72 hr) bicycle counts on a two-year cycle. Staff look to six permanent counter locations across the county, which provide year-round data, in order to calculate Average Annual Daily Bicyclists (AADB) volumes for 48 hour count sites.&nbsp;</p>",
+      "tags": [
+        "Traffic Counts"
+      ],
+      "snippet": "",
+      "thumbnail": "thumbnail/thumbnail1781104906803.png",
+      "documentation": null,
+      "extent": [
+        [
+          -93.50072052384681,
+          44.82723555499686
+        ],
+        [
+          -93.21782257462844,
+          45.005927831983676
+        ]
+      ],
+      "categories": [
+        "/Categories/Transportation Project Delivery/Planning/Multi Modal Counts"
+      ],
+      "spatialReference": "",
+      "accessInformation": "",
+      "classification": null,
+      "licenseInfo": "<div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><span style='font-family:inherit;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.75667;'>Disclaimer: </span></span>This [map/data] (i) is furnished \"AS IS\" with no representation as to completeness or accuracy; (ii) is furnished with no warranty of any kind; and (iii) is not suitable for legal, engineering or surveying purposes. Hennepin County shall not be liable for any damage, injury or loss resulting from this [map/data].</div>",
+      "culture": "en-us",
+      "properties": null,
+      "advancedSettings": null,
+      "url": "",
+      "proxyFilter": null,
+      "access": "public",
+      "size": -1,
+      "subInfo": 0,
+      "appCategories": [],
+      "industries": [],
+      "languages": [],
+      "largeThumbnail": null,
+      "banner": null,
+      "screenshots": [],
+      "listed": false,
+      "numComments": 0,
+      "numRatings": 0,
+      "avgRating": 0,
+      "numViews": 1496,
+      "scoreCompleteness": 66,
+      "groupDesignations": null,
+      "apiToken1ExpirationDate": -1,
+      "apiToken2ExpirationDate": -1,
+      "lastViewed": 1794330000000,
+      "source": "Hennepin County",
+      "licenseConstraintId": "custom"
+    },
+    {
+      "id": "d1c809c4786544ae99b8df5ce1038027",
+      "owner": "hennepin.county.maps",
+      "created": 1756065799000,
+      "modified": 1787144731000,
+      "guid": null,
+      "name": null,
+      "title": "Multimodal Counts Map",
+      "type": "Web Mapping Application",
+      "typeKeywords": [
+        "configurableApp",
+        "JavaScript",
+        "Map",
+        "Mapping Site",
+        "Online Map",
+        "Ready To Use",
+        "Web Map"
+      ],
+      "description": "<h3><strong>Traffic Counts</strong>&nbsp;</h3><p>This map displays annual average daily traffic (AADT) volumes for years 1977 to 2023 and heavy commercial annual average daily traffic (HCAADT*) volumes for 2017 to 2023.&nbsp;</p><p>Traffic volumes (AADT) on the Hennepin County highway system that are outside the City of Minneapolis are counted on a two-year cycle. Traffic volumes within the City of Minneapolis were furnished by the Traffic Engineering Division, Minneapolis Department of Public Works. Minneapolis follows a four-year count cycle.&nbsp;</p><p>For select sites, traffic count reports (AADT and HCAADT) are available and can be viewed within the map. For more specific questions, please contact the <a target='_blank' href='https://www.hennepincounty.gov/government/projects-initiatives/transportation/transportation-planning' rel='nofollow ugc noopener noreferrer'>Hennepin County Transportation Department, Planning Division</a>.&nbsp;</p><p><i>*For more information about how traffic is classified as heavy commercial, click </i><a target='_blank' href='https://www.fhwa.dot.gov/policyinformation/tmguide/tmg_2013/vehicle-types.cfm' rel='nofollow ugc noopener noreferrer'><i>here</i></a><i>.</i>&nbsp;</p><h3><strong>Turning Movement Counts</strong>&nbsp;&nbsp;&nbsp;</h3><p>This map also displays turning movement count data collected by Hennepin County staff and various consultants. This data includes hourly turning movements of vehicles (usually from 6 a.m. - 8 p.m.). The data is used for intersection design and traffic signal timing. Turning movement count locations within Hennepin County and their associated PDF reports are accessible within the map. For additional information or questions, please contact the <a target='_blank' href='https://www.hennepincounty.gov/government/projects-initiatives/transportation/transportation-planning' rel='nofollow ugc noopener noreferrer'>Hennepin County Transportation Department, Planning Division</a>.&nbsp;</p><h3><strong>Bike and Pedestrian counts</strong></h3><p>Hennepin County collects a variety of bicycle and pedestrian data through automated bicycle counters and observations. The primary focus of these programs is to track and report bicycle and pedestrian volume information along Hennepin County roadways, including trails adjacent to county roads. Trails owned and maintained by Three Rivers Park District are not included in this program because Three Rivers conducts their own bicycle monitoring program. There are many reasons to establish and maintain a regular bicycle monitoring program, including:</p><ul><li>Help track ridership changes seasonally and annually.</li><li>Provide bicycle data to inform and support planning and engineering decisions.</li><li>Determine volumes to help calculate crash rates.</li><li>Track usage before and after county projects.</li><li>Report data to elected officials, local government agencies, and the general public</li></ul><h3><strong>Automated bicycle counts</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3><p>The county collects short duration (24-72 hr) bicycle counts on a two-year cycle. Staff look to six permanent counter locations across the county, which provide year-round data, in order to calculate Average Annual Daily Bicyclists (AADB) volumes for 48 hour count sites.&nbsp;</p>",
+      "tags": [
+        "Traffic Counts"
+      ],
+      "snippet": "",
+      "thumbnail": "thumbnail/thumbnail1781104850004.png",
+      "documentation": null,
+      "extent": [],
+      "categories": [
+        "/Categories/Transportation Project Delivery/Planning/Multi Modal Counts"
+      ],
+      "spatialReference": "",
+      "accessInformation": "",
+      "classification": null,
+      "licenseInfo": "<p>Disclaimer: This [map/data] (i) is furnished \"AS IS\" with no representation as to completeness or accuracy; (ii) is furnished with no warranty of any kind; and (iii) is not suitable for legal, engineering or surveying purposes. Hennepin County shall not be liable for any damage, injury or loss resulting from this [map/data].</p>",
+      "culture": "en-us",
+      "properties": null,
+      "advancedSettings": null,
+      "url": "https://hennepin.maps.arcgis.com/apps/instant/sidebar/index.html?appid=d1c809c4786544ae99b8df5ce1038027",
+      "proxyFilter": null,
+      "access": "public",
+      "size": -1,
+      "subInfo": 0,
+      "appCategories": [],
+      "industries": [],
+      "languages": [],
+      "largeThumbnail": null,
+      "banner": null,
+      "screenshots": [],
+      "listed": false,
+      "numComments": 0,
+      "numRatings": 0,
+      "avgRating": 0,
+      "numViews": 1908,
+      "scoreCompleteness": 66,
+      "groupDesignations": null,
+      "apiToken1ExpirationDate": -1,
+      "apiToken2ExpirationDate": -1,
+      "lastViewed": 1794330000000,
+      "source": "Hennepin County",
+      "licenseConstraintId": "custom"
+    }
+  ]
+}

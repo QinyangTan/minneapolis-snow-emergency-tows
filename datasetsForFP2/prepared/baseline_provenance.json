@@ -1,0 +1,5 @@
+{
+  "repository": "https://github.com/QinyangTan/minneapolis-snow-emergency-tows",
+  "commit": "772982a11cb798b9f0d858b9a00e4bc79292bb06",
+  "note": "Copied existing versioned project aggregates; not merged with expanded historical collection. 9-event baseline remains separate from 10-event reference."
+}

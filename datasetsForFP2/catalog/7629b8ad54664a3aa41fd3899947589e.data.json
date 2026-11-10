@@ -1,0 +1,54 @@
+{
+  "operationalLayers": [
+    {
+      "id": "1961ab9025a-layer-2",
+      "title": "American Community Survey Census Block Groups",
+      "url": "https://services6.arcgis.com/bom7L4u7y1k0qkF1/arcgis/rest/services/American_Community_Survey_Census_Block_Groups/FeatureServer/0",
+      "itemId": "b67786c2c8eb4c009027836b41b9a1cc",
+      "layerType": "ArcGISFeatureLayer"
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "World_Hillshade_3805",
+        "opacity": 1,
+        "title": "World Hillshade",
+        "url": "https://services.arcgisonline.com/arcgis/rest/services/Elevation/World_Hillshade/MapServer",
+        "visibility": true,
+        "layerType": "ArcGISTiledMapServiceLayer"
+      },
+      {
+        "id": "195012aeb31-layer-2",
+        "opacity": 1,
+        "title": "World Topographic Map",
+        "visibility": true,
+        "layerType": "VectorTileLayer",
+        "styleUrl": "https://cdn.arcgis.com/sharing/rest/content/items/27e89eb03c1e4341a1d75e597f0291e6/resources/styles/root.json"
+      }
+    ],
+    "title": "Topographic"
+  },
+  "authoringApp": "ArcGISMapViewer",
+  "authoringAppVersion": "2025.1",
+  "initialState": {
+    "viewpoint": {
+      "targetGeometry": {
+        "spatialReference": {
+          "latestWkid": 3857,
+          "wkid": 102100
+        },
+        "xmin": -10396015.495023306,
+        "ymin": 5603489.786857413,
+        "xmax": -10365020.280053709,
+        "ymax": 5627605.669281354
+      }
+    }
+  },
+  "spatialReference": {
+    "latestWkid": 3857,
+    "wkid": 102100
+  },
+  "timeZone": "system",
+  "version": "2.33"
+}

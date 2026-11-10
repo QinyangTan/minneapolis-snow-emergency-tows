@@ -1,0 +1,864 @@
+{
+  "layers": [
+    {
+      "file": "Snow_Emergency_Armatage_Tags_2019__0.json",
+      "count": 5153,
+      "day_counts": {
+        "2": 2964,
+        "3": 2189
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "1d9b9d39ddd3406a830131b04bf36c561107577dd78e4f7c71992659efa242c0"
+    },
+    {
+      "file": "Snow_Emergency_Armatage_Tows_2019__0.json",
+      "count": 948,
+      "day_counts": {
+        "1": 253,
+        "2": 362,
+        "3": 333
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "33f26c7b5688c1b802ebcfec3076465031f49e1c279eacc802103d9451586a4c"
+    },
+    {
+      "file": "Snow_Emergency_Bridge_Tags_2025__0.json",
+      "count": 5456,
+      "day_counts": {
+        "3": 2355,
+        "1": 541,
+        "2": 2560
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "bf8a5e2235d06e511faeb73665d31fdbbe361ffbdd4c7c901ddc3488baafa523"
+    },
+    {
+      "file": "Snow_Emergency_Bridge_Tows_2025__0.json",
+      "count": 852,
+      "day_counts": {
+        "1": 86,
+        "2": 418,
+        "3": 348
+      },
+      "call_taken_min": 1764460800000,
+      "call_taken_max": 1764633600000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "a782713e6b969099bbe80c794d37c47cfa97ec338f0a2cde5640564ae6480ee9"
+    },
+    {
+      "file": "Snow_Emergency_Dana_Tags_2016_b__0.json",
+      "count": 7058,
+      "day_counts": {
+        "2": 4205,
+        "3": 2720,
+        "1": 133
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "2e1cfdedc6f36f6eff1af8b0bed7fd6dc0d49eff2741eb272b2a628709047fa4"
+    },
+    {
+      "file": "Snow_Emergency_Dana_Tows_2016_b__0.json",
+      "count": 1354,
+      "day_counts": {
+        "2": 771,
+        "1": 113,
+        "3": 470
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "03f0b5d6e51d75a530fa31c3fce1f601b2732f47ed2942dec0604d3d67da43ed"
+    },
+    {
+      "file": "Snow_Emergency_Diamond_Lake_Tags_2019__0.json",
+      "count": 5088,
+      "day_counts": {
+        "3": 4063,
+        "2": 1025
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "321dced3848976740221e85c440c243ac6aee495355facc49f68fe3eb88bff34"
+    },
+    {
+      "file": "Snow_Emergency_Diamond_Lake_Tows_2019__0.json",
+      "count": 982,
+      "day_counts": {
+        "1": 326,
+        "2": 267,
+        "3": 389
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "c1b4347c9c01febb15e528db84731d2f9232169d9319c7fe8b5961aa6aa29124"
+    },
+    {
+      "file": "Snow_Emergency_Dover_Tags_2022__0.json",
+      "count": 5942,
+      "day_counts": {
+        "3": 2631,
+        "2": 2637,
+        "1": 674
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "9cd81ac1878422170149129251a778a0e511b6454af8f36cbd6b96d03aaf75c6"
+    },
+    {
+      "file": "Snow_Emergency_Dover_Tows_2022__0.json",
+      "count": 631,
+      "day_counts": {
+        "1": 221,
+        "2": 191,
+        "3": 219
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "3b0ba81d7781576cdb61a671986e1a878de2f540863a2e6669eab8ae862d6648"
+    },
+    {
+      "file": "Snow_Emergency_Ferry_Tags_2016__0.json",
+      "count": 6562,
+      "day_counts": {
+        "1": 340,
+        "2": 3482,
+        "3": 2740
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "023c785725dfa5b7319ca67986b268b6cb987d583f84a467ed557e51e0a62588"
+    },
+    {
+      "file": "Snow_Emergency_Ferry_Tags_2021__0.json",
+      "count": 4797,
+      "day_counts": {
+        "3": 2212,
+        "2": 2585
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "de91ae6369f2b39fa31f2f3a516b7a3d10704489dbea90137b32e0117bddcba8"
+    },
+    {
+      "file": "Snow_Emergency_Ferry_Tows_2016__0.json",
+      "count": 1328,
+      "day_counts": {
+        "1": 125,
+        "2": 769,
+        "3": 434
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "e0147b1114cffac6e441ba4cd6398b7296d6e259561e8c010943a0d0b93bbd60"
+    },
+    {
+      "file": "Snow_Emergency_Ferry_Tows_2021__0.json",
+      "count": 4868,
+      "day_counts": {
+        "1": 78,
+        "2": 263,
+        "3": 289,
+        "0": 4238
+      },
+      "call_taken_min": 1639094400000,
+      "call_taken_max": 1639267200000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "5a9ab34f25d6285d520a70742069decb906f0caf99a93819534a429ac242ccc0"
+    },
+    {
+      "file": "Snow_Emergency_Fremont_Tags_2019__0.json",
+      "count": 4263,
+      "day_counts": {
+        "2": 2209,
+        "3": 1836,
+        "1": 218
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "44c7ab9be4278f679d5587d10bf9152a4e1e7470afa1b8088ef862ba32529d2b"
+    },
+    {
+      "file": "Snow_Emergency_Fremont_Tows_2019__0.json",
+      "count": 1235,
+      "day_counts": {
+        "1": 372,
+        "2": 462,
+        "3": 401
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "76c5386daa96676e0a14ee5c84bcf3d66da79197ceba169465cd37d2632d4327"
+    },
+    {
+      "file": "Snow_Emergency_Glenwood_Tags_2025__3.json",
+      "count": 5138,
+      "day_counts": {
+        "3": 1760,
+        "2": 2562,
+        "1": 816
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "7d6a7d18e1f5ff359904e1e7ba2acb24a8c6a94f5f1ba2b30d5bc7ed59f738ec"
+    },
+    {
+      "file": "Snow_Emergency_Glenwood_Tows_2025__0.json",
+      "count": 719,
+      "day_counts": {
+        "3": 204,
+        "2": 448,
+        "1": 67
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "c70c0acb430cecdd61007c0fa8c2acf7088d64dfa8afbc1ec6c8a700ed00c195"
+    },
+    {
+      "file": "Snow_Emergency_Grant_Tags_2015__0.json",
+      "count": 6235,
+      "day_counts": {
+        "Day 1": 505,
+        "Day 2": 3564,
+        "Day 3": 2166
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "45c801a357715a1023db5aef78e44d38d3534b3ef51c933d01a4c610a0a92653"
+    },
+    {
+      "file": "Snow_Emergency_Grant_Tows_2015__0.json",
+      "count": 1736,
+      "day_counts": {
+        "Day 1": 608,
+        "Day 2": 642,
+        "Day 3": 486
+      },
+      "call_taken_min": 1451347200000,
+      "call_taken_max": 1451520000000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "63edc030ce593727786a65464a22938267b563164d2660a772202bf9ad299b7d"
+    },
+    {
+      "file": "Snow_Emergency_Howard_Tags_2024__0.json",
+      "count": 5655,
+      "day_counts": {
+        "3": 2394,
+        "2": 2556,
+        "1": 705
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "797cd9378d317e155796609bfb67ed2c1b02b7140487873fd0c0672d74e15968"
+    },
+    {
+      "file": "Snow_Emergency_Howard_Tows_2024__0.json",
+      "count": 665,
+      "day_counts": {
+        "1": 73,
+        "2": 329,
+        "3": 263
+      },
+      "call_taken_min": 1734566400000,
+      "call_taken_max": 1734739200000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "c4da7cff7070055a35b42d7269d8c6bc1e59a1ec4f7eb79c1665b99a5a9cec3e"
+    },
+    {
+      "file": "Snow_Emergency_Howe_Tows_2018__0.json",
+      "count": 844,
+      "day_counts": {
+        "2": 320,
+        "1": 245,
+        "3": 279
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "d17e7ba572487ab3182fb5edce60e618332747b274e5e5e10bc83423a304c8c5"
+    },
+    {
+      "file": "Snow_Emergency_James_Tags_2020__0.json",
+      "count": 2262,
+      "day_counts": {
+        "2": 2262
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "aafbbf2a609850fce4385897a44aabfb71e923938bcd6af458a7b432a148e7bd"
+    },
+    {
+      "file": "Snow_Emergency_James_Tows_2020__0.json",
+      "count": 465,
+      "day_counts": {
+        "1": 180,
+        "2": 285
+      },
+      "call_taken_min": 1608681600000,
+      "call_taken_max": 1608768000000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "df8639c9b5d7f533e17756a5af0cdddc14b07415b367080f9174c3c8d5df8586"
+    },
+    {
+      "file": "Snow_Emergency_Jane_Tags_2022__0.json",
+      "count": 4983,
+      "day_counts": {
+        "3": 1780,
+        "2": 2371,
+        "1": 832
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "9137932a24f70485cd16288a305c49fb98311db4700a7c8a44330ca34a5d71a5"
+    },
+    {
+      "file": "Snow_Emergency_Jane_Tows_2017__0.json",
+      "count": 1430,
+      "day_counts": {
+        "2": 804,
+        "3": 536,
+        "1": 90
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "a2195a3c3d8030f9638dcd01fe1b0953f2037cc1cd2d1757791573f950877cdc"
+    },
+    {
+      "file": "Snow_Emergency_Jane_Tows_2022__0.json",
+      "count": 584,
+      "day_counts": {
+        "1": 165,
+        "2": 177,
+        "3": 242
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "8d98813098248e332b02fbe763a7fbfd3af3dc56d9c7d2a2dc4d707e33115726"
+    },
+    {
+      "file": "Snow_Emergency_Jefferson_Tags_2025__0.json",
+      "count": 5350,
+      "day_counts": {
+        "1": 556,
+        "2": 2019,
+        "3": 2775
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "a5332e3103b0eb125a8298aadf4ac13157a33a3a2c9ba5733d1aa230a9369905"
+    },
+    {
+      "file": "Snow_Emergency_Jefferson_Tows_2025__1.json",
+      "count": 566,
+      "day_counts": {
+        "1": 158,
+        "2": 188,
+        "3": 220
+      },
+      "call_taken_min": 1766880000000,
+      "call_taken_max": 1767052800000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "5a584fe250d87fd106af3ec51335c10b664104aae9c6c9d9eb3f0814cc5a1c1f"
+    },
+    {
+      "file": "Snow_Emergency_Kasota_Tags_2019_2020__0.json",
+      "count": 6803,
+      "day_counts": {
+        "3": 3557,
+        "1": 22,
+        "2": 3224
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "bbeb3667dff539cfdf4daccd1a75ef0fc39c02684d1575987ab809801c680cd0"
+    },
+    {
+      "file": "Snow_Emergency_Kasota_Tows_2019_2020__0.json",
+      "count": 1246,
+      "day_counts": {
+        "1": 249,
+        "2": 454,
+        "3": 543
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "f85489927e66f14b2210dd0f6443c0543f4942f6805e1c01ab2c6728bad114c3"
+    },
+    {
+      "file": "Snow_Emergency_Lourdes_Tags_2022__0.json",
+      "count": 3542,
+      "day_counts": {
+        "3": 1173,
+        "2": 1794,
+        "1": 575
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "9c0687b878ccf0e8caa2c9eee8879b3f55e67f4d8cb0bbdc67a3996d0a86022b"
+    },
+    {
+      "file": "Snow_Emergency_Lourdes_Tows_2022__0.json",
+      "count": 435,
+      "day_counts": {
+        "1": 127,
+        "2": 181,
+        "3": 127
+      },
+      "call_taken_min": 1671580800000,
+      "call_taken_max": 1671753600000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "f8d2805ad72ec24573dd64736826974dc003e789c0c82404fde146f505530da6"
+    },
+    {
+      "file": "Snow_Emergency_Newton_Tags_2020__0.json",
+      "count": 6439,
+      "day_counts": {
+        "3": 2686,
+        "2": 3753
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "18cd48f8e47aa76da42740d576146ae4993c5201e7b787144258862b20710bd9"
+    },
+    {
+      "file": "Snow_Emergency_Newton_Tows_2020__0.json",
+      "count": 1140,
+      "day_counts": {
+        "1": 226,
+        "2": 526,
+        "3": 388
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "e96ca5e613f2d195a7dbd69f791345c510d485b995d7ba2adf384d5c0182de66"
+    },
+    {
+      "file": "Snow_Emergency_Northrop_Tags_2023__0.json",
+      "count": 3977,
+      "day_counts": {
+        "3": 1235,
+        "2": 1856,
+        "1": 715,
+        "0": 171
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "7f6ba94fe1a6702a586f8d64745828ccea3b7555a2e8558993259ecfceb1019b"
+    },
+    {
+      "file": "Snow_Emergency_Northrop_Tows_2023__0.json",
+      "count": 465,
+      "day_counts": {
+        "1": 166,
+        "2": 155,
+        "3": 144
+      },
+      "call_taken_min": 1672790400000,
+      "call_taken_max": 1672963200000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "ac8f12844b96d6c68118cb9542a57d1b3f1e65a0de8ae3ce988f4ca7d6f5f806"
+    },
+    {
+      "file": "Snow_Emergency_Olive_Tags_2018__0.json",
+      "count": 6544,
+      "day_counts": {
+        "2": 3612,
+        "3": 2820,
+        "1": 112
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "613438731a0edf7defd43754a402f2c98a751a24cd25dd4f1e6d52afe8054b42"
+    },
+    {
+      "file": "Snow_Emergency_Olive_Tows_2018__0.json",
+      "count": 1161,
+      "day_counts": {
+        "1": 331,
+        "2": 418,
+        "3": 412
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "f00daa23dcf41312aa28872efb513696ff7708f0c814c55209a64a9004599b0d"
+    },
+    {
+      "file": "Snow_Emergency_Oliver_Tags_2021__0.json",
+      "count": 6491,
+      "day_counts": {
+        "2": 3579,
+        "3": 2912
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "755dc5acd532cb687dae854a354ab66ecf9ca396dd05e035a83ae5dd16961246"
+    },
+    {
+      "file": "Snow_Emergency_Oliver_Tows_2021__0.json",
+      "count": 6491,
+      "day_counts": {
+        "1": 395,
+        "2": 447,
+        "3": 426,
+        "0": 5223
+      },
+      "call_taken_min": 1611446400000,
+      "call_taken_max": 1611619200000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "16a4cfa4db2517092f26fe24df9b9ac57f20d131aa1dd7e3baeea1ca73358a37"
+    },
+    {
+      "file": "Snow_Emergency_Omega_Tags__0.json",
+      "count": 5475,
+      "day_counts": {
+        "3": 2321,
+        "2": 2823,
+        "1": 331
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "d401981e6241c35113430782ab121fdde971fc7db053c447497b36c8c2ffbb92"
+    },
+    {
+      "file": "Snow_Emergency_Omega_Tows__0.json",
+      "count": 695,
+      "day_counts": {
+        "3": 302,
+        "2": 361,
+        "1": 32
+      },
+      "call_taken_min": 1738972800000,
+      "call_taken_max": 1739145600000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "1cd73c19edd10fee9b14f0f5b93114ef42158994d62f2f7635fbf646ce26ed84"
+    },
+    {
+      "file": "Snow_Emergency_Polk_Tags_2016__0.json",
+      "count": 5435,
+      "day_counts": {
+        "Day 2": 3367,
+        "Day 1": 244,
+        "Day 3": 1824
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "f9c46c53605b7417ed645a3941fbb97982b43c06fe2e1674591ee333ee5abc33"
+    },
+    {
+      "file": "Snow_Emergency_Polk_Tows_2016__0.json",
+      "count": 1480,
+      "day_counts": {
+        "Day 1": 400,
+        "Day 2": 587,
+        "Day 3": 493
+      },
+      "call_taken_min": 1454371200000,
+      "call_taken_max": 1454544000000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "317870620037c2ef52deec86baca9db7ab90e3ad45fb0a1b37280e6614677f19"
+    },
+    {
+      "file": "Snow_Emergency_Quincy_Tags_2019__0.json",
+      "count": 2825,
+      "day_counts": {
+        "2": 2696,
+        "1": 129
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "c01e6b36aa73337432c26068e4a3b33179a59b59ae5b0f4a44d626267d8848c4"
+    },
+    {
+      "file": "Snow_Emergency_Quincy_Tows_2019__0.json",
+      "count": 617,
+      "day_counts": {
+        "1": 296,
+        "2": 321
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "0e300e76f7bede320af05f8bf7c7f35e25c7055db20b41bd75f433da65622a40"
+    },
+    {
+      "file": "Snow_Emergency_Spruce_Tags_2020__0.json",
+      "count": 6110,
+      "day_counts": {
+        "3": 2599,
+        "2": 3511
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "ed715bcc6b60e38a11307477462be5790e2f010e09fe59f4ca774f5b4795c246"
+    },
+    {
+      "file": "Snow_Emergency_Spruce_Tows_2020__0.json",
+      "count": 1253,
+      "day_counts": {
+        "1": 296,
+        "2": 485,
+        "3": 472
+      },
+      "call_taken_min": 1581206400000,
+      "call_taken_max": 1581379200000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "e3c35b2f8024a3e840c11e7e33c7e0b36ff8f7b6390f6c040d7f6576864c4909"
+    },
+    {
+      "file": "Snow_Emergency_Upton_Tags_2019__0.json",
+      "count": 5656,
+      "day_counts": {
+        "1": 187,
+        "2": 2951,
+        "3": 2518
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "193d95bea2a8a9c409d43535a6625ef1ebe765251c2c554be9ebbc80e6ee3ecc"
+    },
+    {
+      "file": "Snow_Emergency_Upton_Tows_2019__0.json",
+      "count": 805,
+      "day_counts": {
+        "1": 205,
+        "2": 305,
+        "3": 295
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "ef56bd6047db7a6f93729246762251f1a00d11545579761c8384aadf918b1883"
+    },
+    {
+      "file": "Snow_Emergency_Victory1_Tags_2023__0.json",
+      "count": 3755,
+      "day_counts": {
+        "1": 678,
+        "2": 1323,
+        "3": 1754
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "3941fdac76bca22acc76986423e69327b33c480d6e878188c10aea2c74436bc6"
+    },
+    {
+      "file": "Snow_Emergency_Victory1_Tows_2023__0.json",
+      "count": 506,
+      "day_counts": {
+        "1": 192,
+        "2": 135,
+        "3": 179
+      },
+      "call_taken_min": 1677024000000,
+      "call_taken_max": 1677196800000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "859f8a59d68f762a44a33ff6220b940f2b1c913f71d3ef247b9d49fd73039b69"
+    },
+    {
+      "file": "Snow_Emergency_Victory2_Tags_2023__0.json",
+      "count": 758,
+      "day_counts": {
+        "1": 758
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "9768e5c7ebc48cdd6b06547eec1875aac5d19511dec146e2f6e65b68e9008be9"
+    },
+    {
+      "file": "Snow_Emergency_Victory2_Tows_2023__0.json",
+      "count": 187,
+      "day_counts": {
+        "1": 187
+      },
+      "call_taken_min": 1677196800000,
+      "call_taken_max": 1677283200000,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "1075c7deb98dacccf2be0cfad1ec59151d5a5d53c29c7da1551fe7000264b292"
+    },
+    {
+      "file": "Snow_Emergency_Westminster_Tags_2019__0.json",
+      "count": 4151,
+      "day_counts": {
+        "1": 157,
+        "2": 2536,
+        "3": 1458
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "ac0da544f86859fc06584130eedd096a7aa3699db2217440b56f32c08bce9b83"
+    },
+    {
+      "file": "Snow_Emergency_Westminster_Tows_2019__0.json",
+      "count": 980,
+      "day_counts": {
+        "1": 305,
+        "2": 393,
+        "3": 282
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "a7d385e4975ea7d54a2f76517e581ce935e2411895c42602793b578f42ebf545"
+    },
+    {
+      "file": "Snow_Emergency_Xerxes_Tags_2018__0.json",
+      "count": 7941,
+      "day_counts": {
+        "3": 3627,
+        "2": 4125,
+        "1": 189
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "036c491c3e7af6cadda76217dc61ef14c7d578e1549c682eda380b048080d09d"
+    },
+    {
+      "file": "Snow_Emergency_Xerxes_Tows_2018__0.json",
+      "count": 1215,
+      "day_counts": {
+        "1": 342,
+        "2": 573,
+        "3": 300
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "813b3f284091e2aaef599e7cd2173cbd58a80bd8837a7b15de5ac322484f789f"
+    },
+    {
+      "file": "Snow_Emergency_Yale_Tags_2019__0.json",
+      "count": 3983,
+      "day_counts": {
+        "2": 2476,
+        "3": 1507
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "7643a692b8b71af809a7ee8d9ffc9c23d772392f27ad5ef7ddfc0b34d9659f28"
+    },
+    {
+      "file": "Snow_Emergency_Yale_Tows_2019__0.json",
+      "count": 894,
+      "day_counts": {
+        "1": 250,
+        "2": 341,
+        "3": 303
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "20a411c1f2c60f116518e4c26a7c1b876547ebfbbbe340dc2a4288c50c266d69"
+    },
+    {
+      "file": "Snow_Emergency_Yardville_Tags_2018__0.json",
+      "count": 3857,
+      "day_counts": {
+        "2": 3163,
+        "3": 541,
+        "1": 153
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "c2ec4a8b6f5eb36e9d11b0b37e736c16a4e7783ef6f58e9acc264beb20450123"
+    },
+    {
+      "file": "Snow_Emergency_Yardville_Tows_2018__0.json",
+      "count": 728,
+      "day_counts": {
+        "1": 239,
+        "2": 411,
+        "3": 78
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "fb52674bcc5d30142feca87ee6cc6cf2182640746c8c64a5463b85e63ce9206c"
+    },
+    {
+      "file": "SnowEmergencyJaneTags__0.json",
+      "count": 6320,
+      "day_counts": {
+        "1": 368,
+        "2": 3377,
+        "3": 2575
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "876feed5da8eb5ce232fd2cb2d05b779367541fd7bae3e238e4280bf17371342"
+    },
+    {
+      "file": "SnowEmergencyPembinaTags2018__0.json",
+      "count": 4267,
+      "day_counts": {
+        "1": 190,
+        "2": 2769,
+        "3": 1308
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "0baf24153f7ceadd381625191903252877fa31de5c2767c6c7ebe01886e34c66"
+    },
+    {
+      "file": "SnowEmergencyPembinaTows2018__0.json",
+      "count": 962,
+      "day_counts": {
+        "1": 224,
+        "2": 424,
+        "3": 314
+      },
+      "call_taken_min": null,
+      "call_taken_max": null,
+      "status": "requires_semantic_review_before_expanding_baseline",
+      "geometry_day_fingerprint": "9d480c045ee991f33be1ae76f68c3d525a7c8429cfc5551e366191dd78f41474"
+    }
+  ],
+  "identical_geometry_day_multisets": [],
+  "note": "Equal geometry+day multisets are suspicious but do not by themselves prove identical underlying operations. New layers are NOT automatically admitted as true tow events."
+}

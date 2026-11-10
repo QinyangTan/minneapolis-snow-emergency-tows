@@ -1,0 +1,42 @@
+[
+  {
+    "id": "census_download_workbook",
+    "url": "https://tableau.minneapolismn.gov/workbooks/MinneapolisCensusDataDownload.twb",
+    "path": "raw/acs/census_download_workbook.zip",
+    "bytes": 1635575,
+    "sha256": "dd9523f6289e68f345de2d053e7df075d0618f2ec6ac278926c050362c612a33",
+    "content_type": "application/x-twb",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T20:57:51.594331+00:00"
+  },
+  {
+    "id": "city_census_population",
+    "url": "https://tableau.minneapolismn.gov/views/MinneapolisCensusDataDownload/MplsNeighborhoodDemographicsDownload.csv",
+    "path": "raw/acs/city_census_population.csv",
+    "bytes": 822923,
+    "sha256": "cddcbbdadcf8d785b3d267230eb59bda45b29b72d107bb3a339171511cd15c0f",
+    "content_type": "text/csv",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T20:57:53.290300+00:00"
+  },
+  {
+    "id": "city_census_economics",
+    "url": "https://tableau.minneapolismn.gov/views/MinneapolisCensusDataDownload/MplsNeighborhoodEconomicWellbeingDownload.csv",
+    "path": "raw/acs/city_census_economics.csv",
+    "bytes": 895780,
+    "sha256": "83e7d0a14d11f3ec664b3d2134f76a6514e9b113c73663055ec325c10dbe0928",
+    "content_type": "text/csv",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T20:57:53.643293+00:00"
+  },
+  {
+    "id": "city_census_housing",
+    "url": "https://tableau.minneapolismn.gov/views/MinneapolisCensusDataDownload/MplsNeighborhoodHousingDownload.csv",
+    "path": "raw/acs/city_census_housing.csv",
+    "bytes": 987304,
+    "sha256": "440fc7efd7b3e1504bcddf56efeb6d7c5238cde779724c98416fa14de10f730a",
+    "content_type": "text/csv",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T20:57:53.390289+00:00"
+  }
+]

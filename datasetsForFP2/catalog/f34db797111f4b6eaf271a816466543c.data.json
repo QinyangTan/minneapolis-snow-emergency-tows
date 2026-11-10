@@ -1,0 +1,967 @@
+{
+  "values": {
+    "layout": {
+      "sections": [
+        {
+          "containment": "fixed",
+          "isFooter": false,
+          "style": {
+            "background": {
+              "isFile": false,
+              "isUrl": true,
+              "state": "",
+              "display": {},
+              "transparency": 0,
+              "position": {
+                "x": "center",
+                "y": "center"
+              },
+              "color": "#206ead"
+            },
+            "rowLayout": "box"
+          },
+          "rows": [
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "markdown-card",
+                    "settings": {
+                      "cardId": "cmrdegrps",
+                      "schemaVersion": 2.1,
+                      "markdown": "<div id=\"top\"></div>"
+                    }
+                  },
+                  "width": 12
+                }
+              ]
+            }
+          ],
+          "visibility": {
+            "access": "default",
+            "groups": []
+          }
+        },
+        {
+          "containment": "fixed",
+          "isFooter": false,
+          "style": {
+            "background": {
+              "isFile": false,
+              "isUrl": true,
+              "state": "",
+              "display": {},
+              "transparency": 0,
+              "position": {
+                "x": "center",
+                "y": "center"
+              },
+              "color": "#fff"
+            },
+            "rowLayout": "box",
+            "color": "#000000"
+          },
+          "rows": [
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "markdown-card",
+                    "settings": {
+                      "cardId": "cw3ikgwz2",
+                      "schemaVersion": 2.1,
+                      "markdown": "<h1 align=\"center\">\n      <img src=\"https://cityoflakes.maps.arcgis.com/sharing/rest/content/items/061ad2e8307040d4b9e66d7afd8fa7b0/data\" alt=\"Minneapolis Data Icon\" width=\"300\" height=\"45\">\n  <div class=\"banner-heading\" align=\"center\" style=\"color:black\">Minneapolis Neighborhood Housing</div></h1>\n\n\n<p align=\"center\" class=\"banner-heading blockquote\" style=\"font-size: 16pt; color:black;\">Explore housing characteristics in each neighborhood</p>"
+                    }
+                  },
+                  "width": 12
+                }
+              ]
+            }
+          ],
+          "visibility": {
+            "access": "default",
+            "groups": []
+          }
+        },
+        {
+          "containment": "fluid",
+          "isFooter": false,
+          "style": {
+            "background": {
+              "isFile": false,
+              "isUrl": true,
+              "state": "",
+              "display": {},
+              "transparency": 0,
+              "position": {
+                "x": "center",
+                "y": "center"
+              },
+              "color": "#206ead"
+            },
+            "rowLayout": "wide"
+          },
+          "rows": [
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "spacer-card",
+                    "settings": {
+                      "height": "25",
+                      "cardId": "cdn55t1uu"
+                    }
+                  },
+                  "settings": {
+                    "height": 100
+                  },
+                  "width": 12
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "markdown-card",
+                    "settings": {
+                      "cardId": "cp9cvyy8z",
+                      "schemaVersion": 2.1,
+                      "markdown": "<style>\n\n/* Layout for the row of cards */\n.cards-list {\n  display: flex;\n  justify-content: center;\n  gap: 75px;\n  flex-wrap: wrap;\n}\n\n/* Each card container */\n.card-container {\n  background-color: #ffffff;\n  border-radius: 14px;\n  width: 200px;\n  min-height: 90px;\n  border: 1px solid rgba(0,0,0,0.08);\n  margin: 0;\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  justify-content: center;\n  padding: 12px;\n  box-sizing: border-box;\n  transition: all 0.2s ease;\n}\n\n/* Hover effect on the white card */\n.card-container:hover {\n  background-color: rgba(240, 240, 240, 0.6);\n  transform: translateY(-4px);\n  box-shadow: 0 8px 18px rgba(0,0,0,0.15);\n}\n\n/* Link inside the card */\n.card-link {\n  display: block;\n  text-align: center;\n  color: #13294B !important;\n  text-decoration: none !important;\n}\n.card-link:focus,\n.card-link:hover,\n.card-link:active {\n  outline: none !important;\n  border: none !important;\n  box-shadow: none !important;\n}\n\n/* Label text */\n.card-label {\n  font-weight: 700;\n  font-size: 17px;\n  margin-top: 8px;\n  color: #13294B !important;\n  outline: none !important;\n  border: none !important;\n}\n\n/* Prevent icons from shifting on hover */\n.icon {\n  display: block;\n  margin: 10px auto 0 auto;\n}\n\n</style>\n\n\n<div class=\"cards-list\">\n\n  <!-- CARD 1 -->\n  <div class=\"card-container\">\n <a class=\"card-link\" href=\"#about-section\">\n    <span class=\"card-label\">How to use this dashboard</span>\n  </a>\n  </div>\n\n  <!-- CARD 2 -->\n  <div class=\"card-container\">\n <a class=\"card-link\" href=\"#accessibility\">\n    <span class=\"card-label\">Request accessibility help</span>\n  </a>\n  </div>\n\n  <!-- CARD 3 -->\n  <div class=\"card-container\">\n <a class=\"card-link\" target=\"_blank\" rel=\"noopener\" aria-label=\"Minneapolis Neighborhood Housing dashboard\" href=\"https://tableau.minneapolismn.gov/views/MinneapolisNeighborhoodHousing/Occupancy?:embed=t&:toolbar=f\">\n    <span class=\"card-label\">View dashboard in full screen</span>\n    <svg xmlns='http://www.w3.org/2000/svg' height='20' width='20' viewBox='0 -70 640 640'><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill='black' d='M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z'></path></svg>\n  </a>\n  </div>\n\n</div>"
+                    }
+                  },
+                  "width": 12
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "spacer-card",
+                    "settings": {
+                      "height": "25",
+                      "cardId": "czd4r68yj"
+                    }
+                  },
+                  "settings": {
+                    "height": 100
+                  },
+                  "width": 12
+                }
+              ]
+            }
+          ],
+          "visibility": {
+            "access": "default",
+            "groups": []
+          }
+        },
+        {
+          "containment": "fixed",
+          "isFooter": false,
+          "style": {
+            "background": {
+              "isFile": false,
+              "isUrl": true,
+              "state": "",
+              "display": {},
+              "transparency": 0,
+              "position": {
+                "x": "center",
+                "y": "center"
+              },
+              "color": "#ecedef"
+            },
+            "rowLayout": "box"
+          },
+          "rows": [
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "spacer-card",
+                    "settings": {
+                      "height": "25",
+                      "cardId": "crrswnwv5"
+                    }
+                  },
+                  "settings": {
+                    "height": 100
+                  },
+                  "width": 12
+                }
+              ]
+            }
+          ],
+          "visibility": {
+            "access": "default",
+            "groups": []
+          }
+        },
+        {
+          "containment": "fluid",
+          "isFooter": false,
+          "style": {
+            "background": {
+              "isFile": false,
+              "isUrl": true,
+              "state": "",
+              "display": {},
+              "transparency": 0,
+              "position": {
+                "x": "center",
+                "y": "center"
+              },
+              "color": "#ecedef"
+            },
+            "rowLayout": "wide"
+          },
+          "rows": [
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "iframe-card",
+                    "settings": {
+                      "src": "https://tableau.minneapolismn.gov/views/MinneapolisNeighborhoodHousing/Occupancy?:embed=t&:toolbar=f",
+                      "cardId": "cluamb9i7",
+                      "height": "1300",
+                      "scrollable": false,
+                      "shareable": true,
+                      "mobileShareable": true,
+                      "shareableOnHover": true,
+                      "mobileShareableOnHover": true
+                    }
+                  },
+                  "width": 12
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "spacer-card",
+                    "settings": {
+                      "height": "25",
+                      "cardId": "cq3ujcato"
+                    }
+                  },
+                  "settings": {
+                    "height": 100
+                  },
+                  "width": 12
+                }
+              ]
+            }
+          ],
+          "visibility": {
+            "access": "default",
+            "groups": []
+          }
+        },
+        {
+          "containment": "fixed",
+          "isFooter": false,
+          "style": {
+            "background": {
+              "isFile": false,
+              "isUrl": true,
+              "state": "",
+              "display": {},
+              "transparency": 0,
+              "position": {
+                "x": "center",
+                "y": "center"
+              },
+              "color": "#ecedef"
+            },
+            "rowLayout": "box"
+          },
+          "rows": [
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "markdown-card",
+                    "settings": {
+                      "cardId": "ckb2fjlfe",
+                      "schemaVersion": 2.1,
+                      "markdown": "<div id=\"accessibility\"></div>\n<div style=\"background-color: white; border: 1px solid #ccc; padding: 1em; border-radius: 6px; color: black;\">\n  <h1>Request accessible format</h1>\n  <p>\n    If you need help with this information, please\n    <a href=\"mailto:minneapolis311@minneapolismn.gov\">email 311</a>,\n    or call 311 or\n    <a href=\"tel:+16126733000\">612-673-3000</a>.\n    Please tell us what format you need. It will help us if you say what assistive technology you use.\n  </p>\n  \n  <p>For tips on using a keyboard to navigate a Tableau dashboard, see this site: \n<a style=\"color:#206EAD !important\" href=\"https://help.tableau.com/current/pro/desktop/en-us/access_keyboard_navigation.htm\" target=\"_blank\" rel=\"noopener\" aria-label=\"Keyboard Accessibility for Tableau on the Web\">Keyboard\nAccessibility for Tableau on the Web\n<svg xmlns='http://www.w3.org/2000/svg' height='20' width='20' viewBox='0 -70 640 640'><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill='#206EAD' d='M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z'></path></svg></a></p></div>"
+                    }
+                  },
+                  "width": 12
+                }
+              ]
+            }
+          ],
+          "visibility": {
+            "access": "default",
+            "groups": []
+          }
+        },
+        {
+          "containment": "fixed",
+          "isFooter": false,
+          "style": {
+            "background": {
+              "isFile": false,
+              "isUrl": true,
+              "state": "",
+              "display": {},
+              "transparency": 0,
+              "position": {
+                "x": "center",
+                "y": "center"
+              },
+              "color": "transparent"
+            },
+            "color": "#000000",
+            "rowLayout": "box"
+          },
+          "rows": [
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "markdown-card",
+                    "settings": {
+                      "cardId": "cath8mty9",
+                      "schemaVersion": 2.1,
+                      "markdown": "<!-- DO NOT MODIFY -->\n\n<div id=\"about-section\"></div>\n\n<h1>How to use this dashboard</h1>\n\n"
+                    }
+                  },
+                  "width": 12
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "markdown-card",
+                    "settings": {
+                      "cardId": "cioguhye0",
+                      "schemaVersion": 2.1,
+                      "markdown": "<div class=\"grid-container fluid\">\n    <div class=\"multicolumn-content--columns large-up-3 medium-up-1\"><div class=\"cell\"><div class=\"multicolumn-content\"><h2>View the data -</h2><p>For best results:</p><ul><li>View the dashboard in full screen.</li><li>Use Edge, Chrome, Safari, or Firefox as your browser.</li></ul>\n  <h2>Read the data -</h2>\n  <h3>Header</h3>\n  <p>Each page contains text at the top with the dashboard title. There is a button on the upper right to open another dashboard to download neighborhood data. The top section also displays a Dataset ID. The Dataset ID is the unique city identifier for the data on the page you are viewing. This ID may be helpful if you download neighborhood data.<br></p>\n  <h3>Page buttons</h3>\n  <p>There are five buttons below the header to navigate to different pages. Each page covers a different topic. Click the button to select your desired page:</p><ul><li>Occupancy</li><li>Gross Rent</li><li>Bedrooms</li><li>Household Size</li><li>Vehicle Access<br><br></li></ul><h3>Maps and charts</h3><p>Each page contains a map of the Minneapolis neighborhoods, along with charts. Use the controls to look at neighborhoods and the demographics of the people who live there.</p><p>Hover over the maps and charts to get more details.<br><br></p>\n<p><br></p></div></div></div></div>"
+                    }
+                  },
+                  "width": 6
+                },
+                {
+                  "component": {
+                    "name": "markdown-card",
+                    "settings": {
+                      "cardId": "cwc1qrs52",
+                      "schemaVersion": 2.1,
+                      "markdown": "<br><h3>Search the data</h3><p>Look for controls to the left of the map on each page. Each page has a control called “Display estimates or percents.” This control lets you view data as either an estimated count or percent.<br></p><h3>Map controls</h3><p>These controls let you choose the data to display on the map.<br></p><h3>Chart controls</h3><p>All pages let you pick a Minneapolis neighborhood to change the neighborhood charts. You can also choose whether to display chart labels.<br></p><h3>Download the data</h3><p>At the top right of each page is a button to download data. When clicked, the button opens a page with a dashboard to download data. The dashboard is named:&nbsp; Minneapolis Census Dashboard Data Download. The data download dashboard includes instructions for how to download.</p><p>The download dashboard includes:</p><ul><li>Links to the Minneapolis neighborhood census data dashboards</li><li>Tables to download Minneapolis neighborhood data</li><li>A link to the U.S. Census Bureau to download other data.</li><li>A link to an external website that may be helpful</li><li>A link to view and download Minneapolis neighborhood boundaries</li><li><span style=\"background-color: initial; color: currentcolor;\">A table to download the data dictionary</span></li></ul>"
+                    }
+                  },
+                  "width": 6
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "markdown-card",
+                    "settings": {
+                      "cardId": "cwmhrk135",
+                      "schemaVersion": 2.1,
+                      "markdown": "<h2>Technical notes</h2><h3>Source of data</h3>\n<p>The data in this dashboard come from the U.S. Census Bureau. For more information:</p>\n<ul><li><a style=\"color:#206EAD;\" href=\"https://www.census.gov/\" target=\"_blank\" rel=\"noopener\" aria-label=\"Visit the U.S. Census Bureau\">Visit the U.S. Census Bureau\n<svg xmlns='http://www.w3.org/2000/svg' height='20' width='20' viewBox='0 -70 640 640'><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill='#206EAD' d='M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z'></path></svg></a></li>\n<li><a style=\"color:#206EAD;\" href=\"https://data.census.gov/\" target=\"_blank\" rel=\"noopener\" aria-label=\"Find Census data\">Find Census data\n<svg xmlns='http://www.w3.org/2000/svg' height='20' width='20' viewBox='0 -70 640 640'><!--!Font Awesome Free v7.0.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path fill='#206EAD' d='M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z'></path></svg></a></li></ul>\n\n<h3>American Community Survey</h3>\n<p>The city calculates neighborhood estimates using the American Community Survey (ACS). The U.S. Census Bureau conducts the ACS annually. The five year ACS tables are used for these calculations.</p><p>Five year tables include survey data from five years. Dashboard maps and charts include labels with these years. You can find the ACS table(s) used for each page of the dashboard at the top of the page.</p><p>Not all five year ACS tables contain enough information to produce neighborhood data. Therefore, not all ACS tables are included in the city’s dashboards. We do not use one year tables to calculate neighborhood estimates. One year ACS tables do not contain enough information to produce neighborhood data.<br></p><h3>Margin of error</h3><p>ACS data are statistical estimates based on population samples, rather than population counts. These data do not represent true population values, and they include error. A measure of this error is called the “Margin of Error” (MOE).</p><p>For example, a population estimate may be written as “52 +/- 18”, where “18” is the MOE. The MOE is subtracted from and added to the estimate to create a range. In this case the range is 34 to 70. This range indicates there is a 90% chance the true population count falls between 34 and 70. There is a 10% chance the true value falls outside of the range.</p><p>Note that if the bottom of the range is a negative number, it is assumed to be zero if a negative number doesn’t make sense. For example, if the estimated number of people under age ten is 124 +/- 200, it doesn’t make sense to say there are -76 children. The range is instead interpreted as 0 to 324.<br></p><h3>Understanding the estimate reliability</h3><p>A statistical value called the Coefficient of Variation (CV) measures how big an MOE is compared to an estimate. An estimate is assigned a reliability level based on the value of the CV.</p><p>Smaller CVs indicate the MOE is small compared to the estimate. Such estimates are more likely to be close to the true population count. Estimates with larger CVs are less likely to be close to the true population count.<br></p><h3>Estimate reliability level</h3><p>An estimate reliability level is assigned based on the CV as follows:</p><ul><li>High: CV  = 12%</li><li>Medium: CV between 12% and 40%</li>\n<li>Low: CV  = 40%<br></li></ul>\n<h3>Interpreting the reliability level</h3>\n<p>How you interpret the reliability of an estimate depends on how you are using the estimate. There are no specific rules for interpretation. Here is an example of how you might use the reliability level:</p><p>Suppose there are 51,293 +/- 1,681 children under age ten in Minneapolis. Of these, 349 +/- 399 children under ten live in the Kenwood neighborhood. The estimate reliability is low.</p>\n<ul><li>You are organizing a children’s festival in Minneapolis, and you want to locate it near a lot of children under ten. You can be confident that Kenwood is not a good neighborhood to pick.</li>\n<li>You are starting a daycare to serve fifteen children under ten. You want to pick a facility close to where children live. Suppose you find a building in the Kenwood neighborhood. Do not rely on this estimate to decide whether to rent the building. Instead, seek more reliable information about the presence of children under ten in the neighborhood.<br><br></li></ul>"
+                    }
+                  },
+                  "width": 12
+                }
+              ]
+            }
+          ],
+          "visibility": {
+            "access": "default",
+            "groups": []
+          }
+        },
+        {
+          "containment": "fluid",
+          "isFooter": false,
+          "style": {
+            "background": {
+              "isFile": false,
+              "isUrl": true,
+              "state": "",
+              "display": {},
+              "transparency": 0,
+              "position": {
+                "x": "center",
+                "y": "center"
+              },
+              "color": "#ecedef"
+            },
+            "rowLayout": "wide"
+          },
+          "rows": [
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "spacer-card",
+                    "settings": {
+                      "height": "15",
+                      "cardId": "c67g0ah9k"
+                    }
+                  },
+                  "settings": {
+                    "height": 100
+                  },
+                  "width": 12
+                }
+              ]
+            }
+          ],
+          "visibility": {
+            "access": "default",
+            "groups": []
+          }
+        },
+        {
+          "containment": "fixed",
+          "isFooter": false,
+          "style": {
+            "background": {
+              "isFile": false,
+              "isUrl": true,
+              "state": "",
+              "display": {},
+              "transparency": 0,
+              "position": {
+                "x": "center",
+                "y": "center"
+              },
+              "color": "#ecedef"
+            },
+            "rowLayout": "box"
+          },
+          "rows": [
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "spacer-card",
+                    "settings": {
+                      "height": 100,
+                      "cardId": "c7tmw0wdc"
+                    }
+                  },
+                  "settings": {
+                    "height": 100
+                  },
+                  "width": 11
+                },
+                {
+                  "component": {
+                    "name": "markdown-card",
+                    "settings": {
+                      "cardId": "cjsiwd53f",
+                      "schemaVersion": 2.1,
+                      "markdown": "<div><calcite-button href=\"#top\" alignment=\"center\" appearance=\"solid\" kind=\"brand\" scale=\"m\" split-child=\"false\" type=\"button\" width=\"auto\" calcite-hydrated=\"\">Return to top of page</calcite-button></div>"
+                    }
+                  },
+                  "width": 1
+                }
+              ]
+            },
+            {
+              "cards": [
+                {
+                  "component": {
+                    "name": "spacer-card",
+                    "settings": {
+                      "height": "15",
+                      "cardId": "c5y29k4rn"
+                    }
+                  },
+                  "settings": {
+                    "height": 100
+                  },
+                  "width": 12
+                }
+              ]
+            }
+          ],
+          "visibility": {
+            "access": "default",
+            "groups": []
+          }
+        }
+      ]
+    },
+    "sites": [
+      {
+        "id": "24fbdf2972734b97a120c06286fee45e",
+        "title": "Minneapolis Data DRAFT"
+      }
+    ],
+    "slug": "911-incidents-reported-dashboard-1",
+    "updatedAt": "2026-09-03T16:36:24.680Z",
+    "updatedBy": "MPLS_Open_Data"
+  },
+  "view": {
+    "contacts": [],
+    "featuredContentIds": [],
+    "showMap": true
+  },
+  "layout": {
+    "sections": [
+      {
+        "containment": "fixed",
+        "isFooter": false,
+        "style": {
+          "background": {
+            "isFile": false,
+            "isUrl": true,
+            "state": "",
+            "display": {},
+            "transparency": 0,
+            "position": {
+              "x": "center",
+              "y": "center"
+            },
+            "color": "#206ead"
+          },
+          "rowLayout": "box"
+        },
+        "rows": [
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "markdown-card",
+                  "settings": {
+                    "cardId": "cmrdegrps",
+                    "schemaVersion": 2.1,
+                    "markdown": "<div id=\"top\"></div>"
+                  }
+                },
+                "width": 12
+              }
+            ]
+          }
+        ],
+        "visibility": {
+          "access": "default",
+          "groups": []
+        }
+      },
+      {
+        "containment": "fixed",
+        "isFooter": false,
+        "style": {
+          "background": {
+            "isFile": false,
+            "isUrl": true,
+            "state": "",
+            "display": {},
+            "transparency": 0,
+            "position": {
+              "x": "center",
+              "y": "center"
+            },
+            "color": "#fff"
+          },
+          "rowLayout": "box",
+          "color": "#000000"
+        },
+        "rows": [
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "markdown-card",
+                  "settings": {
+                    "cardId": "cw3ikgwz2",
+                    "schemaVersion": 2.1,
+                    "markdown": "<h1 align=\"center\">\n      <img src=\"https://cityoflakes.maps.arcgis.com/sharing/rest/content/items/061ad2e8307040d4b9e66d7afd8fa7b0/data\" alt=\"Minneapolis Data Icon\" width=\"300\" height=\"45\">\n  <div class=\"banner-heading\" align=\"center\" style=\"color:black\">***Title***</div></h1>\n\n\n<p align=\"center\" class=\"banner-heading blockquote\" style=\"font-size: 16pt; color:black;\"> ****sub-title***</p>"
+                  }
+                },
+                "width": 12
+              }
+            ]
+          }
+        ],
+        "visibility": {
+          "access": "default",
+          "groups": []
+        }
+      },
+      {
+        "containment": "fluid",
+        "isFooter": false,
+        "style": {
+          "background": {
+            "isFile": false,
+            "isUrl": true,
+            "state": "",
+            "display": {},
+            "transparency": 0,
+            "position": {
+              "x": "center",
+              "y": "center"
+            },
+            "color": "#206ead"
+          },
+          "rowLayout": "wide"
+        },
+        "rows": [
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "spacer-card",
+                  "settings": {
+                    "height": "20",
+                    "cardId": "cdn55t1uu"
+                  }
+                },
+                "settings": {
+                  "height": 100
+                },
+                "width": 12
+              }
+            ]
+          }
+        ],
+        "visibility": {
+          "access": "default",
+          "groups": []
+        }
+      },
+      {
+        "containment": "fixed",
+        "isFooter": false,
+        "style": {
+          "background": {
+            "isFile": false,
+            "isUrl": true,
+            "state": "",
+            "display": {},
+            "transparency": 0,
+            "position": {
+              "x": "center",
+              "y": "center"
+            },
+            "color": "#ecedef"
+          },
+          "rowLayout": "box"
+        },
+        "rows": [
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "markdown-card",
+                  "settings": {
+                    "cardId": "ccdirwhbu",
+                    "schemaVersion": 2.1,
+                    "markdown": "<style>\n  :root{\n    --btn-bg: #55437E;\n    --btn-border: #114681;\n    --btn-active: #114681;\n    --ring-gap-color: #ecedef;          /* set to your page background */\n    --ring-color: rgba(0, 138, 192, .55);\n  }\n  \n    /* One wrapper for all three buttons */\n  .button-row{\n    display: grid;\n    grid-template-columns: repeat(3, minmax(0, 1fr));\n    gap: 12px;\n    align-items: stretch;               /* all cells match tallest item */\n    padding: 0.5rem;\n  }\n  \n   /* Each cell stretches; button fills it */\n  .button-cell{\n    display: flex;                      /* ensures child can stretch */\n  }\n  \n  .custom-button{\n    width: 100%;\n    height: 100%;                       /* fill stretched cell height */\n    display: inline-flex;\n    align-items: center;\n    justify-content: center;\n    gap: clamp(8px, 1.2vw, 14px);\n    \n    /* Responsive sizing */\n    padding: clamp(8px, 2vw, 14px) clamp(14px, 3vw, 28px); \n    font-size: clamp(10px, 1.4vw, 18px);               \n    line-height: 0.6;                                                \n    \n    font-weight: 700;\n    color: #fff;\n    background-color: var(--btn-bg);\n    text-decoration: none;\n    \n    border-radius: 7px;                                          /* 8px;*/\n    border: 2px solid var(--btn-border);\n    transition: background-color 0.2s ease, transform 0.05s ease, box-shadow 0.2s ease;\n\n    /* Helps long text behave nicely */\n    text-align: center;\n    max-width: 100%;\n    white-space: normal;\n    word-break: break-word;\n  }\n  \n  /* Optional: keep text styling consistent when SVG exists */\n  .custom-button .btn-text{\n    display: inline-block;\n  }\n  /* SVG scales with text size */\n  .custom-button .btn-icon{\n    height: 1.15em;\n    width: auto;\n    display: block;\n    flex-shrink: 0;\n    transform: translateY(0.02em);\n  }\n  .custom-button .btn-icon path{\n    fill: #fff;\n  }\n\n  /* Hover/focus ring with a visible gap */\n  .custom-button:hover,\n  .custom-button:focus-visible{\n    box-shadow:\n      0 0 0 2px var(--ring-gap-color),\n      0 0 0 4px var(--ring-color);\n    outline: none;\n  }\n  \n  /* Pressed state */\n  .custom-button:active{\n    background-color: var(--btn-active);\n    transform: translateY(1px);\n  }\n\n  /* Stack on iPad landscape (1024px) and below */\n  @media (max-width: 1024px){\n    .button-row{\n      grid-template-columns: 1fr;\n    }\n  }\n\n  /* Optional: make buttons easier to tap on very small screens */\n  @media (max-width: 480px){\n    .custom-button{\n      min-height: 3.1em; /* ensures comfortable tap target */\n    }\n  }\n</style>\n\n<div class=\"button-row\">\n\n  <div class=\"button-cell\">\n    <a class=\"custom-button\" href=\"#about-section\">\n      How to use this dashboard\n    </a>\n  </div>\n\n  <div class=\"button-cell\">\n    <a class=\"custom-button\" href=\"#accessibility\">\n      Request accessibility help\n    </a>\n  </div>\n\n  <div class=\"button-cell\">\n    <a class=\"custom-button\" rel=\"noopener noreferrer\" href=\"\">\n      <span class=\"btn-text\">View dashboard in full screen</span>\n      <svg class='btn-icon' viewBox='0 0 640 640' xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false'>\n        <path d='M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z' />\n      </svg>\n    </a>\n  </div>\n\n</div>\n\n"
+                  }
+                },
+                "width": 12
+              }
+            ]
+          },
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "spacer-card",
+                  "settings": {
+                    "height": "25",
+                    "cardId": "crrswnwv5"
+                  }
+                },
+                "settings": {
+                  "height": 100
+                },
+                "width": 12
+              }
+            ]
+          }
+        ],
+        "visibility": {
+          "access": "default",
+          "groups": []
+        }
+      },
+      {
+        "containment": "fluid",
+        "isFooter": false,
+        "style": {
+          "background": {
+            "isFile": false,
+            "isUrl": true,
+            "state": "",
+            "display": {},
+            "transparency": 0,
+            "position": {
+              "x": "center",
+              "y": "center"
+            },
+            "color": "#ecedef"
+          },
+          "rowLayout": "wide"
+        },
+        "rows": [
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "iframe-card",
+                  "settings": {
+                    "src": "https://tableau.minneapolismn.gov/views/PublicCallsforService/CallsforService?%3Aembed=t&%3Atoolbar=f",
+                    "cardId": "cluamb9i7",
+                    "height": "1300",
+                    "scrollable": false,
+                    "shareable": true,
+                    "mobileShareable": true,
+                    "shareableOnHover": true,
+                    "mobileShareableOnHover": true
+                  }
+                },
+                "width": 12
+              }
+            ]
+          },
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "spacer-card",
+                  "settings": {
+                    "height": "25",
+                    "cardId": "cq3ujcato"
+                  }
+                },
+                "settings": {
+                  "height": 100
+                },
+                "width": 12
+              }
+            ]
+          }
+        ],
+        "visibility": {
+          "access": "default",
+          "groups": []
+        }
+      },
+      {
+        "containment": "fixed",
+        "isFooter": false,
+        "style": {
+          "background": {
+            "isFile": false,
+            "isUrl": true,
+            "state": "",
+            "display": {},
+            "transparency": 0,
+            "position": {
+              "x": "center",
+              "y": "center"
+            },
+            "color": "#ecedef"
+          },
+          "rowLayout": "box"
+        },
+        "rows": [
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "markdown-card",
+                  "settings": {
+                    "cardId": "ckb2fjlfe",
+                    "schemaVersion": 2.1,
+                    "markdown": "\n<div id=\"accessibility\"></div>\n<div style=\"background-color: white; border: 1px solid #ccc; padding: 1em; border-radius: 6px; color: black;\">\n  <h1>Request accessible format</h1>\n  <p>\n    If you need help with this information, please\n    <a href=\"mailto:minneapolis311@minneapolismn.gov\">email 311</a>,\n    or call 311 or\n    <a href=\"tel:+16126733000\">612-673-3000</a>.\n    Please tell us what format you need. It will help us if you say what assistive technology you use.\n  </p>\n</div>\n\n"
+                  }
+                },
+                "width": 12
+              }
+            ]
+          }
+        ],
+        "visibility": {
+          "access": "default",
+          "groups": []
+        }
+      },
+      {
+        "containment": "fixed",
+        "isFooter": false,
+        "style": {
+          "background": {
+            "isFile": false,
+            "isUrl": true,
+            "state": "",
+            "display": {},
+            "transparency": 0,
+            "position": {
+              "x": "center",
+              "y": "center"
+            },
+            "color": "transparent"
+          },
+          "color": "#000000",
+          "rowLayout": "box"
+        },
+        "rows": [
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "markdown-card",
+                  "settings": {
+                    "cardId": "cath8mty9",
+                    "schemaVersion": 2.1,
+                    "markdown": "<!-- DO NOT MODIFY -->\n\n<div id=\"about-section\"></div>\n\n<h1>How to use this dashboard</h1>\n\n"
+                  }
+                },
+                "width": 12
+              }
+            ]
+          },
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "markdown-card",
+                  "settings": {
+                    "cardId": "cioguhye0",
+                    "schemaVersion": 2.1,
+                    "markdown": "<div class=\"grid-container fluid\">\n    <div class=\"multicolumn-content--columns large-up-3 medium-up-1\"><div class=\"cell\"><div class=\"multicolumn-content\"><h2>View the data -&nbsp;</h2><p>Put wrapper text here - make sure to use correct headers: paragraph headers should be h2, any sub-headers flow from there.&nbsp;</p>\n<p><br></p></div></div></div></div>"
+                  }
+                },
+                "width": 6
+              },
+              {
+                "component": {
+                  "name": "markdown-card",
+                  "settings": {
+                    "cardId": "cwc1qrs52",
+                    "schemaVersion": 2.1,
+                    "markdown": "<p>Second column of text if needed (delete if not so the first renders accurately)&nbsp;</p>"
+                  }
+                },
+                "width": 6
+              }
+            ]
+          }
+        ],
+        "visibility": {
+          "access": "default",
+          "groups": []
+        }
+      },
+      {
+        "containment": "fluid",
+        "isFooter": false,
+        "style": {
+          "background": {
+            "isFile": false,
+            "isUrl": true,
+            "state": "",
+            "display": {},
+            "transparency": 0,
+            "position": {
+              "x": "center",
+              "y": "center"
+            },
+            "color": "#ecedef"
+          },
+          "rowLayout": "wide"
+        },
+        "rows": [
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "spacer-card",
+                  "settings": {
+                    "height": "15",
+                    "cardId": "c67g0ah9k"
+                  }
+                },
+                "settings": {
+                  "height": 100
+                },
+                "width": 12
+              }
+            ]
+          }
+        ],
+        "visibility": {
+          "access": "default",
+          "groups": []
+        }
+      },
+      {
+        "containment": "fixed",
+        "isFooter": false,
+        "style": {
+          "background": {
+            "isFile": false,
+            "isUrl": true,
+            "state": "",
+            "display": {},
+            "transparency": 0,
+            "position": {
+              "x": "center",
+              "y": "center"
+            },
+            "color": "#ecedef"
+          },
+          "rowLayout": "box"
+        },
+        "rows": [
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "markdown-card",
+                  "settings": {
+                    "cardId": "cjsiwd53f",
+                    "schemaVersion": 2.1,
+                    "markdown": "<div><calcite-button href=\"#top\" alignment=\"center\" appearance=\"solid\" kind=\"brand\" scale=\"m\" split-child=\"false\" type=\"button\" width=\"auto\" calcite-hydrated=\"\">Return to top of page</calcite-button></div>"
+                  }
+                },
+                "width": 12
+              }
+            ]
+          },
+          {
+            "cards": [
+              {
+                "component": {
+                  "name": "spacer-card",
+                  "settings": {
+                    "height": "15",
+                    "cardId": "c5y29k4rn"
+                  }
+                },
+                "settings": {
+                  "height": 100
+                },
+                "width": 12
+              }
+            ]
+          }
+        ],
+        "visibility": {
+          "access": "default",
+          "groups": []
+        }
+      }
+    ]
+  }
+}

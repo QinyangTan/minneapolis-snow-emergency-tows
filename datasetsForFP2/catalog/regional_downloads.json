@@ -1,0 +1,182 @@
+[
+  {
+    "id": "traffic_current_segments__0",
+    "title": "AADT_SEGMENT_CURRENT",
+    "publisher": "MnDOT_GIS",
+    "url": "https://webgis.dot.state.mn.us/65agsf1/rest/services/sdw_incdt/AADT_SEGMENT_CURRENT/FeatureServer/0",
+    "item_id": "42923bcddafe4909b4eed0a03dea893a",
+    "query_filter": {
+      "where": "1=1",
+      "geometry": "-93.34,44.87,-93.19,45.06",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "count": 1932,
+    "path": "raw/regional/traffic_current_segments__0.json",
+    "status": "downloaded",
+    "bytes": 1807910,
+    "sha256": "c6e85e2921605592b46fc6a3cab6d62067412588b3e29245607958a7930ef7fd",
+    "retrieved_at_utc": "2026-11-10T21:01:58.815891+00:00"
+  },
+  {
+    "id": "traffic_current_locations__0",
+    "title": "AADT_LOCATIONS_CURRENT",
+    "publisher": "MnDOT_GIS",
+    "url": "https://webgis.dot.state.mn.us/65agsf1/rest/services/sdw_incdt/AADT_LOCATIONS_CURRENT/FeatureServer/0",
+    "item_id": "4ec4be193c8c481b9057b4be4dedbe80",
+    "query_filter": {
+      "where": "1=1",
+      "geometry": "-93.34,44.87,-93.19,45.06",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "count": 1864,
+    "path": "raw/regional/traffic_current_locations__0.json",
+    "status": "downloaded",
+    "bytes": 1091910,
+    "sha256": "529ab39235d33dc4e947909e7a18d1108d90f0c5eea036434af6fcd716d97563",
+    "retrieved_at_utc": "2026-11-10T21:01:58.473846+00:00"
+  },
+  {
+    "id": "traffic_active_counts__0",
+    "title": "TRAFFIC_COUNT_LOCS_ACTIVE",
+    "publisher": "MnDOT_GIS",
+    "url": "https://webgis.dot.state.mn.us/65agsf1/rest/services/sdw_incdt/TRAFFIC_COUNT_LOCS_ACTIVE/FeatureServer/0",
+    "item_id": "3396cfb808f24451ba1c7939978121cc",
+    "query_filter": {
+      "where": "1=1",
+      "geometry": "-93.34,44.87,-93.19,45.06",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "count": 1969,
+    "path": "raw/regional/traffic_active_counts__0.json",
+    "status": "downloaded",
+    "bytes": 872642,
+    "sha256": "bacec74cde4fba75b829a5cbc7fd79f226808ea89a3301d4e0c3ef0a0750cbc7",
+    "retrieved_at_utc": "2026-11-10T21:02:48.741053+00:00"
+  },
+  {
+    "id": "acs_income_distribution_esri__2",
+    "title": "Tract",
+    "publisher": "esri_demographics",
+    "url": "https://P3ePLMYs2RVChkJx.svcs.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/ACS_Household_Income_Distribution_View_Boundaries/FeatureServer/2",
+    "item_id": "0f43160beaaa4026a8a2f2db01ba1972",
+    "query_filter": {
+      "where": "1=1",
+      "geometry": "-93.34,44.87,-93.19,45.06",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "count": 185,
+    "path": "raw/regional/acs_income_distribution_esri__2.json",
+    "status": "downloaded",
+    "bytes": 894969,
+    "sha256": "5087713dda67f0a3feeb4de23d29b1ddaf3a7b7f0f929e393fd3f138fab1d262",
+    "retrieved_at_utc": "2026-11-10T21:01:51.745689+00:00"
+  },
+  {
+    "id": "acs_income_median_esri__2",
+    "title": "Tract",
+    "publisher": "esri_demographics",
+    "url": "https://P3ePLMYs2RVChkJx.svcs.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/ACS_Median_Household_Income_View_Boundaries/FeatureServer/2",
+    "item_id": "c9faa265b82848498bc0a8390c0afa65",
+    "query_filter": {
+      "where": "1=1",
+      "geometry": "-93.34,44.87,-93.19,45.06",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "count": 185,
+    "path": "raw/regional/acs_income_median_esri__2.json",
+    "status": "downloaded",
+    "bytes": 850742,
+    "sha256": "ff975163187b8fced47f7dc0b89bc6654fd2f662f3274fe9e12dd0df8579e099",
+    "retrieved_at_utc": "2026-11-10T21:02:11.377998+00:00"
+  },
+  {
+    "id": "acs_housing_cost_esri__2",
+    "title": "Tract",
+    "publisher": "esri_demographics",
+    "url": "https://P3ePLMYs2RVChkJx.svcs.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/ACS_Housing_Costs_View_Boundaries/FeatureServer/2",
+    "item_id": "731b71707092404693facc08c9594d00",
+    "query_filter": {
+      "where": "1=1",
+      "geometry": "-93.34,44.87,-93.19,45.06",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "count": 185,
+    "path": "raw/regional/acs_housing_cost_esri__2.json",
+    "status": "downloaded",
+    "bytes": 1063077,
+    "sha256": "c3df4fcbed34913fba030753a1c318514bb4e1358c840dfdb809502ccdceaa7b",
+    "retrieved_at_utc": "2026-11-10T21:02:19.944345+00:00"
+  },
+  {
+    "id": "acs_population_esri__2",
+    "title": "Tract",
+    "publisher": "esri_demographics",
+    "url": "https://P3ePLMYs2RVChkJx.svcs.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/ACS_Population_and_Housing_Basics_View_Boundaries/FeatureServer/2",
+    "item_id": "e6a8c068ebf248b185b221ebb350b1b4",
+    "query_filter": {
+      "where": "1=1",
+      "geometry": "-93.34,44.87,-93.19,45.06",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "count": 185,
+    "path": "raw/regional/acs_population_esri__2.json",
+    "status": "downloaded",
+    "bytes": 1063505,
+    "sha256": "c807c4e31172fcb8b25591e781eca4edc1dd22a9293ddb5c3c4d60dac95a2d65",
+    "retrieved_at_utc": "2026-11-10T21:02:17.164170+00:00"
+  },
+  {
+    "id": "vehicle_availability_city__1",
+    "title": "2025_TEP_UPDATE",
+    "publisher": "andrew.schmitz@minneapolismn.gov_cityoflakes",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Vehicle_Availability/FeatureServer/1",
+    "item_id": "f798fa5690e64522a5fc011495c3b518",
+    "query_filter": {
+      "where": "1=1",
+      "geometry": "-93.34,44.87,-93.19,45.06",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "count": 121,
+    "path": "raw/regional/vehicle_availability_city__1.json",
+    "status": "downloaded",
+    "bytes": 438832,
+    "sha256": "a73d49b0da4653334bd8d15557a7101b48213b7b75caf5f35f3a4adf669724e4",
+    "retrieved_at_utc": "2026-11-10T21:02:23.786503+00:00"
+  },
+  {
+    "id": "commute_time_city__120",
+    "title": "2025_TEP_UPDATE",
+    "publisher": "andrew.schmitz@minneapolismn.gov_cityoflakes",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Commute_Time/FeatureServer/120",
+    "item_id": "df244bfbe838409893c37be326594b0b",
+    "query_filter": {
+      "where": "1=1",
+      "geometry": "-93.34,44.87,-93.19,45.06",
+      "geometryType": "esriGeometryEnvelope",
+      "inSR": 4326,
+      "spatialRel": "esriSpatialRelIntersects"
+    },
+    "count": 121,
+    "path": "raw/regional/commute_time_city__120.json",
+    "status": "downloaded",
+    "bytes": 438831,
+    "sha256": "dc6286651d0df6767da1a8fb4ee8c14f925df5a6779aac168f900822a6b1afaa",
+    "retrieved_at_utc": "2026-11-10T21:02:31.951520+00:00"
+  }
+]

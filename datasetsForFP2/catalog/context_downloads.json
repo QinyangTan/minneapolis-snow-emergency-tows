@@ -1,0 +1,1097 @@
+[
+  {
+    "id": "acs/2022/tract_B01003.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B01003.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B19301.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B19301.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B19013.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B19013.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B17001.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B17001.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B25077.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B25077.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B25064.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B25064.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B25003.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B25003.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B08201.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B08201.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B08301.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B08301.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B25024.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B25024.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B25070.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B25070.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/tract_B25002.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2022/block_group_B25002.json",
+    "url": "https://api.census.gov/data/2022/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B01003.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B01003.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B19301.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B19301.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B19013.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B19013.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B17001.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B17001.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B25077.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B25077.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B25064.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B25064.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B25003.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B25003.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B08201.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B08201.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B08301.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B08301.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B25024.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B25024.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B25070.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B25070.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/tract_B25002.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2023/block_group_B25002.json",
+    "url": "https://api.census.gov/data/2023/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B01003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B01003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B01003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B19301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B19301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B19013.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B19013.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B19013)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B17001.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B17001.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B17001)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B25077.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B25077.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25077)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B25064.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B25064.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25064)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B25003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B25003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25003)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B08201.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B08201.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08201)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B08301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B08301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B08301)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B25024.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B25024.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25024)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B25070.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B25070.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25070)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/tract_B25002.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "tract:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/2024/block_group_B25002.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5",
+    "params": {
+      "get": "NAME,group(B25002)",
+      "for": "block group:*",
+      "in": "state:27 county:053"
+    },
+    "status": "failed",
+    "error": "Expecting value: line 1 column 1 (char 0)"
+  },
+  {
+    "id": "acs/metadata/B01003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B01003.json",
+    "path": "raw/acs/metadata/B01003.json",
+    "status": "downloaded",
+    "bytes": 199994,
+    "sha256": "f692fa121bf007948893c312945d86abc83c6bae6420540ccf4c66891467b904",
+    "retrieved_at_utc": "2026-11-10T20:54:40.033410+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B19301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B19301.json",
+    "path": "raw/acs/metadata/B19301.json",
+    "status": "downloaded",
+    "bytes": 200518,
+    "sha256": "b3c19c6c133963668f3b4ba618b7189c89d0e88366248d450cc6177342bd9234",
+    "retrieved_at_utc": "2026-11-10T20:54:40.000891+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B19013.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B19013.json",
+    "path": "raw/acs/metadata/B19013.json",
+    "status": "downloaded",
+    "bytes": 200530,
+    "sha256": "304b5d72b144edcddf9d76bdb3d3928d2240d2a1c3071770666a313df32bfae9",
+    "retrieved_at_utc": "2026-11-10T20:54:40.423998+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B17001.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B17001.json",
+    "path": "raw/acs/metadata/B17001.json",
+    "status": "downloaded",
+    "bytes": 291458,
+    "sha256": "3554588a3334d9e4359d82508e7abb7f16b3bc52da9ff4b406d4e93375e146e5",
+    "retrieved_at_utc": "2026-11-10T20:54:41.746161+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B25077.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25077.json",
+    "path": "raw/acs/metadata/B25077.json",
+    "status": "downloaded",
+    "bytes": 200158,
+    "sha256": "892740d42c4a6c7120999f9302c18550508c964082f66eddc75865200f32fd0c",
+    "retrieved_at_utc": "2026-11-10T20:54:41.651562+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B25064.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25064.json",
+    "path": "raw/acs/metadata/B25064.json",
+    "status": "downloaded",
+    "bytes": 200266,
+    "sha256": "6e7536d071748c25add9844650d785a5dc59d8047f2923f4fd2889731fc8b670",
+    "retrieved_at_utc": "2026-11-10T20:54:41.677031+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B25003.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25003.json",
+    "path": "raw/acs/metadata/B25003.json",
+    "status": "downloaded",
+    "bytes": 202106,
+    "sha256": "75bc8b9150800dd2f40336814062a5795b6cf4ab14f00b38e9a053887422133b",
+    "retrieved_at_utc": "2026-11-10T20:54:41.737612+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B08201.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B08201.json",
+    "path": "raw/acs/metadata/B08201.json",
+    "status": "downloaded",
+    "bytes": 235388,
+    "sha256": "24ce57c5e3cdc294dc0c3f4fb54cb857173906d67827b35a87ddc082ab8da957",
+    "retrieved_at_utc": "2026-11-10T20:54:42.042852+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B08301.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B08301.json",
+    "path": "raw/acs/metadata/B08301.json",
+    "status": "downloaded",
+    "bytes": 225160,
+    "sha256": "819fd7fda8a71e38ed860416b6defe5590d7f3ff8487a46fc880b95fe73b0735",
+    "retrieved_at_utc": "2026-11-10T20:54:43.324386+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B25024.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25024.json",
+    "path": "raw/acs/metadata/B25024.json",
+    "status": "downloaded",
+    "bytes": 210452,
+    "sha256": "cca3eba14b48c355f8cf844385a76ff907768be6d074466f971bda3eae3fedde",
+    "retrieved_at_utc": "2026-11-10T20:54:43.363183+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B25070.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25070.json",
+    "path": "raw/acs/metadata/B25070.json",
+    "status": "downloaded",
+    "bytes": 213800,
+    "sha256": "81516d5733ff2931eab994443db33bcf9057fdb39263336cf3768bcb2d848638",
+    "retrieved_at_utc": "2026-11-10T20:54:43.395300+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "acs/metadata/B25002.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/B25002.json",
+    "path": "raw/acs/metadata/B25002.json",
+    "status": "downloaded",
+    "bytes": 202040,
+    "sha256": "7203086ab854865dab956d9efa0f5b9e83d3a91db99eb311b2772c1c299b97e1",
+    "retrieved_at_utc": "2026-11-10T20:54:43.420386+00:00",
+    "last_modified": null,
+    "kind": "json"
+  },
+  {
+    "id": "weather/USW00014922.dly",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+    "path": "raw/weather/USW00014922.dly",
+    "status": "downloaded",
+    "bytes": 5091660,
+    "sha256": "66416a94efa292f6ff769ff707bac003fc3450d52fa4c74cc4716a31fb7f53d8",
+    "retrieved_at_utc": "2026-11-10T20:54:46.002321+00:00",
+    "last_modified": "Tue, 10 Nov 2026 02:51:55 GMT",
+    "kind": "text"
+  },
+  {
+    "id": "weather/ghcn_daily_readme.txt",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt",
+    "path": "raw/weather/ghcn_daily_readme.txt",
+    "status": "downloaded",
+    "bytes": 29587,
+    "sha256": "0e4e6f0e6947cf1add884c328a01760f31c56ef5fb86b85ed57dd5dc4c4aeaa6",
+    "retrieved_at_utc": "2026-11-10T20:54:45.082944+00:00",
+    "last_modified": "Mon, 05 Oct 2026 22:14:56 GMT",
+    "kind": "text"
+  },
+  {
+    "id": "weather/ghcn_stations.txt",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt",
+    "path": "raw/weather/ghcn_stations.txt",
+    "status": "downloaded",
+    "bytes": 11441526,
+    "sha256": "437ee87f0343bcad408a492cf7a02163fb69255364c541b4006d5d76055d0dc3",
+    "retrieved_at_utc": "2026-11-10T20:54:57.570485+00:00",
+    "last_modified": "Wed, 04 Nov 2026 17:52:23 GMT",
+    "kind": "text"
+  },
+  {
+    "id": "transit/gtfs_current.zip",
+    "url": "https://svc.metrotransit.org/mtgtfs/gtfs.zip",
+    "path": "raw/transit/gtfs_current.zip",
+    "status": "downloaded",
+    "bytes": 29407291,
+    "sha256": "20c7b7227e0cf04088caff3dcbc4df74be4bdddcb7aeec327b91b0bba4f41c1f",
+    "retrieved_at_utc": "2026-11-10T20:54:56.035265+00:00",
+    "last_modified": "Thu, 05 Nov 2026 19:47:23 GMT",
+    "kind": "zip"
+  },
+  {
+    "id": "transit/feed_documentation.html",
+    "url": "https://svc.metrotransit.org/",
+    "path": "raw/transit/feed_documentation.html",
+    "status": "downloaded",
+    "bytes": 7986,
+    "sha256": "4293a36381f845dd17492afaa610c8a1d33564e32dc9a222abf50767252bbfcb",
+    "retrieved_at_utc": "2026-11-10T20:54:44.988282+00:00",
+    "last_modified": "Thu, 10 Sep 2026 15:47:47 GMT",
+    "kind": "text"
+  },
+  {
+    "id": "transit/archive_index.html",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/",
+    "path": "raw/transit/archive_index.html",
+    "status": "downloaded",
+    "bytes": 37909,
+    "sha256": "1166a1a6c10b409a836466ec84c538412b97af5f52e5504bbe44861f6b07189e",
+    "retrieved_at_utc": "2026-11-10T20:54:46.517310+00:00",
+    "last_modified": null,
+    "kind": "text"
+  },
+  {
+    "id": "transit/tripupdates.pb",
+    "url": "https://svc.metrotransit.org/mtgtfs/tripupdates.pb",
+    "path": "raw/transit/tripupdates.pb",
+    "status": "downloaded",
+    "bytes": 978342,
+    "sha256": "6506b9c276385683be5f800fff6be4168b91792c92cc3a43fcf6861b27e82856",
+    "retrieved_at_utc": "2026-11-10T20:54:46.943135+00:00",
+    "last_modified": "Tue, 10 Nov 2026 20:54:42 GMT",
+    "kind": "binary"
+  },
+  {
+    "id": "transit/vehiclepositions.pb",
+    "url": "https://svc.metrotransit.org/mtgtfs/vehiclepositions.pb",
+    "path": "raw/transit/vehiclepositions.pb",
+    "status": "downloaded",
+    "bytes": 82205,
+    "sha256": "1741c6803339127c4cb9887acbec3eb9292944a2ed9a95715cd83fce64b5f9a9",
+    "retrieved_at_utc": "2026-11-10T20:54:47.575437+00:00",
+    "last_modified": "Tue, 10 Nov 2026 20:54:42 GMT",
+    "kind": "binary"
+  },
+  {
+    "id": "transit/alerts.pb",
+    "url": "https://svc.metrotransit.org/mtgtfs/alerts.pb",
+    "path": "raw/transit/alerts.pb",
+    "status": "downloaded",
+    "bytes": 80574,
+    "sha256": "0955efdc069aa0ed55ce28b0819083a48b62667549d1bd6ef2947d5bd0499f59",
+    "retrieved_at_utc": "2026-11-10T20:54:48.035224+00:00",
+    "last_modified": "Tue, 10 Nov 2026 20:54:45 GMT",
+    "kind": "binary"
+  },
+  {
+    "id": "geography/tl_2024_27_tract.zip",
+    "url": "https://www2.census.gov/geo/tiger/TIGER2024/TRACT/tl_2024_27_tract.zip",
+    "path": "raw/geography/tl_2024_27_tract.zip",
+    "status": "downloaded",
+    "bytes": 7492209,
+    "sha256": "ff85e970af09db62e28f1010cbf51c0241373da4e75b168aee76ca224473f3ce",
+    "retrieved_at_utc": "2026-11-10T20:54:49.212291+00:00",
+    "last_modified": "Fri, 27 Jun 2025 20:05:43 GMT",
+    "kind": "zip"
+  },
+  {
+    "id": "geography/tl_2024_27_bg.zip",
+    "url": "https://www2.census.gov/geo/tiger/TIGER2024/BG/tl_2024_27_bg.zip",
+    "path": "raw/geography/tl_2024_27_bg.zip",
+    "status": "downloaded",
+    "bytes": 13095867,
+    "sha256": "608a2cf783eb473f0e0d1d96085cd9b36f5d0581e25556f95686b2a1af71ed5f",
+    "retrieved_at_utc": "2026-11-10T20:54:50.296783+00:00",
+    "last_modified": "Fri, 27 Jun 2025 20:01:19 GMT",
+    "kind": "zip"
+  },
+  {
+    "id": "references/2024_Accomplishments_TPS.pdf",
+    "url": "https://www.minneapolismn.gov/media/-www-content-assets/documents/2024-Accomplishments-TPS.pdf",
+    "params": null,
+    "status": "failed",
+    "error": "404 Client Error: Not Found for url: https://www.minneapolismn.gov/media/-www-content-assets/documents/2024-Accomplishments-TPS.pdf"
+  },
+  {
+    "id": "references/Public_Works_Retention_Schedule.pdf",
+    "url": "https://www.minneapolismn.gov/media/-www-content-assets/documents/Public-Works-Retention-Schedule.pdf",
+    "path": "raw/references/Public_Works_Retention_Schedule.pdf",
+    "status": "downloaded",
+    "bytes": 449922,
+    "sha256": "9428a1d5349e9db8cccd7e19786fedb661aafd7a2159fd2a5725563c280775d4",
+    "retrieved_at_utc": "2026-11-10T20:54:50.829962+00:00",
+    "last_modified": "Fri, 04 Jul 2025 04:21:07 GMT",
+    "kind": "binary"
+  },
+  {
+    "id": "references/public_data_request.html",
+    "url": "https://www.minneapolismn.gov/government/government-data/request-public-data/",
+    "path": "raw/references/public_data_request.html",
+    "status": "downloaded",
+    "bytes": 188180,
+    "sha256": "ac535d03a2267c85acba12250b87d259bf948f2d39ae4736565a3bb2283a1704",
+    "retrieved_at_utc": "2026-11-10T20:54:51.581803+00:00",
+    "last_modified": "Tue, 03 Nov 2026 15:25:46 GMT",
+    "kind": "text"
+  },
+  {
+    "id": "references/traffic_data_products.html",
+    "url": "https://www.dot.state.mn.us/traffic/data/data-products.html",
+    "path": "raw/references/traffic_data_products.html",
+    "status": "downloaded",
+    "bytes": 14625,
+    "sha256": "cb43c82f807d67d47cee1f5ccf7c5cec432f9d6fb5258473164ad473436440e3",
+    "retrieved_at_utc": "2026-11-10T20:54:51.915954+00:00",
+    "last_modified": null,
+    "kind": "text"
+  },
+  {
+    "id": "acs/metadata/C17002.json",
+    "url": "https://api.census.gov/data/2024/acs/acs5/groups/C17002.json",
+    "path": "raw/acs/metadata/C17002.json",
+    "status": "downloaded",
+    "bytes": 209720,
+    "sha256": "6e363deb4d9f86424627b61b46364c14a6b325d0e7d639fe1722b68f207f86ed",
+    "retrieved_at_utc": "2026-11-10T21:15:18.135399+00:00",
+    "kind": "json"
+  }
+]

@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Metro Transit</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.metrotransit.org/metrotransit/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.metrotransit.org/metrotransit/favicon-16x16.png">
+	<link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+	<form>
+		<div role="link" aria-labelledby="skipNav">
+			<a id="skipNav" href="#pageContainer" class="skip-to-content">Skip to main content</a>
+		</div>
+
+		<!-- Begin Header -->
+		<header id="header">
+			<nav class="navbar navbar-expand-xl navbar-light">
+				<div class="container">
+					<a class="navbar-brand" href="/">
+						<img alt="metro transit logo" src="https://assets.metrotransit.org/$web/public/img/svg/mt-logo.svg" class="logo d-inline-block">
+					</a>
+				</div>
+			</nav>
+		</header>
+		<!-- End Header -->
+
+		<!-- Begin Main Content -->
+		<main id="pageContainer" class="container">
+			<section>
+				<div class="page-content">
+					<div class="full-width">
+						<div class="secondary">
+							<div class="container">
+								<div class="page-title">
+									<h1>Schedule and Realtime Data Feeds</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="mt-5">
+						<div class="htmlmodule">
+                            <section>
+                                <h2>General Transit Feed Specification (GTFS) data</h2>
+                                <p>
+                                    These data include bus, light rail, and commuter rail service for the Minneapolis / St. Paul metropolitan area. This
+                                    includes service operated by Metro Transit, the Metropolitan Council, Maple Grove Transit, Plymouth Metrolink, SouthWest
+                                    Transit, the University of Minnesota, and the Metropolitan Airports Commission (MAC). The Minnesota Valley Transit
+                                    Authority (MVTA) also provides service in the region.
+                                </p>
+                                <p>Schedule and realtime data are provided in the General Transit Feed Specification (GTFS) format.</p>
+                                <ul>
+                                    <li><a href="https://gtfs.org/" target="_blank">GTFS documentation</a></li>
+                                    <li><a href="https://www.metrotransit.org/gtfs-extensions" target="_blank">Documentation on Metro Transit's extensions to GTFS</a></li>
+                                </ul>
+
+                                <h3>Static schedule data</h3>
+                                <p>The current bus and light rail schedule is available at: <a href="/mtgtfs/gtfs.zip">https://svc.metrotransit.org/mtgtfs/gtfs.zip</a>
+                                <p>
+                                    GTFS-Flex - Metro Micro Service schedule:
+                                    <a href="/mtgtfs/gtfs-flex.zip">https://svc.metrotransit.org/mtgtfs/gtfs-flex.zip</a>
+                                </p>
+                                <p>
+                                    The upcoming schedule is typically available Thursday afternoons, effective the following Saturday at:
+                                    <a href="/mtgtfs/next/gtfs.zip">https://svc.metrotransit.org/mtgtfs/next/gtfs.zip</a>
+                                </p>
+                                <p>
+                                    In general, schedule data are updated weekly, starting on Saturdays, and cover seven weeks.
+                                    However, schedule data are subject to change at any time. We recommend checking for a new feed <strong>daily</strong>.
+                                    It is always available at the above URL.
+                                </p>
+                                <p>
+                                    You can use the "Last-Modified" header to see whether there has been an update.
+                                    "Last Modified" can be used with the "If-Modified-Since" request header to return a 304
+                                    http response if the file has not been changed.
+                                </p>
+
+                                <h3>GTFS-realtime data</h3>
+                                <p>Metro Transit's GTFS-realtime feeds are refreshed every 5 seconds.</p>
+                                <ul>
+                                    <li>TripUpdate feed: <a href="/mtgtfs/tripupdates.pb">https://svc.metrotransit.org/mtgtfs/tripupdates.pb</a></li>
+                                    <li>VehiclePosition feed: <a href="/mtgtfs/vehiclepositions.pb">https://svc.metrotransit.org/mtgtfs/vehiclepositions.pb</a></li>
+                                    <li>ServiceAlerts feed: <a href="/mtgtfs/alerts.pb">https://svc.metrotransit.org/mtgtfs/alerts.pb</a></li>
+                                </ul>
+                                <h3>MVTA GTFS data</h3>
+                                <p>
+                                    The Minnesota Valley Transit Authority (MVTA) also provides service in the region; their service data are available separately at
+                                    <a href="https://srv.mvta.com/InfoPoint/GTFS-zip.ashx">https://srv.mvta.com/InfoPoint/GTFS-zip.ashx</a>.
+                                </p>
+                                <p>MVTA's GTFS-realtime feeds are also available.</p>
+                                <ul>
+                                    <li>TripUpdate feed: <a href="https:/srv.mvta.com/infoPoint/GTFS-realtime.ashx?&Type=TripUpdate">https:/srv.mvta.com/infoPoint/GTFS-realtime.ashx?&Type=TripUpdate</a></li>
+                                    <li>VehiclePosition feed: <a href="https://srv.mvta.com/infoPoint/GTFS-realtime.ashx?&Type=VehiclePosition">https://srv.mvta.com/infoPoint/GTFS-realtime.ashx?&Type=VehiclePosition</a></li>
+                                    <li>ServiceAlerts feed: <a href="https://srv.mvta.com/infoPoint/GTFS-realtime.ashx?&Type=Alert">https://srv.mvta.com/infoPoint/GTFS-realtime.ashx?&Type=Alert</a></li>
+                                </ul>
+                            </section>
+							<section>
+								<h3>Archive</h3>
+								<p>Past weekly updated GTFS.zip static schedule files are available under /mtgtfs/archive/. The previous week's data file is added to the archive
+								with each Saturday update in the format below replacing {yyyyMMdd} with the 8 digit date of a previous Saturday. (files begin at 20201128)</p>
+								<p>"https://svc.metrotransit.org/mtgtfs/archive/gtfs{yyyyMMdd}.zip".</p>
+								<p>Archive directory listing: <a href="https://svc.metrotransit.org/mtgtfs/archive/">https://svc.metrotransit.org/mtgtfs/archive/</a></p>
+							</section>
+							<section>
+								<h3>Swagger Docs</h3>
+								<p>Swagger documentation is available for publicly available REST services at<br/>
+								<a href="/swagger">https://svc.metrotransit.org/swagger</a></p>
+							</section>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<!-- End Main Content -->
+
+		<!-- Begin Footer -->
+		<footer role="contentinfo" class="section">
+			<div class="container">
+				<div class="btn-container center mb-lg-5">
+					<a class="btn btn-secondary-ghost has-icon-right" href="https://www.metrotransit.org/contact-us">Contact us</a>
+				</div>		
+				<p class="text-center d-lg-none my-3"><a class="h2" href="tel:612-373-3333">612-373-3333</a></p>
+				<p class="copyright">Metro Transit is a service of the <a href="https://metrocouncil.org/" target="_blank">Metropolitan Council</a>.<br />
+				Minneapolis/St. Paul, MN<br />
+				© 2020 Metro Transit</p>
+			</div>
+		</footer>
+		<!-- End Footer -->
+	</form>	
+</body>
+</html>

@@ -1,0 +1,1608 @@
+{
+  "method": "Shapely covers on shared unsimplified polygons; multiple matches, outside boundaries and missing coordinates remain unmatched.",
+  "recordsContainAddresses": false,
+  "sourceHashes": {
+    "data/raw/events/dover-2022.geojson": "8d25a826b5ee1fa53e21b411e7593d105b9138e1d85214d18026d32b1d9aefd6",
+    "data/raw/events/jane-2022.geojson": "8f84b630e65c841f5185cc266fafb3e7d2a14d9ef2ea697d21382696da533e14",
+    "data/raw/events/lourdes-2022.geojson": "3b174fcae88e65c989c0e974215cfed842de1ea44d7e7f7b7860feebba9d9113",
+    "data/raw/events/northrop-2023.geojson": "64933de0b164efcf9e632073546c32f1fe13225997cbadd98fbf9688a209baea",
+    "data/raw/events/victory1-2023.geojson": "e17eec39a9364ca8fc986024d87bcf4702cbdf945e5581e851cb93faf208615f",
+    "data/raw/events/howard-2024.geojson": "122f093ae2003e525a041085e7d648f7477280237e65b590f0818afea8377ffc",
+    "data/raw/events/omega-2025.geojson": "8e49166a0ed07c6b6851d24975512a80b33668b7c2203bc6c2d393e98a5b4dbb",
+    "data/raw/events/bridge-2025.geojson": "d4773009b7d24a5bc89c0ea0cc125326a970da1fac878331cb977d9ec8d9480b",
+    "data/raw/events/glenwood-2025.geojson": "3f67fae2a7885057bba32475b1ce1990d117b16bfe3a33d04b3aa1b1ea5765b4",
+    "data/raw/events/jefferson-2025.geojson": "120787a3ec4180b7af110f5039914b2cd044fc6a0f2247d237973cbb2c36c93f",
+    "data/raw/neighborhoods.geojson": "bc22f3fcc0a043b88442e47dbdc085ab90e25c6a3e74d1dabc5688de812742a1",
+    "data/raw/water.geojson": "aef1a0365ef81688a77353cb0daebb06ebd3b489d3753e7541b32a7b9be101de",
+    "data/raw/USW00014922.dly": "92f5699820a5591331874aeaf7022f3ef2b40f1424bcfb220f2a2cad508a722b",
+    "data/raw/ghcn-daily-readme.txt": "0e4e6f0e6947cf1add884c328a01760f31c56ef5fb86b85ed57dd5dc4c4aeaa6"
+  },
+  "shapelyVersion": "2.1.2",
+  "selectionNote": "Ten audited published three-day Events, 2022\u20132025. Victory2 is excluded because its source contains only Day 1. This is a selected collection, not a census of all Snow Emergencies or all tows. Counts use published Source Day and current official neighborhood boundaries; unmatched points remain in Event totals.",
+  "sources": [
+    {
+      "name": "Dover published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Dover_Tows_2022/FeatureServer/0"
+    },
+    {
+      "name": "Jane published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Jane_Tows_2022/FeatureServer/0"
+    },
+    {
+      "name": "Lourdes published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Lourdes_Tows_2022/FeatureServer/0"
+    },
+    {
+      "name": "Northrop published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Northrop_Tows_2023/FeatureServer/0"
+    },
+    {
+      "name": "Victory1 published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Victory1_Tows_2023/FeatureServer/0"
+    },
+    {
+      "name": "Howard published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Howard_Tows_2024/FeatureServer/0"
+    },
+    {
+      "name": "Omega published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Omega_Tows/FeatureServer/0"
+    },
+    {
+      "name": "Bridge published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Bridge_Tows_2025/FeatureServer/0"
+    },
+    {
+      "name": "Glenwood published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Glenwood_Tows_2025/FeatureServer/0"
+    },
+    {
+      "name": "Jefferson published tows",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Jefferson_Tows_2025/FeatureServer/1"
+    },
+    {
+      "name": "Neighborhood boundaries",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Minneapolis_Neighborhoods/FeatureServer/0"
+    },
+    {
+      "name": "Water",
+      "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Water/FeatureServer/0"
+    },
+    {
+      "name": "NOAA MSP GHCN daily",
+      "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly"
+    },
+    {
+      "name": "GHCN daily format and flags",
+      "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt"
+    }
+  ],
+  "acquisition": {
+    "fetchedAt": "2026-10-07T21:20:04.831273+00:00",
+    "addressesRetained": false,
+    "sources": [
+      {
+        "id": "dover-2022",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Dover_Tows_2022/FeatureServer/0"
+      },
+      {
+        "id": "jane-2022",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Jane_Tows_2022/FeatureServer/0"
+      },
+      {
+        "id": "lourdes-2022",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Lourdes_Tows_2022/FeatureServer/0"
+      },
+      {
+        "id": "northrop-2023",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Northrop_Tows_2023/FeatureServer/0"
+      },
+      {
+        "id": "victory1-2023",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Victory1_Tows_2023/FeatureServer/0"
+      },
+      {
+        "id": "howard-2024",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Howard_Tows_2024/FeatureServer/0"
+      },
+      {
+        "id": "omega-2025",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Omega_Tows/FeatureServer/0"
+      },
+      {
+        "id": "bridge-2025",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Bridge_Tows_2025/FeatureServer/0"
+      },
+      {
+        "id": "glenwood-2025",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Glenwood_Tows_2025/FeatureServer/0"
+      },
+      {
+        "id": "jefferson-2025",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/arcgis/rest/services/Snow_Emergency_Jefferson_Tows_2025/FeatureServer/1"
+      }
+    ],
+    "weatherUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly"
+  },
+  "weatherMethod": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero.",
+  "events": [
+    {
+      "event": {
+        "id": "dover-2022",
+        "name": "Dover",
+        "start": "2022-11-29",
+        "end": "2022-12-01",
+        "season": "2022\u20132023",
+        "total": 631,
+        "dayTotals": [
+          221,
+          191,
+          219
+        ]
+      },
+      "quality": {
+        "matched": 622,
+        "unmatched": 9,
+        "unmatchedByDay": [
+          1,
+          4,
+          4
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [
+          {
+            "id": "dover-2022:122",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "dover-2022:269",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "dover-2022:327",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "dover-2022:362",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "dover-2022:367",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "dover-2022:420",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "dover-2022:474",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "dover-2022:515",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "dover-2022:615",
+            "day": 3,
+            "reason": "outside boundary"
+          }
+        ],
+        "missingCoordinates": 0,
+        "sourceLabelField": "Neighborho",
+        "sourceLabelMissing": 9,
+        "sourceLabelDisagreements": 0,
+        "sourceLabelDifferences": [],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2022-11-27",
+        "windowEnd": "2022-11-29",
+        "snowfallMm": 213,
+        "snowDepthMm": 0,
+        "tminC": -6.6,
+        "tmaxC": 1.1,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2022-11-27",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2022-11-28",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2022-11-29",
+            "snowfall": {
+              "value": 213,
+              "rawValue": 213,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 0,
+            "rawValue": 0,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -6.6,
+            "rawValue": -66,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMAX": {
+            "value": 1.1,
+            "rawValue": 11,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          }
+        },
+        "traceDays": [],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    },
+    {
+      "event": {
+        "id": "jane-2022",
+        "name": "Jane",
+        "start": "2022-12-15",
+        "end": "2022-12-17",
+        "season": "2022\u20132023",
+        "total": 584,
+        "dayTotals": [
+          165,
+          177,
+          242
+        ]
+      },
+      "quality": {
+        "matched": 575,
+        "unmatched": 9,
+        "unmatchedByDay": [
+          0,
+          1,
+          8
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [
+          {
+            "id": "jane-2022:312",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jane-2022:360",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jane-2022:411",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jane-2022:419",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jane-2022:446",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jane-2022:460",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jane-2022:490",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jane-2022:570",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jane-2022:583",
+            "day": 3,
+            "reason": "outside boundary"
+          }
+        ],
+        "missingCoordinates": 0,
+        "sourceLabelField": "Neighborho",
+        "sourceLabelMissing": 9,
+        "sourceLabelDisagreements": 0,
+        "sourceLabelDifferences": [],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2022-12-13",
+        "windowEnd": "2022-12-15",
+        "snowfallMm": 134,
+        "snowDepthMm": 30,
+        "tminC": -1.0,
+        "tmaxC": 1.1,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2022-12-13",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "T",
+              "qflag": "",
+              "sflag": "W",
+              "trace": true
+            }
+          },
+          {
+            "date": "2022-12-14",
+            "snowfall": {
+              "value": 10,
+              "rawValue": 10,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2022-12-15",
+            "snowfall": {
+              "value": 124,
+              "rawValue": 124,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 30,
+            "rawValue": 30,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -1.0,
+            "rawValue": -10,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMAX": {
+            "value": 1.1,
+            "rawValue": 11,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          }
+        },
+        "traceDays": [
+          "2022-12-13"
+        ],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    },
+    {
+      "event": {
+        "id": "lourdes-2022",
+        "name": "Lourdes",
+        "start": "2022-12-21",
+        "end": "2022-12-23",
+        "season": "2022\u20132023",
+        "total": 435,
+        "dayTotals": [
+          127,
+          181,
+          127
+        ]
+      },
+      "quality": {
+        "matched": 424,
+        "unmatched": 11,
+        "unmatchedByDay": [
+          5,
+          4,
+          2
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [
+          {
+            "id": "lourdes-2022:77",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:89",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:96",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:104",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:105",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:238",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:248",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:281",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:299",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:373",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "lourdes-2022:405",
+            "day": 3,
+            "reason": "outside boundary"
+          }
+        ],
+        "missingCoordinates": 0,
+        "sourceLabelField": "Neighborho",
+        "sourceLabelMissing": 11,
+        "sourceLabelDisagreements": 0,
+        "sourceLabelDifferences": [],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2022-12-19",
+        "windowEnd": "2022-12-21",
+        "snowfallMm": 224,
+        "snowDepthMm": 150,
+        "tminC": -22.1,
+        "tmaxC": -17.1,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2022-12-19",
+            "snowfall": {
+              "value": 36,
+              "rawValue": 36,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2022-12-20",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "T",
+              "qflag": "",
+              "sflag": "W",
+              "trace": true
+            }
+          },
+          {
+            "date": "2022-12-21",
+            "snowfall": {
+              "value": 188,
+              "rawValue": 188,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 150,
+            "rawValue": 150,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -22.1,
+            "rawValue": -221,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMAX": {
+            "value": -17.1,
+            "rawValue": -171,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          }
+        },
+        "traceDays": [
+          "2022-12-20"
+        ],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    },
+    {
+      "event": {
+        "id": "northrop-2023",
+        "name": "Northrop",
+        "start": "2023-01-04",
+        "end": "2023-01-06",
+        "season": "2022\u20132023",
+        "total": 465,
+        "dayTotals": [
+          166,
+          155,
+          144
+        ]
+      },
+      "quality": {
+        "matched": 453,
+        "unmatched": 12,
+        "unmatchedByDay": [
+          5,
+          6,
+          1
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [
+          {
+            "id": "northrop-2023:19",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:45",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:53",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:126",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:145",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:169",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:200",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:202",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:236",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:241",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:244",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "northrop-2023:364",
+            "day": 3,
+            "reason": "outside boundary"
+          }
+        ],
+        "missingCoordinates": 0,
+        "sourceLabelField": "Neighborho",
+        "sourceLabelMissing": 12,
+        "sourceLabelDisagreements": 0,
+        "sourceLabelDifferences": [],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2023-01-02",
+        "windowEnd": "2023-01-04",
+        "snowfallMm": 379,
+        "snowDepthMm": 360,
+        "tminC": -1.0,
+        "tmaxC": 0.6,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2023-01-02",
+            "snowfall": {
+              "value": 3,
+              "rawValue": 3,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2023-01-03",
+            "snowfall": {
+              "value": 152,
+              "rawValue": 152,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2023-01-04",
+            "snowfall": {
+              "value": 224,
+              "rawValue": 224,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 360,
+            "rawValue": 360,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -1.0,
+            "rawValue": -10,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMAX": {
+            "value": 0.6,
+            "rawValue": 6,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          }
+        },
+        "traceDays": [],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    },
+    {
+      "event": {
+        "id": "victory1-2023",
+        "name": "Victory1",
+        "start": "2023-02-22",
+        "end": "2023-02-24",
+        "season": "2022\u20132023",
+        "total": 506,
+        "dayTotals": [
+          192,
+          135,
+          179
+        ]
+      },
+      "quality": {
+        "matched": 496,
+        "unmatched": 10,
+        "unmatchedByDay": [
+          4,
+          1,
+          5
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [
+          {
+            "id": "victory1-2023:114",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "victory1-2023:130",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "victory1-2023:168",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "victory1-2023:169",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "victory1-2023:271",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "victory1-2023:380",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "victory1-2023:444",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "victory1-2023:454",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "victory1-2023:464",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "victory1-2023:497",
+            "day": 3,
+            "reason": "outside boundary"
+          }
+        ],
+        "missingCoordinates": 0,
+        "sourceLabelField": "Neighborho",
+        "sourceLabelMissing": 10,
+        "sourceLabelDisagreements": 0,
+        "sourceLabelDifferences": [],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2023-02-20",
+        "windowEnd": "2023-02-22",
+        "snowfallMm": 219,
+        "snowDepthMm": 200,
+        "tminC": -9.9,
+        "tmaxC": -6.0,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2023-02-20",
+            "snowfall": {
+              "value": 43,
+              "rawValue": 43,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2023-02-21",
+            "snowfall": {
+              "value": 79,
+              "rawValue": 79,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2023-02-22",
+            "snowfall": {
+              "value": 97,
+              "rawValue": 97,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 200,
+            "rawValue": 200,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -9.9,
+            "rawValue": -99,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMAX": {
+            "value": -6.0,
+            "rawValue": -60,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          }
+        },
+        "traceDays": [],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    },
+    {
+      "event": {
+        "id": "howard-2024",
+        "name": "Howard",
+        "start": "2024-12-19",
+        "end": "2024-12-21",
+        "season": "2024\u20132025",
+        "total": 665,
+        "dayTotals": [
+          73,
+          329,
+          263
+        ]
+      },
+      "quality": {
+        "matched": 662,
+        "unmatched": 3,
+        "unmatchedByDay": [
+          0,
+          2,
+          1
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [
+          {
+            "id": "howard-2024:221",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "howard-2024:232",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "howard-2024:540",
+            "day": 3,
+            "reason": "outside boundary"
+          }
+        ],
+        "missingCoordinates": 0,
+        "sourceLabelField": "Neighborho",
+        "sourceLabelMissing": 3,
+        "sourceLabelDisagreements": 0,
+        "sourceLabelDifferences": [],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2024-12-17",
+        "windowEnd": "2024-12-19",
+        "snowfallMm": 145,
+        "snowDepthMm": 50,
+        "tminC": -6.6,
+        "tmaxC": -3.8,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2024-12-17",
+            "snowfall": {
+              "value": 5,
+              "rawValue": 5,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2024-12-18",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "T",
+              "qflag": "",
+              "sflag": "W",
+              "trace": true
+            }
+          },
+          {
+            "date": "2024-12-19",
+            "snowfall": {
+              "value": 140,
+              "rawValue": 140,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 50,
+            "rawValue": 50,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -6.6,
+            "rawValue": -66,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMAX": {
+            "value": -3.8,
+            "rawValue": -38,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          }
+        },
+        "traceDays": [
+          "2024-12-18"
+        ],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    },
+    {
+      "event": {
+        "id": "omega-2025",
+        "name": "Omega",
+        "start": "2025-02-08",
+        "end": "2025-02-10",
+        "season": "2024\u20132025",
+        "total": 695,
+        "dayTotals": [
+          32,
+          361,
+          302
+        ]
+      },
+      "quality": {
+        "matched": 695,
+        "unmatched": 0,
+        "unmatchedByDay": [
+          0,
+          0,
+          0
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [],
+        "missingCoordinates": 0,
+        "sourceLabelField": "Neighorhoo",
+        "sourceLabelMissing": 0,
+        "sourceLabelDisagreements": 134,
+        "sourceLabelDifferences": [
+          {
+            "sourceLabel": "CARAG",
+            "joinedNeighborhood": "South Uptown",
+            "count": 89
+          },
+          {
+            "sourceLabel": "ECCO",
+            "joinedNeighborhood": "East Bde Maka Ska",
+            "count": 45
+          }
+        ],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2025-02-06",
+        "windowEnd": "2025-02-08",
+        "snowfallMm": 84,
+        "snowDepthMm": 30,
+        "tminC": -15.5,
+        "tmaxC": -5.5,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2025-02-06",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "T",
+              "qflag": "",
+              "sflag": "W",
+              "trace": true
+            }
+          },
+          {
+            "date": "2025-02-07",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          },
+          {
+            "date": "2025-02-08",
+            "snowfall": {
+              "value": 84,
+              "rawValue": 84,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "W",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 30,
+            "rawValue": 30,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -15.5,
+            "rawValue": -155,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          },
+          "TMAX": {
+            "value": -5.5,
+            "rawValue": -55,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "W",
+            "trace": false
+          }
+        },
+        "traceDays": [
+          "2025-02-06"
+        ],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    },
+    {
+      "event": {
+        "id": "bridge-2025",
+        "name": "Bridge",
+        "start": "2025-11-30",
+        "end": "2025-12-02",
+        "season": "2025\u20132026",
+        "total": 852,
+        "dayTotals": [
+          86,
+          418,
+          348
+        ]
+      },
+      "quality": {
+        "matched": 846,
+        "unmatched": 6,
+        "unmatchedByDay": [
+          3,
+          3,
+          0
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [
+          {
+            "id": "bridge-2025:23",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "bridge-2025:25",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "bridge-2025:27",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "bridge-2025:204",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "bridge-2025:212",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "bridge-2025:279",
+            "day": 2,
+            "reason": "outside boundary"
+          }
+        ],
+        "missingCoordinates": 0,
+        "sourceLabelField": "Neighborho",
+        "sourceLabelMissing": 6,
+        "sourceLabelDisagreements": 0,
+        "sourceLabelDifferences": [],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2025-11-28",
+        "windowEnd": "2025-11-30",
+        "snowfallMm": 119,
+        "snowDepthMm": 178,
+        "tminC": -12.2,
+        "tmaxC": -5.0,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2025-11-28",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "1",
+              "trace": false
+            }
+          },
+          {
+            "date": "2025-11-29",
+            "snowfall": {
+              "value": 99,
+              "rawValue": 99,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "1",
+              "trace": false
+            }
+          },
+          {
+            "date": "2025-11-30",
+            "snowfall": {
+              "value": 20,
+              "rawValue": 20,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "1",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 178,
+            "rawValue": 178,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "1",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -12.2,
+            "rawValue": -122,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "1",
+            "trace": false
+          },
+          "TMAX": {
+            "value": -5.0,
+            "rawValue": -50,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "1",
+            "trace": false
+          }
+        },
+        "traceDays": [],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    },
+    {
+      "event": {
+        "id": "glenwood-2025",
+        "name": "Glenwood",
+        "start": "2025-12-10",
+        "end": "2025-12-12",
+        "season": "2025\u20132026",
+        "total": 719,
+        "dayTotals": [
+          67,
+          448,
+          204
+        ]
+      },
+      "quality": {
+        "matched": 715,
+        "unmatched": 4,
+        "unmatchedByDay": [
+          0,
+          3,
+          1
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [
+          {
+            "id": "glenwood-2025:165",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "glenwood-2025:415",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "glenwood-2025:452",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "glenwood-2025:592",
+            "day": 2,
+            "reason": "outside boundary"
+          }
+        ],
+        "missingCoordinates": 0,
+        "sourceLabelField": null,
+        "sourceLabelMissing": 719,
+        "sourceLabelDisagreements": 0,
+        "sourceLabelDifferences": [],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2025-12-08",
+        "windowEnd": "2025-12-10",
+        "snowfallMm": 136,
+        "snowDepthMm": 254,
+        "tminC": -7.8,
+        "tmaxC": -2.2,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2025-12-08",
+            "snowfall": {
+              "value": 30,
+              "rawValue": 30,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "1",
+              "trace": false
+            }
+          },
+          {
+            "date": "2025-12-09",
+            "snowfall": {
+              "value": 86,
+              "rawValue": 86,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "1",
+              "trace": false
+            }
+          },
+          {
+            "date": "2025-12-10",
+            "snowfall": {
+              "value": 20,
+              "rawValue": 20,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "1",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 254,
+            "rawValue": 254,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "1",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -7.8,
+            "rawValue": -78,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "1",
+            "trace": false
+          },
+          "TMAX": {
+            "value": -2.2,
+            "rawValue": -22,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "1",
+            "trace": false
+          }
+        },
+        "traceDays": [],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    },
+    {
+      "event": {
+        "id": "jefferson-2025",
+        "name": "Jefferson",
+        "start": "2025-12-28",
+        "end": "2025-12-30",
+        "season": "2025\u20132026",
+        "total": 566,
+        "dayTotals": [
+          158,
+          188,
+          220
+        ]
+      },
+      "quality": {
+        "matched": 562,
+        "unmatched": 4,
+        "unmatchedByDay": [
+          1,
+          1,
+          2
+        ],
+        "ambiguousBoundary": 0,
+        "unmatchedRecords": [
+          {
+            "id": "jefferson-2025:77",
+            "day": 1,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jefferson-2025:209",
+            "day": 2,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jefferson-2025:541",
+            "day": 3,
+            "reason": "outside boundary"
+          },
+          {
+            "id": "jefferson-2025:566",
+            "day": 3,
+            "reason": "outside boundary"
+          }
+        ],
+        "missingCoordinates": 0,
+        "sourceLabelField": "Neighborho",
+        "sourceLabelMissing": 4,
+        "sourceLabelDisagreements": 0,
+        "sourceLabelDifferences": [],
+        "boundaryVersion": "Shared unsimplified official Minneapolis_Neighborhoods snapshot",
+        "expectedAddressError": "8\u201314% in publisher disclaimer; not measured here",
+        "datePrecision": "Published calendar dates; UTC midnight values are dates, not precise tow times",
+        "dayMethod": "Published Source Day; never derived from Call_Taken",
+        "dateMethod": "Start and end from audited published Call_Taken date range; item descriptions may contain typos"
+      },
+      "weather": {
+        "stationId": "USW00014922",
+        "stationName": "MINNEAPOLIS ST PAUL INTERNATIONAL AIRPORT",
+        "windowStart": "2025-12-26",
+        "windowEnd": "2025-12-28",
+        "snowfallMm": 147,
+        "snowDepthMm": 25,
+        "tminC": -11.7,
+        "tmaxC": 1.7,
+        "status": "complete",
+        "sourceUrl": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/USW00014922.dly",
+        "dailySnowfall": [
+          {
+            "date": "2025-12-26",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "1",
+              "trace": false
+            }
+          },
+          {
+            "date": "2025-12-27",
+            "snowfall": {
+              "value": 0,
+              "rawValue": 0,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "1",
+              "trace": false
+            }
+          },
+          {
+            "date": "2025-12-28",
+            "snowfall": {
+              "value": 147,
+              "rawValue": 147,
+              "mflag": "",
+              "qflag": "",
+              "sflag": "1",
+              "trace": false
+            }
+          }
+        ],
+        "startObservations": {
+          "SNWD": {
+            "value": 25,
+            "rawValue": 25,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "1",
+            "trace": false
+          },
+          "TMIN": {
+            "value": -11.7,
+            "rawValue": -117,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "1",
+            "trace": false
+          },
+          "TMAX": {
+            "value": 1.7,
+            "rawValue": 17,
+            "mflag": "",
+            "qflag": "",
+            "sflag": "1",
+            "trace": false
+          }
+        },
+        "traceDays": [],
+        "note": "Fixed start\u22122 through start daily snowfall sum; not a storm total. Snow depth and temperature are on the Event start date. One station measurement, not neighborhood snowfall. Trace values retain their flag; the numeric sum is the reported measurable amount. Missing or failed-quality values are null, never zero."
+      }
+    }
+  ]
+}

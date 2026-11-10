@@ -1,0 +1,1292 @@
+[
+  {
+    "name": "100_ft_Buffer_of_High_Injury_Street_Network",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/100_ft_Buffer_of_High_Injury_Street_Network/FeatureServer"
+  },
+  {
+    "name": "2022_High_Injury_Streets",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/2022_High_Injury_Streets/FeatureServer"
+  },
+  {
+    "name": "2022_Traffic_Conflict_Trees",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/2022_Traffic_Conflict_Trees/FeatureServer"
+  },
+  {
+    "name": "2025_Traffic_Comments",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/2025_Traffic_Comments/FeatureServer"
+  },
+  {
+    "name": "ACP50_traffic",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/ACP50_traffic/FeatureServer"
+  },
+  {
+    "name": "Aggregation of AbatelistJanuary2015 to Neighborhoods",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Aggregation of AbatelistJanuary2015 to Neighborhoods/FeatureServer"
+  },
+  {
+    "name": "Aggregation of AbatelistJanuary2015 toNeighborhoods",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Aggregation of AbatelistJanuary2015 toNeighborhoods/FeatureServer"
+  },
+  {
+    "name": "Al_Streets_PCI_StreetWidth_Year_Map",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Al_Streets_PCI_StreetWidth_Year_Map/FeatureServer"
+  },
+  {
+    "name": "All_Transit_Routes",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/All_Transit_Routes/FeatureServer"
+  },
+  {
+    "name": "Assessing_Department_Parcel_Data_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2023/FeatureServer"
+  },
+  {
+    "name": "Assessing_Department_Parcel_Data_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2024/FeatureServer"
+  },
+  {
+    "name": "Assessing_Department_Parcel_Data_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2025/FeatureServer"
+  },
+  {
+    "name": "Assessor_Parcels_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessor_Parcels_2024/FeatureServer"
+  },
+  {
+    "name": "AssessorDashboardResQuintileParcelJoin24",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/AssessorDashboardResQuintileParcelJoin24/FeatureServer"
+  },
+  {
+    "name": "Assessors_Parcel_Data_2017",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessors_Parcel_Data_2017/FeatureServer"
+  },
+  {
+    "name": "Assessors_Parcel_Data_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessors_Parcel_Data_2018/FeatureServer"
+  },
+  {
+    "name": "Assessors_Parcel_Data_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessors_Parcel_Data_2019/FeatureServer"
+  },
+  {
+    "name": "Assessors_Parcel_Data_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessors_Parcel_Data_2020/FeatureServer"
+  },
+  {
+    "name": "Assessors_Parcel_Data_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessors_Parcel_Data_2021/FeatureServer"
+  },
+  {
+    "name": "Assessors_Parcel_Data_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessors_Parcel_Data_2022/FeatureServer"
+  },
+  {
+    "name": "BNSF_Parcels",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/BNSF_Parcels/FeatureServer"
+  },
+  {
+    "name": "Census_Union_2010_and_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Census_Union_2010_and_2020/FeatureServer"
+  },
+  {
+    "name": "Census2020_PopinHHbyAge",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Census2020_PopinHHbyAge/FeatureServer"
+  },
+  {
+    "name": "Census2020_QuestionnaireCenters",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Census2020_QuestionnaireCenters/FeatureServer"
+  },
+  {
+    "name": "Census2020_RaceEthnicity_BLRT_OneMile",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Census2020_RaceEthnicity_BLRT_OneMile/FeatureServer"
+  },
+  {
+    "name": "Census2020_Tenure_BLRT_OneMile",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Census2020_Tenure_BLRT_OneMile/FeatureServer"
+  },
+  {
+    "name": "CityStreetsWithin500ftBuffer",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/CityStreetsWithin500ftBuffer/FeatureServer"
+  },
+  {
+    "name": "Contiguous_Inventory_Parcels_8_16_2017",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Contiguous_Inventory_Parcels_8_16_2017/FeatureServer"
+  },
+  {
+    "name": "County_Parcels_VBR",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/County_Parcels_VBR/FeatureServer"
+  },
+  {
+    "name": "CPED_inventory_adjacent_parcels",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/CPED_inventory_adjacent_parcels/FeatureServer"
+  },
+  {
+    "name": "Downtown_Core_Area_Map",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Downtown_Core_Area_Map/FeatureServer"
+  },
+  {
+    "name": "Downtown_Improvement_District_Boundary",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Downtown_Improvement_District_Boundary/FeatureServer"
+  },
+  {
+    "name": "Downtown_Open_Space___Walking_Tour_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Downtown_Open_Space___Walking_Tour_WFL1/FeatureServer"
+  },
+  {
+    "name": "Downtown_Small_Cell_Locations",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Downtown_Small_Cell_Locations/FeatureServer"
+  },
+  {
+    "name": "DowntownParking",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/DowntownParking/FeatureServer"
+  },
+  {
+    "name": "DowntownZoningPrimary",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/DowntownZoningPrimary/FeatureServer"
+  },
+  {
+    "name": "Existing_Bike_Boulevards_and_Planned_Neighborhood_Greenways_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Existing_Bike_Boulevards_and_Planned_Neighborhood_Greenways_WFL1/FeatureServer"
+  },
+  {
+    "name": "Existing_Land_Use",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Existing_Land_Use/FeatureServer"
+  },
+  {
+    "name": "Feb_2024_Parcels",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Feb_2024_Parcels/FeatureServer"
+  },
+  {
+    "name": "Garden_Parcels",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Garden_Parcels/FeatureServer"
+  },
+  {
+    "name": "Great_Streets_Eligible_Areas",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Great_Streets_Eligible_Areas/FeatureServer"
+  },
+  {
+    "name": "Great_Streets_Eligible_Parcels_2020_Prioritization",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Great_Streets_Eligible_Parcels_2020_Prioritization/FeatureServer"
+  },
+  {
+    "name": "GreatStreets_2020_priority_nonpriority_v3",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/GreatStreets_2020_priority_nonpriority_v3/FeatureServer"
+  },
+  {
+    "name": "HFA_indicators_x_census_tract",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/HFA_indicators_x_census_tract/FeatureServer"
+  },
+  {
+    "name": "High_Frequency_Transit_And_Walksheds",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/High_Frequency_Transit_And_Walksheds/FeatureServer"
+  },
+  {
+    "name": "High_Injury_Streets_2022_Update",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/High_Injury_Streets_2022_Update/FeatureServer"
+  },
+  {
+    "name": "Housing_Policy_Areas",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Housing_Policy_Areas/FeatureServer"
+  },
+  {
+    "name": "Land_Use_Rezoning_Study_District_Layer",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Land_Use_Rezoning_Study_District_Layer/FeatureServer"
+  },
+  {
+    "name": "Land_Use_Rezoning_Study_Districts_for_Public_Comment",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Land_Use_Rezoning_Study_Districts_for_Public_Comment/FeatureServer"
+  },
+  {
+    "name": "LSLR_2026_Parcels",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/LSLR_2026_Parcels/FeatureServer"
+  },
+  {
+    "name": "Major_City_Streets",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Major_City_Streets/FeatureServer"
+  },
+  {
+    "name": "Metered_parking_Changes",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Metered_parking_Changes/FeatureServer"
+  },
+  {
+    "name": "Minneapolis_2040_and_Zoning_Amendments_Parcel_Index",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_2040_and_Zoning_Amendments_Parcel_Index/FeatureServer"
+  },
+  {
+    "name": "Minneapolis_2040_Future_Land_Use_030525_View",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_2040_Future_Land_Use_030525_View/FeatureServer"
+  },
+  {
+    "name": "Minneapolis_2040_Future_Land_Use_Built_Form_030525",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_2040_Future_Land_Use_Built_Form_030525/FeatureServer"
+  },
+  {
+    "name": "Minneapolis_2040_Future_Land_Use_Joined_View_Layer",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_2040_Future_Land_Use_Joined_View_Layer/FeatureServer"
+  },
+  {
+    "name": "Minneapolis_2040_Land_Use",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_2040_Land_Use/FeatureServer"
+  },
+  {
+    "name": "Minneapolis_Neighborhood_Organizations",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_Neighborhood_Organizations/FeatureServer"
+  },
+  {
+    "name": "Minneapolis_Neighborhood_Organizations_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_Neighborhood_Organizations_2023/FeatureServer"
+  },
+  {
+    "name": "Minneapolis_Neighborhoods",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_Neighborhoods/FeatureServer"
+  },
+  {
+    "name": "minneapolis_traffic_lines_new",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/minneapolis_traffic_lines_new/FeatureServer"
+  },
+  {
+    "name": "minneapolis_traffic_points_new",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/minneapolis_traffic_points_new/FeatureServer"
+  },
+  {
+    "name": "minneapolis_traffic_polygons_new",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/minneapolis_traffic_polygons_new/FeatureServer"
+  },
+  {
+    "name": "minneapolis_traffic_SOP",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/minneapolis_traffic_SOP/FeatureServer"
+  },
+  {
+    "name": "MPHA_Highrise_Addresses_and_neighborhoods",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MPHA_Highrise_Addresses_and_neighborhoods/FeatureServer"
+  },
+  {
+    "name": "Mpls_Census_Tracts_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Mpls_Census_Tracts_2020/FeatureServer"
+  },
+  {
+    "name": "Mpls_CENSUS2010_POP_HISPANIC_SF1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Mpls_CENSUS2010_POP_HISPANIC_SF1/FeatureServer"
+  },
+  {
+    "name": "MPLS_Neighborhoods",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MPLS_Neighborhoods/FeatureServer"
+  },
+  {
+    "name": "MPLS_STREET_PAVEMENT_DATA",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MPLS_STREET_PAVEMENT_DATA/FeatureServer"
+  },
+  {
+    "name": "MPLS_Streets",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MPLS_Streets/FeatureServer"
+  },
+  {
+    "name": "msvcNeighborhood_MPD_CA",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/msvcNeighborhood_MPD_CA/FeatureServer"
+  },
+  {
+    "name": "msvcPW_ParkingMeters",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/msvcPW_ParkingMeters/FeatureServer"
+  },
+  {
+    "name": "msvcPW_TransitBikeways",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/msvcPW_TransitBikeways/FeatureServer"
+  },
+  {
+    "name": "msvcPW_TransitStops",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/msvcPW_TransitStops/FeatureServer"
+  },
+  {
+    "name": "msvcSTREETCLOSE",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/msvcSTREETCLOSE/FeatureServer"
+  },
+  {
+    "name": "NCU_Parking",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/NCU_Parking/FeatureServer"
+  },
+  {
+    "name": "Neighborhood_Commercial_Nodes",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhood_Commercial_Nodes/FeatureServer"
+  },
+  {
+    "name": "Neighborhood_Dem_Tenure_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhood_Dem_Tenure_WFL1/FeatureServer"
+  },
+  {
+    "name": "Neighborhood_Guide_4_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhood_Guide_4_WFL1/FeatureServer"
+  },
+  {
+    "name": "Neighborhood_Guide_5_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhood_Guide_5_WFL1/FeatureServer"
+  },
+  {
+    "name": "Neighborhood_Orgs",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhood_Orgs/FeatureServer"
+  },
+  {
+    "name": "Neighborhoods_(1)",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhoods_(1)/FeatureServer"
+  },
+  {
+    "name": "Neighborhoods_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhoods_2022/FeatureServer"
+  },
+  {
+    "name": "NNO_Neighborhood",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/NNO_Neighborhood/FeatureServer"
+  },
+  {
+    "name": "Other_parking_Zones",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Other_parking_Zones/FeatureServer"
+  },
+  {
+    "name": "Parcel_and_RoW",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Parcel_and_RoW/FeatureServer"
+  },
+  {
+    "name": "ParcelChangeCOGO",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/ParcelChangeCOGO/FeatureServer"
+  },
+  {
+    "name": "Parking_Meter_Inventory",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Parking_Meter_Inventory/FeatureServer"
+  },
+  {
+    "name": "Parking_Meter_Pay_Stations",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Parking_Meter_Pay_Stations/FeatureServer"
+  },
+  {
+    "name": "Parking_stagingarea",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Parking_stagingarea/FeatureServer"
+  },
+  {
+    "name": "PCT_HH_Income_Transportation",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/PCT_HH_Income_Transportation/FeatureServer"
+  },
+  {
+    "name": "Planned_HF_Transit",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Planned_HF_Transit/FeatureServer"
+  },
+  {
+    "name": "Poverty",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Poverty/FeatureServer"
+  },
+  {
+    "name": "Proactive_Street_Segments_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Proactive_Street_Segments_2018/FeatureServer"
+  },
+  {
+    "name": "Proactive_Street_Segments_YTD",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Proactive_Street_Segments_YTD/FeatureServer"
+  },
+  {
+    "name": "Public_311_2015",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2015/FeatureServer"
+  },
+  {
+    "name": "Public_311_2016",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2016/FeatureServer"
+  },
+  {
+    "name": "Public_311_2017",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2017/FeatureServer"
+  },
+  {
+    "name": "Public_311_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2018/FeatureServer"
+  },
+  {
+    "name": "Public_311_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2019/FeatureServer"
+  },
+  {
+    "name": "Public_311_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2020/FeatureServer"
+  },
+  {
+    "name": "Public_311_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2021/FeatureServer"
+  },
+  {
+    "name": "Public_311_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2022/FeatureServer"
+  },
+  {
+    "name": "Public_311_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2023/FeatureServer"
+  },
+  {
+    "name": "Public_311_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2024/FeatureServer"
+  },
+  {
+    "name": "Public_311_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2025/FeatureServer"
+  },
+  {
+    "name": "Public_Comments_Dinkytown_Pedestrian_Improvements_Project",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_Comments_Dinkytown_Pedestrian_Improvements_Project/FeatureServer"
+  },
+  {
+    "name": "Public_Works_Parcels_Online_Map",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_Works_Parcels_Online_Map/FeatureServer"
+  },
+  {
+    "name": "PWStreetPavementMgmt",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/PWStreetPavementMgmt/FeatureServer"
+  },
+  {
+    "name": "RecommendedGreatStreetsEligibleParcels_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/RecommendedGreatStreetsEligibleParcels_2020/FeatureServer"
+  },
+  {
+    "name": "RecommendedGreatStreetsEligibleParcels_2020_old_cat_for_export",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/RecommendedGreatStreetsEligibleParcels_2020_old_cat_for_export/FeatureServer"
+  },
+  {
+    "name": "REF_Neighborhoods",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/REF_Neighborhoods/FeatureServer"
+  },
+  {
+    "name": "RM1_Parcels",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/RM1_Parcels/FeatureServer"
+  },
+  {
+    "name": "School_Parcels",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/School_Parcels/FeatureServer"
+  },
+  {
+    "name": "Severe__Fatal_Crashes_per_1000_Residents",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Severe__Fatal_Crashes_per_1000_Residents/FeatureServer"
+  },
+  {
+    "name": "Small_Cell_Downtown_Area_Tracker",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Small_Cell_Downtown_Area_Tracker/FeatureServer"
+  },
+  {
+    "name": "Snow_Amb_Parcels_2025_2026",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Amb_Parcels_2025_2026/FeatureServer"
+  },
+  {
+    "name": "Snow_Ambassador_PPN",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Ambassador_PPN/FeatureServer"
+  },
+  {
+    "name": "Snow_Ambassador_Sidewalk",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Ambassador_Sidewalk/FeatureServer"
+  },
+  {
+    "name": "Snow_Assistance_Requests_311_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Assistance_Requests_311_2025/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Armatage_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Armatage_Tags_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Armatage_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Armatage_Tows_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Bridge_Tags_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Bridge_Tags_2025/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Bridge_Tows_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Bridge_Tows_2025/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Dana_Tags_2016_b",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dana_Tags_2016_b/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Dana_Tows_2016_b",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dana_Tows_2016_b/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Diamond_Lake_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Diamond_Lake_Tags_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Diamond_Lake_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Diamond_Lake_Tows_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Dover_Tags_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dover_Tags_2022/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Dover_Tows_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dover_Tows_2022/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Ferry_Tags_2016",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tags_2016/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Ferry_Tags_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tags_2021/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Ferry_Tows_2016",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tows_2016/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Ferry_Tows_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tows_2021/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Fremont_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Fremont_Tags_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Fremont_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Fremont_Tows_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Glenwood_Tags_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Glenwood_Tags_2025/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Glenwood_Tows_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Glenwood_Tows_2025/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Grant_Tags_2015",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Grant_Tags_2015/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Grant_Tows_2015",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Grant_Tows_2015/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Howard_Tags_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howard_Tags_2024/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Howard_Tows_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howard_Tows_2024/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Howe_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howe_2018/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Howe_Tows_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howe_Tows_2018/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_James_Tags_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_James_Tags_2020/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_James_Tows_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_James_Tows_2020/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Jane_Tags_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jane_Tags_2022/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Jane_Tows_2017",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jane_Tows_2017/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Jane_Tows_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jane_Tows_2022/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Jefferson_Tags_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jefferson_Tags_2025/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Jefferson_Tows_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jefferson_Tows_2025/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Kasota_Tags_2019_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Kasota_Tags_2019_2020/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Kasota_Tows_2019_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Kasota_Tows_2019_2020/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Lourdes_Tags_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Lourdes_Tags_2022/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Lourdes_Tows_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Lourdes_Tows_2022/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Newton_Tags_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Newton_Tags_2020/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Newton_Tows_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Newton_Tows_2020/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Northrop_Tags_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Northrop_Tags_2023/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Northrop_Tows_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Northrop_Tows_2023/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Olive_Tags_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Olive_Tags_2018/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Olive_Tows_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Olive_Tows_2018/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Oliver_Tags_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Oliver_Tags_2021/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Oliver_Tows_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Oliver_Tows_2021/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Omega_Tags",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Omega_Tags/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Omega_Tows",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Omega_Tows/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Parkways_in_Minneapolis",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Parkways_in_Minneapolis/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Polk_Tags_2016",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Polk_Tags_2016/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Polk_Tows_2016",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Polk_Tows_2016/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Quincy_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Quincy_Tags_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Quincy_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Quincy_Tows_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Spruce_Tags_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Spruce_Tags_2020/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Spruce_Tows_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Spruce_Tows_2020/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Upton_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Upton_Tags_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Upton_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Upton_Tows_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Victory1_Tags_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory1_Tags_2023/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Victory1_Tows_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory1_Tows_2023/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Victory2_Tags_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory2_Tags_2023/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Victory2_Tows_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory2_Tows_2023/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Westminster_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Westminster_Tags_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Westminster_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Westminster_Tows_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Xerxes_Tags_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Xerxes_Tags_2018/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Xerxes_Tows_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Xerxes_Tows_2018/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Yale_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yale_Tags_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Yale_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yale_Tows_2019/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Yardville_Tags_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yardville_Tags_2018/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Yardville_Tows_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yardville_Tows_2018/FeatureServer"
+  },
+  {
+    "name": "SnowEmergencyJaneTags",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SnowEmergencyJaneTags/FeatureServer"
+  },
+  {
+    "name": "SnowEmergencyPembinaTags2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SnowEmergencyPembinaTags2018/FeatureServer"
+  },
+  {
+    "name": "SnowEmergencyPembinaTows2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SnowEmergencyPembinaTows2018/FeatureServer"
+  },
+  {
+    "name": "SpecialServiceDistrictLines_Snow",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SpecialServiceDistrictLines_Snow/FeatureServer"
+  },
+  {
+    "name": "Street_Jurisdiction",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Jurisdiction/FeatureServer"
+  },
+  {
+    "name": "Street_Types",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Types/FeatureServer"
+  },
+  {
+    "name": "Street_Types_DRAFT",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Types_DRAFT/FeatureServer"
+  },
+  {
+    "name": "Street_Types_DRAFT_2",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Types_DRAFT_2/FeatureServer"
+  },
+  {
+    "name": "Street_Types_DRAFT_3",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Types_DRAFT_3/FeatureServer"
+  },
+  {
+    "name": "Street_Types_DRAFT_4",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Types_DRAFT_4/FeatureServer"
+  },
+  {
+    "name": "Street_Types_February_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Types_February_2021/FeatureServer"
+  },
+  {
+    "name": "Street_Types_Street_Design_Guide",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Types_Street_Design_Guide/FeatureServer"
+  },
+  {
+    "name": "Street_Types_Updated",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Types_Updated/FeatureServer"
+  },
+  {
+    "name": "Summarize Communities within Neighborhoods",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Summarize Communities within Neighborhoods/FeatureServer"
+  },
+  {
+    "name": "Summarize Licenses within Neighborhoods",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Summarize Licenses within Neighborhoods/FeatureServer"
+  },
+  {
+    "name": "TAP_Street_Data",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TAP_Street_Data/FeatureServer"
+  },
+  {
+    "name": "TAP_Transit_Priority_Map_additional_layers_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TAP_Transit_Priority_Map_additional_layers_WFL1/FeatureServer"
+  },
+  {
+    "name": "TAP_Transit_Priority_Map_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TAP_Transit_Priority_Map_WFL1/FeatureServer"
+  },
+  {
+    "name": "Total_Neighborhood_Canopy",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Total_Neighborhood_Canopy/FeatureServer"
+  },
+  {
+    "name": "Traffic Calming Street Types",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Traffic Calming Street Types/FeatureServer"
+  },
+  {
+    "name": "Traffic_Calming",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Traffic_Calming/FeatureServer"
+  },
+  {
+    "name": "Traffic_Circles_v2",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Traffic_Circles_v2/FeatureServer"
+  },
+  {
+    "name": "Traffic_Safety",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Traffic_Safety/FeatureServer"
+  },
+  {
+    "name": "Traffic_Safety_-_Comments",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Traffic_Safety_-_Comments/FeatureServer"
+  },
+  {
+    "name": "Traffic_Safety_Cameras_Potential_Locations",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Traffic_Safety_Cameras_Potential_Locations/FeatureServer"
+  },
+  {
+    "name": "Traffic_Safety_Concerns",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Traffic_Safety_Concerns/FeatureServer"
+  },
+  {
+    "name": "Traffic_Supports",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Traffic_Supports/FeatureServer"
+  },
+  {
+    "name": "TRAFFICAuxiliaryAttachments",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TRAFFICAuxiliaryAttachments/FeatureServer"
+  },
+  {
+    "name": "TRAFFICLightFixtures",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TRAFFICLightFixtures/FeatureServer"
+  },
+  {
+    "name": "TRAFFICMastArms",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TRAFFICMastArms/FeatureServer"
+  },
+  {
+    "name": "TRAFFICSignalDetection",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TRAFFICSignalDetection/FeatureServer"
+  },
+  {
+    "name": "TRAFFICSignalHeads",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TRAFFICSignalHeads/FeatureServer"
+  },
+  {
+    "name": "TRAFFICSignalPreemption",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TRAFFICSignalPreemption/FeatureServer"
+  },
+  {
+    "name": "TrafficSignals_OnRoutes",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TrafficSignals_OnRoutes/FeatureServer"
+  },
+  {
+    "name": "Transit_Priority_Projects",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Transit_Priority_Projects/FeatureServer"
+  },
+  {
+    "name": "Transit_Stations",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Transit_Stations/FeatureServer"
+  },
+  {
+    "name": "Transit_Webmap_2_5_20",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Transit_Webmap_2_5_20/FeatureServer"
+  },
+  {
+    "name": "TransitStops",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TransitStops/FeatureServer"
+  },
+  {
+    "name": "TransitStops_HighSchools",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TransitStops_HighSchools/FeatureServer"
+  },
+  {
+    "name": "Transportation_Action_Plan_Street_Types",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Transportation_Action_Plan_Street_Types/FeatureServer"
+  },
+  {
+    "name": "Unrest_parcels_staging",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Unrest_parcels_staging/FeatureServer"
+  },
+  {
+    "name": "Unrest_parcels_staging_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Unrest_parcels_staging_2021/FeatureServer"
+  },
+  {
+    "name": "Urban_Neighborhood_Blocks",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Urban_Neighborhood_Blocks/FeatureServer"
+  },
+  {
+    "name": "VanWhite_SAP_Parcels",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/VanWhite_SAP_Parcels/FeatureServer"
+  },
+  {
+    "name": "Vision_Zero_High_Injury_Streets",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Vision_Zero_High_Injury_Streets/FeatureServer"
+  },
+  {
+    "name": "Minneapolis_2040_Land_Use",
+    "type": "MapServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_2040_Land_Use/MapServer"
+  },
+  {
+    "name": "Nice_Ride_Stations_Outside_Downtown_and_U_of_M",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Nice_Ride_Stations_Outside_Downtown_and_U_of_M/FeatureServer"
+  },
+  {
+    "name": "TAP_Update_Transit_Network",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TAP_Update_Transit_Network/FeatureServer"
+  },
+  {
+    "name": "7th_Street_South_Project_Comments",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/7th_Street_South_Project_Comments/FeatureServer"
+  },
+  {
+    "name": "PW_Street_Centerline",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/PW_Street_Centerline/FeatureServer"
+  },
+  {
+    "name": "TylerParkingProd",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TylerParkingProd/FeatureServer"
+  },
+  {
+    "name": "Final_2026_High_Injury_Streets",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Final_2026_High_Injury_Streets/FeatureServer"
+  },
+  {
+    "name": "2026_Neighborhood_Traffic_Calming_Treatments_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/2026_Neighborhood_Traffic_Calming_Treatments_WFL1/FeatureServer"
+  },
+  {
+    "name": "NTC_Traffic_Circle_2026",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/NTC_Traffic_Circle_2026/FeatureServer"
+  },
+  {
+    "name": "Crashes_per_1000",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Crashes_per_1000/FeatureServer"
+  },
+  {
+    "name": "Serious_Injury_and_Fatal_Crashes_2020_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Serious_Injury_and_Fatal_Crashes_2020_2024/FeatureServer"
+  },
+  {
+    "name": "CPED_Inventory_Parcels_shp",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/CPED_Inventory_Parcels_shp/FeatureServer"
+  },
+  {
+    "name": "LoopParcel",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/LoopParcel/FeatureServer"
+  },
+  {
+    "name": "34th_St_Neighborhood_Greenway",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/34th_St_Neighborhood_Greenway/FeatureServer"
+  },
+  {
+    "name": "34th_St_Neighborhood_Greenway_Input",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/34th_St_Neighborhood_Greenway_Input/FeatureServer"
+  },
+  {
+    "name": "Assessing_Department_Parcel_Data_2026",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2026/FeatureServer"
+  },
+  {
+    "name": "Lowest_Income_Population",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Lowest_Income_Population/FeatureServer"
+  },
+  {
+    "name": "msvcPW_ParkingMeters2",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/msvcPW_ParkingMeters2/FeatureServer"
+  },
+  {
+    "name": "Lower_Income_Population",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Lower_Income_Population/FeatureServer"
+  },
+  {
+    "name": "TEP_Lowest_Income_Residents",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TEP_Lowest_Income_Residents/FeatureServer"
+  },
+  {
+    "name": "TEP_Lower_Income_Residents",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TEP_Lower_Income_Residents/FeatureServer"
+  },
+  {
+    "name": "Public_311_2026",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2026/FeatureServer"
+  },
+  {
+    "name": "Street_Basemap",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Street_Basemap/FeatureServer"
+  },
+  {
+    "name": "ParcelsnearBLE",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/ParcelsnearBLE/FeatureServer"
+  },
+  {
+    "name": "NEIGHBORHOOD_CRIME_STATS",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/NEIGHBORHOOD_CRIME_STATS/FeatureServer"
+  },
+  {
+    "name": "Future_Land_Use_and_Built_Form_2040",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Future_Land_Use_and_Built_Form_2040/FeatureServer"
+  },
+  {
+    "name": "Snow_Emergency_Routes",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Routes/FeatureServer"
+  }
+]

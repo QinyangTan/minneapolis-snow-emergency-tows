@@ -1,0 +1,143 @@
+{
+  "total": 2,
+  "start": 1,
+  "num": 50,
+  "nextStart": -1,
+  "results": [
+    {
+      "id": "7629b8ad54664a3aa41fd3899947589e",
+      "owner": "hkelley_tooledesign",
+      "created": 1744205105000,
+      "modified": 1744205124000,
+      "guid": null,
+      "name": null,
+      "title": "Minneapolis towing Data ACS Block Groups",
+      "type": "Web Map",
+      "typeKeywords": [
+        "ArcGIS API for JavaScript",
+        "ArcGIS Online",
+        "Explorer Web Map",
+        "Map",
+        "Online Map",
+        "Web Map"
+      ],
+      "description": "",
+      "tags": [
+        "minneapolis",
+        "towing",
+        "impound",
+        "toole"
+      ],
+      "snippet": "Towing and Tag data for Impound Equity Project.",
+      "thumbnail": "thumbnail/ago_downloaded.png",
+      "documentation": null,
+      "extent": [
+        [
+          -93.38899613122808,
+          44.88534729030452
+        ],
+        [
+          -93.1105613778105,
+          45.038633990739406
+        ]
+      ],
+      "categories": [],
+      "spatialReference": "",
+      "accessInformation": "",
+      "classification": null,
+      "licenseInfo": "",
+      "culture": "en-us",
+      "properties": null,
+      "advancedSettings": null,
+      "url": "",
+      "proxyFilter": null,
+      "access": "public",
+      "size": -1,
+      "subInfo": 0,
+      "appCategories": [],
+      "industries": [],
+      "languages": [],
+      "largeThumbnail": null,
+      "banner": null,
+      "screenshots": [],
+      "listed": false,
+      "numComments": 0,
+      "numRatings": 0,
+      "avgRating": 0,
+      "numViews": 33,
+      "scoreCompleteness": 63,
+      "groupDesignations": null,
+      "apiToken1ExpirationDate": -1,
+      "apiToken2ExpirationDate": -1,
+      "lastViewed": 1793772000000
+    },
+    {
+      "id": "b67786c2c8eb4c009027836b41b9a1cc",
+      "owner": "hkelley_tooledesign",
+      "created": 1744204978000,
+      "modified": 1744205000000,
+      "guid": null,
+      "name": "American_Community_Survey_Census_Block_Groups",
+      "title": "American Community Survey Census Block Groups",
+      "type": "Feature Service",
+      "typeKeywords": [
+        "ArcGIS Server",
+        "Data",
+        "Feature Access",
+        "Feature Service",
+        "Metadata",
+        "Service",
+        "Singlelayer",
+        "Hosted Service"
+      ],
+      "description": "",
+      "tags": [
+        "impound",
+        "minneapolis",
+        "toole"
+      ],
+      "snippet": "ACS Block Groups with Towing and Tag data joined. ",
+      "thumbnail": "thumbnail/thumbnail.png",
+      "documentation": null,
+      "extent": [
+        [
+          2860418.7443903238,
+          286969.11513748765
+        ],
+        [
+          2902747.7548764944,
+          348267.2136696428
+        ]
+      ],
+      "categories": [],
+      "spatialReference": "NAD83(HARN) / Minnesota Central (ftUS)",
+      "accessInformation": "",
+      "classification": null,
+      "licenseInfo": "",
+      "culture": "en-us",
+      "properties": null,
+      "advancedSettings": null,
+      "url": "https://services6.arcgis.com/bom7L4u7y1k0qkF1/arcgis/rest/services/American_Community_Survey_Census_Block_Groups/FeatureServer",
+      "proxyFilter": null,
+      "access": "public",
+      "size": -1,
+      "subInfo": 0,
+      "appCategories": [],
+      "industries": [],
+      "languages": [],
+      "largeThumbnail": null,
+      "banner": null,
+      "screenshots": [],
+      "listed": false,
+      "numComments": 0,
+      "numRatings": 0,
+      "avgRating": 0,
+      "numViews": 33,
+      "scoreCompleteness": 65,
+      "groupDesignations": null,
+      "apiToken1ExpirationDate": -1,
+      "apiToken2ExpirationDate": -1,
+      "lastViewed": 1794315600000
+    }
+  ]
+}

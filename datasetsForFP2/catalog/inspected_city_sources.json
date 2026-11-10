@@ -1,0 +1,4050 @@
+[
+  {
+    "name": "All_Transit_Routes",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/All_Transit_Routes/FeatureServer",
+    "itemId": "3fc6b7261cc74b09a0644d5be773c8d8",
+    "layers": [
+      {
+        "id": 0,
+        "name": "MPLS_HighFrequencyNetwork",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/All_Transit_Routes/FeatureServer/0",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "LINE_ID",
+          "DIRECTION",
+          "Shape_Leng",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 1,
+        "name": "MPLS_TransitRoutes",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/All_Transit_Routes/FeatureServer/1",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "route",
+          "routetype",
+          "route_oper",
+          "routetype_",
+          "routedscrp",
+          "routesort",
+          "RoutePayLe",
+          "EffectiveD",
+          "PayLeaveDi",
+          "wk_ftrip",
+          "wk_ltrip",
+          "wk_span",
+          "wk_trip_fr",
+          "sat_ftrip",
+          "sat_ltrip",
+          "sat_span",
+          "sat_trip_f",
+          "sun_ftrip",
+          "sun_ltrip",
+          "sun_span",
+          "sun_trip_f",
+          "fri_ftrip",
+          "fri_ltrip",
+          "fri_span",
+          "fri_trip_f",
+          "hol_ftrip",
+          "hol_ltrip",
+          "hol_span",
+          "hol_trip_f",
+          "Shape_Leng",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Assessing_Department_Parcel_Data_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2023/FeatureServer",
+    "itemId": "d9bb827c0465472a937d325b22f9939d",
+    "layers": [
+      {
+        "id": 0,
+        "name": "2023 Parcel Data",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2023/FeatureServer/0",
+        "geometryType": null,
+        "fields": [
+          "PIN",
+          "ASMTYEAR",
+          "TAXYEAR",
+          "HOUSE_NO",
+          "STREET_NAME",
+          "UNIT_NO",
+          "ZIP_POSTAL",
+          "FORMATTED_ADDRESS",
+          "OWNERNM",
+          "TAXPAYER1",
+          "TAXPAYER2",
+          "TAXPAYER3",
+          "TAXPAYER4",
+          "PLAT_NO",
+          "NEIGHBORHOOD",
+          "COMMUNITY",
+          "WARD",
+          "ZONING",
+          "LANDUSE",
+          "PARCEL_AREA_SQFT",
+          "X",
+          "Y",
+          "PRIMARY_PROP_TYPE",
+          "LANDVALUE",
+          "BLDGVALUE",
+          "TOTALVALUE",
+          "IS_MULTIPLE_USES",
+          "IS_EXEMPT",
+          "IS_HOMESTEAD",
+          "SUB1_PT",
+          "SUB2_PT",
+          "SUB3_PT",
+          "SUB4_PT",
+          "SUB1_EXEMPTCD",
+          "SUB2_EXEMPTCD",
+          "SUB3_EXEMPTCD",
+          "SUB4_EXEMPTCD",
+          "NUM_BLDGS",
+          "BUILDINGUSE",
+          "YEARBUILT",
+          "BELOWGROUNDAREA",
+          "ABOVEGROUNDAREA",
+          "NUM_STORIES",
+          "NUM_GAR_STALLS",
+          "PRIMARYHEATING",
+          "CONSTRUCTIONTYPE",
+          "EXTERIORTYPE",
+          "ROOF",
+          "TOTAL_UNITS",
+          "FIREPLACES",
+          "BATHROOMS",
+          "BEDROOMS",
+          "FID"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Assessing_Department_Parcel_Data_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2024/FeatureServer",
+    "itemId": "5f4b033b92724341810b832385d4f7c2",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Sheet2",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2024/FeatureServer/0",
+        "geometryType": null,
+        "fields": [
+          "PIN",
+          "ASMTYEAR",
+          "TAXYEAR",
+          "HOUSE_NO",
+          "STREET_NAME",
+          "UNIT_NO",
+          "ZIP_POSTAL",
+          "FORMATTED_ADDRESS",
+          "OWNERNM",
+          "TAXPAYER1",
+          "TAXPAYER2",
+          "TAXPAYER3",
+          "TAXPAYER4",
+          "PLAT_NO",
+          "NEIGHBORHOOD",
+          "COMMUNITY",
+          "WARD",
+          "ZONING",
+          "LANDUSE",
+          "PARCEL_AREA_SQFT",
+          "X",
+          "Y",
+          "PRIMARY_PROP_TYPE",
+          "LANDVALUE",
+          "BLDGVALUE",
+          "TOTALVALUE",
+          "IS_MULTIPLE_USES",
+          "IS_EXEMPT",
+          "IS_HOMESTEAD",
+          "SUB1_PT",
+          "SUB2_PT",
+          "SUB3_PT",
+          "SUB4_PT",
+          "SUB1_EXEMPTCD",
+          "SUB2_EXEMPTCD",
+          "SUB3_EXEMPTCD",
+          "SUB4_EXEMPTCD",
+          "NUM_BLDGS",
+          "BUILDINGUSE",
+          "YEARBUILT",
+          "BELOWGROUNDAREA",
+          "ABOVEGROUNDAREA",
+          "NUM_STORIES",
+          "NUM_GAR_STALLS",
+          "PRIMARYHEATING",
+          "CONSTRUCTIONTYPE",
+          "EXTERIORTYPE",
+          "ROOF",
+          "TOTAL_UNITS",
+          "FIREPLACES",
+          "BATHROOMS",
+          "BEDROOMS",
+          "FID"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Assessing_Department_Parcel_Data_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2025/FeatureServer",
+    "itemId": "64383942df1148bea53db4823770f145",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Assessing_Department_Parcel_Data_2025",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessing_Department_Parcel_Data_2025/FeatureServer/0",
+        "geometryType": null,
+        "fields": [
+          "TAX_MAP_UFMT",
+          "ASMTYEAR",
+          "TAXYR",
+          "HOUSE_NO",
+          "ADRSTR",
+          "UNITNO",
+          "ZIP1",
+          "ADDRESSFORMATTED",
+          "SUBDIV",
+          "OWNERNAME",
+          "MUNI",
+          "NEIGHBORHOOD",
+          "COMMUNITY",
+          "ZONING",
+          "LANDUSE",
+          "PARCELAREA",
+          "X",
+          "Y",
+          "PROPERTYTYPE",
+          "LANDVALUE",
+          "BUILDINGVALUE",
+          "TOTALVALUE",
+          "MULTIPLEUSES",
+          "ISEXEMPT",
+          "HOMESTEAD",
+          "NUMBEROFBUILDINGS",
+          "BUILDINGUSE",
+          "YEARBUILT",
+          "BASEMENTAREA",
+          "ABOVEGROUNDAREA",
+          "STORIES",
+          "PRIMARYHEATING",
+          "CONSTRUCTIONTYPE",
+          "EXTERIORWALL",
+          "ROOF",
+          "GARAGESTALLS",
+          "TOTALBEDROOMS",
+          "TOTALUNITS",
+          "FIREPLACES",
+          "TOTALBATHROOMS",
+          "ObjectId"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Assessors_Parcel_Data_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessors_Parcel_Data_2022/FeatureServer",
+    "itemId": "1044cb301de546f5b325c67dc457b50a",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Sheet2",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Assessors_Parcel_Data_2022/FeatureServer/0",
+        "geometryType": null,
+        "fields": [
+          "PIN",
+          "ASMTYEAR",
+          "TAXYEAR",
+          "HOUSE_NO",
+          "STREET_NAME",
+          "UNIT_NO",
+          "ZIP_POSTAL",
+          "FORMATTED_ADDRESS",
+          "OWNERNM",
+          "TAXPAYER1",
+          "TAXPAYER2",
+          "TAXPAYER3",
+          "TAXPAYER4",
+          "PLAT_NO",
+          "NEIGHBORHOOD",
+          "COMMUNITY",
+          "WARD",
+          "ZONING",
+          "LANDUSE",
+          "PARCEL_AREA_SQFT",
+          "X",
+          "Y",
+          "PRIMARY_PROP_TYPE",
+          "LANDVALUE",
+          "BLDGVALUE",
+          "TOTALVALUE",
+          "IS_MULTIPLE_USES",
+          "IS_EXEMPT",
+          "IS_HOMESTEAD",
+          "SUB1_PT",
+          "SUB2_PT",
+          "SUB3_PT",
+          "SUB4_PT",
+          "SUB1_EXEMPTCD",
+          "SUB2_EXEMPTCD",
+          "SUB3_EXEMPTCD",
+          "SUB4_EXEMPTCD",
+          "NUM_BLDGS",
+          "BUILDINGUSE",
+          "YEARBUILT",
+          "BELOWGROUNDAREA",
+          "ABOVEGROUNDAREA",
+          "NUM_STORIES",
+          "NUM_GAR_STALLS",
+          "PRIMARYHEATING",
+          "CONSTRUCTIONTYPE",
+          "EXTERIORTYPE",
+          "ROOF",
+          "TOTAL_UNITS",
+          "FIREPLACES",
+          "BATHROOMS",
+          "BEDROOMS",
+          "FID"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Downtown_Core_Area_Map",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Downtown_Core_Area_Map/FeatureServer",
+    "itemId": "3afd56f216304e79b80bcb86ca098767",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Downtown Core Area",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Downtown_Core_Area_Map/FeatureServer/0",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "DATA_SOURCE",
+          "BDRY_ID",
+          "BDRY_NAME",
+          "SYMBOL_NAME",
+          "SOURCE_DATE",
+          "BNDRY_POLY_REVD",
+          "MSLINK",
+          "SYMBO_DESC",
+          "CREATED_DATE",
+          "MODIFIED_DATE",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Downtown Core Area",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Downtown_Core_Area_Map/FeatureServer/1",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "DATA_SOURCE",
+          "BDRY_ID",
+          "BDRY_NAME",
+          "SYMBOL_NAME",
+          "SOURCE_DATE",
+          "BNDRY_POLY_REVD",
+          "MSLINK",
+          "SYMBO_DESC",
+          "CREATED_DATE",
+          "MODIFIED_DATE",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "DowntownParking",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/DowntownParking/FeatureServer",
+    "itemId": "7c37c6e0666e465fbb73c73846146ea2",
+    "layers": [
+      {
+        "id": 0,
+        "name": "dbtgis_SitAware.SITAWARE.SBLII_Parking",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/DowntownParking/FeatureServer/0",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "Id",
+          "Name",
+          "Type",
+          "Label",
+          "Address",
+          "ParkingSpaces",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Existing_Land_Use",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Existing_Land_Use/FeatureServer",
+    "itemId": "50eb37e6c0a247e5b7964bf59c490a86",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Existing Land Use",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Existing_Land_Use/FeatureServer/0",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID_1",
+          "OBJECTID",
+          "PID",
+          "MUNICNM",
+          "ZIPCD",
+          "HOUSENUM",
+          "FRACHOUSEN",
+          "STREETNM",
+          "CONDONO",
+          "PROPSTATCD",
+          "X_CENTROID",
+          "Y_CENTROID",
+          "LATITUDE",
+          "LONGITUDE",
+          "WGS_X",
+          "WGS_Y",
+          "Shape_STAr",
+          "Shape_STLe",
+          "PID_1",
+          "BLDG_USE",
+          "LAND_USE",
+          "FinalDU",
+          "DensCatswM",
+          "ELUC",
+          "TwoLetterE",
+          "Acres",
+          "Shape_Leng",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "High_Frequency_Transit_And_Walksheds",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/High_Frequency_Transit_And_Walksheds/FeatureServer",
+    "itemId": "5553fa95a1734ceaaee25551543842df",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Existing and Planned High Frequency Network",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/High_Frequency_Transit_And_Walksheds/FeatureServer/0",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Miles",
+          "Name",
+          "Transitway",
+          "Status",
+          "Comments",
+          "Type",
+          "Shape_Leng",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Existing High Frequency Network",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/High_Frequency_Transit_And_Walksheds/FeatureServer/1",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "LINE_ID",
+          "DIRECTION",
+          "Shape_Leng",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Existing 5 Minute Walking Distance",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/High_Frequency_Transit_And_Walksheds/FeatureServer/2",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID_12",
+          "LINE_ID",
+          "DIRECTION",
+          "Shape_Leng",
+          "BUFF_DIST",
+          "ORIG_FID",
+          "OBJECTID_1",
+          "OBJECTID",
+          "site_id",
+          "site_on",
+          "site_at",
+          "corn_desc",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Existing 10 Minute Walking Distance",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/High_Frequency_Transit_And_Walksheds/FeatureServer/3",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "LINE_ID",
+          "DIRECTION",
+          "Shape_Leng",
+          "BUFF_DIST",
+          "ORIG_FID",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Planned 5 Minute Walking Distance to High Frequency Transit",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/High_Frequency_Transit_And_Walksheds/FeatureServer/4",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "Miles",
+          "Name",
+          "Transitway",
+          "Status",
+          "Comments",
+          "Type",
+          "Shape_Leng",
+          "BUFF_DIST",
+          "ORIG_FID",
+          "LINE_ID",
+          "DIRECTION",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Planned 10 Minute Walking Distance to High Freuency Transit",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/High_Frequency_Transit_And_Walksheds/FeatureServer/5",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "Miles",
+          "Name",
+          "Transitway",
+          "Status",
+          "Comments",
+          "Type",
+          "Shape_Leng",
+          "BUFF_DIST",
+          "ORIG_FID",
+          "LINE_ID",
+          "DIRECTION",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Minneapolis_Neighborhoods",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_Neighborhoods/FeatureServer",
+    "itemId": "ea0561bb00a94ba8b286a736464ee326",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Minneapolis_Neighborhoods",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Minneapolis_Neighborhoods/FeatureServer/0",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "INT_REFNO",
+          "PREFIX",
+          "UDI",
+          "SYMBOL_NAM",
+          "BDNAME",
+          "BDNUM",
+          "TEXT_NBR",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "MinneapolisCurbMap_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer",
+    "itemId": "308d163efb504446b8fca5008dd2c158",
+    "layers": [
+      {
+        "id": 0,
+        "name": "No Parking",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/0",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "Days",
+          "DaysActive",
+          "HrsActive",
+          "layer",
+          "GlobalID",
+          "Hours",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 1,
+        "name": "No Stopping",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/1",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "Days",
+          "HrsActive",
+          "DaysActive",
+          "layer",
+          "GlobalID",
+          "Hours",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Meter Parking",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/2",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "DaysActive",
+          "HrsActive",
+          "layer",
+          "GlobalID",
+          "Days",
+          "Hours",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Free Parking",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/3",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "Days",
+          "Limit",
+          "DaysActive",
+          "HrsActive",
+          "layer",
+          "GlobalID",
+          "Hours",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Passenger Loading",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/4",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "Days",
+          "PayStatus",
+          "Owner",
+          "Amount",
+          "UniqueID",
+          "DaysActive",
+          "HrsActive",
+          "layer",
+          "GlobalID",
+          "Hours",
+          "Limit",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Commercial Loading",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/5",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "Days",
+          "Limit",
+          "PayStatus",
+          "Owner",
+          "Amount",
+          "UniqueID",
+          "HrsActive",
+          "DaysActive",
+          "layer",
+          "GlobalID",
+          "Hours",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Bus Only",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/6",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "Days",
+          "Hours",
+          "HrsActive",
+          "DaysActive",
+          "layer",
+          "GlobalID",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Disability Only",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/7",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "Limit",
+          "Type",
+          "Days",
+          "HrsActive",
+          "DaysActive",
+          "layer",
+          "GlobalID",
+          "Hours",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Construction",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/8",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "DaysActive",
+          "HrsActive",
+          "layer",
+          "GlobalID",
+          "Days",
+          "Hours",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Other",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/MinneapolisCurbMap_WFL1/FeatureServer/9",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "Notes",
+          "Hours",
+          "DaysActive",
+          "HrsActive",
+          "layer",
+          "GlobalID",
+          "Days",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mpls_Census_Tracts_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Mpls_Census_Tracts_2020/FeatureServer",
+    "itemId": "b99a9b320f5c4228b8715af2f8bc79c5",
+    "layers": [
+      {
+        "id": 0,
+        "name": "mpls_tracts_2020",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Mpls_Census_Tracts_2020/FeatureServer/0",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID_1",
+          "STATEFP",
+          "COUNTYFP",
+          "TRACTCE",
+          "GEOID",
+          "NAME",
+          "NAMELSAD",
+          "MTFCC",
+          "FUNCSTAT",
+          "ALAND",
+          "AWATER",
+          "INTPTLAT",
+          "INTPTLON",
+          "OBJECTID",
+          "SUMLEV",
+          "GEOCODE",
+          "GEOID_1",
+          "NAME_1",
+          "BASENAME",
+          "FILEID",
+          "STUSAB",
+          "CHARITER",
+          "CIFSN",
+          "LOGRECNO",
+          "P0010001",
+          "P0010002",
+          "P0010003",
+          "P0010004",
+          "P0010005",
+          "P0010006",
+          "P0010007",
+          "P0010008",
+          "P0010009",
+          "P0010010",
+          "P0010011",
+          "P0010012",
+          "P0010013",
+          "P0010014",
+          "P0010015",
+          "P0010016",
+          "P0010017",
+          "P0010018",
+          "P0010019",
+          "P0010020",
+          "P0010021",
+          "P0010022",
+          "P0010023",
+          "P0010024",
+          "P0010025",
+          "P0010026",
+          "P0010027",
+          "P0010028",
+          "P0010029",
+          "P0010030",
+          "P0010031",
+          "P0010032",
+          "P0010033",
+          "P0010034",
+          "P0010035",
+          "P0010036",
+          "P0010037",
+          "P0010038",
+          "P0010039",
+          "P0010040",
+          "P0010041",
+          "P0010042",
+          "P0010043",
+          "P0010044",
+          "P0010045",
+          "P0010046",
+          "P0010047",
+          "P0010048",
+          "P0010049",
+          "P0010050",
+          "P0010051",
+          "P0010052",
+          "P0010053",
+          "P0010054",
+          "P0010055",
+          "P0010056",
+          "P0010057",
+          "P0010058",
+          "P0010059",
+          "P0010060",
+          "P0010061",
+          "P0010062",
+          "P0010063",
+          "P0010064",
+          "P0010065",
+          "P0010066",
+          "P0010067",
+          "P0010068",
+          "P0010069",
+          "P0010070",
+          "P0010071",
+          "P0020001",
+          "P0020002",
+          "P0020003",
+          "P0020004",
+          "P0020005",
+          "P0020006",
+          "P0020007",
+          "P0020008",
+          "P0020009",
+          "P0020010",
+          "P0020011",
+          "P0020012",
+          "P0020013",
+          "P0020014",
+          "P0020015",
+          "P0020016",
+          "P0020017",
+          "P0020018",
+          "P0020019",
+          "P0020020",
+          "P0020021",
+          "P0020022",
+          "P0020023",
+          "P0020024",
+          "P0020025",
+          "P0020026",
+          "P0020027",
+          "P0020028",
+          "P0020029",
+          "P0020030",
+          "P0020031",
+          "P0020032",
+          "P0020033",
+          "P0020034",
+          "P0020035",
+          "P0020036",
+          "P0020037",
+          "P0020038",
+          "P0020039",
+          "P0020040",
+          "P0020041",
+          "P0020042",
+          "P0020043",
+          "P0020044",
+          "P0020045",
+          "P0020046",
+          "P0020047",
+          "P0020048",
+          "P0020049",
+          "P0020050",
+          "P0020051",
+          "P0020052",
+          "P0020053",
+          "P0020054",
+          "P0020055",
+          "P0020056",
+          "P0020057",
+          "P0020058",
+          "P0020059",
+          "P0020060",
+          "P0020061",
+          "P0020062",
+          "P0020063",
+          "P0020064",
+          "P0020065",
+          "P0020066",
+          "P0020067",
+          "P0020068",
+          "P0020069",
+          "P0020070",
+          "P0020071",
+          "P0020072",
+          "P0020073",
+          "GEOCODETXT",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Neighborhood_Commercial_Nodes",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhood_Commercial_Nodes/FeatureServer",
+    "itemId": "47a7b23ee906431eb646f863ad2cb2e5",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Neighborhood_Commercial_Nodes",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhood_Commercial_Nodes/FeatureServer/0",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "Id",
+          "type",
+          "name",
+          "SECTOR",
+          "CATEGORY",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Neighborhood_Dem_Tenure_WFL1",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhood_Dem_Tenure_WFL1/FeatureServer",
+    "itemId": "22316ba691594aedb4a9ea5c9a64dbc1",
+    "layers": [
+      {
+        "id": 20,
+        "name": "Total_Neighborhood_PopTenure",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Neighborhood_Dem_Tenure_WFL1/FeatureServer/20",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID_12",
+          "OBJECTID",
+          "BDNAME",
+          "Canopy_Percentage",
+          "estAll",
+          "PctUmAmInd_number",
+          "pctUnAsianPac_number",
+          "pctUnBlack_number",
+          "pctUnHisp_number",
+          "pctUn2Plus_number",
+          "pctUnWhite_number",
+          "pctUnOwnOccAll_number",
+          "pctUnRentOccAll_number",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Parking_Meter_Inventory",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Parking_Meter_Inventory/FeatureServer",
+    "itemId": "ce8f3fa014ae464e861ee74615bae4b0",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Parking Meter Field Notes",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Parking_Meter_Inventory/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Name",
+          "Category",
+          "Location",
+          "Date",
+          "Comments",
+          "GlobalID",
+          "esrignss_receiver",
+          "esrignss_h_rms",
+          "esrignss_v_rms",
+          "esrignss_latitude",
+          "esrignss_longitude",
+          "esrignss_altitude",
+          "esrignss_pdop",
+          "esrignss_hdop",
+          "esrignss_vdop",
+          "esrignss_fixtype",
+          "esrignss_correctionage",
+          "esrignss_stationid",
+          "esrignss_numsats",
+          "esrignss_fixdatetime",
+          "esrignss_avg_h_rms",
+          "esrignss_avg_v_rms",
+          "esrignss_avg_positions",
+          "esrignss_h_stddev",
+          "CreationDate",
+          "Creator",
+          "EditDate",
+          "Editor"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Parking_Meter_Pay_Stations",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Parking_Meter_Pay_Stations/FeatureServer",
+    "itemId": "35cc1d667b024c92a643a914359c729e",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Field Notes (Points)",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Parking_Meter_Pay_Stations/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Name",
+          "Category",
+          "Location",
+          "Date",
+          "Comments",
+          "GlobalID",
+          "esrignss_receiver",
+          "esrignss_h_rms",
+          "esrignss_v_rms",
+          "esrignss_latitude",
+          "esrignss_longitude",
+          "esrignss_altitude",
+          "esrignss_pdop",
+          "esrignss_hdop",
+          "esrignss_vdop",
+          "esrignss_fixtype",
+          "esrignss_correctionage",
+          "esrignss_stationid",
+          "esrignss_numsats",
+          "esrignss_fixdatetime",
+          "esrignss_avg_h_rms",
+          "esrignss_avg_v_rms",
+          "esrignss_avg_positions",
+          "esrignss_h_stddev",
+          "CreationDate",
+          "Creator",
+          "EditDate",
+          "Editor"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PCT_HH_Income_Transportation",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/PCT_HH_Income_Transportation/FeatureServer",
+    "itemId": "30d96f3add48482c91bbb88284f095b2",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Transportation_Housing_Cost",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/PCT_HH_Income_Transportation/FeatureServer/0",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "FID_1",
+          "FID_1_1",
+          "BLOCKGROUP",
+          "STATE",
+          "CO",
+          "BLKGRPCE10",
+          "TRACTCE10",
+          "GEOID",
+          "ALAND10",
+          "AWATER10",
+          "Acres",
+          "Shape_Leng",
+          "Count_",
+          "FID_2",
+          "INT_REFNO",
+          "PREFIX",
+          "UDI",
+          "SYMBOL_NAM",
+          "BDNAME",
+          "BDNUM",
+          "TEXT_NBR",
+          "SHAPE_AR_1",
+          "GEOID_1",
+          "GEOID_12",
+          "blkgrp",
+          "Neighborho",
+          "PCT_T_Typ",
+          "PCT_T_mod",
+          "h_cost",
+          "t_cost_typ",
+          "t_cost_mod",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Poverty",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Poverty/FeatureServer",
+    "itemId": "83e1ddbc0d2948dc812f61c6d14698b6",
+    "layers": [
+      {
+        "id": 3,
+        "name": "Poverty",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Poverty/FeatureServer/3",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "FID",
+          "statefp",
+          "countyfp",
+          "tractce",
+          "geoid",
+          "name",
+          "namelsad",
+          "mtfcc",
+          "funcstat",
+          "aland",
+          "awater",
+          "intptlat",
+          "intptlon",
+          "geography",
+          "maxprp200x",
+          "prp200x",
+          "prp200xmoe",
+          "status200x",
+          "totpov",
+          "totpovmoe",
+          "pop200x",
+          "pop200xmoe",
+          "totpoc",
+          "totpocmoe",
+          "poc",
+          "pocmoe",
+          "prppoc",
+          "prppocmoe",
+          "maxprppoc",
+          "statuspoc",
+          "maxprplep",
+          "prplep",
+          "prplepmoe",
+          "statuslep",
+          "totlep",
+          "totlepmoe",
+          "poplep",
+          "poplepmoe",
+          "totlan",
+          "totengonly",
+          "nonenglan1",
+          "nonenglan2",
+          "nonenglan3",
+          "nonengpop1",
+          "nonengpop2",
+          "nonengpop3",
+          "totnoneng",
+          "prpnoneng",
+          "prpnoneng1",
+          "prpnoneng2",
+          "prpnoneng3",
+          "source",
+          "Shape_Leng",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Public_311_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2022/FeatureServer",
+    "itemId": "07b2c478f34b412c8b792551de56c06a",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Public_311_Incidents_2022",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2022/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "CASEID",
+          "OBJECTID",
+          "SUBJECTNAME",
+          "REASONNAME",
+          "TYPENAME",
+          "TITLE",
+          "OPENEDDATETIME",
+          "CASESTATUS",
+          "CLOSEDDATETIME",
+          "XCOORD",
+          "YCOORD",
+          "LastUpdateDate"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Public_311_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2023/FeatureServer",
+    "itemId": "653d00d8dd864cc597b87766aa12255d",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Public_311_Incidents_2023",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2023/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "CASEID",
+          "OBJECTID",
+          "SUBJECTNAME",
+          "REASONNAME",
+          "TYPENAME",
+          "TITLE",
+          "OPENEDDATETIME",
+          "CASESTATUS",
+          "CLOSEDDATETIME",
+          "XCOORD",
+          "YCOORD",
+          "LastUpdateDate"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Public_311_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2024/FeatureServer",
+    "itemId": "3c00b4c223014dccb79b0f42a4235ad7",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Public_311_2024",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2024/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "CASEID",
+          "OBJECTID",
+          "SUBJECTNAME",
+          "REASONNAME",
+          "TYPENAME",
+          "TITLE",
+          "OPENEDDATETIME",
+          "CASESTATUS",
+          "CLOSEDDATETIME",
+          "XCOORD",
+          "YCOORD",
+          "LastUpdateDate",
+          "POINT_X",
+          "POINT_Y"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Public_311_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2025/FeatureServer",
+    "itemId": "cb378a2e807f4cbfb626850b2767e234",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Public_311_2025",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Public_311_2025/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "CASEID",
+          "ENQUIRYTYPEID",
+          "SUBJECTNAME",
+          "REASONNAME",
+          "TYPENAME",
+          "TITLE",
+          "OPENEDDATETIME",
+          "CASESTATUS",
+          "CLOSEDDATETIME",
+          "XCOORD",
+          "YCOORD",
+          "LastUpdateDate",
+          "IsAccessibilityRelated",
+          "OBJECTID"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Armatage_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Armatage_Tags_2019/FeatureServer",
+    "itemId": "4f7b485453a84d46b0a9a34980bfe968",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Armatage_Tickets",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Armatage_Tags_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Ordinance",
+          "Ordinanc_1",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Armatage_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Armatage_Tows_2019/FeatureServer",
+    "itemId": "e58926289dda4ecc97d5534bab700241",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Armatage_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Armatage_Tows_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Tow_Reason",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Bridge_Tags_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Bridge_Tags_2025/FeatureServer",
+    "itemId": "9ed28c003bd64f9da7632ed8bcc304e4",
+    "layers": [
+      {
+        "id": 0,
+        "name": "BridgeTicket",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Bridge_Tags_2025/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance_",
+          "Ordinance1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Bridge_Tows_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Bridge_Tows_2025/FeatureServer",
+    "itemId": "e774f780664e4f9da048cad590ef0fe7",
+    "layers": [
+      {
+        "id": 0,
+        "name": "BridgeTow",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Bridge_Tows_2025/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Dana_Tags_2016_b",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dana_Tags_2016_b/FeatureServer",
+    "itemId": "3bf8f9be1c0142218ac031ae0b15c3cd",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Dana_Tags_2016_b",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dana_Tags_2016_b/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "X_Coordina",
+          "Y_Coordina",
+          "Ordinance",
+          "Ordinanc_1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day_ID",
+          "TowDist",
+          "F13",
+          "F14"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Dana_Tows_2016_b",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dana_Tows_2016_b/FeatureServer",
+    "itemId": "1f72f15c6fbf40daa42d3e3bc7ebe317",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Dana_Tows_2016_b",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dana_Tows_2016_b/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "X_Coord",
+          "Y_Coord",
+          "Ward_numbe",
+          "Neighborho",
+          "Community",
+          "Day_identi",
+          "TowDist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Diamond_Lake_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Diamond_Lake_Tags_2019/FeatureServer",
+    "itemId": "8ee899aa241d495f92968be8e42e4c7d",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Diamond_Lake_Tags_2019",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Diamond_Lake_Tags_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Ordinance",
+          "Ordinanc_1",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Diamond_Lake_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Diamond_Lake_Tows_2019/FeatureServer",
+    "itemId": "2b5c73187ce04666ae6f732cff748550",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Diamond_Lake_Tows_2019",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Diamond_Lake_Tows_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Tow_Reason",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Dover_Tags_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dover_Tags_2022/FeatureServer",
+    "itemId": "07e95a7e813c4b39a8ecab5569566558",
+    "layers": [
+      {
+        "id": 0,
+        "name": "DoverTags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dover_Tags_2022/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance_",
+          "Violation",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Dover_Tows_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dover_Tows_2022/FeatureServer",
+    "itemId": "d5c59a24326446dbbd6b45931d4dd0f1",
+    "layers": [
+      {
+        "id": 0,
+        "name": "DoverTows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Dover_Tows_2022/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Ferry_Tags_2016",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tags_2016/FeatureServer",
+    "itemId": "ac09a2036248474a9162a9e738d4d278",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Ferry_Tags_2016",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tags_2016/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "X_Coordina",
+          "Y_Coordina",
+          "Ordinance",
+          "Ordinanc_1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day_ID",
+          "TowDist",
+          "F13",
+          "F14"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Ferry_Tags_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tags_2021/FeatureServer",
+    "itemId": "21b52d19a5c542a1a14a19f70dc63e15",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Ferry_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tags_2021/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance",
+          "Ordinanc_1",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Ferry_Tows_2016",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tows_2016/FeatureServer",
+    "itemId": "889c8d7273ba406e8238823918d8bb01",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Ferry_Tows_2016",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tows_2016/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "X_Coord",
+          "Y_Coord",
+          "Ward_numbe",
+          "Neighborho",
+          "Community",
+          "Day_identi",
+          "TowDist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Ferry_Tows_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tows_2021/FeatureServer",
+    "itemId": "a9892ec01ee74e64b8ffd7ebe8f5eb14",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Ferry_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Ferry_Tows_2021/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Fremont_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Fremont_Tags_2019/FeatureServer",
+    "itemId": "e1c4353aad6f4010bfa809876bf6d051",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Fremont_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Fremont_Tags_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Ordinance",
+          "Ordinanc_1",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Fremont_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Fremont_Tows_2019/FeatureServer",
+    "itemId": "dc71f28326644345aaf482f986ed395c",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Fremont_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Fremont_Tows_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Glenwood_Tags_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Glenwood_Tags_2025/FeatureServer",
+    "itemId": "e79793f663b14715a01320fcdcbc121a",
+    "layers": [
+      {
+        "id": 3,
+        "name": "GlenwoodTickets",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Glenwood_Tags_2025/FeatureServer/3",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Ticket__",
+          "Ticket_Typ",
+          "Infraction",
+          "Status",
+          "Void_Reaso",
+          "Date",
+          "Time",
+          "By_Law",
+          "Code",
+          "Day",
+          "Violation",
+          "Fine",
+          "Tow__",
+          "Tow_Priori",
+          "Plate",
+          "VIN",
+          "State",
+          "Plate_Year",
+          "Creation_D",
+          "Creation_T",
+          "Make",
+          "Model",
+          "Color",
+          "Area",
+          "Civic__",
+          "Street",
+          "Intersecti",
+          "Zone_Code",
+          "Space__",
+          "Export_Dat",
+          "Latitude",
+          "Longitude",
+          "Officer_Na",
+          "Officer_Ba",
+          "Officer_Un",
+          "Public_Not",
+          "Private_No",
+          "First_Name",
+          "Name",
+          "Defendant",
+          "Birth_Date",
+          "Defendan_1",
+          "N",
+          "P",
+          "D",
+          "Server",
+          "Start_Time",
+          "Export_D_1",
+          "Software",
+          "Print_Layo",
+          "Client_Id"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Glenwood_Tows_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Glenwood_Tows_2025/FeatureServer",
+    "itemId": "59cdf4fa28c443398e88a5424f36f1ba",
+    "layers": [
+      {
+        "id": 0,
+        "name": "GlenwoodTows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Glenwood_Tows_2025/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Call_Taken",
+          "Day",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Grant_Tags_2015",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Grant_Tags_2015/FeatureServer",
+    "itemId": "82b505b7a6004caca5f53bbe61e71366",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Grant_Tags_2015",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Grant_Tags_2015/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Citation",
+          "Date",
+          "Address",
+          "X_Coord",
+          "Y_Coord",
+          "Ordinance",
+          "Ordinanc_1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day_ID"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Grant_Tows_2015",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Grant_Tows_2015/FeatureServer",
+    "itemId": "2726be2ce37141de9969105666700b9b",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Grant_Tows_2015",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Grant_Tows_2015/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "X",
+          "Y",
+          "Call_Taken",
+          "Location",
+          "Day"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Howard_Tags_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howard_Tags_2024/FeatureServer",
+    "itemId": "d69e291eba704ce38dcfd6e5302aa63c",
+    "layers": [
+      {
+        "id": 0,
+        "name": "HowardTicket",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howard_Tags_2024/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Addess",
+          "Civic",
+          "Community",
+          "Day",
+          "Day_of_Dat",
+          "Neighborho",
+          "Ordinance_",
+          "Ordinance1",
+          "Street",
+          "Ticket__",
+          "Tow_Zone",
+          "Latitude",
+          "Longitude"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Howard_Tows_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howard_Tows_2024/FeatureServer",
+    "itemId": "5026372e138e45bfb4aadf5f1c78edb0",
+    "layers": [
+      {
+        "id": 0,
+        "name": "HowardTow",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howard_Tows_2024/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Day",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Community",
+          "Neighborho",
+          "Ward",
+          "TOW_ZONE"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Howe_Tows_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howe_Tows_2018/FeatureServer",
+    "itemId": "0bf74f21025c49b386e64376043053b2",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Howe_Tows_2018",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Howe_Tows_2018/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Service_Da",
+          "Address",
+          "Tow_Reason",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_James_Tags_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_James_Tags_2020/FeatureServer",
+    "itemId": "a10e9723c8b54419bc2339b4b5b68201",
+    "layers": [
+      {
+        "id": 0,
+        "name": "James_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_James_Tags_2020/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Address",
+          "Citation_N",
+          "Code",
+          "Community",
+          "Date",
+          "Day",
+          "Descriptio",
+          "Latitude",
+          "Longitude",
+          "Neighborho",
+          "Tow_Zone",
+          "Ward"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_James_Tows_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_James_Tows_2020/FeatureServer",
+    "itemId": "56306a8b6613480f928aab35b826349a",
+    "layers": [
+      {
+        "id": 0,
+        "name": "James_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_James_Tows_2020/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Community",
+          "Customer",
+          "Day",
+          "Latitude",
+          "Location",
+          "Longitude",
+          "Neighborho",
+          "Tow_Zone",
+          "Ward"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Jane_Tags_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jane_Tags_2022/FeatureServer",
+    "itemId": "e274230976d340b4abea8f8fdc748e31",
+    "layers": [
+      {
+        "id": 0,
+        "name": "JaneTickets",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jane_Tags_2022/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance_",
+          "Ordinance1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Jane_Tows_2017",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jane_Tows_2017/FeatureServer",
+    "itemId": "7177e04c30464c06afea123aaea4710d",
+    "layers": [
+      {
+        "id": 0,
+        "name": "SE_Jane_Tows_2017",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jane_Tows_2017/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward_numbe",
+          "Neighborho",
+          "Community",
+          "Day_Identi",
+          "TowDist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Jane_Tows_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jane_Tows_2022/FeatureServer",
+    "itemId": "dc54cb2d354b4502a8c535785ec9c93e",
+    "layers": [
+      {
+        "id": 0,
+        "name": "JaneTows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jane_Tows_2022/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Jefferson_Tags_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jefferson_Tags_2025/FeatureServer",
+    "itemId": "4df6890c66be4a56bd4aca5247e0b58f",
+    "layers": [
+      {
+        "id": 0,
+        "name": "JeffersonTicket",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jefferson_Tags_2025/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance_",
+          "Ordinance1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "TOW_ZONE"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Jefferson_Tows_2025",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jefferson_Tows_2025/FeatureServer",
+    "itemId": "f0737d0e1457440694756bf6177a3f07",
+    "layers": [
+      {
+        "id": 1,
+        "name": "JeffersonTows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Jefferson_Tows_2025/FeatureServer/1",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Location",
+          "Call_Taken",
+          "Customer",
+          "Key_",
+          "Longitude",
+          "Latitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "TOW_ZONE"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Kasota_Tags_2019_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Kasota_Tags_2019_2020/FeatureServer",
+    "itemId": "25c526d798fc403eb54d4ac963225de3",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Kasota_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Kasota_Tags_2019_2020/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Ordinance",
+          "Ordinance_",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Zone",
+          "Day_ID",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Kasota_Tows_2019_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Kasota_Tows_2019_2020/FeatureServer",
+    "itemId": "72ef3a1d76b4472c97be170ddd3701fd",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Kasota_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Kasota_Tows_2019_2020/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Lourdes_Tags_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Lourdes_Tags_2022/FeatureServer",
+    "itemId": "782823ff5ee0464795c5df137251fb18",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Lourdes_tickets_gisteam",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Lourdes_Tags_2022/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Time",
+          "Date___Tim",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance_",
+          "Violation",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Lourdes_Tows_2022",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Lourdes_Tows_2022/FeatureServer",
+    "itemId": "70c960a92df446c881198444222abaea",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Lourdes_tows_gisteam",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Lourdes_Tows_2022/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Newton_Tags_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Newton_Tags_2020/FeatureServer",
+    "itemId": "3e3b2a788b8b459eb6521cb1102af008",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Newton_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Newton_Tags_2020/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Ordinance",
+          "Ordinance_",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Zone",
+          "Day_ID",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Newton_Tows_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Newton_Tows_2020/FeatureServer",
+    "itemId": "12cbab0512084e12bb2fed2fafe6a7f3",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Newton_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Newton_Tows_2020/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Zone",
+          "Day_ID",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Northrop_Tags_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Northrop_Tags_2023/FeatureServer",
+    "itemId": "3d06947ce95942e5a8166f8c2f61addd",
+    "layers": [
+      {
+        "id": 0,
+        "name": "NorthropTags2023",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Northrop_Tags_2023/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Time",
+          "Date___Tim",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance_",
+          "Violation",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Northrop_Tows_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Northrop_Tows_2023/FeatureServer",
+    "itemId": "fec7ca70364b47b0aa48bbbf390bd1ea",
+    "layers": [
+      {
+        "id": 0,
+        "name": "NorthropTows2023",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Northrop_Tows_2023/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Olive_Tags_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Olive_Tags_2018/FeatureServer",
+    "itemId": "70b24ebf7695415c8e273e91253be0ed",
+    "layers": [
+      {
+        "id": 0,
+        "name": "SnowEmergencyOliveTags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Olive_Tags_2018/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Neighborho",
+          "Community",
+          "Ward",
+          "Day_ID",
+          "Date",
+          "Code",
+          "Descriptio",
+          "Tow_Dist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Olive_Tows_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Olive_Tows_2018/FeatureServer",
+    "itemId": "7b64b556fefc46df87d6502a46b9521a",
+    "layers": [
+      {
+        "id": 0,
+        "name": "SnowEmergencyOliveTows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Olive_Tows_2018/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Day_identi",
+          "TowDist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Oliver_Tags_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Oliver_Tags_2021/FeatureServer",
+    "itemId": "c1e5e621483846c1b388d98d32e9d5ac",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Oliver_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Oliver_Tags_2021/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance",
+          "Ordinanc_1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Oliver_Tows_2021",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Oliver_Tows_2021/FeatureServer",
+    "itemId": "0deb0a2d757346aeb95ed571c3981d5d",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Oliver_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Oliver_Tows_2021/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Omega_Tags",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Omega_Tags/FeatureServer",
+    "itemId": "cfad39397b844151b227222ba68aab9a",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Omega_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Omega_Tags/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance",
+          "Ordinanc_1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone",
+          "F16",
+          "F17",
+          "F18",
+          "F19",
+          "F20",
+          "F21",
+          "F22",
+          "F23",
+          "F24",
+          "F25",
+          "F26",
+          "F27",
+          "F28",
+          "F29",
+          "F30",
+          "F31",
+          "F32",
+          "F33",
+          "F34",
+          "F35",
+          "F36",
+          "F37",
+          "F38",
+          "F39",
+          "F40",
+          "F41",
+          "F42",
+          "F43",
+          "F44",
+          "F45",
+          "F46",
+          "F47",
+          "F48",
+          "F49",
+          "F50",
+          "F51",
+          "F52",
+          "F53",
+          "F54",
+          "F55",
+          "F56"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Omega_Tows",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Omega_Tows/FeatureServer",
+    "itemId": "a61f05f41a0d4f0f84089385abc0e418",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Omega_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Omega_Tows/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighorhoo",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Parkways_in_Minneapolis",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Parkways_in_Minneapolis/FeatureServer",
+    "itemId": "680d8e0b790f4be689a7bb605be1d497",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Parkways - Day One",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Parkways_in_Minneapolis/FeatureServer/0",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "L_CITY_CODE",
+          "R_T_ADD_RANGE",
+          "L_T_ADD_RANGE",
+          "R_F_ADD_RANGE",
+          "L_F_ADD_RANGE",
+          "R_T_ADD_ACTUAL",
+          "L_T_ADD_ACTUAL",
+          "R_F_ADD_ACTUAL",
+          "L_F_ADD_ACTUAL",
+          "ALT_STREET_NAME2",
+          "ALT_STREET_NAME1",
+          "PRINT_ORD",
+          "PARTIAL_WALK_GAP",
+          "IS_WALK_GAP",
+          "NUM_WALKS",
+          "MSA_MILEAGE",
+          "STREET_CLINE_REVD",
+          "STREET_CLINE_CREATED",
+          "GBSID",
+          "COMMENTS",
+          "SOURCE_DATE",
+          "DIGITIZING_SOURCE",
+          "BIKE_LANE",
+          "TRAFFIC_DIR",
+          "SPEED_LIM",
+          "FUNC_CLASS",
+          "TRUCK_ROUTE_TYPE",
+          "BUS_ROUTE",
+          "SNOW_EMERGENCY_ROUTE",
+          "STREET_MAINT_DIST",
+          "BRIDGE",
+          "TURNBACK",
+          "SYSTEM_MILEAGE",
+          "SEGMENT_LENGTH",
+          "JURISDICTION",
+          "US_ROUTE_NO2",
+          "US_ROUTE_NO1",
+          "ROUTE_TYPE",
+          "ROUTE_NO",
+          "STREET_T_NAME",
+          "STREET_F_NAME",
+          "STREET_O_NAME",
+          "OFT",
+          "SYMBOL_NAME",
+          "R_ZIPCODE",
+          "L_ZIPCODE",
+          "R_CITY_CODE",
+          "STREET_TYPE",
+          "AADT_ID",
+          "MODIFIED_BY",
+          "MODIFIED_DATE",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 1,
+        "name": "Parkways - Day Two",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Parkways_in_Minneapolis/FeatureServer/1",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "L_CITY_CODE",
+          "R_T_ADD_RANGE",
+          "L_T_ADD_RANGE",
+          "R_F_ADD_RANGE",
+          "L_F_ADD_RANGE",
+          "R_T_ADD_ACTUAL",
+          "L_T_ADD_ACTUAL",
+          "R_F_ADD_ACTUAL",
+          "L_F_ADD_ACTUAL",
+          "ALT_STREET_NAME2",
+          "ALT_STREET_NAME1",
+          "PRINT_ORD",
+          "PARTIAL_WALK_GAP",
+          "IS_WALK_GAP",
+          "NUM_WALKS",
+          "MSA_MILEAGE",
+          "STREET_CLINE_REVD",
+          "STREET_CLINE_CREATED",
+          "GBSID",
+          "COMMENTS",
+          "SOURCE_DATE",
+          "DIGITIZING_SOURCE",
+          "BIKE_LANE",
+          "TRAFFIC_DIR",
+          "SPEED_LIM",
+          "FUNC_CLASS",
+          "TRUCK_ROUTE_TYPE",
+          "BUS_ROUTE",
+          "SNOW_EMERGENCY_ROUTE",
+          "STREET_MAINT_DIST",
+          "BRIDGE",
+          "TURNBACK",
+          "SYSTEM_MILEAGE",
+          "SEGMENT_LENGTH",
+          "JURISDICTION",
+          "US_ROUTE_NO2",
+          "US_ROUTE_NO1",
+          "ROUTE_TYPE",
+          "ROUTE_NO",
+          "STREET_T_NAME",
+          "STREET_F_NAME",
+          "STREET_O_NAME",
+          "OFT",
+          "SYMBOL_NAME",
+          "R_ZIPCODE",
+          "L_ZIPCODE",
+          "R_CITY_CODE",
+          "STREET_TYPE",
+          "AADT_ID",
+          "MODIFIED_BY",
+          "MODIFIED_DATE",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Polk_Tags_2016",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Polk_Tags_2016/FeatureServer",
+    "itemId": "f907adb89fe34d7ca60186573de323ab",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Polk_Tags_2016",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Polk_Tags_2016/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Citation",
+          "Date",
+          "Address",
+          "X_Coord",
+          "Y_Coord",
+          "Ordinance",
+          "Ordinanc_1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day_ID"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Polk_Tows_2016",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Polk_Tows_2016/FeatureServer",
+    "itemId": "454f5f098931419da9f978aaa579b8fe",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Polk_Tows_2016",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Polk_Tows_2016/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "X",
+          "Y",
+          "Call_Taken",
+          "Location",
+          "Day"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Quincy_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Quincy_Tags_2019/FeatureServer",
+    "itemId": "34d5c4f3f50745aa870ffe080895e80a",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Quincy_Tags_2019",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Quincy_Tags_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Service_Da",
+          "Address",
+          "Ordinance",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Quincy_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Quincy_Tows_2019/FeatureServer",
+    "itemId": "9cdebb43979247f79c003e85874f0dc0",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Quincy_Tows_2019",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Quincy_Tows_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Service_Da",
+          "Address",
+          "Tow_Reason",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Spruce_Tags_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Spruce_Tags_2020/FeatureServer",
+    "itemId": "24a26b54b5864ffb99a29b3ed71975db",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Spruce_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Spruce_Tags_2020/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Address",
+          "Citation_N",
+          "Code",
+          "Community",
+          "Date",
+          "Day",
+          "Descriptio",
+          "Latitude",
+          "Longitude",
+          "Neighborho",
+          "Tow_Zone",
+          "Ward"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Spruce_Tows_2020",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Spruce_Tows_2020/FeatureServer",
+    "itemId": "45be7ebec7a74fe0996e494723fd74dd",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Spruce_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Spruce_Tows_2020/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Community",
+          "Customer",
+          "Day",
+          "Latitude",
+          "Location",
+          "Longitude",
+          "Neighbohoo",
+          "Tow_Zone",
+          "Ward"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Upton_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Upton_Tags_2019/FeatureServer",
+    "itemId": "7e7bd717073f44e0930e8c1b62124213",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Upton_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Upton_Tags_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Ordinance",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Upton_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Upton_Tows_2019/FeatureServer",
+    "itemId": "fa9e8fe69f824b5285f096accccd3d48",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Upton_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Upton_Tows_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Victory1_Tags_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory1_Tags_2023/FeatureServer",
+    "itemId": "a58fe8f592d44904aa9e4da788a5f8c2",
+    "layers": [
+      {
+        "id": 0,
+        "name": "VictoryTags_1_2023",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory1_Tags_2023/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Time",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance_",
+          "Ordinance1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Victory1_Tows_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory1_Tows_2023/FeatureServer",
+    "itemId": "a688ffc7777443b0ac0eee6db2996b8c",
+    "layers": [
+      {
+        "id": 0,
+        "name": "VictoryTows_1_2023",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory1_Tows_2023/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Victory2_Tags_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory2_Tags_2023/FeatureServer",
+    "itemId": "514a114291284a9197b81da3d38d6337",
+    "layers": [
+      {
+        "id": 0,
+        "name": "VictoryTags_2_2023",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory2_Tags_2023/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Citation_N",
+          "Date",
+          "Time",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance_",
+          "Ordinance1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Victory2_Tows_2023",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory2_Tows_2023/FeatureServer",
+    "itemId": "e0d98b2122424374b86b9c54f203da6a",
+    "layers": [
+      {
+        "id": 0,
+        "name": "VictoryTows_2_2023",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Victory2_Tows_2023/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Snow_Emerg",
+          "Snow_Eme_1",
+          "Snow_Eme_2",
+          "Key_",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day",
+          "Tow_Zone"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Westminster_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Westminster_Tags_2019/FeatureServer",
+    "itemId": "4ccfbb85578f4504b9419db32003fa0e",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Westminster_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Westminster_Tags_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Ordinance",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Westminster_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Westminster_Tows_2019/FeatureServer",
+    "itemId": "06109d24bde2472c8f53cfaab298eaad",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Westminster_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Westminster_Tows_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Xerxes_Tags_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Xerxes_Tags_2018/FeatureServer",
+    "itemId": "eb6a9c50238d40a6a1f236f4593e89c0",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Xerxes_Tags_2018",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Xerxes_Tags_2018/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance",
+          "Ordinanc_1",
+          "Neighborho",
+          "Community",
+          "Ward",
+          "Snow_Em_Na",
+          "Day_ID",
+          "Tow_Distri"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Xerxes_Tows_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Xerxes_Tows_2018/FeatureServer",
+    "itemId": "44476aa8a6b148f3ba6328d46c0c9b27",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Xerxes_Tows_2018",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Xerxes_Tows_2018/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Snow_Emerg",
+          "Day",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Dist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Yale_Tags_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yale_Tags_2019/FeatureServer",
+    "itemId": "b967f5c249e640bca562b35b45eeac23",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Yale_Tags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yale_Tags_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Ordinance",
+          "Ordinanc_1",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Yale_Tows_2019",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yale_Tows_2019/FeatureServer",
+    "itemId": "e9ff65d83e744cce9ee6555ba5850449",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Yale_Tows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yale_Tows_2019/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Location",
+          "Tow_Reason",
+          "Latitude",
+          "Longitude",
+          "Ward",
+          "Community",
+          "Neighborho",
+          "Tow_Zone",
+          "Day",
+          "Snow_Emerg"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Yardville_Tags_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yardville_Tags_2018/FeatureServer",
+    "itemId": "582d73921317450b85b6a8d6feba991e",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Yardville_Tags_2018",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yardville_Tags_2018/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance",
+          "Ordinanc_1",
+          "Neighborho",
+          "Community",
+          "Ward",
+          "Snow_Em_Na",
+          "Day_ID",
+          "Tow_Distri"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Yardville_Tows_2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yardville_Tows_2018/FeatureServer",
+    "itemId": "610bf83e7ce748b3bbc8ceabda286ffe",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Yardville_Tows_2018",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Yardville_Tows_2018/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "FID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Snow_Emerg",
+          "Day",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Tow_Dist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnowEmergencyJaneTags",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SnowEmergencyJaneTags/FeatureServer",
+    "itemId": "673e398341e246ecb47c1d4b61cec362",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Jane_Tickets",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SnowEmergencyJaneTags/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation_N",
+          "Date",
+          "Address",
+          "X_Coordina",
+          "Y_Coordina",
+          "Ordinance",
+          "Ordinanc_1",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "Day_ID",
+          "TowDist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnowEmergencyPembinaTags2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SnowEmergencyPembinaTags2018/FeatureServer",
+    "itemId": "6b952dfbe1fe4ab7b7121a8db0117d14",
+    "layers": [
+      {
+        "id": 0,
+        "name": "SnowEmergencyPembinaTags",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SnowEmergencyPembinaTags2018/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Citation",
+          "Date",
+          "Address",
+          "Latitude",
+          "Longitude",
+          "Ordinance",
+          "Ordinanc_1",
+          "Neighborho",
+          "Community",
+          "Ward",
+          "Day_ID",
+          "TowDist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "SnowEmergencyPembinaTows2018",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SnowEmergencyPembinaTows2018/FeatureServer",
+    "itemId": "1ee3f8c90ba243d9916f948167e6280b",
+    "layers": [
+      {
+        "id": 0,
+        "name": "SnowEmergencyPembinaTows",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/SnowEmergencyPembinaTows2018/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Call_Taken",
+          "Customer",
+          "Location",
+          "Latitude",
+          "Longitude",
+          "Day",
+          "Ward",
+          "Neighborho",
+          "Community",
+          "TowDist"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TransitStops",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TransitStops/FeatureServer",
+    "itemId": "5a892e9159354f219d32a0fa4aa087a4",
+    "layers": [
+      {
+        "id": 0,
+        "name": "TransitStops",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TransitStops/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "site_id",
+          "site_on",
+          "site_at",
+          "corn_desc",
+          "city",
+          "county",
+          "publiccomm",
+          "dt_zone",
+          "parkride",
+          "adaaccess",
+          "busstop_yn",
+          "IsSuspended",
+          "node_id",
+          "gate",
+          "T_Code",
+          "UNIQUE_ID",
+          "board_flag",
+          "alight_flag",
+          "active_status",
+          "itinerary_yn",
+          "route_provider",
+          "created_user",
+          "created_date",
+          "last_edited_user",
+          "last_edited_date",
+          "CornerNumber",
+          "description",
+          "site_id_1",
+          "shelter"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Transportation_Action_Plan_Street_Types",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Transportation_Action_Plan_Street_Types/FeatureServer",
+    "itemId": "2bea816653b64c87a179202339dca6c8",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Transportation_Action_Plan_Street_Types",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Transportation_Action_Plan_Street_Types/FeatureServer/0",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "FID",
+          "OBJECTID",
+          "L_CITY_COD",
+          "R_T_ADD_RA",
+          "L_T_ADD_RA",
+          "R_F_ADD_RA",
+          "L_F_ADD_RA",
+          "R_T_ADD_AC",
+          "L_T_ADD_AC",
+          "R_F_ADD_AC",
+          "L_F_ADD_AC",
+          "ALT_STREET",
+          "ALT_STRE_1",
+          "PRINT_ORD",
+          "PARTIAL_WA",
+          "IS_WALK_GA",
+          "NUM_WALKS",
+          "MSA_MILEAG",
+          "STREET_CLI",
+          "STREET_C_1",
+          "GBSID",
+          "COMMENTS",
+          "SOURCE_DAT",
+          "DIGITIZING",
+          "BIKE_LANE",
+          "TRAFFIC_DI",
+          "SPEED_LIM",
+          "FUNC_CLASS",
+          "TRUCK_ROUT",
+          "BUS_ROUTE",
+          "SNOW_EMERG",
+          "POTHOLE_MA",
+          "STREET_MAI",
+          "BRIDGE",
+          "TURNBACK",
+          "SYSTEM_MIL",
+          "SEGMENT_LE",
+          "JURISDICTI",
+          "US_ROUTE_N",
+          "US_ROUTE_1",
+          "ROUTE_TYPE",
+          "ROUTE_NO",
+          "STREET_T_N",
+          "STREET_F_N",
+          "STREET_O_N",
+          "OFT",
+          "SYMBOL_NAM",
+          "R_ZIPCODE",
+          "L_ZIPCODE",
+          "R_CITY_COD",
+          "STREET_TYP",
+          "AADT_ID",
+          "Shape_STLe",
+          "ST_TYPE2",
+          "MILEAGE",
+          "OBJECTID_1",
+          "OFT_1",
+          "CHAIN_NO",
+          "DIST_FROM_",
+          "RIGHT_OF_W",
+          "ROW_L",
+          "ROW_R",
+          "ROADWAY",
+          "ROADWAY_L",
+          "ROADWAY_R",
+          "BLVD_NEXT_",
+          "BLVD_NEXT1",
+          "SIDEWALK_L",
+          "SIDEWALK_R",
+          "BLVD_NEX_1",
+          "BLVD_NEX_2",
+          "MEDIAN_WID",
+          "DATA_SOURC",
+          "SOURCE_D_1",
+          "HC_ROW_DAT",
+          "CLINE_OFFS",
+          "COMMENTS_1",
+          "DATE_MODIF",
+          "MODIFIED_B",
+          "SPEED_NEW",
+          "Shape__Length",
+          "SLChange"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "PW_Street_Centerline",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/PW_Street_Centerline/FeatureServer",
+    "itemId": "ec28f7083c9346bf8a9fe44f8546c055",
+    "layers": [
+      {
+        "id": 0,
+        "name": "PW_Street_Centerline",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/PW_Street_Centerline/FeatureServer/0",
+        "geometryType": "esriGeometryPolyline",
+        "fields": [
+          "OBJECTID",
+          "L_CITY_CODE",
+          "R_T_ADD_RANGE",
+          "L_T_ADD_RANGE",
+          "R_F_ADD_RANGE",
+          "L_F_ADD_RANGE",
+          "R_T_ADD_ACTUAL",
+          "L_T_ADD_ACTUAL",
+          "R_F_ADD_ACTUAL",
+          "L_F_ADD_ACTUAL",
+          "ALT_STREET_NAME2",
+          "ALT_STREET_NAME1",
+          "PRINT_ORD",
+          "PARTIAL_WALK_GAP",
+          "IS_WALK_GAP",
+          "NUM_WALKS",
+          "MSA_MILEAGE",
+          "GBSID",
+          "COMMENTS",
+          "DIGITIZING_SOURCE",
+          "BIKE_LANE",
+          "TRAFFIC_DIR",
+          "SPEED_LIM",
+          "FUNC_CLASS",
+          "TRUCK_ROUTE_TYPE",
+          "BUS_ROUTE",
+          "SNOW_EMERGENCY_ROUTE",
+          "POTHOLE_MAINTENANCE",
+          "STREET_MAINT_DIST",
+          "BRIDGE",
+          "TURNBACK",
+          "SYSTEM_MILEAGE",
+          "JURISDICTION",
+          "US_ROUTE_NO2",
+          "US_ROUTE_NO1",
+          "ROUTE_TYPE",
+          "ROUTE_NO",
+          "STREET_T_NAME",
+          "STREET_F_NAME",
+          "STREET_O_NAME",
+          "OFT",
+          "SYMBOL_NAME",
+          "R_ZIPCODE",
+          "L_ZIPCODE",
+          "R_CITY_CODE",
+          "STREET_TYPE",
+          "AADT_ID",
+          "DOCUMENT_LINK",
+          "SEGMENT_LENGTH",
+          "Shape__Length",
+          "NEAR_FID",
+          "NEAR_DIST"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "TylerParkingProd",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TylerParkingProd/FeatureServer",
+    "itemId": "a01178784963475ca19c9a32d6f77906",
+    "layers": [
+      {
+        "id": 9,
+        "name": "METER_SPACES",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TylerParkingProd/FeatureServer/9",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "Space_ID",
+          "Tariff_Package",
+          "FB_Notes",
+          "FB_Date_Modified",
+          "Space_Status",
+          "New_space_Date",
+          "Space_Type",
+          "Program_Area",
+          "Terminal_ID",
+          "Space__Street_Address",
+          "Parking_Space_Group",
+          "Space_range",
+          "Hourly_Rate",
+          "Split_rate",
+          "Hour_Limit",
+          "Hours_of_Enforcement",
+          "Days_of_enforcement",
+          "Hours_Enforced_Day",
+          "Number_of_Enforced_Days",
+          "Restrictions",
+          "Paid_Restriction",
+          "Traffic_Restriction",
+          "Event_rate",
+          "Status_2024",
+          "GeocodeData_June2019_Lat__Y_",
+          "GeocodeData_June2019_Long__X_"
+        ]
+      },
+      {
+        "id": 10,
+        "name": "ROW",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TylerParkingProd/FeatureServer/10",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "Id",
+          "ParentId",
+          "Type",
+          "Display",
+          "AltName",
+          "AltType",
+          "Jurisdiction",
+          "OriginFile",
+          "AreaSqFt",
+          "EntID",
+          "EntIDField",
+          "created_user",
+          "created_date",
+          "last_edited_user",
+          "last_edited_date",
+          "FacilityID",
+          "Status",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      },
+      {
+        "id": 8,
+        "name": "PARCELS",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/TylerParkingProd/FeatureServer/8",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "PID",
+          "ZIP",
+          "BLDG_NUM",
+          "BLDG_NUM_SUF",
+          "STREETNAME",
+          "CONDONO",
+          "CITY",
+          "X_CENTROID",
+          "Y_CENTROID",
+          "LATITUDE",
+          "LONGITUDE",
+          "WGS_X",
+          "WGS_Y",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Serious_Injury_and_Fatal_Crashes_2020_2024",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Serious_Injury_and_Fatal_Crashes_2020_2024/FeatureServer",
+    "itemId": "3a29c229526f4f0784c29e4f8713f8e7",
+    "layers": [
+      {
+        "id": 0,
+        "name": "AllModeCrashesselection_ExportFeatures",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Serious_Injury_and_Fatal_Crashes_2020_2024/FeatureServer/0",
+        "geometryType": "esriGeometryPoint",
+        "fields": [
+          "OBJECTID",
+          "INCIDENTID",
+          "RTESYSCODE",
+          "RTENUMBER",
+          "MEASURE",
+          "COUNTY_SPA",
+          "CITY_NAME",
+          "TOWNSHIP_N",
+          "ATP",
+          "MNDOT_DIST",
+          "STATE_PATR",
+          "TRIBAL_GOV",
+          "LOCALID",
+          "ACCIDENT_N",
+          "CRASH_MONT",
+          "CRASH_DAY",
+          "CRASH_YEAR",
+          "CRASH_DAYO",
+          "CRASH_HOUR",
+          "DIVIDEDRDW",
+          "CRASHSEVER",
+          "NUMBERKILL",
+          "NUMBEROFVE",
+          "MANNEROFCO",
+          "FIRSTHARMF",
+          "RELATIVE_L",
+          "RELATIONTO",
+          "LIGHTCONDI",
+          "WEATHERPRI",
+          "WEATHERSEC",
+          "RDWYSURFAC",
+          "WORKZONETY",
+          "ROADWAY_NA",
+          "INTERSECTI",
+          "ROUTE_ID",
+          "BASIC_TYPE",
+          "UNITTYPEU1",
+          "VHCLTYP1_1",
+          "DRCTN1_1",
+          "PRCRSHMN_1",
+          "AGEU1",
+          "SEXU1",
+          "PHYSCLCN_1",
+          "CNTRBFCT_1",
+          "CNTRBFCT_2",
+          "NNMTRSTM_1",
+          "NNMTRSTL_1",
+          "RDWYDSGN_1",
+          "TRFFCCNT_1",
+          "SPDLMT1_1",
+          "LGNMNT1_1",
+          "GRADEU1",
+          "UNITTYPEU2",
+          "VHCLTYP2_1",
+          "DRCTN2_1",
+          "PRCRSHMN_2",
+          "AGEU2",
+          "SEXU2",
+          "PHYSCLCN_2",
+          "CNTRBFCT_3",
+          "CNTRBFCT_4",
+          "NNMTRSTM_2",
+          "NNMTRSTL_2",
+          "RDWYDSGN_2",
+          "TRFFCCNT_2",
+          "SPDLMT2_1",
+          "LGNMNT2_1",
+          "GRADEU2",
+          "UNITTYPEU3",
+          "VHCLTYP3_1",
+          "DRCTN3_1",
+          "PRCRSHMN_3",
+          "AGEU3",
+          "SEXU3",
+          "PHYSCLCN_3",
+          "CNTRBFCT_5",
+          "CNTRBFCT_6",
+          "NNMTRSTM_3",
+          "NNMTRSTL_3",
+          "RDWYDSGN_3",
+          "TRFFCCNT_3",
+          "SPDLMT3_1",
+          "LGNMNT3_1",
+          "GRADEU3",
+          "UNITTYPEU4",
+          "VHCLTYP4_1",
+          "DRCTN4_1",
+          "PRCRSHMN_4",
+          "AGEU4",
+          "SEXU4",
+          "PHYSCLCN_4",
+          "CNTRBFCT_7",
+          "CNTRBFCT_8",
+          "NNMTRSTM_4",
+          "NNMTRSTL_4",
+          "RDWYDSGN_4",
+          "TRFFCCNT_4",
+          "SPDLMT4_1",
+          "LGNMNT4_1",
+          "GRADEU4",
+          "UTMX",
+          "UTMY",
+          "LATITUDE",
+          "LONGITUDE",
+          "CRASH_DATE",
+          "STATUS",
+          "STATUS_NOT",
+          "AGENCY_ORI",
+          "GNCY_R_G_1",
+          "CrashSeverityWeight",
+          "NEAR_FID",
+          "NEAR_DIST",
+          "NEAR_X",
+          "NEAR_Y",
+          "OBJECTID_1",
+          "Join_Count",
+          "TARGET_FID",
+          "L_CITY_CODE",
+          "R_T_ADD_RANGE",
+          "L_T_ADD_RANGE",
+          "R_F_ADD_RANGE",
+          "L_F_ADD_RANGE",
+          "R_T_ADD_ACTUAL",
+          "L_T_ADD_ACTUAL",
+          "R_F_ADD_ACTUAL",
+          "L_F_ADD_ACTUAL",
+          "ALT_STREET_NAME2",
+          "ALT_STREET_NAME1",
+          "PRINT_ORD",
+          "PARTIAL_WALK_GAP",
+          "IS_WALK_GAP",
+          "NUM_WALKS",
+          "MSA_MILEAGE",
+          "STREET_CLINE_REVD",
+          "STREET_CLINE_CREATED",
+          "GBSID",
+          "COMMENTS",
+          "SOURCE_DATE",
+          "DIGITIZING_SOURCE",
+          "BIKE_LANE",
+          "TRAFFIC_DIR",
+          "SPEED_LIM",
+          "FUNC_CLASS",
+          "TRUCK_ROUTE_TYPE",
+          "BUS_ROUTE",
+          "SNOW_EMERGENCY_ROUTE",
+          "POTHOLE_MAINTENANCE",
+          "STREET_MAINT_DIST",
+          "BRIDGE",
+          "TURNBACK",
+          "SYSTEM_MILEAGE",
+          "SEGMENT_LENGTH",
+          "JURISDICTION",
+          "US_ROUTE_NO2",
+          "US_ROUTE_NO1",
+          "ROUTE_TYPE",
+          "ROUTE_NO",
+          "STREET_T_NAME",
+          "STREET_F_NAME",
+          "STREET_O_NAME",
+          "OFT",
+          "SYMBOL_NAME",
+          "R_ZIPCODE",
+          "L_ZIPCODE",
+          "R_CITY_CODE",
+          "STREET_TYPE",
+          "AADT_ID",
+          "CREATED_DATE",
+          "MODIFIED_DATE",
+          "Length_Feet"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Snow_Emergency_Routes",
+    "type": "FeatureServer",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Routes/FeatureServer",
+    "itemId": "9a1e00d0a52d4e8db2a0b85ad3495fd6",
+    "layers": [
+      {
+        "id": 0,
+        "name": "Snow_Emergency_Routes",
+        "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Snow_Emergency_Routes/FeatureServer/0",
+        "geometryType": "esriGeometryPolygon",
+        "fields": [
+          "OBJECTID",
+          "DAY1",
+          "DAY2",
+          "DAY3",
+          "WINTERRULES",
+          "Shape__Area",
+          "Shape__Length"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1156 @@
+{
+  "created_at_utc": "2026-11-10T21:16:57.286996+00:00",
+  "asset_count": 188,
+  "data_snapshot_count": 180,
+  "categories": {
+    "道路停车与公交设施": 28,
+    "住房与房产": 6,
+    "空间边界与土地使用": 7,
+    "人口收入与住房统计": 48,
+    "投诉与执法背景": 4,
+    "交通与事故": 5,
+    "雪灾拖车与罚单": 67,
+    "公交与可达性": 16,
+    "说明与参考": 4,
+    "天气": 3
+  },
+  "snow_layers": 67,
+  "tow_layers": 34,
+  "tag_layers": 33,
+  "acs_bulk_tables": 36,
+  "source_files_total_bytes": 1320459425,
+  "validation_errors": [],
+  "checks": [
+    {
+      "id": "All_Transit_Routes__0",
+      "hash_verified": true,
+      "record_count": 22,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "All_Transit_Routes__1",
+      "hash_verified": true,
+      "record_count": 152,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Assessing_Department_Parcel_Data_2023__0",
+      "hash_verified": true,
+      "record_count": 130995,
+      "null_geometry_count": null
+    },
+    {
+      "id": "Assessing_Department_Parcel_Data_2024__0",
+      "hash_verified": true,
+      "record_count": 130994,
+      "null_geometry_count": null
+    },
+    {
+      "id": "Assessing_Department_Parcel_Data_2025__0",
+      "hash_verified": true,
+      "record_count": 131978,
+      "null_geometry_count": null
+    },
+    {
+      "id": "Assessors_Parcel_Data_2022__0",
+      "hash_verified": true,
+      "record_count": 130765,
+      "null_geometry_count": null
+    },
+    {
+      "id": "Downtown_Core_Area_Map__0",
+      "hash_verified": true,
+      "record_count": 1,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "DowntownParking__0",
+      "hash_verified": true,
+      "record_count": 494,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Existing_Land_Use__0",
+      "hash_verified": true,
+      "record_count": 102518,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "High_Frequency_Transit_And_Walksheds__0",
+      "hash_verified": true,
+      "record_count": 12,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "High_Frequency_Transit_And_Walksheds__1",
+      "hash_verified": true,
+      "record_count": 22,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "High_Frequency_Transit_And_Walksheds__2",
+      "hash_verified": true,
+      "record_count": 793,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "High_Frequency_Transit_And_Walksheds__3",
+      "hash_verified": true,
+      "record_count": 22,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "High_Frequency_Transit_And_Walksheds__4",
+      "hash_verified": true,
+      "record_count": 34,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "High_Frequency_Transit_And_Walksheds__5",
+      "hash_verified": true,
+      "record_count": 34,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Minneapolis_Neighborhoods__0",
+      "hash_verified": true,
+      "record_count": 87,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__0",
+      "hash_verified": true,
+      "record_count": 4007,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__1",
+      "hash_verified": true,
+      "record_count": 378,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__2",
+      "hash_verified": true,
+      "record_count": 1531,
+      "null_geometry_count": 1
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__3",
+      "hash_verified": true,
+      "record_count": 1548,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__4",
+      "hash_verified": true,
+      "record_count": 99,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__5",
+      "hash_verified": true,
+      "record_count": 61,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__6",
+      "hash_verified": true,
+      "record_count": 624,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__7",
+      "hash_verified": true,
+      "record_count": 93,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__8",
+      "hash_verified": true,
+      "record_count": 104,
+      "null_geometry_count": 9
+    },
+    {
+      "id": "MinneapolisCurbMap_WFL1__9",
+      "hash_verified": true,
+      "record_count": 40,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Mpls_Census_Tracts_2020__0",
+      "hash_verified": true,
+      "record_count": 121,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Neighborhood_Commercial_Nodes__0",
+      "hash_verified": true,
+      "record_count": 69,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Neighborhood_Dem_Tenure_WFL1__20",
+      "hash_verified": true,
+      "record_count": 87,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Parking_Meter_Inventory__0",
+      "hash_verified": true,
+      "record_count": 8196,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Parking_Meter_Pay_Stations__0",
+      "hash_verified": true,
+      "record_count": 661,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "PCT_HH_Income_Transportation__0",
+      "hash_verified": true,
+      "record_count": 414,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Poverty__3",
+      "hash_verified": true,
+      "record_count": 151,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Public_311_2022__0",
+      "hash_verified": true,
+      "record_count": 33433,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Public_311_2023__0",
+      "hash_verified": true,
+      "record_count": 43512,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Public_311_2024__0",
+      "hash_verified": true,
+      "record_count": 26479,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Public_311_2025__0",
+      "hash_verified": true,
+      "record_count": 34189,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Parkways_in_Minneapolis__0",
+      "hash_verified": true,
+      "record_count": 3,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Parkways_in_Minneapolis__1",
+      "hash_verified": true,
+      "record_count": 457,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "TransitStops__0",
+      "hash_verified": true,
+      "record_count": 2364,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Transportation_Action_Plan_Street_Types__0",
+      "hash_verified": true,
+      "record_count": 12833,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "PW_Street_Centerline__0",
+      "hash_verified": true,
+      "record_count": 13021,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "TylerParkingProd__9",
+      "hash_verified": true,
+      "record_count": 10012,
+      "null_geometry_count": 7
+    },
+    {
+      "id": "Serious_Injury_and_Fatal_Crashes_2020_2024__0",
+      "hash_verified": true,
+      "record_count": 864,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Routes__0",
+      "hash_verified": true,
+      "record_count": 21644,
+      "null_geometry_count": 15
+    },
+    {
+      "id": "Snow_Emergency_Armatage_Tags_2019__0",
+      "hash_verified": true,
+      "record_count": 5153,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Armatage_Tows_2019__0",
+      "hash_verified": true,
+      "record_count": 948,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Bridge_Tags_2025__0",
+      "hash_verified": true,
+      "record_count": 5456,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Bridge_Tows_2025__0",
+      "hash_verified": true,
+      "record_count": 852,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Dana_Tags_2016_b__0",
+      "hash_verified": true,
+      "record_count": 7058,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Dana_Tows_2016_b__0",
+      "hash_verified": true,
+      "record_count": 1354,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Diamond_Lake_Tags_2019__0",
+      "hash_verified": true,
+      "record_count": 5088,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Diamond_Lake_Tows_2019__0",
+      "hash_verified": true,
+      "record_count": 982,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Dover_Tags_2022__0",
+      "hash_verified": true,
+      "record_count": 5942,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Dover_Tows_2022__0",
+      "hash_verified": true,
+      "record_count": 631,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Ferry_Tags_2016__0",
+      "hash_verified": true,
+      "record_count": 6562,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Ferry_Tags_2021__0",
+      "hash_verified": true,
+      "record_count": 4797,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Ferry_Tows_2016__0",
+      "hash_verified": true,
+      "record_count": 1328,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Ferry_Tows_2021__0",
+      "hash_verified": true,
+      "record_count": 4868,
+      "null_geometry_count": 4238
+    },
+    {
+      "id": "Snow_Emergency_Fremont_Tags_2019__0",
+      "hash_verified": true,
+      "record_count": 4263,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Fremont_Tows_2019__0",
+      "hash_verified": true,
+      "record_count": 1235,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Glenwood_Tags_2025__3",
+      "hash_verified": true,
+      "record_count": 5138,
+      "null_geometry_count": 801
+    },
+    {
+      "id": "Snow_Emergency_Glenwood_Tows_2025__0",
+      "hash_verified": true,
+      "record_count": 719,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Grant_Tags_2015__0",
+      "hash_verified": true,
+      "record_count": 6235,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Grant_Tows_2015__0",
+      "hash_verified": true,
+      "record_count": 1736,
+      "null_geometry_count": 180
+    },
+    {
+      "id": "Snow_Emergency_Howard_Tags_2024__0",
+      "hash_verified": true,
+      "record_count": 5655,
+      "null_geometry_count": 45
+    },
+    {
+      "id": "Snow_Emergency_Howard_Tows_2024__0",
+      "hash_verified": true,
+      "record_count": 665,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Howe_Tows_2018__0",
+      "hash_verified": true,
+      "record_count": 844,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_James_Tags_2020__0",
+      "hash_verified": true,
+      "record_count": 2262,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_James_Tows_2020__0",
+      "hash_verified": true,
+      "record_count": 465,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Jane_Tags_2022__0",
+      "hash_verified": true,
+      "record_count": 4983,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Jane_Tows_2017__0",
+      "hash_verified": true,
+      "record_count": 1430,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Jane_Tows_2022__0",
+      "hash_verified": true,
+      "record_count": 584,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Jefferson_Tags_2025__0",
+      "hash_verified": true,
+      "record_count": 5350,
+      "null_geometry_count": 1108
+    },
+    {
+      "id": "Snow_Emergency_Jefferson_Tows_2025__1",
+      "hash_verified": true,
+      "record_count": 566,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Kasota_Tags_2019_2020__0",
+      "hash_verified": true,
+      "record_count": 6803,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Kasota_Tows_2019_2020__0",
+      "hash_verified": true,
+      "record_count": 1246,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Lourdes_Tags_2022__0",
+      "hash_verified": true,
+      "record_count": 3542,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Lourdes_Tows_2022__0",
+      "hash_verified": true,
+      "record_count": 435,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Newton_Tags_2020__0",
+      "hash_verified": true,
+      "record_count": 6439,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Newton_Tows_2020__0",
+      "hash_verified": true,
+      "record_count": 1140,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Northrop_Tags_2023__0",
+      "hash_verified": true,
+      "record_count": 3977,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Northrop_Tows_2023__0",
+      "hash_verified": true,
+      "record_count": 465,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Olive_Tags_2018__0",
+      "hash_verified": true,
+      "record_count": 6544,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Olive_Tows_2018__0",
+      "hash_verified": true,
+      "record_count": 1161,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Oliver_Tags_2021__0",
+      "hash_verified": true,
+      "record_count": 6491,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Oliver_Tows_2021__0",
+      "hash_verified": true,
+      "record_count": 6491,
+      "null_geometry_count": 5223
+    },
+    {
+      "id": "Snow_Emergency_Omega_Tags__0",
+      "hash_verified": true,
+      "record_count": 5475,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Omega_Tows__0",
+      "hash_verified": true,
+      "record_count": 695,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Polk_Tags_2016__0",
+      "hash_verified": true,
+      "record_count": 5435,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Polk_Tows_2016__0",
+      "hash_verified": true,
+      "record_count": 1480,
+      "null_geometry_count": 100
+    },
+    {
+      "id": "Snow_Emergency_Quincy_Tags_2019__0",
+      "hash_verified": true,
+      "record_count": 2825,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Quincy_Tows_2019__0",
+      "hash_verified": true,
+      "record_count": 617,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Spruce_Tags_2020__0",
+      "hash_verified": true,
+      "record_count": 6110,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Spruce_Tows_2020__0",
+      "hash_verified": true,
+      "record_count": 1253,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Upton_Tags_2019__0",
+      "hash_verified": true,
+      "record_count": 5656,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Upton_Tows_2019__0",
+      "hash_verified": true,
+      "record_count": 805,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Victory1_Tags_2023__0",
+      "hash_verified": true,
+      "record_count": 3755,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Victory1_Tows_2023__0",
+      "hash_verified": true,
+      "record_count": 506,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Victory2_Tags_2023__0",
+      "hash_verified": true,
+      "record_count": 758,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Victory2_Tows_2023__0",
+      "hash_verified": true,
+      "record_count": 187,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Westminster_Tags_2019__0",
+      "hash_verified": true,
+      "record_count": 4151,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Westminster_Tows_2019__0",
+      "hash_verified": true,
+      "record_count": 980,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Xerxes_Tags_2018__0",
+      "hash_verified": true,
+      "record_count": 7941,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Xerxes_Tows_2018__0",
+      "hash_verified": true,
+      "record_count": 1215,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Yale_Tags_2019__0",
+      "hash_verified": true,
+      "record_count": 3983,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Yale_Tows_2019__0",
+      "hash_verified": true,
+      "record_count": 894,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Yardville_Tags_2018__0",
+      "hash_verified": true,
+      "record_count": 3857,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "Snow_Emergency_Yardville_Tows_2018__0",
+      "hash_verified": true,
+      "record_count": 728,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "SnowEmergencyJaneTags__0",
+      "hash_verified": true,
+      "record_count": 6320,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "SnowEmergencyPembinaTags2018__0",
+      "hash_verified": true,
+      "record_count": 4267,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "SnowEmergencyPembinaTows2018__0",
+      "hash_verified": true,
+      "record_count": 962,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "traffic_current_segments__0",
+      "hash_verified": true,
+      "record_count": 1932,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "traffic_current_locations__0",
+      "hash_verified": true,
+      "record_count": 1864,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "traffic_active_counts__0",
+      "hash_verified": true,
+      "record_count": 1969,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "acs_income_distribution_esri__2",
+      "hash_verified": true,
+      "record_count": 185,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "acs_income_median_esri__2",
+      "hash_verified": true,
+      "record_count": 185,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "acs_housing_cost_esri__2",
+      "hash_verified": true,
+      "record_count": 185,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "acs_population_esri__2",
+      "hash_verified": true,
+      "record_count": 185,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "vehicle_availability_city__1",
+      "hash_verified": true,
+      "record_count": 121,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "commute_time_city__120",
+      "hash_verified": true,
+      "record_count": 121,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "acs2022_B01003",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B19301",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B19013",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B25077",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B25064",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B25003",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B08201",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B08301",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B25024",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B25070",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_B25002",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2022_C17002",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B01003",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B19301",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B19013",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B25077",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B25064",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B25003",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B08201",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B08301",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B25024",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B25070",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_B25002",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2023_C17002",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B01003",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B19301",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B19013",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B25077",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B25064",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B25003",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B08201",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B08301",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B25024",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B25070",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_B25002",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "acs2024_C17002",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "traffic_history_hennepin_2022_2025",
+      "hash_verified": true,
+      "record_count": 20769,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20221126",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20221210",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20221217",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20221231",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20230218",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20241214",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20250208",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20251129",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20251206",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "gtfs_20251227",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "Property_Sales_2021_to_2025__0",
+      "hash_verified": true,
+      "record_count": 38566,
+      "null_geometry_count": null
+    },
+    {
+      "id": "Active_Rental_Licenses__0",
+      "hash_verified": true,
+      "record_count": 23376,
+      "null_geometry_count": 0
+    },
+    {
+      "id": "census_download_workbook",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "city_census_population",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "city_census_economics",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "city_census_housing",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "weather/USW00014922.dly",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "weather/ghcn_daily_readme.txt",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "weather/ghcn_stations.txt",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "transit/gtfs_current.zip",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "transit/feed_documentation.html",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "transit/archive_index.html",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "transit/tripupdates.pb",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "transit/vehiclepositions.pb",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "transit/alerts.pb",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "geography/tl_2024_27_tract.zip",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "geography/tl_2024_27_bg.zip",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "references/Public_Works_Retention_Schedule.pdf",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "references/public_data_request.html",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    },
+    {
+      "id": "references/traffic_data_products.html",
+      "hash_verified": true,
+      "record_count": null,
+      "null_geometry_count": null
+    }
+  ],
+  "baseline_total": 5423,
+  "community_matches": 86,
+  "remaining_core_gap": "Complete non-snow-emergency tow records with reason, date, origin and completion status; complete emergency calendar."
+}

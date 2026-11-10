@@ -1,0 +1,5949 @@
+[
+  {
+    "neighborhood": "Armatage",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5718,
+      "moe": 973,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 455,
+      "moe": 163,
+      "source_percent": 0.21,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1696,
+      "moe": 223,
+      "source_percent": 0.79,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 50,
+      "moe": 55,
+      "source_percent": 0.02,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2151,
+      "moe": 267,
+      "source_percent": 0.99,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 29,
+      "moe": 38,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 216,
+      "moe": 158,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Audubon Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5073,
+      "moe": 626,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 587,
+      "moe": 144,
+      "source_percent": 0.26,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1684,
+      "moe": 210,
+      "source_percent": 0.74,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 68,
+      "moe": 44,
+      "source_percent": 0.03,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2271,
+      "moe": 237,
+      "source_percent": 0.95,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 130,
+      "moe": 86,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 404,
+      "moe": 193,
+      "source_percent": 0.07,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Bancroft",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3303,
+      "moe": 492,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 407,
+      "moe": 117,
+      "source_percent": 0.29,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 996,
+      "moe": 147,
+      "source_percent": 0.71,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 29,
+      "moe": 49,
+      "source_percent": 0.02,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1403,
+      "moe": 171,
+      "source_percent": 0.95,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 76,
+      "moe": 75,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 262,
+      "moe": 126,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Beltrami",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 1264,
+      "moe": 292,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 254,
+      "moe": 70,
+      "source_percent": 0.53,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 227,
+      "moe": 77,
+      "source_percent": 0.47,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 21,
+      "moe": 20,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 481,
+      "moe": 89,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 0,
+      "moe": 10,
+      "source_percent": 0,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 298,
+      "moe": 161,
+      "source_percent": 0.23,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Bottineau",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 1934,
+      "moe": 348,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 542,
+      "moe": 140,
+      "source_percent": 0.7,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 231,
+      "moe": 61,
+      "source_percent": 0.3,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 83,
+      "moe": 89,
+      "source_percent": 0.11,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 773,
+      "moe": 140,
+      "source_percent": 0.95,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 44,
+      "moe": 61,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 121,
+      "moe": 100,
+      "source_percent": 0.07,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Bryant",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2717,
+      "moe": 548,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 119,
+      "moe": 70,
+      "source_percent": 0.12,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 850,
+      "moe": 152,
+      "source_percent": 0.88,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 87,
+      "moe": 62,
+      "source_percent": 0.09,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 969,
+      "moe": 163,
+      "source_percent": 0.96,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 43,
+      "moe": 35,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 397,
+      "moe": 315,
+      "source_percent": 0.16,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Bryn - Mawr",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2770,
+      "moe": 362,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 189,
+      "moe": 98,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1173,
+      "moe": 158,
+      "source_percent": 0.86,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 11,
+      "moe": 28,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1362,
+      "moe": 173,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 0,
+      "moe": 17,
+      "source_percent": 0,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 233,
+      "moe": 133,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Camden Industrial",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 31,
+      "moe": 9,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 2,
+      "moe": 1,
+      "source_percent": 0.2,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 8,
+      "moe": 2,
+      "source_percent": 0.8,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 1,
+      "moe": 1,
+      "source_percent": 0.1,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 10,
+      "moe": 2,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 1,
+      "moe": 1,
+      "source_percent": 0.1,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 9,
+      "moe": 5,
+      "source_percent": 0.24,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Cedar - Isles - Dean",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3453,
+      "moe": 538,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1027,
+      "moe": 226,
+      "source_percent": 0.58,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 750,
+      "moe": 160,
+      "source_percent": 0.42,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 88,
+      "moe": 94,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1777,
+      "moe": 255,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 164,
+      "moe": 125,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 94,
+      "moe": 84,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Cedar Riverside",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 9682,
+      "moe": 1275,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 3616,
+      "moe": 485,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 322,
+      "moe": 174,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 1795,
+      "moe": 296,
+      "source_percent": 0.46,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3938,
+      "moe": 509,
+      "source_percent": 0.95,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 193,
+      "moe": 125,
+      "source_percent": 0.05,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 3867,
+      "moe": 1300,
+      "source_percent": 0.51,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Central",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 7472,
+      "moe": 1064,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1053,
+      "moe": 210,
+      "source_percent": 0.46,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1221,
+      "moe": 173,
+      "source_percent": 0.54,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 216,
+      "moe": 112,
+      "source_percent": 0.1,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2274,
+      "moe": 252,
+      "source_percent": 0.89,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 292,
+      "moe": 125,
+      "source_percent": 0.11,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1081,
+      "moe": 534,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Cleveland",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3392,
+      "moe": 882,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 306,
+      "moe": 190,
+      "source_percent": 0.23,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1000,
+      "moe": 210,
+      "source_percent": 0.77,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 63,
+      "moe": 54,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1306,
+      "moe": 265,
+      "source_percent": 0.96,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 52,
+      "moe": 49,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 227,
+      "moe": 255,
+      "source_percent": 0.07,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Columbia Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 1407,
+      "moe": 321,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 19,
+      "moe": 31,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 725,
+      "moe": 160,
+      "source_percent": 0.97,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 8,
+      "moe": 21,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 744,
+      "moe": 161,
+      "source_percent": 0.99,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 5,
+      "moe": 12,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 46,
+      "moe": 40,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Como",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 7083,
+      "moe": 1041,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1848,
+      "moe": 268,
+      "source_percent": 0.76,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 568,
+      "moe": 133,
+      "source_percent": 0.24,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 222,
+      "moe": 99,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2416,
+      "moe": 288,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 163,
+      "moe": 100,
+      "source_percent": 0.06,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 2019,
+      "moe": 475,
+      "source_percent": 0.29,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Cooper",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3490,
+      "moe": 564,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 281,
+      "moe": 92,
+      "source_percent": 0.18,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1267,
+      "moe": 202,
+      "source_percent": 0.82,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 80,
+      "moe": 48,
+      "source_percent": 0.05,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1548,
+      "moe": 221,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 95,
+      "moe": 89,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 146,
+      "moe": 105,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Corcoran",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4545,
+      "moe": 741,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 889,
+      "moe": 296,
+      "source_percent": 0.47,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 998,
+      "moe": 171,
+      "source_percent": 0.53,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 372,
+      "moe": 237,
+      "source_percent": 0.2,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1887,
+      "moe": 308,
+      "source_percent": 0.93,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 134,
+      "moe": 107,
+      "source_percent": 0.07,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 755,
+      "moe": 332,
+      "source_percent": 0.18,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Diamond Lake",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6051,
+      "moe": 1018,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 245,
+      "moe": 180,
+      "source_percent": 0.09,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 2385,
+      "moe": 405,
+      "source_percent": 0.91,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 24,
+      "moe": 42,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2630,
+      "moe": 430,
+      "source_percent": 0.97,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 78,
+      "moe": 71,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 101,
+      "moe": 63,
+      "source_percent": 0.02,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Downtown East",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4613,
+      "moe": 631,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1432,
+      "moe": 365,
+      "source_percent": 0.59,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1013,
+      "moe": 255,
+      "source_percent": 0.41,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 246,
+      "moe": 145,
+      "source_percent": 0.1,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2445,
+      "moe": 387,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 209,
+      "moe": 170,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 472,
+      "moe": 227,
+      "source_percent": 0.13,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Downtown West",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 8224,
+      "moe": 835,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 3933,
+      "moe": 556,
+      "source_percent": 0.77,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1174,
+      "moe": 223,
+      "source_percent": 0.23,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 1138,
+      "moe": 251,
+      "source_percent": 0.22,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 5107,
+      "moe": 596,
+      "source_percent": 0.91,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 488,
+      "moe": 222,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1006,
+      "moe": 261,
+      "source_percent": 0.13,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "East Bde Maka Ska",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2436,
+      "moe": 423,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 832,
+      "moe": 197,
+      "source_percent": 0.6,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 546,
+      "moe": 147,
+      "source_percent": 0.4,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 62,
+      "moe": 61,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1378,
+      "moe": 227,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 127,
+      "moe": 138,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 196,
+      "moe": 103,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "East Harriet",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3257,
+      "moe": 389,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 539,
+      "moe": 139,
+      "source_percent": 0.36,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 965,
+      "moe": 163,
+      "source_percent": 0.64,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 113,
+      "moe": 86,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1504,
+      "moe": 190,
+      "source_percent": 0.93,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 118,
+      "moe": 91,
+      "source_percent": 0.07,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 113,
+      "moe": 61,
+      "source_percent": 0.04,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "East Isles",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3893,
+      "moe": 582,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1380,
+      "moe": 245,
+      "source_percent": 0.63,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 818,
+      "moe": 159,
+      "source_percent": 0.37,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 306,
+      "moe": 164,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2198,
+      "moe": 280,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 141,
+      "moe": 112,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 108,
+      "moe": 61,
+      "source_percent": 0.03,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "East Phillips",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4804,
+      "moe": 1315,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 678,
+      "moe": 192,
+      "source_percent": 0.54,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 581,
+      "moe": 231,
+      "source_percent": 0.46,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 265,
+      "moe": 138,
+      "source_percent": 0.21,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1259,
+      "moe": 306,
+      "source_percent": 0.85,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 214,
+      "moe": 95,
+      "source_percent": 0.15,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1240,
+      "moe": 584,
+      "source_percent": 0.28,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Elliot Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6561,
+      "moe": 793,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 2782,
+      "moe": 413,
+      "source_percent": 0.78,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 763,
+      "moe": 176,
+      "source_percent": 0.22,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 1176,
+      "moe": 302,
+      "source_percent": 0.33,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3545,
+      "moe": 438,
+      "source_percent": 0.83,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 726,
+      "moe": 211,
+      "source_percent": 0.17,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1792,
+      "moe": 418,
+      "source_percent": 0.31,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Ericsson",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3413,
+      "moe": 493,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 245,
+      "moe": 100,
+      "source_percent": 0.16,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1322,
+      "moe": 225,
+      "source_percent": 0.84,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 89,
+      "moe": 52,
+      "source_percent": 0.06,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1567,
+      "moe": 243,
+      "source_percent": 0.91,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 146,
+      "moe": 110,
+      "source_percent": 0.09,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 115,
+      "moe": 79,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Field",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2843,
+      "moe": 489,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 134,
+      "moe": 76,
+      "source_percent": 0.12,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 999,
+      "moe": 191,
+      "source_percent": 0.88,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 21,
+      "moe": 31,
+      "source_percent": 0.02,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1133,
+      "moe": 201,
+      "source_percent": 0.98,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 27,
+      "moe": 45,
+      "source_percent": 0.02,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 417,
+      "moe": 269,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Folwell",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5341,
+      "moe": 1315,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 388,
+      "moe": 184,
+      "source_percent": 0.21,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1484,
+      "moe": 290,
+      "source_percent": 0.79,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 324,
+      "moe": 149,
+      "source_percent": 0.17,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1872,
+      "moe": 332,
+      "source_percent": 0.86,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 296,
+      "moe": 151,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 826,
+      "moe": 408,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Fulton",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6638,
+      "moe": 691,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 329,
+      "moe": 133,
+      "source_percent": 0.12,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 2453,
+      "moe": 253,
+      "source_percent": 0.88,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 97,
+      "moe": 69,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2782,
+      "moe": 270,
+      "source_percent": 0.96,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 108,
+      "moe": 83,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 165,
+      "moe": 98,
+      "source_percent": 0.02,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Hale",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3083,
+      "moe": 513,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 167,
+      "moe": 79,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1068,
+      "moe": 152,
+      "source_percent": 0.86,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 18,
+      "moe": 33,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1235,
+      "moe": 171,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 79,
+      "moe": 68,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 122,
+      "moe": 79,
+      "source_percent": 0.04,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Harrison",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3974,
+      "moe": 1116,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 988,
+      "moe": 249,
+      "source_percent": 0.76,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 313,
+      "moe": 103,
+      "source_percent": 0.24,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 218,
+      "moe": 149,
+      "source_percent": 0.17,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1301,
+      "moe": 268,
+      "source_percent": 0.88,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 180,
+      "moe": 120,
+      "source_percent": 0.12,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1490,
+      "moe": 478,
+      "source_percent": 0.38,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Hawthorne",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4157,
+      "moe": 904,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 909,
+      "moe": 233,
+      "source_percent": 0.61,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 575,
+      "moe": 142,
+      "source_percent": 0.39,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 458,
+      "moe": 152,
+      "source_percent": 0.31,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1484,
+      "moe": 250,
+      "source_percent": 0.9,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 162,
+      "moe": 83,
+      "source_percent": 0.1,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1705,
+      "moe": 746,
+      "source_percent": 0.35,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Hiawatha",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6572,
+      "moe": 674,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1151,
+      "moe": 247,
+      "source_percent": 0.36,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 2042,
+      "moe": 265,
+      "source_percent": 0.64,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 241,
+      "moe": 100,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3193,
+      "moe": 329,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 215,
+      "moe": 196,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 295,
+      "moe": 148,
+      "source_percent": 0.05,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Holland",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5045,
+      "moe": 1029,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1062,
+      "moe": 258,
+      "source_percent": 0.49,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1100,
+      "moe": 262,
+      "source_percent": 0.51,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 243,
+      "moe": 183,
+      "source_percent": 0.11,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2162,
+      "moe": 348,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 193,
+      "moe": 112,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 918,
+      "moe": 413,
+      "source_percent": 0.18,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Howe",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 7090,
+      "moe": 803,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 711,
+      "moe": 190,
+      "source_percent": 0.22,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 2554,
+      "moe": 330,
+      "source_percent": 0.78,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 258,
+      "moe": 124,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3265,
+      "moe": 371,
+      "source_percent": 0.96,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 122,
+      "moe": 97,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 440,
+      "moe": 185,
+      "source_percent": 0.07,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Humboldt Industrial Area",
+    "period": "2020-2024",
+    "population": null,
+    "renter_households": null,
+    "owner_households": null,
+    "households_no_vehicle": null,
+    "occupied_housing_units": null,
+    "vacant_housing_units": null,
+    "people_below_poverty": null,
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Jordan",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 8439,
+      "moe": 1188,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1153,
+      "moe": 297,
+      "source_percent": 0.41,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1626,
+      "moe": 282,
+      "source_percent": 0.59,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 529,
+      "moe": 198,
+      "source_percent": 0.19,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2779,
+      "moe": 380,
+      "source_percent": 0.89,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 337,
+      "moe": 140,
+      "source_percent": 0.11,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 2243,
+      "moe": 642,
+      "source_percent": 0.27,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Keewaydin",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2977,
+      "moe": 491,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 153,
+      "moe": 77,
+      "source_percent": 0.11,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1198,
+      "moe": 229,
+      "source_percent": 0.89,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 15,
+      "moe": 36,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1351,
+      "moe": 231,
+      "source_percent": 0.95,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 68,
+      "moe": 100,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 47,
+      "moe": 45,
+      "source_percent": 0.02,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Kenny",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3792,
+      "moe": 576,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 128,
+      "moe": 125,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1478,
+      "moe": 208,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 18,
+      "moe": 37,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1606,
+      "moe": 238,
+      "source_percent": 0.98,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 39,
+      "moe": 46,
+      "source_percent": 0.02,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 62,
+      "moe": 42,
+      "source_percent": 0.02,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Kenwood",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 1359,
+      "moe": 748,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 42,
+      "moe": 63,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 466,
+      "moe": 221,
+      "source_percent": 0.92,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 0,
+      "moe": 14,
+      "source_percent": 0,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 508,
+      "moe": 228,
+      "source_percent": 0.93,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 41,
+      "moe": 60,
+      "source_percent": 0.07,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 0,
+      "moe": 9,
+      "source_percent": 0,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "King Field",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 7453,
+      "moe": 752,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1320,
+      "moe": 250,
+      "source_percent": 0.36,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 2360,
+      "moe": 274,
+      "source_percent": 0.64,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 98,
+      "moe": 65,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3680,
+      "moe": 346,
+      "source_percent": 0.95,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 186,
+      "moe": 154,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 493,
+      "moe": 173,
+      "source_percent": 0.06,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Lind - Bohanon",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4994,
+      "moe": 876,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 482,
+      "moe": 153,
+      "source_percent": 0.25,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1416,
+      "moe": 237,
+      "source_percent": 0.75,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 349,
+      "moe": 133,
+      "source_percent": 0.18,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1899,
+      "moe": 264,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 112,
+      "moe": 80,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 480,
+      "moe": 276,
+      "source_percent": 0.1,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Linden Hills",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 7543,
+      "moe": 706,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1109,
+      "moe": 199,
+      "source_percent": 0.34,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 2199,
+      "moe": 257,
+      "source_percent": 0.66,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 78,
+      "moe": 60,
+      "source_percent": 0.02,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3308,
+      "moe": 295,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 230,
+      "moe": 151,
+      "source_percent": 0.07,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 270,
+      "moe": 111,
+      "source_percent": 0.04,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Logan Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2325,
+      "moe": 561,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 811,
+      "moe": 307,
+      "source_percent": 0.67,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 398,
+      "moe": 129,
+      "source_percent": 0.33,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 319,
+      "moe": 158,
+      "source_percent": 0.26,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1209,
+      "moe": 315,
+      "source_percent": 0.92,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 99,
+      "moe": 83,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 134,
+      "moe": 85,
+      "source_percent": 0.06,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Longfellow",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5616,
+      "moe": 846,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1310,
+      "moe": 266,
+      "source_percent": 0.52,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1199,
+      "moe": 200,
+      "source_percent": 0.48,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 369,
+      "moe": 132,
+      "source_percent": 0.15,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2509,
+      "moe": 297,
+      "source_percent": 0.91,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 247,
+      "moe": 125,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 749,
+      "moe": 300,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Loring Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 9665,
+      "moe": 1107,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 5456,
+      "moe": 635,
+      "source_percent": 0.78,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1573,
+      "moe": 332,
+      "source_percent": 0.22,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 2277,
+      "moe": 450,
+      "source_percent": 0.32,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 7029,
+      "moe": 694,
+      "source_percent": 0.86,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 1099,
+      "moe": 383,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1508,
+      "moe": 460,
+      "source_percent": 0.16,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Lowry Hill",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4058,
+      "moe": 688,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1416,
+      "moe": 274,
+      "source_percent": 0.58,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1018,
+      "moe": 276,
+      "source_percent": 0.42,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 242,
+      "moe": 118,
+      "source_percent": 0.1,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2434,
+      "moe": 360,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 151,
+      "moe": 122,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 208,
+      "moe": 125,
+      "source_percent": 0.05,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Lowry Hill East",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 8376,
+      "moe": 1008,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 5168,
+      "moe": 662,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 471,
+      "moe": 197,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 738,
+      "moe": 287,
+      "source_percent": 0.13,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 5639,
+      "moe": 694,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 369,
+      "moe": 230,
+      "source_percent": 0.06,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 768,
+      "moe": 290,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Lyndale",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6406,
+      "moe": 948,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 2452,
+      "moe": 399,
+      "source_percent": 0.72,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 961,
+      "moe": 246,
+      "source_percent": 0.28,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 820,
+      "moe": 278,
+      "source_percent": 0.24,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3413,
+      "moe": 468,
+      "source_percent": 0.96,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 136,
+      "moe": 127,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1329,
+      "moe": 466,
+      "source_percent": 0.22,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Lynnhurst",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6451,
+      "moe": 702,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 178,
+      "moe": 62,
+      "source_percent": 0.07,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 2289,
+      "moe": 236,
+      "source_percent": 0.93,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 64,
+      "moe": 68,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2467,
+      "moe": 239,
+      "source_percent": 0.99,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 37,
+      "moe": 45,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 238,
+      "moe": 148,
+      "source_percent": 0.04,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Marcy Holmes",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 15393,
+      "moe": 1394,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 6251,
+      "moe": 608,
+      "source_percent": 0.9,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 718,
+      "moe": 168,
+      "source_percent": 0.1,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 1753,
+      "moe": 394,
+      "source_percent": 0.25,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 6969,
+      "moe": 618,
+      "source_percent": 0.89,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 863,
+      "moe": 273,
+      "source_percent": 0.11,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 5860,
+      "moe": 902,
+      "source_percent": 0.42,
+      "reliability": "High",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Marshall Terrace",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 1472,
+      "moe": 253,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 345,
+      "moe": 120,
+      "source_percent": 0.44,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 441,
+      "moe": 67,
+      "source_percent": 0.56,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 144,
+      "moe": 61,
+      "source_percent": 0.18,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 786,
+      "moe": 126,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 47,
+      "moe": 41,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 248,
+      "moe": 187,
+      "source_percent": 0.17,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "McKinley",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3742,
+      "moe": 967,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 444,
+      "moe": 167,
+      "source_percent": 0.4,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 670,
+      "moe": 177,
+      "source_percent": 0.6,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 172,
+      "moe": 71,
+      "source_percent": 0.15,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1114,
+      "moe": 208,
+      "source_percent": 0.97,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 33,
+      "moe": 52,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 569,
+      "moe": 388,
+      "source_percent": 0.14,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Mid - City Industrial",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 261,
+      "moe": 54,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 59,
+      "moe": 16,
+      "source_percent": 0.76,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 19,
+      "moe": 12,
+      "source_percent": 0.24,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 2,
+      "moe": 14,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 78,
+      "moe": 17,
+      "source_percent": 0.66,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 39,
+      "moe": 48,
+      "source_percent": 0.33,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 65,
+      "moe": 27,
+      "source_percent": 0.26,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Midtown Phillips",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5032,
+      "moe": 1392,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1067,
+      "moe": 302,
+      "source_percent": 0.61,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 684,
+      "moe": 195,
+      "source_percent": 0.39,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 569,
+      "moe": 259,
+      "source_percent": 0.33,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1751,
+      "moe": 332,
+      "source_percent": 0.86,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 276,
+      "moe": 177,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 2060,
+      "moe": 1209,
+      "source_percent": 0.42,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Minnehaha",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4115,
+      "moe": 689,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 404,
+      "moe": 159,
+      "source_percent": 0.19,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1703,
+      "moe": 278,
+      "source_percent": 0.81,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 145,
+      "moe": 90,
+      "source_percent": 0.07,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2107,
+      "moe": 304,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 180,
+      "moe": 136,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 202,
+      "moe": 95,
+      "source_percent": 0.05,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Morris Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3579,
+      "moe": 811,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 192,
+      "moe": 125,
+      "source_percent": 0.13,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1248,
+      "moe": 241,
+      "source_percent": 0.87,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 0,
+      "moe": 24,
+      "source_percent": 0,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1440,
+      "moe": 246,
+      "source_percent": 0.95,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 70,
+      "moe": 68,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 140,
+      "moe": 84,
+      "source_percent": 0.04,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Near - North",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6332,
+      "moe": 1350,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1023,
+      "moe": 254,
+      "source_percent": 0.5,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1029,
+      "moe": 288,
+      "source_percent": 0.5,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 411,
+      "moe": 199,
+      "source_percent": 0.2,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2052,
+      "moe": 334,
+      "source_percent": 0.86,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 329,
+      "moe": 142,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1804,
+      "moe": 691,
+      "source_percent": 0.27,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Nicollet Island - East Bank",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2503,
+      "moe": 371,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 857,
+      "moe": 183,
+      "source_percent": 0.52,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 798,
+      "moe": 173,
+      "source_percent": 0.48,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 128,
+      "moe": 72,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1655,
+      "moe": 218,
+      "source_percent": 0.84,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 315,
+      "moe": 166,
+      "source_percent": 0.16,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 157,
+      "moe": 86,
+      "source_percent": 0.07,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "North Loop",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 7737,
+      "moe": 857,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 3864,
+      "moe": 493,
+      "source_percent": 0.77,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1171,
+      "moe": 380,
+      "source_percent": 0.23,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 456,
+      "moe": 252,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 5035,
+      "moe": 608,
+      "source_percent": 0.91,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 497,
+      "moe": 250,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 658,
+      "moe": 157,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Northeast Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 896,
+      "moe": 422,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 199,
+      "moe": 107,
+      "source_percent": 0.55,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 164,
+      "moe": 64,
+      "source_percent": 0.45,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 21,
+      "moe": 31,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 363,
+      "moe": 133,
+      "source_percent": 0.92,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 31,
+      "moe": 36,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 111,
+      "moe": 130,
+      "source_percent": 0.13,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Northrop",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4695,
+      "moe": 628,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 322,
+      "moe": 164,
+      "source_percent": 0.16,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1674,
+      "moe": 211,
+      "source_percent": 0.84,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 12,
+      "moe": 36,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1996,
+      "moe": 259,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 0,
+      "moe": 22,
+      "source_percent": 0,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 165,
+      "moe": 75,
+      "source_percent": 0.04,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Page",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2148,
+      "moe": 364,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 23,
+      "moe": 27,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 722,
+      "moe": 101,
+      "source_percent": 0.97,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 0,
+      "moe": 20,
+      "source_percent": 0,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 745,
+      "moe": 96,
+      "source_percent": 0.96,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 33,
+      "moe": 67,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 22,
+      "moe": 27,
+      "source_percent": 0.01,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Phillips West",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6402,
+      "moe": 2039,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1918,
+      "moe": 432,
+      "source_percent": 0.89,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 243,
+      "moe": 116,
+      "source_percent": 0.11,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 716,
+      "moe": 228,
+      "source_percent": 0.33,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2161,
+      "moe": 449,
+      "source_percent": 0.95,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 117,
+      "moe": 105,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1512,
+      "moe": 623,
+      "source_percent": 0.29,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Powderhorn Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 7768,
+      "moe": 1131,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1550,
+      "moe": 303,
+      "source_percent": 0.47,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1774,
+      "moe": 287,
+      "source_percent": 0.53,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 444,
+      "moe": 188,
+      "source_percent": 0.13,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3324,
+      "moe": 400,
+      "source_percent": 0.91,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 339,
+      "moe": 153,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1587,
+      "moe": 694,
+      "source_percent": 0.19,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Prospect Park - East River Road",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 8619,
+      "moe": 1006,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 3182,
+      "moe": 398,
+      "source_percent": 0.8,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 818,
+      "moe": 182,
+      "source_percent": 0.2,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 996,
+      "moe": 277,
+      "source_percent": 0.25,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 4000,
+      "moe": 427,
+      "source_percent": 0.87,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 610,
+      "moe": 257,
+      "source_percent": 0.13,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 3435,
+      "moe": 764,
+      "source_percent": 0.42,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Regina",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 1957,
+      "moe": 462,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 186,
+      "moe": 113,
+      "source_percent": 0.2,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 753,
+      "moe": 190,
+      "source_percent": 0.8,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 71,
+      "moe": 64,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 939,
+      "moe": 207,
+      "source_percent": 0.91,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 88,
+      "moe": 85,
+      "source_percent": 0.09,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 65,
+      "moe": 55,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Seward",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 8210,
+      "moe": 1052,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 2682,
+      "moe": 338,
+      "source_percent": 0.67,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1344,
+      "moe": 223,
+      "source_percent": 0.33,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 1220,
+      "moe": 281,
+      "source_percent": 0.3,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 4026,
+      "moe": 390,
+      "source_percent": 0.96,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 182,
+      "moe": 107,
+      "source_percent": 0.04,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1754,
+      "moe": 558,
+      "source_percent": 0.22,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Sheridan",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2953,
+      "moe": 379,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 984,
+      "moe": 187,
+      "source_percent": 0.58,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 714,
+      "moe": 141,
+      "source_percent": 0.42,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 197,
+      "moe": 112,
+      "source_percent": 0.12,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1698,
+      "moe": 213,
+      "source_percent": 0.88,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 233,
+      "moe": 104,
+      "source_percent": 0.12,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 169,
+      "moe": 82,
+      "source_percent": 0.06,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Shingle Creek",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3103,
+      "moe": 743,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 92,
+      "moe": 69,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1055,
+      "moe": 218,
+      "source_percent": 0.92,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 61,
+      "moe": 59,
+      "source_percent": 0.05,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1147,
+      "moe": 224,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 69,
+      "moe": 66,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 531,
+      "moe": 282,
+      "source_percent": 0.17,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "South Uptown",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6101,
+      "moe": 736,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 2567,
+      "moe": 340,
+      "source_percent": 0.7,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1080,
+      "moe": 288,
+      "source_percent": 0.3,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 455,
+      "moe": 181,
+      "source_percent": 0.12,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3647,
+      "moe": 405,
+      "source_percent": 0.97,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 99,
+      "moe": 84,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 779,
+      "moe": 230,
+      "source_percent": 0.12,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "St. Anthony East",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2280,
+      "moe": 384,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 791,
+      "moe": 153,
+      "source_percent": 0.7,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 334,
+      "moe": 105,
+      "source_percent": 0.3,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 152,
+      "moe": 95,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1125,
+      "moe": 161,
+      "source_percent": 0.96,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 44,
+      "moe": 65,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 216,
+      "moe": 123,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "St. Anthony West",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 3023,
+      "moe": 399,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1213,
+      "moe": 172,
+      "source_percent": 0.75,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 411,
+      "moe": 121,
+      "source_percent": 0.25,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 277,
+      "moe": 100,
+      "source_percent": 0.17,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1624,
+      "moe": 194,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 107,
+      "moe": 77,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 237,
+      "moe": 79,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Standish",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6877,
+      "moe": 711,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 606,
+      "moe": 152,
+      "source_percent": 0.19,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 2505,
+      "moe": 273,
+      "source_percent": 0.81,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 291,
+      "moe": 122,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3111,
+      "moe": 302,
+      "source_percent": 0.96,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 143,
+      "moe": 118,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 250,
+      "moe": 126,
+      "source_percent": 0.04,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Steven's Square - Loring Heights",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4289,
+      "moe": 641,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 2220,
+      "moe": 492,
+      "source_percent": 0.75,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 725,
+      "moe": 216,
+      "source_percent": 0.25,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 1320,
+      "moe": 447,
+      "source_percent": 0.45,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2945,
+      "moe": 515,
+      "source_percent": 0.89,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 380,
+      "moe": 217,
+      "source_percent": 0.11,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 786,
+      "moe": 309,
+      "source_percent": 0.19,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Sumner - Glenwood",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2181,
+      "moe": 863,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 570,
+      "moe": 228,
+      "source_percent": 0.54,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 490,
+      "moe": 406,
+      "source_percent": 0.46,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 199,
+      "moe": 139,
+      "source_percent": 0.19,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1060,
+      "moe": 445,
+      "source_percent": 0.87,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 152,
+      "moe": 113,
+      "source_percent": 0.13,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 804,
+      "moe": 522,
+      "source_percent": 0.32,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Tangletown",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5081,
+      "moe": 937,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 329,
+      "moe": 158,
+      "source_percent": 0.15,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1808,
+      "moe": 280,
+      "source_percent": 0.85,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 145,
+      "moe": 127,
+      "source_percent": 0.07,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2137,
+      "moe": 314,
+      "source_percent": 0.91,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 199,
+      "moe": 163,
+      "source_percent": 0.09,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 214,
+      "moe": 118,
+      "source_percent": 0.04,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "University of Minnesota",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 7720,
+      "moe": 733,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 798,
+      "moe": 162,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1,
+      "moe": 14,
+      "source_percent": 0,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 438,
+      "moe": 156,
+      "source_percent": 0.55,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 799,
+      "moe": 162,
+      "source_percent": 0.93,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 61,
+      "moe": 52,
+      "source_percent": 0.07,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1095,
+      "moe": 348,
+      "source_percent": 0.66,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Ventura Village",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 6248,
+      "moe": 1050,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1976,
+      "moe": 294,
+      "source_percent": 0.84,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 376,
+      "moe": 108,
+      "source_percent": 0.16,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 851,
+      "moe": 217,
+      "source_percent": 0.36,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2352,
+      "moe": 307,
+      "source_percent": 0.87,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 340,
+      "moe": 142,
+      "source_percent": 0.13,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1825,
+      "moe": 511,
+      "source_percent": 0.31,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Victory",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4791,
+      "moe": 754,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 390,
+      "moe": 129,
+      "source_percent": 0.2,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1513,
+      "moe": 203,
+      "source_percent": 0.8,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 105,
+      "moe": 67,
+      "source_percent": 0.06,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1903,
+      "moe": 230,
+      "source_percent": 0.94,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 117,
+      "moe": 102,
+      "source_percent": 0.06,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 508,
+      "moe": 223,
+      "source_percent": 0.11,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Waite Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5657,
+      "moe": 889,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 214,
+      "moe": 118,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 2128,
+      "moe": 312,
+      "source_percent": 0.91,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 120,
+      "moe": 72,
+      "source_percent": 0.05,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2342,
+      "moe": 326,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 196,
+      "moe": 137,
+      "source_percent": 0.08,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 169,
+      "moe": 105,
+      "source_percent": 0.03,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Webber - Camden",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5984,
+      "moe": 1036,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 623,
+      "moe": 166,
+      "source_percent": 0.26,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1762,
+      "moe": 436,
+      "source_percent": 0.74,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 316,
+      "moe": 139,
+      "source_percent": 0.13,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2385,
+      "moe": 457,
+      "source_percent": 0.97,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 82,
+      "moe": 68,
+      "source_percent": 0.03,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1088,
+      "moe": 452,
+      "source_percent": 0.18,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Wenonah",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4318,
+      "moe": 1104,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 398,
+      "moe": 129,
+      "source_percent": 0.23,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1314,
+      "moe": 266,
+      "source_percent": 0.77,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 76,
+      "moe": 70,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1712,
+      "moe": 289,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 146,
+      "moe": 81,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 800,
+      "moe": 372,
+      "source_percent": 0.17,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "West Maka Ska",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 2599,
+      "moe": 1007,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1144,
+      "moe": 289,
+      "source_percent": 0.77,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 340,
+      "moe": 215,
+      "source_percent": 0.23,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 158,
+      "moe": 82,
+      "source_percent": 0.11,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1484,
+      "moe": 375,
+      "source_percent": 0.87,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 213,
+      "moe": 162,
+      "source_percent": 0.13,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 280,
+      "moe": 233,
+      "source_percent": 0.1,
+      "reliability": "Low",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Whittier",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 15157,
+      "moe": 1562,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 6825,
+      "moe": 713,
+      "source_percent": 0.87,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 988,
+      "moe": 239,
+      "source_percent": 0.13,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 2025,
+      "moe": 466,
+      "source_percent": 0.26,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 7813,
+      "moe": 733,
+      "source_percent": 0.9,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 894,
+      "moe": 288,
+      "source_percent": 0.1,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 3606,
+      "moe": 800,
+      "source_percent": 0.25,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Willard - Hay",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 7500,
+      "moe": 893,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1280,
+      "moe": 251,
+      "source_percent": 0.42,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1757,
+      "moe": 230,
+      "source_percent": 0.58,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 687,
+      "moe": 211,
+      "source_percent": 0.23,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 3037,
+      "moe": 335,
+      "source_percent": 0.92,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 273,
+      "moe": 116,
+      "source_percent": 0.08,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 1752,
+      "moe": 509,
+      "source_percent": 0.22,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Windom",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 4413,
+      "moe": 889,
+      "source_percent": 1,
+      "reliability": "Medium",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 898,
+      "moe": 269,
+      "source_percent": 0.48,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 974,
+      "moe": 224,
+      "source_percent": 0.52,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 130,
+      "moe": 107,
+      "source_percent": 0.07,
+      "reliability": "Low",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 1872,
+      "moe": 336,
+      "source_percent": 0.96,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 83,
+      "moe": 102,
+      "source_percent": 0.04,
+      "reliability": "Low",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 852,
+      "moe": 544,
+      "source_percent": 0.17,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  },
+  {
+    "neighborhood": "Windom Park",
+    "period": "2020-2024",
+    "population": {
+      "estimate": 5327,
+      "moe": 803,
+      "source_percent": 1,
+      "reliability": "High",
+      "universe": "total population",
+      "table": "B01003",
+      "dataset_id": "B01003-1"
+    },
+    "renter_households": {
+      "estimate": 1591,
+      "moe": 368,
+      "source_percent": 0.57,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "owner_households": {
+      "estimate": 1209,
+      "moe": 220,
+      "source_percent": 0.43,
+      "reliability": "High",
+      "universe": "occupied housing units",
+      "table": "B25003",
+      "dataset_id": "B25003-1"
+    },
+    "households_no_vehicle": {
+      "estimate": 385,
+      "moe": 151,
+      "source_percent": 0.14,
+      "reliability": "Medium",
+      "universe": "occupied housing units",
+      "table": "B25044",
+      "dataset_id": "B25044-2"
+    },
+    "occupied_housing_units": {
+      "estimate": 2800,
+      "moe": 411,
+      "source_percent": 0.91,
+      "reliability": "High",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "vacant_housing_units": {
+      "estimate": 266,
+      "moe": 146,
+      "source_percent": 0.09,
+      "reliability": "Medium",
+      "universe": "total housing units",
+      "table": "B25002",
+      "dataset_id": "B25002-1"
+    },
+    "people_below_poverty": {
+      "estimate": 626,
+      "moe": 247,
+      "source_percent": 0.12,
+      "reliability": "Medium",
+      "universe": "people for whom poverty status is determined",
+      "table": "B17021",
+      "dataset_id": "B17021-4"
+    },
+    "per_capita_income": null,
+    "per_capita_income_note": "Available at tract/block-group scale in ACS bulk files; neighborhood allocation has NOT been performed."
+  }
+]

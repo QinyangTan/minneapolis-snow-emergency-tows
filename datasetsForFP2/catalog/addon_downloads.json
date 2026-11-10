@@ -1,0 +1,68 @@
+[
+  {
+    "id": "Property_Sales_2021_to_2025__0",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Property_Sales_2021_to_2025/FeatureServer/0",
+    "path": "raw/city/Property_Sales_2021_to_2025__0.json",
+    "status": "downloaded",
+    "count": 38566,
+    "out_fields": [
+      "ECRV",
+      "SALE_DATE",
+      "EXCLUDED_FROM_RATIO_STUDY",
+      "PIN",
+      "NUM_PARCELS_IN_SALE",
+      "LAND_SALE",
+      "NBHD_DESC",
+      "COMMUNITY_DESC",
+      "PROPTYPE_CD",
+      "PROPTYPE_DESC",
+      "ADJ_SALE_PRICE",
+      "GROSS_SALE_PRICE",
+      "DOWNPAYMENT",
+      "X",
+      "Y",
+      "ObjectId"
+    ],
+    "sha256": "c5694880676af84f3381c6b581526b7ef68d3d762ac7ff1aef1f9800c92733b6",
+    "bytes": 15043633,
+    "retrieved_at_utc": "2026-11-10T21:07:53.116561+00:00"
+  },
+  {
+    "id": "Active_Rental_Licenses__0",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Active_Rental_Licenses/FeatureServer/0",
+    "path": "raw/city/Active_Rental_Licenses__0.json",
+    "status": "downloaded",
+    "count": 23376,
+    "out_fields": [
+      "OBJECTID",
+      "apn",
+      "rentalID",
+      "licenseNumber",
+      "category",
+      "milestone",
+      "tier",
+      "status",
+      "issueDate",
+      "expirationDate",
+      "licensedUnits",
+      "ward",
+      "neighborhoodDesc",
+      "communityDesc",
+      "policePrecinct",
+      "shortTermRental",
+      "latitude",
+      "longitude",
+      "xWebMercator",
+      "yWebMercator"
+    ],
+    "sha256": "85682fd6f0d62d1b7cfde9853082326e7c70f14cd0401f5780a76996924aae1e",
+    "bytes": 12758933,
+    "retrieved_at_utc": "2026-11-10T21:08:23.094901+00:00"
+  },
+  {
+    "id": "Incidents_Reported_911",
+    "url": "https://services.arcgis.com/afSMGVsC7QlRK1kZ/ArcGIS/rest/services/Incidents_Reported_911/FeatureServer/0",
+    "status": "metadata_only",
+    "reason": "Calls for service are not confirmed tows; inspect categories and dates before acquisition."
+  }
+]

@@ -1,0 +1,133 @@
+[
+  {
+    "id": "traffic_history_hennepin_2022_2025",
+    "url": "https://webgis.dot.state.mn.us/65agsf1/rest/services/sdw_incdt/AADT_HISTORY_SAMPLED/FeatureServer/0",
+    "where": "COUNTY = 'Hennepin' AND DATA_YEAR >= 2022 AND DATA_YEAR <= 2025",
+    "count": 20769,
+    "path": "raw/regional/traffic_history_hennepin_2022_2025.json",
+    "status": "downloaded",
+    "bytes": 9952732,
+    "sha256": "e830c70601181e861e1b0f446145ed005dc6af910a7a674710f339cad3554528",
+    "retrieved_at_utc": "2026-11-10T21:08:51.591868+00:00"
+  },
+  {
+    "id": "gtfs_20221126",
+    "event_id": "dover-2022",
+    "event_start": "2022-11-29",
+    "schedule_archive_date": "2022-11-26",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20221126.zip",
+    "path": "raw/transit/gtfs_20221126.zip",
+    "bytes": 25974562,
+    "sha256": "f5bd524bc738ca8b215bc9bde87a3a1c1831b6b32e4237b64c113fa5cc1011fd",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:09:01.080300+00:00"
+  },
+  {
+    "id": "gtfs_20221210",
+    "event_id": "jane-2022",
+    "event_start": "2022-12-15",
+    "schedule_archive_date": "2022-12-10",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20221210.zip",
+    "path": "raw/transit/gtfs_20221210.zip",
+    "bytes": 14968824,
+    "sha256": "747e03bf41094fa49e08eb87be693f4cab570a3c6827111fe6a1ad3b6767057a",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:08:57.082165+00:00"
+  },
+  {
+    "id": "gtfs_20221217",
+    "event_id": "lourdes-2022",
+    "event_start": "2022-12-21",
+    "schedule_archive_date": "2022-12-17",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20221217.zip",
+    "path": "raw/transit/gtfs_20221217.zip",
+    "bytes": 14978942,
+    "sha256": "444b71e16ee3058c3b5e24723196eeed12bdb6fe91965e98ee33716761f0574d",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:08:58.374262+00:00"
+  },
+  {
+    "id": "gtfs_20221231",
+    "event_id": "northrop-2023",
+    "event_start": "2023-01-04",
+    "schedule_archive_date": "2022-12-31",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20221231.zip",
+    "path": "raw/transit/gtfs_20221231.zip",
+    "bytes": 14923625,
+    "sha256": "a6de742a59d3abb7855936d768adcf7725d427fce429c78ae6ecb3dc4a7144dc",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:09:03.626345+00:00"
+  },
+  {
+    "id": "gtfs_20230218",
+    "event_id": "victory1-2023",
+    "event_start": "2023-02-22",
+    "schedule_archive_date": "2023-02-18",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20230218.zip",
+    "path": "raw/transit/gtfs_20230218.zip",
+    "bytes": 23012737,
+    "sha256": "de1b596201107045fcf1eb73fc42d95ef0fac2ba51c6125f3e79fab0ed8b3e30",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:09:08.291304+00:00"
+  },
+  {
+    "id": "gtfs_20241214",
+    "event_id": "howard-2024",
+    "event_start": "2024-12-19",
+    "schedule_archive_date": "2024-12-14",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20241214.zip",
+    "path": "raw/transit/gtfs_20241214.zip",
+    "bytes": 16617975,
+    "sha256": "62207de47bd03ad05ecd1440c80d92be1c643f586ccf27c1bcd2a39735d28817",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:09:06.645579+00:00"
+  },
+  {
+    "id": "gtfs_20250208",
+    "event_id": "omega-2025",
+    "event_start": "2025-02-08",
+    "schedule_archive_date": "2025-02-08",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20250208.zip",
+    "path": "raw/transit/gtfs_20250208.zip",
+    "bytes": 23000582,
+    "sha256": "ec39d0303e56d8f815577cd3a792d5e3ffff246b67bf5603697ecc6c1494d2de",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:09:13.148738+00:00"
+  },
+  {
+    "id": "gtfs_20251129",
+    "event_id": "bridge-2025",
+    "event_start": "2025-11-30",
+    "schedule_archive_date": "2025-11-29",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20251129.zip",
+    "path": "raw/transit/gtfs_20251129.zip",
+    "bytes": 21408966,
+    "sha256": "d28d9c826217f9e98a0738c657c168e5c214bbd06359b9206cd4534bdac534e5",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:09:14.730284+00:00"
+  },
+  {
+    "id": "gtfs_20251206",
+    "event_id": "glenwood-2025",
+    "event_start": "2025-12-10",
+    "schedule_archive_date": "2025-12-06",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20251206.zip",
+    "path": "raw/transit/gtfs_20251206.zip",
+    "bytes": 26079552,
+    "sha256": "056033c01ceba0fca2a16488bb7e78bb1a8c177f97ae81554bd2d45f7f0adfa6",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:09:17.580304+00:00"
+  },
+  {
+    "id": "gtfs_20251227",
+    "event_id": "jefferson-2025",
+    "event_start": "2025-12-28",
+    "schedule_archive_date": "2025-12-27",
+    "url": "https://svc.metrotransit.org/mtgtfs/archive/gtfs20251227.zip",
+    "path": "raw/transit/gtfs_20251227.zip",
+    "bytes": 21935120,
+    "sha256": "422f8b6a1da3a375bf884584e21f59e0e58bb5ba63ccefc999a6b21929ad662e",
+    "status": "downloaded",
+    "retrieved_at_utc": "2026-11-10T21:09:21.372084+00:00"
+  }
+]

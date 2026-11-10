@@ -1,0 +1,18 @@
+{
+  "scope": "Citywide annual operational totals, not neighborhood observations or ordinary-day counts",
+  "source_url": "https://www.minneapolismn.gov/media/-www-content-assets/documents/2024-Accomplishments-TPS.pdf",
+  "source_title": "City of Minneapolis 2024 Traffic & Parking Services Accomplishments, page 23",
+  "retrieved_date": "2026-11-10",
+  "acquisition_method": "Transcribed numerical table from official report text returned by web search; direct PDF download returned HTTP 404",
+  "rows": [
+    {"year": 2023, "public_street_tows": 32560, "snow_emergency_tows": 1191, "street_sweep_tows": 5867, "abandoned_vehicle_tows": 1677, "private_property_tows_recorded": 11055},
+    {"year": 2024, "public_street_tows": 30549, "snow_emergency_tows": 680, "street_sweep_tows": 6273, "abandoned_vehicle_tows": 1414, "private_property_tows_recorded": 12288}
+  ],
+  "limitations": [
+    "These are category labels, not an official reason-code dictionary.",
+    "No neighborhood or day identifiers; do not join these totals to neighborhood income.",
+    "Do not interpret subtraction of snow-emergency reasons as non-snow-day totals.",
+    "Do not sum categories without confirming overlap and coverage.",
+    "Operational totals may differ from the selected event layers; do not force them to reconcile."
+  ]
+}
