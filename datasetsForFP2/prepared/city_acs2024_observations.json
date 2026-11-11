@@ -1,5 +1,5 @@
 {
-  "period": "2020-2024 ACS 5-year",
+  "period": "Mixed ACS releases: economics 2019-2023; population and housing 2020-2024",
   "rows": [
     {
       "ACS Subject": "age; sex",
@@ -358622,5 +358622,10 @@
       "source_file": "raw/acs/city_census_housing.csv"
     }
   ],
-  "note": "Official City neighborhood aggregates. Preserve MOE, reliability, universe and units. Overlapping categories must not be summed blindly. Not annual 2024 measurements."
+  "note": "Official City neighborhood aggregates. Preserve MOE, reliability, universe and units. Overlapping categories must not be summed blindly. Not annual 2024 measurements. Legacy filename is not a uniform vintage: use each row ACS5 Release.",
+  "periods_by_source": {
+    "raw/acs/city_census_population.csv": "2020-2024",
+    "raw/acs/city_census_economics.csv": "2019-2023",
+    "raw/acs/city_census_housing.csv": "2020-2024"
+  }
 }

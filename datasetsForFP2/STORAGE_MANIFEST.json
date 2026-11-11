@@ -1,8 +1,8 @@
 {
   "packaged_at_utc": "2026-11-10T21:28:23.381328+00:00",
   "original_file_count": 661,
-  "original_bytes": 1321296445,
-  "stored_bytes": 993810090,
+  "original_bytes": 1321317332,
+  "stored_bytes": 993830977,
   "files": [
     {
       "original_path": "catalog/7629b8ad54664a3aa41fd3899947589e.data.json",
@@ -3527,10 +3527,10 @@
       "original_path": "docs/FP2_BUILD_PLAN_ZH.md",
       "stored_path": "docs/FP2_BUILD_PLAN_ZH.md",
       "compression": "none",
-      "original_bytes": 6248,
-      "stored_bytes": 6248,
-      "original_sha256": "7bdcfe82c6743a8bd9f407659842fe1fbff552644451c5c6ded86c5dd8a8c0a1",
-      "stored_sha256": "7bdcfe82c6743a8bd9f407659842fe1fbff552644451c5c6ded86c5dd8a8c0a1"
+      "original_bytes": 6536,
+      "stored_bytes": 6536,
+      "original_sha256": "70a1da4d005f75f0cd023e0abeac903c856ab2758c45fd24090fdb683142449a",
+      "stored_sha256": "70a1da4d005f75f0cd023e0abeac903c856ab2758c45fd24090fdb683142449a"
     },
     {
       "original_path": "docs/NORMAL_TOW_DATA_REQUEST_DRAFT.md",
@@ -3626,10 +3626,10 @@
       "original_path": "prepared/city_acs2024_observations.json",
       "stored_path": "prepared/city_acs2024_observations.json",
       "compression": "none",
-      "original_bytes": 11589482,
-      "stored_bytes": 11589482,
-      "original_sha256": "0f6f6093ec9f719a174e62501b6c012c115b0b4f08f928bb80700dd347787389",
-      "stored_sha256": "0f6f6093ec9f719a174e62501b6c012c115b0b4f08f928bb80700dd347787389"
+      "original_bytes": 11589799,
+      "stored_bytes": 11589799,
+      "original_sha256": "e54716aec9dec803eae93d3a151d16fe371488f78bbce3c6c9dda22a9388ce3a",
+      "stored_sha256": "e54716aec9dec803eae93d3a151d16fe371488f78bbce3c6c9dda22a9388ce3a"
     },
     {
       "original_path": "prepared/citywide_towing_context_2023_2024.json",
@@ -3644,10 +3644,10 @@
       "original_path": "prepared/neighborhood_context_starter.json",
       "stored_path": "prepared/neighborhood_context_starter.json",
       "compression": "none",
-      "original_bytes": 169413,
-      "stored_bytes": 169413,
-      "original_sha256": "15ae0a92fba400e869d8c489c1a6ad0133a3f7beea2deadd2c4d9ad3eaced8f9",
-      "stored_sha256": "15ae0a92fba400e869d8c489c1a6ad0133a3f7beea2deadd2c4d9ad3eaced8f9"
+      "original_bytes": 189213,
+      "stored_bytes": 189213,
+      "original_sha256": "5801a2c7dd457a0567f605b5602ca47c9338be56589736a4cd30747a50633eaf",
+      "stored_sha256": "5801a2c7dd457a0567f605b5602ca47c9338be56589736a4cd30747a50633eaf"
     },
     {
       "original_path": "prepared/neighborhood_name_crosswalk.json",
@@ -5840,10 +5840,10 @@
       "original_path": "README_ZH.md",
       "stored_path": "README_ZH.md",
       "compression": "none",
-      "original_bytes": 3750,
-      "stored_bytes": 3750,
-      "original_sha256": "942a5ce4954073c15adeee0b197c0e1af717c84a92cbf668ce5af4393ea5a68a",
-      "stored_sha256": "942a5ce4954073c15adeee0b197c0e1af717c84a92cbf668ce5af4393ea5a68a"
+      "original_bytes": 3978,
+      "stored_bytes": 3978,
+      "original_sha256": "ea15532fba4ffc63fdd8ae9c73daf75a2bde7f18e1b0064500de5ee92797f993",
+      "stored_sha256": "ea15532fba4ffc63fdd8ae9c73daf75a2bde7f18e1b0064500de5ee92797f993"
     },
     {
       "original_path": "scripts/catalog_and_validate.py",
@@ -5948,10 +5948,11 @@
       "original_path": "scripts/prepare_bundle.py",
       "stored_path": "scripts/prepare_bundle.py",
       "compression": "none",
-      "original_bytes": 8960,
-      "stored_bytes": 8960,
-      "original_sha256": "43e5242dee704abebe41604c1769e2a476d1dffd3862b64bbc3c8601a2513098",
-      "stored_sha256": "43e5242dee704abebe41604c1769e2a476d1dffd3862b64bbc3c8601a2513098"
+      "original_bytes": 9214,
+      "stored_bytes": 9214,
+      "original_sha256": "a530689262fe30871231eb388e0308b85353990c0841b2ec78e8a3a0497bc8d5",
+      "stored_sha256": "a530689262fe30871231eb388e0308b85353990c0841b2ec78e8a3a0497bc8d5"
     }
-  ]
+  ],
+  "correction_note": "Prepared ACS metric periods corrected against original row ACS5 Release; raw downloads unchanged."
 }
