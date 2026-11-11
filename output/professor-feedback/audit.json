@@ -1,0 +1,432 @@
+{
+  "source_commit": "f54d514f01575a6da5b38e6e1c5b93ba50e7f2e8",
+  "access_date": "2026-11-10",
+  "stored_files_hash_verified": 661,
+  "compressed_originals_hash_verified": 5,
+  "pyproj_version": "3.8.0",
+  "area_method": "WGS84 ellipsoidal ring areas; gross supplied polygon, not land-only or parkable curb area",
+  "sample": {
+    "events": 9,
+    "records": 5423,
+    "mapped_records": 5355,
+    "unmatched_records": 68,
+    "event_days": 27,
+    "seasons": [
+      "2022/23",
+      "2024/25",
+      "2025/26"
+    ]
+  },
+  "context_rows": 87,
+  "missing_population": [
+    "Humboldt Industrial Area"
+  ],
+  "missing_neighborhood_per_capita_income": 87,
+  "acs_periods_by_table": {
+    "B01003": [
+      "2020-2024"
+    ],
+    "B25003": [
+      "2020-2024"
+    ],
+    "B25044": [
+      "2020-2024"
+    ],
+    "B17021": [
+      "2019-2023"
+    ]
+  },
+  "low_reliability_counts": {
+    "population": 0,
+    "renter_households": 6,
+    "households_no_vehicle": 35,
+    "people_below_poverty": 17
+  },
+  "top_by_count": [
+    {
+      "neighborhood": "Marcy Holmes",
+      "snow_records": 577,
+      "population_estimate": 15393,
+      "snow_records_per_1000_residents": 37.48457090885467,
+      "snow_records_per_km2": 266.30131390301966
+    },
+    {
+      "neighborhood": "South Uptown",
+      "snow_records": 356,
+      "population_estimate": 6101,
+      "snow_records_per_1000_residents": 58.35108998524832,
+      "snow_records_per_km2": 373.42301556267176
+    },
+    {
+      "neighborhood": "Powderhorn Park",
+      "snow_records": 351,
+      "population_estimate": 7768,
+      "snow_records_per_1000_residents": 45.18537590113285,
+      "snow_records_per_km2": 185.03509297108792
+    },
+    {
+      "neighborhood": "Loring Park",
+      "snow_records": 338,
+      "population_estimate": 9665,
+      "snow_records_per_1000_residents": 34.97154681841697,
+      "snow_records_per_km2": 278.93369999832714
+    },
+    {
+      "neighborhood": "Near - North",
+      "snow_records": 309,
+      "population_estimate": 6332,
+      "snow_records_per_1000_residents": 48.79974731522426,
+      "snow_records_per_km2": 112.38364955034218
+    }
+  ],
+  "top_by_per1000": [
+    {
+      "neighborhood": "East Bde Maka Ska",
+      "snow_records": 238,
+      "population_estimate": 2436,
+      "snow_records_per_1000_residents": 97.70114942528735,
+      "snow_records_per_km2": 209.48266323340795
+    },
+    {
+      "neighborhood": "Camden Industrial",
+      "snow_records": 3,
+      "population_estimate": 31,
+      "snow_records_per_1000_residents": 96.7741935483871,
+      "snow_records_per_km2": 3.900020272831468
+    },
+    {
+      "neighborhood": "Steven's Square - Loring Heights",
+      "snow_records": 270,
+      "population_estimate": 4289,
+      "snow_records_per_1000_residents": 62.95173700163208,
+      "snow_records_per_km2": 560.7816686282018
+    },
+    {
+      "neighborhood": "South Uptown",
+      "snow_records": 356,
+      "population_estimate": 6101,
+      "snow_records_per_1000_residents": 58.35108998524832,
+      "snow_records_per_km2": 373.42301556267176
+    },
+    {
+      "neighborhood": "Hawthorne",
+      "snow_records": 240,
+      "population_estimate": 4157,
+      "snow_records_per_1000_residents": 57.733942747173444,
+      "snow_records_per_km2": 98.02227199682065
+    }
+  ],
+  "top_by_density": [
+    {
+      "neighborhood": "Steven's Square - Loring Heights",
+      "snow_records": 270,
+      "population_estimate": 4289,
+      "snow_records_per_1000_residents": 62.95173700163208,
+      "snow_records_per_km2": 560.7816686282018
+    },
+    {
+      "neighborhood": "South Uptown",
+      "snow_records": 356,
+      "population_estimate": 6101,
+      "snow_records_per_1000_residents": 58.35108998524832,
+      "snow_records_per_km2": 373.42301556267176
+    },
+    {
+      "neighborhood": "Loring Park",
+      "snow_records": 338,
+      "population_estimate": 9665,
+      "snow_records_per_1000_residents": 34.97154681841697,
+      "snow_records_per_km2": 278.93369999832714
+    },
+    {
+      "neighborhood": "Marcy Holmes",
+      "snow_records": 577,
+      "population_estimate": 15393,
+      "snow_records_per_1000_residents": 37.48457090885467,
+      "snow_records_per_km2": 266.30131390301966
+    },
+    {
+      "neighborhood": "East Bde Maka Ska",
+      "snow_records": 238,
+      "population_estimate": 2436,
+      "snow_records_per_1000_residents": 97.70114942528735,
+      "snow_records_per_km2": 209.48266323340795
+    }
+  ],
+  "historical_layer_triage": [
+    {
+      "file": "Snow_Emergency_Armatage_Tows_2019__0.json",
+      "rows": 948,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Bridge_Tows_2025__0.json",
+      "rows": 852,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Dana_Tows_2016_b__0.json",
+      "rows": 1354,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Diamond_Lake_Tows_2019__0.json",
+      "rows": 982,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Dover_Tows_2022__0.json",
+      "rows": 631,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Ferry_Tows_2016__0.json",
+      "rows": 1328,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Ferry_Tows_2021__0.json",
+      "rows": 4868,
+      "has_all_three_days": true,
+      "unclassified_rows": 4238,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Fremont_Tows_2019__0.json",
+      "rows": 1235,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Glenwood_Tows_2025__0.json",
+      "rows": 719,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Grant_Tows_2015__0.json",
+      "rows": 1736,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Howard_Tows_2024__0.json",
+      "rows": 665,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Howe_Tows_2018__0.json",
+      "rows": 844,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_James_Tows_2020__0.json",
+      "rows": 465,
+      "has_all_three_days": false,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Jane_Tows_2017__0.json",
+      "rows": 1430,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Jane_Tows_2022__0.json",
+      "rows": 584,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Jefferson_Tows_2025__1.json",
+      "rows": 566,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Kasota_Tows_2019_2020__0.json",
+      "rows": 1246,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Lourdes_Tows_2022__0.json",
+      "rows": 435,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Newton_Tows_2020__0.json",
+      "rows": 1140,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Northrop_Tows_2023__0.json",
+      "rows": 465,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Olive_Tows_2018__0.json",
+      "rows": 1161,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Oliver_Tows_2021__0.json",
+      "rows": 6491,
+      "has_all_three_days": true,
+      "unclassified_rows": 5223,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Omega_Tows__0.json",
+      "rows": 695,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Polk_Tows_2016__0.json",
+      "rows": 1480,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Quincy_Tows_2019__0.json",
+      "rows": 617,
+      "has_all_three_days": false,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Spruce_Tows_2020__0.json",
+      "rows": 1253,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Upton_Tows_2019__0.json",
+      "rows": 805,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Victory1_Tows_2023__0.json",
+      "rows": 506,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Victory2_Tows_2023__0.json",
+      "rows": 187,
+      "has_all_three_days": false,
+      "unclassified_rows": 0,
+      "date_range_available": true,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Westminster_Tows_2019__0.json",
+      "rows": 980,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Xerxes_Tows_2018__0.json",
+      "rows": 1215,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Yale_Tows_2019__0.json",
+      "rows": 894,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "Snow_Emergency_Yardville_Tows_2018__0.json",
+      "rows": 728,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    },
+    {
+      "file": "SnowEmergencyPembinaTows2018__0.json",
+      "rows": 962,
+      "has_all_three_days": true,
+      "unclassified_rows": 0,
+      "date_range_available": false,
+      "admitted_to_primary_sample": false
+    }
+  ],
+  "ordinary_day_baseline_status": "not_available; null values are not zeros",
+  "interpretation": "Exploratory selected-snow sample, not causal effects, annual rates, or individual tow risk. Population sensitivity bounds vary the ACS denominator only; not outcome confidence intervals."
+}

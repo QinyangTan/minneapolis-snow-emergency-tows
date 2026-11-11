@@ -45,3 +45,14 @@ Next: small-multiple map, normalized neighborhood profiles, recurrence matrix, s
 - M2: linked event/day explorer and 3-up small-multiple maps.
 - M3: recurrence heatmap, normalized day signatures, guided narrative.
 - M4: accessibility, performance, reproducibility, course FP2/FP3 deliverables.
+
+## Neighborhood context extension · November 10, 2026
+
+- The compact dashboard now shares a Count / per-1,000 residents / per-km² measure between its map and neighborhood scatterplot. Counts follow the selected event/day; map domains remain fixed to full selected-nine-event totals for each measure.
+- A linked context axis uses renter households, households without a vehicle or people below poverty. Source universes are distinct. Population, tenure and vehicle access use 2020–2024 ACS; poverty uses 2019–2023.
+- Hollow points identify low-reliability ACS estimates. A selected point shows the source percentage's horizontal 90% MOE, clipped to the physical 0–100% range. Population MOE appears in the detail, not as an outcome confidence interval.
+- Unknown population produces a hatched map region and unavailable ratio. True zero records with a valid denominator remain zero. All 87 neighborhoods stay selectable through a native selector and semantic table.
+- Areas are WGS84 ellipsoidal areas of the supplied gross polygons, including water where present. Resident and area descriptions do not measure parked vehicles or individual tow risk.
+- The new context surface uses the existing cold-blue dashboard palette, flat chart/detail layout and responsive SVG dimensions. Secondary source/record details remain collapsed by default.
+- Context downloads independently; a failed context request leaves the count map available and offers retry. Reset restores event/day/neighborhood, brush, measure and context attribute.
+- Ordinary-day towing and a complete emergency calendar remain unavailable. No baseline-adjusted excess, estimated normal-day counts or causal claims appear in this extension.
