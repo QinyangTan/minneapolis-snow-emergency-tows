@@ -13,3 +13,7 @@ Five large JSON files are stored losslessly as `.json.gz` to keep individual Git
 Ordinary-day actual towing records with reason codes were not found as a verified complete public export. 311 complaints, crashes, citations and 911 calls are NOT replacement towing records. Citywide annual towing categories are context only. The prototype therefore uses the documented nine-event snow-emergency baseline (5,423 records; 68 unmatched to neighborhoods), keeping expanded historical layers and the separate ten-event reference distinct.
 
 Dates, geography, uncertainty and data coverage differ by source. Read the source metadata before joining datasets. Neighborhood ACS estimates describe 2020-2024 (population/housing) or 2019-2023 (income/poverty), not individual vehicle owners or causal effects. Current transit and parking snapshots do not represent historical availability.
+
+## Derived prototype inputs
+
+`derived/` additionally stores the lightweight plotted context, source-scale income/traffic geography and computed analysis results. Its separate `manifest.json` hashes those derived files. Regenerate them using the repository's `npm run data:fp2`; the original 661-file storage manifest remains scoped to the collected source package.

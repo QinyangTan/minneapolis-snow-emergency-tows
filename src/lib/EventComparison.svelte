@@ -76,7 +76,7 @@
   <div>
     <h3>Most similar pairs</h3>
     {#each stats.closest as pair}
-      <button onclick={() => choose(pair)} aria-label={`Compare ${pair.a} and ${pair.b}, divergence ${f.format(pair.divergence)}`}>
+      <button onclick={() => choose(pair)} title={`Compare ${pair.a} and ${pair.b}, divergence ${f.format(pair.divergence)}`}>
         <span>{pair.a} ↔ {pair.b}</span><strong>{f.format(pair.divergence)}</strong>
       </button>
     {/each}
@@ -84,7 +84,7 @@
   <div>
     <h3>Most different pairs</h3>
     {#each stats.farthest as pair}
-      <button onclick={() => choose(pair)} aria-label={`Compare ${pair.a} and ${pair.b}, divergence ${f.format(pair.divergence)}`}>
+      <button onclick={() => choose(pair)} title={`Compare ${pair.a} and ${pair.b}, divergence ${f.format(pair.divergence)}`}>
         <span>{pair.a} ↔ {pair.b}</span><strong>{f.format(pair.divergence)}</strong>
       </button>
     {/each}

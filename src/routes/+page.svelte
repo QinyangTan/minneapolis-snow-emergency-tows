@@ -105,6 +105,7 @@
   <header class="topbar">
     <a href="#home" class="brand">❄ MINNEAPOLIS <span>/ DATA STORIES</span></a>
     <nav aria-label="Main navigation">
+      <a href={`${base}/fp2/`}>FP2 · Neighborhoods</a>
       <a href="#focus-dashboard">Dashboard</a>
       <a href="#constellation" onclick={showFullStory}>Brush &amp; link</a>
       <a href="#geography" onclick={showFullStory}>Day maps</a>
@@ -169,7 +170,7 @@
           <div class="focus-panel-title"><h3>When are tows recorded?</h3><span>Citywide composition, not risk</span></div>
           <div class="focus-day-bars">
             {#each chartDays as row}<button type="button" class:active={selectedDay===row.day} aria-pressed={selectedDay===row.day}
-                aria-label={'Focus Day '+row.day+', '+(row.count/Math.max(1,chartTotal)*100).toFixed(1)+' percent'}
+                aria-label={'DAY 0'+row.day+' '+(row.count/Math.max(1,chartTotal)*100).toFixed(1)+'% — Focus Day '+row.day}
                 onclick={()=>selectedDay=selectedDay===row.day?0:row.day}>
                 <span class="focus-bar-name">DAY 0{row.day}</span>
                 <span class="focus-bar-track"><i class={'day-'+row.day} style:width={(row.count/maxDayCount*100)+'%'}></i></span>
@@ -237,7 +238,7 @@
         </div>
         <div class="bar-list">
           {#each chartDays as row}
-            <button class:chosen={selectedDay === row.day} class="bar-row" onclick={() => selectedDay = selectedDay === row.day ? 0 : row.day} aria-label={'Highlight day ' + row.day}>
+            <button class:chosen={selectedDay === row.day} class="bar-row" onclick={() => selectedDay = selectedDay === row.day ? 0 : row.day}>
               <strong>DAY 0{row.day}</strong>
               <div class="bar-rail"><div class={'bar-fill day-' + row.day} style:width={(row.count / maxDayCount * 100) + '%'}></div></div>
               <div class="bar-data"><b>{fmt.format(row.count)}</b><span>{(row.count / Math.max(1, chartTotal) * 100).toFixed(1)}%</span></div>

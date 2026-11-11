@@ -1,0 +1,54 @@
+{
+  "files": [
+    {
+      "file": "analysis-results.json",
+      "bytes": 69850,
+      "sha256": "2ae907dd600ddf0a8c1d7f72574558e999b595d91f29d0ef94f680d8fafbccc5"
+    },
+    {
+      "file": "FP2-demo.zip",
+      "bytes": 492560,
+      "sha256": "c8aed042f4f9ca58531088c266472f41c2bc65b06dba06a13ea053eb013e13c8"
+    },
+    {
+      "file": "FP2-Progress-Presentation.pdf",
+      "bytes": 1783566,
+      "sha256": "43a7760ef0e0de481e0f873f0fdd9f146de29f9fcce51d6cf983c0320efa5295"
+    },
+    {
+      "file": "FP2-Progress-Presentation.pptx",
+      "bytes": 279168,
+      "sha256": "f93ae83a9504cc178c1fa44ed4bdf9938773c5821ecdeb1bdb7e8b66e8c067ec"
+    },
+    {
+      "file": "README.md",
+      "bytes": 3913,
+      "sha256": "09b15ea35da27b9a095d76667fb24165f5419bb69e067e636295b812661011b0"
+    },
+    {
+      "file": "screenshots/fp2-income-lens.png",
+      "bytes": 93449,
+      "sha256": "243fbad639d909a628cd436aa0a635f5c178e129fbbfdf99129d86c904e5f020"
+    },
+    {
+      "file": "screenshots/fp2-linked-views.png",
+      "bytes": 101670,
+      "sha256": "092e52b3b62cf57fea1a8f7285c1e96aed5e5c035489b11f9a44fb466ce9bed4"
+    },
+    {
+      "file": "screenshots/fp2-mobile-viewport.png",
+      "bytes": 46227,
+      "sha256": "75f43ad470d3ed361ae7f4328ed67e9dbcfce236b8ffedd88b755eda8cc513b6"
+    },
+    {
+      "file": "screenshots/fp2-mobile.png",
+      "bytes": 392254,
+      "sha256": "8fb23527f9acc55af1da2e7084a0439ed8fa470c30bf2a88ba87ad451f0fe287"
+    },
+    {
+      "file": "speaker-notes.md",
+      "bytes": 11796,
+      "sha256": "771535d1ed18c4a7ae71ff7140972592cbe4b541560ef87078c0ef45f11d7e95"
+    }
+  ]
+}

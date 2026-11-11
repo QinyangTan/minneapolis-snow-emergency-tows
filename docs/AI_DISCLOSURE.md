@@ -10,3 +10,7 @@ Checked the CSCI 5609 Canvas page [Using Coding Agents](https://canvas.umn.edu/c
 - **Optional research**: consent to log reuse for research is independent of grading and distinct from mandatory course logging.
 
 Unverified: which team members have connected course-funded Codex, which original design choices are theirs, and which code was actually run under course sessions. Get authentic review, don't guess.
+
+### FP2 work, November 2026
+
+Codex assisted with source discovery and snapshots, schema/period validation, preparation scripts, the `/fp2/` implementation, automated tests, packaging and the 15-slide English progress presentation. Sources and computation are retained in the repository. This does not establish individual teammate contribution ownership or represent a completed participant evaluation. Statistical results remain descriptive; ordinary-day actual towing and reason codes were not fabricated.

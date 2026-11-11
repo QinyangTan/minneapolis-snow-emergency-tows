@@ -27,7 +27,7 @@
   {@const mappedN = mapped(event.id)}
   <button class:fp-selected={selectedEvent===event.id} class="fingerprint-card"
     aria-pressed={selectedEvent===event.id}
-    aria-label={`${event.id}: ${event.total} observed tows, highest number on Day ${peak}. Select emergency.`}
+    title={`${event.id}: ${event.total} observed tows, highest number on Day ${peak}. Select emergency.`}
     onclick={()=>dispatch('select',selectedEvent===event.id?'all':event.id)}>
     <span class="fingerprint-top"><strong>{event.id}</strong><span>{event.season}</span></span>
     <span class="fingerprint-total">{fmt.format(event.total)} <small>tows</small></span>

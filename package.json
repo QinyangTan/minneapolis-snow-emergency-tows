@@ -19,7 +19,9 @@
     "build:extension": "node scripts/build-google-maps-extension.mjs",
     "qa:extension": "node --test tests/test_google_maps_extension.mjs tests/test_extension_story_layers.mjs tests/test_extension_delta_layer.mjs",
     "qa:extension:browser": "node scripts/test-google-maps-extension-browser.mjs",
-    "qa:extension:live": "node scripts/test-google-maps-extension-live.mjs"
+    "qa:extension:live": "node scripts/test-google-maps-extension-live.mjs",
+    "data:fp2": "python scripts/prepare-fp2.py && node scripts/prepare-fp2-geography.mjs && node scripts/analyze-fp2.mjs",
+    "qa:fp2": "node --test tests/test_fp2.mjs"
   },
   "dependencies": {
     "@sveltejs/kit": "^2.20.0",

@@ -6,6 +6,12 @@
 
 An interactive, evidence-driven visual story about how Minneapolis towing patterns change between Snow Emergency Days 1, 2, and 3, and which neighborhoods repeatedly appear or rank prominently across separate emergencies.
 
+## FP2 — neighborhood economics and towing
+
+**[Download the 15-slide English presentation and runnable demo](deliverables/FP2/README.md)** · [All collected datasets](datasetsForFP2/README.md) · [Implementation and methods](docs/FP2_IMPLEMENTATION.md)
+
+The new `/fp2/` explorer links a neighborhood map, socioeconomic scatterplot and event/day details. It adds population adjustment, six context indicators, 121-tract per-capita income and 2024 traffic sites. Ordinary-day actual towing remains explicitly deferred because no complete verified public log with reasons was found. Use the prebuilt demo ZIP for an immediate local demonstration.
+
 ## See the linked visualization in action
 
 ![Real Chromium capture of the CSCI 5609 compact dashboard: select Bridge, highlight Day 2, inspect a Minneapolis neighborhood, and brush events by Day 2 share](docs/demos/linked-dashboard-brushing.gif)
