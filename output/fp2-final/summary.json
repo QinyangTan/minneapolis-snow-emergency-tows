@@ -1,0 +1,101 @@
+{
+  "police_stop_tows_downloaded": 3640,
+  "police_stop_tows_with_date_xy": 3640,
+  "police_unmatched_neighborhood": 28,
+  "ordinary_winter_police_tows": 1332,
+  "snow_tows_9_events_mapped": 5355,
+  "street_segments": 13021,
+  "street_km_total": 1947.5,
+  "street_km_unmatched": 51.1,
+  "historical_layers": 34,
+  "clean_dated_events": 29,
+  "event_tows_vs_snow_spearman": [
+    -0.21,
+    29
+  ],
+  "associations_spearman_rho_n": {
+    "share_change_pp": {
+      "age_18_24_pct": [
+        -0.01,
+        86
+      ],
+      "renter_pct": [
+        0.0,
+        86
+      ],
+      "no_vehicle_pct": [
+        -0.18,
+        86
+      ],
+      "poverty_pct": [
+        -0.23,
+        86
+      ],
+      "pop_density_per_km2": [
+        -0.03,
+        86
+      ],
+      "street_km": [
+        -0.09,
+        87
+      ]
+    },
+    "snow_tows_per_street_km": {
+      "age_18_24_pct": [
+        0.29,
+        86
+      ],
+      "renter_pct": [
+        0.35,
+        86
+      ],
+      "no_vehicle_pct": [
+        0.47,
+        86
+      ],
+      "poverty_pct": [
+        0.32,
+        86
+      ],
+      "pop_density_per_km2": [
+        0.36,
+        86
+      ],
+      "street_km": [
+        -0.04,
+        87
+      ]
+    }
+  },
+  "per_street_km_bootstrap_95ci": {
+    "age_18_24_pct": [
+      0.07,
+      0.48
+    ],
+    "renter_pct": [
+      0.13,
+      0.54
+    ],
+    "no_vehicle_pct": [
+      0.28,
+      0.65
+    ],
+    "poverty_pct": [
+      0.12,
+      0.5
+    ],
+    "pop_density_per_km2": [
+      0.15,
+      0.55
+    ],
+    "street_km": [
+      -0.26,
+      0.17
+    ]
+  },
+  "definitions": {
+    "ordinary": "Police-stop calls with TOW disposition, Nov-Mar, excluding day before through Day 3 of every stored event layer. Police-initiated tows only; not parking-enforcement tows.",
+    "share_change_pp": "Neighborhood share of nine-event snow tows minus its share of ordinary winter police-stop tows. Different tow definitions: compare geography, not volume.",
+    "snow_3day_mm": "MSP airport snowfall on the Day 1 date and two prior days."
+  }
+}
