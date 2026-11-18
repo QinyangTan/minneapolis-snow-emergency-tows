@@ -86,7 +86,7 @@
   .explorer-notes { background: #f4f8fb; border: 1px solid #d5e2ec; border-radius: 10px; padding: 18px 20px; }
   .explorer-notes h3 { font: 700 14px 'Space Grotesk', sans-serif; color: #0b1d32; margin: 14px 0 4px; }
   .explorer-notes p { font-size: 14.5px; line-height: 1.6; color: #2b3f55; margin: 0; }
-  .finding-tag { font: 700 12px 'Space Grotesk', sans-serif !important; letter-spacing: 0.12em; color: #2f7db8 !important; text-transform: uppercase; }
+  .finding-tag { font: 700 12px 'Space Grotesk', sans-serif !important; letter-spacing: 0.12em; color: #215a89 !important; text-transform: uppercase; }
   .selected-note { margin-top: 14px !important; }
   .selected-note button { margin-left: 6px; border: 1px solid #c8d8e4; background: #ffffff; border-radius: 4px; font-size: 12px; }
   .source-note { margin-top: 16px !important; font-size: 12px !important; color: #5a6f86 !important; }
