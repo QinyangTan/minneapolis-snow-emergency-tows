@@ -56,23 +56,24 @@
 <style>
   .scrolly { background: #f4f8fb; padding: 90px max(5%, calc((100vw - 1240px) / 2)) 40px; border-top: 1px solid #dde7ef; }
   .scrolly-intro { max-width: 760px; margin-bottom: 30px; }
+  .scrolly-intro .eyebrow { color: #3c5e78; }
   .scrolly-intro h2 { font: 700 clamp(34px, 4.4vw, 54px)/1.05 'Space Grotesk', sans-serif; letter-spacing: -0.04em; color: #0b1d32; margin: 14px 0; }
   .scrolly-intro p:last-child { font-size: 17px; line-height: 1.7; color: #38566d; }
   .scrolly-body { display: grid; grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.5fr); gap: 36px; align-items: start; }
   .scrolly-steps { padding-bottom: 30vh; }
-  .step { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; opacity: 0.35; transition: opacity 300ms ease; }
-  .step.active { opacity: 1; }
+  .step { min-height: 72vh; display: flex; flex-direction: column; justify-content: center; opacity: 1; border-left: 3px solid transparent; padding-left: 14px; transition: border-color 300ms ease; }
+  .step.active { border-left-color: #215a89; }
   .step h3 { font: 700 26px/1.2 'Space Grotesk', sans-serif; color: #0b1d32; margin: 6px 0 10px; letter-spacing: -0.02em; }
   .step p { font-size: 16.5px; line-height: 1.7; color: #2b3f55; margin: 0; max-width: 46ch; }
-  .scene-label { font: 700 12px 'Space Grotesk', sans-serif !important; letter-spacing: 0.14em; color: #2f7db8 !important; margin-bottom: 4px !important; }
+  .scene-label { font: 700 12px 'Space Grotesk', sans-serif !important; letter-spacing: 0.14em; color: #215a89 !important; margin-bottom: 4px !important; }
   .step-link { margin-top: 14px; font-weight: 700; color: #a8343e; text-decoration: none; }
   .scrolly-graphic { position: sticky; top: 4vh; }
   .scene-track { list-style: none; padding: 0; margin: 0 0 10px; display: flex; gap: 6px; flex-wrap: wrap; }
-  .scene-track li { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #6f8496; padding: 4px 10px 4px 4px; border-radius: 999px; background: #e8f0f6; }
+  .scene-track li { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #415b70; padding: 4px 10px 4px 4px; border-radius: 999px; background: #e8f0f6; }
   .scene-track span { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: #ffffff; font-size: 11px; }
   .scene-track li.done { color: #1f5a8a; }
   .scene-track li.current { background: #0b1d32; color: #ffffff; }
-  .scene-track li.current span { background: #cc5a61; color: #ffffff; }
+  .scene-track li.current span { background: #a2353e; color: #ffffff; }
   @media (max-width: 900px) {
     .scrolly-body { grid-template-columns: 1fr; }
     .scrolly-graphic { order: -1; top: 0; z-index: 2; background: #f4f8fb; padding-bottom: 8px; }
