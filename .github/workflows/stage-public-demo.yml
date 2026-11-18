@@ -43,6 +43,6 @@ jobs:
           git rm -rf --cached . >/dev/null || true
           cp -R "$RUNNER_TEMP/snow-demo-artifact/." .
           touch .nojekyll
-          git add -f index.html _app data .nojekyll
+          git add -f index.html _app data fp2 .nojekyll
           git commit -m "build: validated public demo artifact [skip ci]"
           git push --force origin HEAD:refs/heads/demo-build-snapshot-20261011

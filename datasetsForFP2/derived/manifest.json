@@ -1,0 +1,20 @@
+{
+  "scope": "Derived FP2 plotted inputs; original snapshots remain in raw and prepared.",
+  "files": [
+    {
+      "path": "analysis-results.json",
+      "bytes": 69850,
+      "sha256": "2ae907dd600ddf0a8c1d7f72574558e999b595d91f29d0ef94f680d8fafbccc5"
+    },
+    {
+      "path": "fp2-context.json",
+      "bytes": 106886,
+      "sha256": "16c53672a8b62dd7069966ec12259515568c8d5cbee01d2f5d9a4b9058428308"
+    },
+    {
+      "path": "fp2-geography.json",
+      "bytes": 262332,
+      "sha256": "50530121f324969a7a7d6c58f63b95ec450ddfd6dbfb5eb994c967d5dfc034e8"
+    }
+  ]
+}

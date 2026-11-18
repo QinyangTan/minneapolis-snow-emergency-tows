@@ -1,0 +1,16 @@
+import {chromium} from '@playwright/test';
+const browser=await chromium.launch({headless:true});const page=await browser.newPage();
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.route('https://fonts.googleapis.com/**',r=>r.abort());
+await page.goto('http://127.0.0.1:4175/fp2/');
+await page.locator('.city-map [role=button]').first().waitFor();
+if(await page.locator('.city-map [role=button]').count()!==87)throw Error('Map missing');
+await page.getByLabel('Neighborhood indicator',{exact:true}).selectOption('traffic');
+if(await page.locator('.scatter circle').count()!==83)throw Error('Traffic indicator missing');
+await page.getByLabel('Context layer',{exact:true}).selectOption('traffic');
+await page.getByLabel('Choose neighborhood',{exact:true}).selectOption('Como');
+await page.getByLabel('Context layer',{exact:true}).selectOption('income');
+await page.setViewportSize({width:390,height:844});await page.screenshot({path:'artifacts/fp2-mobile-viewport.png'});
+if(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth))throw Error('Mobile overflow');
+if(errors.length)throw Error(errors.join('\n'));
+await browser.close();console.log('PASS: prebuilt package, 87 neighborhoods, 83 traffic points, income lens, offline-font fallback and mobile viewport.');

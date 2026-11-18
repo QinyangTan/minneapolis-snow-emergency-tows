@@ -26,7 +26,7 @@
   {#each ranked as name (name)}
     {@const vals=layers.map(l=>l.get(name)??0)}
     <button class:area-active={selectedNeighborhood===name} class="sensitivity-row"
-      aria-label={`${name} prominent in ${vals[0]} of 9 events at top 5; ${vals[1]} at top 10; ${vals[2]} at top 15. Select neighborhood.`}
+      title={`${name} prominent in ${vals[0]} of 9 events at top 5; ${vals[1]} at top 10; ${vals[2]} at top 15. Select neighborhood.`}
       onclick={()=>dispatch('select',name)}>
       <span class="sensitivity-name">{name}</span>
       <svg viewBox="0 0 202 87" role="img" aria-label={`Top 5 ${vals[0]}, top 10 ${vals[1]}, top 15 ${vals[2]}`}>

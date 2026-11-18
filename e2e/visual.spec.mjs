@@ -128,7 +128,7 @@ test('automated accessibility: axe serious/critical violations on desktop and mo
     const violations = report.violations.filter((v) => ['critical','serious'].includes(v.impact));
     expect(violations.map((v) => ({
       id:v.id, impact:v.impact,
-      nodes:v.nodes.slice(0,5).map((n) => ({target:n.target, summary:n.failureSummary}))
+      nodes:v.nodes.map((n) => ({target:n.target, summary:n.failureSummary}))
     }))).toEqual([]);
   }
 });

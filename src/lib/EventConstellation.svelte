@@ -90,7 +90,7 @@
             style:height={bubbleDiameter(event.total,scale.maxCount,equalSize)+'px'}
             style:background={palette(event.peakDay)}
             aria-pressed={selectedEvent===event.id}
-            aria-label={`${event.id}: Day 2 ${format(event.day2Share)} of citywide records; top five mapped areas ${format(event.concentration)} of mapped records; ${event.total} total observations. Select this emergency.`}
+            aria-label={`${String(i+1).padStart(2,'0')} ${event.id}: Day 2 ${format(event.day2Share)} of citywide records; top five mapped areas ${format(event.concentration)} of mapped records; ${event.total} total observations. Select this emergency.`}
             title={`${event.id} — Day 2: ${format(event.day2Share)} · top-five: ${format(event.concentration)} · ${event.total} records`}
             onclick={()=>pick(event.id)}
             ><span>{String(i+1).padStart(2,'0')}</span></button>

@@ -67,7 +67,7 @@
     {@const portions = shares(dayRows(area))}
     <button class:focused={selectedNeighborhood === area.name} class="signature-row"
       onclick={() => dispatch('select', area.name)}
-      aria-label={`${area.name}: ${n} observed records; Day 1 ${(portions[0]*100).toFixed(1)}%, Day 2 ${(portions[1]*100).toFixed(1)}%, Day 3 ${(portions[2]*100).toFixed(1)}%. Select neighborhood.`}>
+      title={`${area.name}: ${n} observed records; Day 1 ${(portions[0]*100).toFixed(1)}%, Day 2 ${(portions[1]*100).toFixed(1)}%, Day 3 ${(portions[2]*100).toFixed(1)}%. Select neighborhood.`}>
       <span class="signature-name">{area.name}</span>
       <span class="signature-track" aria-hidden="true">
         {#each portions as portion, i}
