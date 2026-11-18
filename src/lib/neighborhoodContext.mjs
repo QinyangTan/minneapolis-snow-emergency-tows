@@ -1,7 +1,8 @@
 /** Descriptive denominators for the selected snow-event sample, never individual risk. */
 export function contextValue(count, context, measure) {
   if (measure === 'count') return count;
-  const denominator = measure === 'residents' ? context?.population?.estimate : context?.areaKm2;
+  const denominator = measure === 'residents' ? context?.population?.estimate
+    : measure === 'street' ? context?.streetKm : context?.areaKm2;
   return Number.isFinite(denominator) && denominator > 0
     ? count / denominator * (measure === 'residents' ? 1000 : 1) : null;
 }

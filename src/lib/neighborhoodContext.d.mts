@@ -1,12 +1,13 @@
 import type { NeighborhoodGeoJSON } from './analytics';
 
-export type ContextMeasure = 'count' | 'residents' | 'area';
+export type ContextMeasure = 'count' | 'residents' | 'area' | 'street';
 export type ContextAttribute = 'renters' | 'noVehicle' | 'poverty';
 export type ContextEstimate = { estimate: number | null; moe: number | null; period: string; reliability: string };
 export type ContextPercent = { percent: number | null; moe: number | null; period: string; reliability: string };
 export type NeighborhoodContextRow = {
   name: string;
   areaKm2: number;
+  streetKm?: number | null;
   population: ContextEstimate | null;
   attributes: Partial<Record<ContextAttribute, ContextPercent | null>>;
 };

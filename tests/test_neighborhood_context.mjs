@@ -64,3 +64,11 @@ test('published context preserves missingness, indicator vintages and complete n
   assert.equal(marcy.attributes.renters.period, '2020-2024');
   assert.equal(payload.ordinaryDayBaseline, null);
 });
+
+test('street-km measure divides by public street length and keeps missing lengths undefined', () => {
+  assert.equal(contextValue(577, { streetKm: 31.4 }, 'street'), 577 / 31.4);
+  assert.equal(contextValue(3, { streetKm: 0 }, 'street'), null);
+  assert.equal(contextValue(3, null, 'street'), null);
+  const live = JSON.parse(readFileSync(new URL('../static/data/neighborhood-context.json', import.meta.url)));
+  assert.ok(live.neighborhoods.every(row => row.streetKm > 0));
+});
