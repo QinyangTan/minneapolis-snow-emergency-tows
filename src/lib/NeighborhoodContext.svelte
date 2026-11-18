@@ -57,7 +57,7 @@
         <text x={(left + plotRight) / 2} y="330" text-anchor="middle">{attributes[attribute]} · {period}</text>
         {#each points as point (point.name)}
           <g role="button" tabindex="0" aria-pressed={selectedNeighborhood === point.name}
-            aria-label={`${point.name}: ${fmt(point.value)} ${measureLabel}; ${fmt(point.attribute?.percent)}% ${attributes[attribute]}. Select neighborhood.`}
+            aria-label={`${point.name} · ${point.count} records · ${fmt(point.attribute?.percent)}% ${attributes[attribute]}${point.attribute?.reliability === 'Low' ? ' · Low ACS reliability' : ''}. ${fmt(point.value)} ${measureLabel}. Select neighborhood.`}
             class:chosen={selectedNeighborhood === point.name} class:low={point.attribute?.reliability === 'Low'}
             on:click={() => choose(point.name)} on:keydown={(event) => key(event, point.name)}>
             <title>{point.name} · {point.count} records · {fmt(point.attribute?.percent)}% {attributes[attribute]}{point.attribute?.reliability === 'Low' ? ' · Low ACS reliability' : ''}</title>
