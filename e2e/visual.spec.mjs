@@ -10,7 +10,7 @@ async function ready(page) {
   await expect(page.locator('.status-strip')).toContainText('Regenerated City ArcGIS');
   await page.getByRole('button',{name:'Explore all charts ↗'}).click();
   await expect(page.locator('.small-map-panel')).toHaveCount(3);
-  await expect(page.locator('.explorer-layout')).toBeVisible();
+  await expect(page.locator('#explore .explorer-layout')).toBeVisible();
 }
 
 test('desktop: live City data, shared-scale maps and geometry totals', async ({ page }, testInfo) => {
@@ -51,7 +51,7 @@ test('linked event/day/neighborhood filters, matrix click, and reset', async ({ 
   await page.locator('.filterbar .day-picker button').filter({hasText: /^2$/}).click();
   await expect(page.locator('.filterbar .day-picker button.active')).toHaveText('2');
 
-  const marcy = page.locator('.explorer-layout svg path[aria-label^="Marcy Holmes:"]');
+  const marcy = page.locator('#explore .explorer-layout svg path[aria-label^="Marcy Holmes:"]');
   await marcy.click();
   await expect(page.locator('.area-detail h3')).toHaveText('Marcy Holmes');
 
@@ -91,7 +91,7 @@ test('day composition remains normalized for selected event; sorted matrix and k
   const count = await page.locator('.recurrence-matrix tbody tr').count();
   expect(count).toBeGreaterThanOrEqual(65);
 
-  const path = page.locator('.explorer-layout svg path[aria-label^="Central:"]');
+  const path = page.locator('#explore .explorer-layout svg path[aria-label^="Central:"]');
   await path.focus();
   await page.keyboard.press('Enter');
   await expect(page.locator('.area-detail h3')).toHaveText('Central');

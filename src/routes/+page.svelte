@@ -10,6 +10,10 @@
   import EventConstellation from '$lib/EventConstellation.svelte';
   import { constellationRows } from '$lib/eventConstellation.mjs';
   import RankSensitivity from '$lib/RankSensitivity.svelte';
+  import NeighborhoodContext from '$lib/NeighborhoodContext.svelte';
+  import ScrollStory from '$lib/story/ScrollStory.svelte';
+  import FindingsExplorer from '$lib/story/FindingsExplorer.svelte';
+  import { contextRows, contextDomain, type ContextMeasure, type ContextAttribute, type NeighborhoodContextData } from '$lib/neighborhoodContext.mjs';
   import { countInScope, eventDays, shares, type NeighborhoodGeoJSON } from '$lib/analytics';
   import {
     preliminaryDays, preliminaryEvents,
@@ -25,6 +29,13 @@
   let brushMin = 0;
   let brushMax = 100;
   let loadError = '';
+  let neighborhoodContext: NeighborhoodContextData | null = null;
+  let contextMeasure: ContextMeasure = 'street';
+  let story: any = null;
+  let storyError = '';
+  let contextAttribute: ContextAttribute = 'renters';
+  let contextError = '';
+  const measureLabels = { count: 'Observed tow records', residents: 'Records per 1,000 residents', area: 'Records per km²', street: 'Records per street-km' };
 
   const rules = [
     { day: 1, hours: '9 PM', title: 'Snow Emergency Routes', detail: 'No parking on either side of Snow Emergency routes (until fully plowed).' },
@@ -52,7 +63,36 @@
         loadError = error instanceof Error ? error.message : String(error);
       }
     })();
+    loadNeighborhoodContext();
+    loadStory();
   });
+
+  async function loadStory() {
+    storyError = '';
+    try {
+      const response = await fetch(`${base}/data/story.json`);
+      if (!response.ok) throw new Error('Story data download failed');
+      const data = await response.json();
+      if (data.schemaVersion !== 1 || !Array.isArray(data.storms)) throw new Error('Invalid story data');
+      story = data;
+    } catch {
+      storyError = 'The story data could not be loaded.';
+    }
+  }
+  function selectFromStory(name: string) { selectedNeighborhood = name; }
+
+  async function loadNeighborhoodContext() {
+    contextError = '';
+    try {
+      const response = await fetch(`${base}/data/neighborhood-context.json`);
+      if (!response.ok) throw new Error('Context download failed');
+      const data: NeighborhoodContextData = await response.json();
+      if (data.schemaVersion !== 1 || !Array.isArray(data.neighborhoods)) throw new Error('Invalid context data');
+      neighborhoodContext = data;
+    } catch {
+      contextError = 'Neighborhood context could not be loaded.';
+    }
+  }
 
   $: events = (summary?.events ?? preliminaryEvents) as EventRow[];
   $: overallDays = (summary?.days ?? preliminaryDays) as DayRow[];
@@ -69,6 +109,9 @@
   $: brushedEvents = overviewEvents.filter(event => event.day2Share*100 >= brushMin-1e-8 && event.day2Share*100 <= brushMax+1e-8);
   $: brushedEventIds = new Set(brushedEvents.map(event => event.id));
   $: brushActive = brushMin>0 || brushMax<100;
+  $: contextMapValues = geography && neighborhoodContext
+    ? Object.fromEntries(contextRows(geography, neighborhoodContext, selectedEvent, selectedDay, contextMeasure).map(row => [row.name, row.value])) : null;
+  $: contextMapDomain = geography && neighborhoodContext ? contextDomain(geography, neighborhoodContext, contextMeasure) : null;
 
   function observeDayStep(node: HTMLElement, day: number) {
     if (typeof IntersectionObserver === 'undefined') return {};
@@ -92,21 +135,25 @@
     selectedEvent = 'all';
     selectedNeighborhood = 'all';
     brushMin = 0; brushMax = 100;
+    contextMeasure = 'street';
+    contextAttribute = 'renters';
   }
   function showFullStory() { storyMode = true; }
 </script>
 
 <svelte:head>
-  <title>Three Days, Three Rules — Minneapolis Snow Emergency Tows</title>
-  <meta name="description" content="Exploring historic tow records and neighborhood patterns across three days of Minneapolis Snow Emergencies." />
+  <title>Same Rule, Different Streets — Minneapolis Snow Emergency Tows</title>
+  <meta name="description" content="A scroll story on where Minneapolis Snow Emergency tows land, how they differ from everyday towing, and which neighborhoods carry them." />
 </svelte:head>
 
 <div class="shell" class:focus-view={!storyMode}>
   <header class="topbar">
     <a href="#home" class="brand">❄ MINNEAPOLIS <span>/ DATA STORIES</span></a>
     <nav aria-label="Main navigation">
+      <a href="#story">Story</a>
       <a href={`${base}/fp2/`}>FP2 · Neighborhoods</a>
       <a href="#focus-dashboard">Dashboard</a>
+      <a href="#findings-explorer">Findings</a>
       <a href="#constellation" onclick={showFullStory}>Brush &amp; link</a>
       <a href="#geography" onclick={showFullStory}>Day maps</a>
       <a href="#comparison" onclick={showFullStory}>Compare</a>
@@ -119,13 +166,13 @@
     <section class="hero">
       <p class="eyebrow">AN INTERACTIVE CIVIC DATA STORY <span class="dot">●</span> MINNEAPOLIS, MN</p>
       <h1>THREE DAYS.<br />THREE RULES.<br /><em>ONE CITY.</em></h1>
-      <p class="lead">Every Snow Emergency changes where you can park. We explore how observed towing patterns shift across those three days — and why some neighborhoods keep appearing in the records.</p>
+      <p class="lead">Every Snow Emergency changes where you can park, and the rule is the same on every street. <strong>So how does snow-emergency towing differ from ordinary towing, and which neighborhoods carry the difference?</strong></p>
       <div class="hero-meta">
-        <div><strong>{fmt.format(summary?.total ?? 5423)}</strong><span>observed tow records</span></div>
-        <div><strong>9</strong><span>complete emergencies</span></div>
-        <div><strong>3</strong><span>different rule days</span></div>
+        <div><strong>{fmt.format(story?.totals?.stormTows ?? 27839)}</strong><span>storm tows, 2015–2025</span></div>
+        <div><strong>29</strong><span>clean Snow Emergencies</span></div>
+        <div><strong>87</strong><span>neighborhoods compared</span></div>
       </div>
-      <a class="scroll-link" href="#focus-dashboard">EXPLORE THE DATA ↓</a>
+      <a class="scroll-link" href="#story">START THE STORY ↓</a>
     </section>
 
     <div class:verified={summary !== null} class="status-strip">
@@ -138,10 +185,20 @@
       {#if loadError}<span class="error-text"> · {loadError}</span>{/if}
     </div>
 
+    <div id="story" class="anchor-target">
+    {#if story && geography}
+      <ScrollStory {story} {geography} selected={selectedNeighborhood === 'all' ? null : selectedNeighborhood} onselect={selectFromStory} />
+    {:else if storyError}
+      <p class="focus-evidence-note" role="status">{storyError} <button type="button" onclick={loadStory}>Retry story</button></p>
+    {:else}
+      <p class="focus-evidence-note" role="status">Loading the story…</p>
+    {/if}
+    </div>
+
 
     <section class="focus-dashboard" id="focus-dashboard" aria-labelledby="focus-title">
       <div class="focus-heading">
-        <div><p class="eyebrow">EXPLORE / BRUSH · LINK · INSPECT</p>
+        <div><p class="eyebrow">SCENE 5 · EXPLORE / BRUSH · LINK · INSPECT</p>
         <h2 id="focus-title">Find the pattern. <em>See it move.</em></h2>
         <p>Choose a day, brush Day 2 shares, or select a neighborhood. The linked views respond together.</p></div>
         <button class="focus-mode-switch" onclick={() => storyMode = !storyMode} aria-expanded={storyMode}>
@@ -157,6 +214,7 @@
           {#each [0,1,2,3] as day}<button type="button" class:active={selectedDay===day}
             aria-pressed={selectedDay===day} onclick={()=>selectedDay=day}>{day===0?'All':'Day '+day}</button>{/each}
         </fieldset>
+        <label>MAP &amp; PLOT<select bind:value={contextMeasure} aria-label="Map and plot measure" disabled={!neighborhoodContext}><option value="street">Per street-km</option><option value="count">Count</option><option value="residents">Per 1,000 residents</option><option value="area">Per km²</option></select></label>
         <button class="focus-reset" onclick={resetFilters} type="button">Reset all ↺</button>
       </div>
       <div class="focus-stats" aria-live="polite">
@@ -201,16 +259,30 @@
           <div class="focus-panel-title"><h3>Where does it happen?</h3><span>{selectedDay?'Day '+selectedDay:'All days'} · {titleScope}</span></div>
           {#if geography && summary}
             <NeighborhoodMap {geography} {selectedDay} {selectedEvent} {selectedNeighborhood}
+              metricValues={contextMapValues} maxDomain={contextMapDomain}
+              metricLabel={contextMeasure === 'count' ? 'observed tows' : measureLabels[contextMeasure].toLowerCase()}
               on:select={event=>selectedNeighborhood=event.detail}/>
             <div class="focus-map-footer" aria-live="polite"><strong>{selectedArea?.name??'Choose a neighborhood'}</strong>
-              <span>{selectedArea?fmt.format(selectedAreaCount)+' mapped tows in scope':'Color indicates observed counts, not per-car risk.'}</span>
+              <span>{selectedArea?fmt.format(selectedAreaCount)+' mapped tows in scope':`Color shows ${measureLabels[contextMeasure].toLowerCase()}.`}</span>
               {#if selectedArea}<button onclick={()=>selectedNeighborhood='all'}>Clear area ×</button>{/if}
             </div>
           {:else}<p class="focus-data-loading" role="status">Map awaits verified neighborhood data. No synthetic geography.</p>{/if}
         </div>
       </div>
+      {#if geography && summary && neighborhoodContext}
+        <NeighborhoodContext {geography} context={neighborhoodContext} {selectedEvent} {selectedDay} {selectedNeighborhood}
+          measure={contextMeasure} measureLabel={measureLabels[contextMeasure]} bind:attribute={contextAttribute} on:select={event=>selectedNeighborhood=event.detail}/>
+      {:else if contextError}
+        <p class="focus-evidence-note" role="status">{contextError} <button type="button" onclick={loadNeighborhoodContext}>Retry context</button> The count map remains available.</p>
+      {:else}<p class="focus-evidence-note" role="status">{neighborhoodContext ? 'Context needs verified neighborhood tow data.' : 'Loading neighborhood context…'}</p>{/if}
       <p class="focus-evidence-note">9 selected historic emergencies · City of Minneapolis tow records · unmatched locations excluded from mapped counts. Brushing highlights events; click one event to inspect its linked geography. No towing-risk or causal claims.</p>
     </section>
+
+    <div id="findings-explorer" class="anchor-target">
+    {#if story && geography}
+      <FindingsExplorer {story} {geography} selected={selectedNeighborhood === 'all' ? null : selectedNeighborhood} onselect={selectFromStory} />
+    {/if}
+    </div>
 
     <section class="section rules-section" id="rules">
       <div class="section-heading"><p class="eyebrow">01 / THE RULES</p><h2>Same storm.<br />Different streets.</h2><p>Each emergency day has a distinct restriction. Those differences are central to this analysis.</p></div>
@@ -415,6 +487,10 @@
         <div><b>Interpretation</b><p>Counts represent observed enforcement actions; they do not measure illegal parking prevalence or individual towing probability.</p></div>
         <div><b>Location uncertainty</b><p>Some City tow-layer metadata cites an expected address geocoding error rate of approximately 8–14%. We prioritize neighborhood-level aggregation.</p></div>
         <div><b>Complete emergencies</b><p>The selected nine events include all three days. The available Victory 2 dataset is excluded because it only contains Day 1 records.</p></div>
+        <div><b>Neighborhood context</b><p>Population, rental tenure and vehicle access use 2020–2024 ACS; poverty uses 2019–2023. Estimates retain 90% margins of error and City reliability labels. Area is the supplied gross polygon, not parking supply. <a href="https://data.minneapolismn.gov/pages/minneapolis-neighborhood-explorer-dashboard" target="_blank" rel="noreferrer">City ACS source</a>.</p></div>
+        <div><b>Storm sample</b><p>34 historical tow layers were screened; 29 with all three rule days and valid dates are kept for the storm timeline. The nine most recent storms are mapped to neighborhoods (5,355 of 5,423 records matched). Five layers with Day 0 rows or a missing rule day are quarantined.</p></div>
+        <div><b>Ordinary-day baseline</b><p>“Ordinary” tows are 1,332 City Police Stop Data calls ending in a tow, November–March, outside every storm window (2016–2026). They follow police activity, not parking enforcement, so we compare where tows land (shares), never how many. A full City tow log has been requested in draft, not yet received.</p></div>
+        <div><b>Street-km and statistics</b><p>Street-km sums Public Works centerline segments assigned by midpoint; it is not parkable curb length. Associations are Spearman rank correlations across 86 neighborhoods with 4,000-sample bootstrap 95% intervals. They describe neighborhoods, not causes or individual risk.</p></div>
       </div>
     </section>
   </main>
