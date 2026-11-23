@@ -2,7 +2,7 @@
 :root{font-family:'DM Sans',sans-serif;color:#10243b;background:#f6f7f7;font-synthesis:none;scroll-behavior:smooth}
 *{box-sizing:border-box}
 body{margin:0}a{color:inherit}button,select{font:inherit}button{cursor:pointer}
-.shell{overflow:hidden}.topbar{display:flex;align-items:center;gap:36px;padding:23px 5%;background:#0b1d32;color:white;border-bottom:1px solid #34516a}
+.shell{overflow-x:clip}.topbar{display:flex;align-items:center;gap:36px;padding:23px 5%;background:#0b1d32;color:white;border-bottom:1px solid #34516a}
 .brand{font:700 16px 'Space Grotesk',sans-serif;text-decoration:none;letter-spacing:.05em;white-space:nowrap}
 .brand span{font-weight:400;color:#a5b5c6}.topbar nav{display:flex;gap:28px;margin-left:auto}
 .topbar nav a{text-decoration:none;font-size:13px;color:#c5d5e1}.topbar nav a:hover{color:white}
@@ -127,3 +127,4 @@ footer span:first-child{color:white;font-weight:700;letter-spacing:.09em}
 
 /* Explicit WCAG AA contrast for the compact dashboard eyebrow on pale blue. */
 .focus-dashboard .focus-heading .eyebrow{color:#2a526c}
+.anchor-target{scroll-margin-top:10px}
